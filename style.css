@@ -5326,3 +5326,728 @@ ul {
         font-size: 16px !important;
     }
 }
+/* =====================================================
+   HORIZONTAL SCROLL FIX - NO OVERFLOW ON ANY DEVICE
+   ===================================================== */
+
+/* ==================== GLOBAL OVERFLOW PREVENTION ==================== */
+html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    max-width: 100vw;
+}
+
+/* Prevent all containers from causing overflow */
+* {
+    max-width: 100%;
+}
+
+.container {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* ==================== PRELOADER FIXES ==================== */
+.preloader {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.preloader-scene,
+.particles-bg,
+.floating-icons {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.globe-container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .orbit-ring.ring-1,
+    .orbit-ring.ring-2,
+    .orbit-ring.ring-3 {
+        display: none; /* Hide orbit rings that cause overflow on mobile */
+    }
+    
+    .floating-icons {
+        display: none; /* Already set but ensuring */
+    }
+}
+
+/* ==================== HEADER FIXES ==================== */
+.top-bar,
+.main-header {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.top-bar .container,
+.main-header .container {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Navigation Controls */
+.nav-controls {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.integrated-access-bar {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .top-bar .container {
+        padding: 0 1rem;
+    }
+    
+    .main-header .container {
+        padding: 0.3rem 1rem;
+    }
+    
+    .header-actions {
+        flex-shrink: 0;
+    }
+}
+
+/* ==================== HERO SLIDER FIXES ==================== */
+.hero-slider {
+    overflow: hidden;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.hero-slides-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-slide {
+    max-width: 100vw;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.hero-content h2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-arrow {
+        position: absolute;
+    }
+    
+    .hero-prev {
+        left: 0.5rem;
+    }
+    
+    .hero-next {
+        right: 0.5rem;
+    }
+    
+    .hero-buttons {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ==================== STATS SECTION FIXES ==================== */
+.stats-section {
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.stats-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.stat-card {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== CONTENT SECTIONS FIXES ==================== */
+.featured-section,
+.cta-section,
+.newsletter-section,
+.about-content-section,
+.values-section,
+.team-section,
+.steps-section,
+.guidelines-section,
+.contact-section,
+.faq-section,
+.how-section,
+.speakers-section,
+.partners-section,
+.proceedings-section,
+.publications-section,
+.journal-about-section,
+.conf-section {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+}
+
+/* All Grids */
+.journals-grid,
+.publications-grid,
+.stats-grid,
+.values-grid,
+.team-grid,
+.steps-grid,
+.guidelines-grid,
+.partners-grid,
+.partner-grid,
+.standards-grid,
+.how-grid,
+.speakers-grid,
+.about-grid,
+.contact-grid,
+.journal-about-grid,
+.proceedings-list,
+.other-journals-grid,
+.conf-grid,
+.faq-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* All Cards */
+.journal-card,
+.publication-card,
+.stat-card,
+.value-card,
+.team-card,
+.step-card,
+.guideline-card,
+.partner-card,
+.partner-info-card,
+.standard-card,
+.how-card,
+.speaker-card,
+.contact-info-card,
+.proceeding-card,
+.other-journal-card,
+.conf-card,
+.faq-item {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Images */
+.journal-image img,
+.publication-image img,
+.about-image img,
+.team-image img,
+.speaker-image img,
+.conf-image img,
+.journal-cover img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ==================== FILTER SECTION FIXES ==================== */
+.filter-section {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.filter-bar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-search {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-categories {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.filter-categories::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        padding: 0 0.5rem;
+    }
+    
+    .filter-categories {
+        justify-content: flex-start;
+        padding: 0.5rem 0;
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+/* ==================== CTA & NEWSLETTER FIXES ==================== */
+.cta-content,
+.newsletter-content {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.cta-buttons,
+.newsletter-form {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .newsletter-form input {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ==================== FOOTER FIXES ==================== */
+.site-footer {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.footer-main,
+.footer-bottom {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.footer-column {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-links {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom .container {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+}
+
+/* ==================== MOBILE MENU FIXES ==================== */
+.mobile-menu {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.mobile-menu-header,
+.mobile-search,
+.mobile-nav,
+.mobile-menu-cta,
+.mobile-menu-footer {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== PAGE HERO FIXES ==================== */
+.page-hero {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.page-hero-content {
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.page-hero h1 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.breadcrumb {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ==================== JOURNAL DETAIL PAGE FIXES ==================== */
+.journal-hero {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.journal-hero-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.journal-info {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.journal-metrics,
+.journal-actions {
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.journal-info h1 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .journal-cover {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .journal-metrics {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .journal-actions {
+        gap: 0.75rem;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .journal-actions .btn-hero-primary,
+    .journal-actions .btn-hero-secondary {
+        width: 100%;
+    }
+}
+
+/* ==================== PROCEEDING PAGE FIXES ==================== */
+.proceeding-hero,
+.proceeding-content-section {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.proceeding-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.proceeding-main-content,
+.proceeding-sidebar {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.article-placeholder-card {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .proceeding-meta-row {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    .proceeding-badge-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+/* ==================== CONFERENCE PAGE FIXES ==================== */
+.conf-card {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.conf-content {
+    max-width: 100%;
+}
+
+.conf-actions {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .btn-radiant {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* ==================== FORM FIXES ==================== */
+.contact-form,
+.newsletter-form {
+    max-width: 100%;
+}
+
+.form-row {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    max-width: 100%;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== SEARCH OVERLAY FIXES ==================== */
+.search-dropdown {
+    max-width: calc(100vw - 2rem);
+    left: 1rem;
+    right: 1rem;
+}
+
+.dropdown-item {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== TABLE/RESPONSIVE CONTENT FIXES ==================== */
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==================== MEGA MENU FIXES ==================== */
+@media (max-width: 768px) {
+    .mega-menu {
+        width: 100%;
+        max-width: calc(100vw - 2rem);
+    }
+    
+    .mega-menu-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== IMAGE GALLERY FIXES ==================== */
+.journal-image,
+.publication-image,
+.conf-image,
+.other-journal-img {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* ==================== TEXT OVERFLOW PREVENTION ==================== */
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Long URLs and email addresses */
+a[href^="mailto:"],
+a[href^="http"] {
+    word-break: break-all;
+}
+
+/* ==================== MOBILE SPECIFIC OVERFLOW FIXES ==================== */
+@media (max-width: 768px) {
+    /* Ensure all sections are contained */
+    section {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
+    /* Container padding adjustment */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Remove negative margins that might cause overflow */
+    * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Fix for flex items */
+    .hero-buttons,
+    .cta-buttons,
+    .journal-actions,
+    .journal-metrics,
+    .conf-actions {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Button fixes */
+    .btn-hero-primary,
+    .btn-hero-secondary,
+    .btn-cta-primary,
+    .btn-cta-secondary,
+    .btn-view-all,
+    .btn-mobile-cta,
+    .btn-primary-header {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ==================== SMALL MOBILE SPECIFIC (480px) ==================== */
+@media (max-width: 480px) {
+    /* Force maximum container constraint */
+    .container {
+        max-width: 100vw;
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+        overflow-x: hidden;
+    }
+    
+    /* Hero content specific */
+    .hero-content {
+        padding: 1.5rem 0.875rem;
+    }
+    
+    /* Page hero specific */
+    .page-hero-content {
+        padding: 0 0.875rem;
+    }
+    
+    /* All cards padding adjustment */
+    .journal-card,
+    .publication-card,
+    .value-card,
+    .step-card,
+    .guideline-card {
+        padding: 1rem 0.875rem;
+    }
+    
+    /* Form inputs */
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .newsletter-form input,
+    .filter-search input {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+}
+
+/* ==================== LANDSCAPE MODE FIX ==================== */
+@media (max-width: 900px) and (orientation: landscape) {
+    .hero-slider {
+        max-height: 70vh;
+        overflow: hidden;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+}
+
+/* ==================== IFRAME & EMBED FIXES ==================== */
+iframe,
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==================== PRE & CODE FIXES ==================== */
+pre,
+code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* ==================== SAFETY NET - FORCE CONSTRAINT ==================== */
+@media (max-width: 768px) {
+    /* Absolutely force everything to stay within viewport */
+    * {
+        max-width: 100vw !important;
+    }
+    
+    /* Exception for properly contained elements */
+    .container > *,
+    .hero-content > *,
+    .page-hero-content > *,
+    section > .container > * {
+        max-width: 100% !important;
+    }
+}
+
+/* ==================== DEBUGGING HELPER (Remove in production) ==================== */
+/*
+@media (max-width: 768px) {
+    * {
+        outline: 1px solid red;
+    }
+    
+    *:hover {
+        outline: 2px solid blue;
+    }
+}
+*/
