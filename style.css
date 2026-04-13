@@ -4726,6 +4726,14 @@ ul {
         display: flex;
     }
 
+    /* Hide Search Bar & Call to Action Buttons on Mobile Header */
+    .search-autocomplete-wrapper,
+    .integrated-access-bar,
+    .header-actions,
+    .btn-primary-header {
+        display: none !important;
+    }
+
     /* Header Actions */
     .header-actions {
         gap: 0.3rem;
