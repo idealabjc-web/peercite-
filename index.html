@@ -14,6 +14,8 @@
         rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    </script>
 </head>
 
 <body>
@@ -150,7 +152,7 @@
                                 </ul>
                             </div>
                             <div class="mega-col" data-category="environmental">
-                                <h5 class="mega-title"><i class='bx bx-leaf'></i> Environmental Sciences</h5>
+                                <h5 class="mega-title"><i class='bx bx-chip'></i> Environmental Sciences</h5>
                                 <ul class="mega-links">
                                     <li><a href="journal.html">Climate Studies</a></li>
                                     <li><a href="journal.html">Sustainability Research</a></li>
@@ -171,10 +173,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mega-footer">
+                        <!-- <div class="mega-footer">
                             <a href="publications.html" class="mega-footer-link">View All Publications <i
                                     class='bx bx-right-arrow-alt'></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -258,6 +260,20 @@
                 </div> -->
             <!-- Dropdown MUST be inside wrapper -->
             <!-- </div> -->
+            <!-- Replace your current search div with this -->
+            <div class="search-autocomplete-wrapper">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search journals, conferences, topics..."
+                        autocomplete="off" aria-label="Search PeerCite">
+                    <button id="search-btn" class="search-btn">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </div>
+
+                <!-- Suggestions Dropdown -->
+                <div id="search-dropdown" class="search-dropdown"></div>
+            </div>
+
     </header>
 
     <!-- MOBILE MENU -->

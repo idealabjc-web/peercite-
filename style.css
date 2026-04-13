@@ -758,83 +758,7 @@ ul {
     }
 }
 
-/* ==================== ANNOUNCEMENT BAR ==================== */
 
-/* ==================== TOP BAR ==================== */
-.top-bar {
-    background: var(--primary);
-    color: var(--white);
-    padding: 0.5rem 0;
-    font-size: 0.85rem;
-}
-
-.top-bar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.top-bar-left,
-.top-bar-right {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.top-bar-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--white);
-}
-
-.top-bar-link:hover {
-    opacity: 0.8;
-    color: var(--white);
-}
-
-.top-bar-divider {
-    width: 1px;
-    height: 16px;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.top-bar-socials {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.top-bar-social {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--white);
-    font-size: 0.9rem;
-}
-
-.top-bar-social.facebook {
-    background: #1877f2;
-}
-
-.top-bar-social.linkedin {
-    background: #0a66c2;
-}
-
-.top-bar-social.twitter {
-    background: #1da1f2;
-}
-
-.top-bar-social.instagram {
-    background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-}
-
-.top-bar-social:hover {
-    transform: translateY(-2px);
-    color: var(--white);
-}
 
 /* ==================== MAIN HEADER ==================== */
 /* .main-header {
@@ -863,20 +787,16 @@ ul {
 .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 12px;
+    margin-left: 0;
 }
 
 .nav-link {
-    position: relative;
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.6rem 1rem;
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--dark);
-    border-radius: var(--radius-sm);
+    margin-left: 0px;
+    gap: 6px;
+    padding: 8px 12px;
 }
 
 .nav-link:hover {
@@ -905,23 +825,35 @@ ul {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
+    left: 0;
+    transform: translateY(10px);
     background: var(--white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
-    min-width: 280px;
-    padding: 1rem;
+    min-width: 750px;
+    padding: 0;
+    pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
-    z-index: 100;
+    transition: all 0.3s ease;
+    z-index: 999;
 }
 
 .nav-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    /* invisible bridge */
 }
 
 .dropdown-item {
@@ -977,6 +909,9 @@ ul {
 
 .mega-col {
     padding: 0 1rem;
+}
+
+.mega-col:not(:last-child) {
     border-right: 1px solid var(--gray-100);
 }
 
@@ -1012,21 +947,21 @@ ul {
 }
 
 .mega-featured-card {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: var(--white);
-    padding: 1.5rem;
-    border-radius: var(--radius-md);
-    height: 100%;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1.2rem;
+    position: relative;
 }
 
 .featured-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.2rem 0.6rem;
-    border-radius: var(--radius-full);
-    font-size: 0.65rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    background: #10B981;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 .mega-featured-card h4 {
@@ -1133,140 +1068,113 @@ ul {
    ENHANCED SEARCH DROPDOWN STYLES
    ===================================================== */
 
+/* ==================== SEARCH STYLES ==================== */
+
 .search-autocomplete-wrapper {
     position: relative;
+    width: 320px;
+    margin-left: auto;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+#search-input {
+    flex: 1;
+    padding: 14px 20px 14px 50px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
     width: 100%;
+}
+
+#search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-btn {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6366f1;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-btn:hover {
+    color: #4f46e5;
 }
 
 .search-dropdown {
     position: absolute;
-    top: calc(100% + 8px);
+    top: 100%;
     left: 0;
-    right: 0;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background: white;
+    border: 1px solid #e5e7eb;
     border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    z-index: 9999;
-    /* Increased z-index */
-    overflow: hidden;
-    max-height: 400px;
+    margin-top: 8px;
+    max-height: 340px;
     overflow-y: auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
     display: none;
-    animation: dropdownSlideIn 0.2s ease;
+    z-index: 9999;
+    padding: 8px 0;
 }
 
-@keyframes dropdownSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.search-dropdown.visible {
+.search-dropdown.show {
     display: block;
 }
 
-/* Dropdown Items */
-.dropdown-item {
+.suggestion-item {
+    padding: 14px 20px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.25rem;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    gap: 12px;
+    font-size: 15px;
+    transition: all 0.2s;
 }
 
-.dropdown-item:last-child {
-    border-bottom: none;
+.suggestion-item:hover {
+    background: #f8fafc;
 }
 
-.dropdown-item:hover,
-.dropdown-item.highlighted {
-    background: rgba(16, 185, 129, 0.08);
+.suggestion-item i {
+    color: #6366f1;
+    font-size: 18px;
 }
 
-.dropdown-item-icon {
-    font-size: 1.5rem;
-    color: #10B981;
-    flex-shrink: 0;
-}
-
-.dropdown-item-text {
-    flex: 1;
-    min-width: 0;
-}
-
-.dropdown-item-title {
-    font-size: 0.95rem;
+.suggestion-highlight {
+    color: #6366f1;
     font-weight: 600;
-    color: #111;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 0.25rem;
 }
 
-.dropdown-item-title mark {
-    background: rgba(16, 185, 129, 0.2);
-    color: #059669;
-    font-weight: 700;
-    padding: 0 2px;
-    border-radius: 2px;
-}
-
-.dropdown-item-category {
-    font-size: 0.8rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* No Results State */
-.dropdown-no-results {
-    padding: 2rem 1.5rem;
-    text-align: center;
-    color: #888;
-}
-
-.dropdown-no-results i {
-    font-size: 2.5rem;
-    color: #ccc;
-    display: block;
-    margin-bottom: 0.75rem;
-}
-
-.dropdown-no-results p {
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.dropdown-no-results strong {
-    color: #10B981;
-}
-
-/* Custom Scrollbar */
-.search-dropdown::-webkit-scrollbar {
-    width: 6px;
-}
-
-.search-dropdown::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.search-dropdown::-webkit-scrollbar-thumb {
-    background: #10B981;
-    border-radius: 3px;
-}
-
-.search-dropdown::-webkit-scrollbar-thumb:hover {
-    background: #059669;
+/* For mobile responsiveness */
+@media (max-width: 992px) {
+    .search-autocomplete-wrapper {
+        width: 100%;
+        margin: 15px 0;
+    }
 }
 
 /* Mobile Responsive */
@@ -4570,7 +4478,7 @@ ul {
     /* Search Bar */
     .nav-controls {
         max-width: 400px;
-        margin: 0 1rem;
+        margin: 0;
     }
 
     /* Hero Slider */
@@ -5968,28 +5876,26 @@ code {
 }
 
 /* ==================== DROPDOWN MENUS Z-INDEX ==================== */
-.dropdown-menu {
+/* .dropdown-menu {
     position: absolute;
-    z-index: 2000;
-    /* Higher than header */
-}
-
+    z-index: 2000; */
+/* Higher than header */
+/* } */
+/* 
 .mega-menu {
     z-index: 2000;
-    /* Higher than header */
-}
+} */
 
 /* Search Dropdown */
-.search-dropdown {
+/* .search-dropdown {
     position: absolute;
     z-index: 9999;
-    /* Highest priority */
 }
 
 .search-autocomplete-wrapper {
     position: relative;
     z-index: 100;
-}
+} */
 
 /* ==================== HERO SLIDER Z-INDEX ==================== */
 /* .hero-slider {
@@ -7534,4 +7440,77 @@ html {
     .mega-col:last-child {
         border-bottom: none;
     }
+}
+
+/* Common column styling */
+.dropdown-column {
+    flex: 1;
+    padding: 20px 30px;
+    border-right: 1px solid #e5e5e5;
+}
+
+/* Remove border from last column */
+.dropdown-column:last-child {
+    border-right: none;
+}
+
+/* Section titles (Medical, Technology, Environmental) */
+.dropdown-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Active underline (same for all) */
+.dropdown-column h4::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #10B981;
+    /* your green theme */
+}
+
+/* List items */
+.dropdown-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-column ul li {
+    font-size: 15px;
+    color: #555;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.dropdown-column ul li:hover {
+    color: #10B981;
+}
+
+/* 🔥 FIX FOR ENVIRONMENTAL COLUMN */
+.dropdown-column.environmental {
+    opacity: 1 !important;
+    /* remove faded look */
+    color: #1a1a1a !important;
+}
+
+/* Ensure text inside is not faded */
+.dropdown-column.environmental ul li {
+    color: #555 !important;
+}
+
+/* Optional: active tab highlight (if needed) */
+.dropdown-column.active h4 {
+    color: #10B981;
 }

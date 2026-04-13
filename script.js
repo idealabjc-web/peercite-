@@ -123,241 +123,123 @@ const startAuto = () => {
 };
 startAuto();
 
-// =====================================================
-// NEW SEARCH OVERLAY SCRIPT
-// =====================================================
-/* =====================================================
-   SEARCH FUNCTIONALITY - FIXED & SEO OPTIMIZED
-   ===================================================== */
+// search.js - Smart Search for PeerCite Publishers
 
-const searchInput = document.getElementById('journal-search');
-const searchDropdown = document.getElementById('search-dropdown');
+document.addEventListener('DOMContentLoaded', function () {
 
-// Highlight matching text in search results
-const highlightMatch = (text, query) => {
-    if (!query) return text;
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    return text.replace(regex, '<mark>$1</mark>');
-};
+    const searchInput = document.getElementById('search-input');
+    const searchDropdown = document.getElementById('search-dropdown');
+    const searchBtn = document.getElementById('search-btn');
 
-// Enhanced search matching with better SEO
-const searchArticles = (query) => {
-    if (!query || !articlesData) return [];
+    // Comprehensive searchable data (Add more as needed)
+    const searchData = [
+        { title: "Home", url: "index.html", category: "Page", icon: "bx bx-home" },
+        { title: "Publications", url: "publications.html", category: "Section", icon: "bx bx-book-open" },
+        { title: "Authors Hub", url: "authors.html", category: "Section", icon: "bx bx-feather" },
+        { title: "About Us", url: "about.html", category: "Page", icon: "bx bx-building-house" },
+        { title: "Contact", url: "contact.html", category: "Page", icon: "bx bx-envelope" },
 
-    const q = query.toLowerCase().trim();
+        // Journals & Topics
+        { title: "AI & Machine Learning in Modern Research", url: "journal.html", category: "Journal", icon: "bx bx-chip" },
+        { title: "Mental Health & Neuroscience Research Journal", url: "journal.html", category: "Journal", icon: "bx bx-heart-circle" },
+        { title: "Climate & Environmental Sustainability Studies", url: "journal.html", category: "Journal", icon: "bx bx-leaf" },
+        { title: "Quantum Computing & Advanced Physics Review", url: "journal.html", category: "Journal", icon: "bx bx-atom" },
+        { title: "Biotechnology & Genomics Frontiers", url: "journal.html", category: "Journal", icon: "bx bx-test-tube" },
+        { title: "Data Science & Analytics Quarterly", url: "journal.html", category: "Journal", icon: "bx bx-bar-chart-alt-2" },
 
-    return articlesData.filter(art => {
-        const title = art.title.toLowerCase();
-        const category = art.category.toLowerCase();
+        // Popular Keywords
+        { title: "Artificial Intelligence", url: "journal.html", category: "Topic", icon: "bx bx-brain" },
+        { title: "Neuroscience", url: "journal.html", category: "Topic", icon: "bx bx-brain" },
+        { title: "Climate Change", url: "journal.html", category: "Topic", icon: "bx bx-leaf" },
+        { title: "Mental Health Research", url: "journal.html", category: "Topic", icon: "bx bx-heart-circle" },
+        { title: "Global Health Summit", url: "journal.html", category: "Conference", icon: "bx bx-calendar-event" },
+        { title: "AI World Congress", url: "journal.html", category: "Conference", icon: "bx bx-calendar-event" }
+    ];
 
-        // SEO-friendly matching logic
-        // 1. Exact title match (highest priority)
-        if (title === q) return true;
+    function showSuggestions(query) {
+        searchDropdown.innerHTML = '';
 
-        // 2. Title starts with query
-        if (title.startsWith(q)) return true;
+        if (query.length < 2) {
+            searchDropdown.classList.remove('show');
+            return;
+        }
 
-        // 3. Title contains query as whole word
-        const words = title.split(/\s+/);
-        if (words.some(word => word.startsWith(q))) return true;
+        const filtered = searchData.filter(item =>
+            item.title.toLowerCase().includes(query.toLowerCase())
+        );
 
-        // 4. Title contains query anywhere
-        if (title.includes(q)) return true;
+        if (filtered.length === 0) {
+            searchDropdown.innerHTML = `
+                <div class="suggestion-item">
+                    <i class='bx bx-info-circle'></i>
+                    <span>No results found for "<strong>${query}</strong>"</span>
+                </div>`;
+            searchDropdown.classList.add('show');
+            return;
+        }
 
-        // 5. Category match
-        if (category.includes(q)) return true;
+        filtered.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'suggestion-item';
 
-        // 6. Special handling for common abbreviations
-        const abbrevMap = {
-            'ai': 'artificial intelligence',
-            'ml': 'machine learning',
-            'iot': 'internet of things',
-            'vr': 'virtual reality',
-            'ar': 'augmented reality'
-        };
+            const highlightedTitle = item.title.replace(
+                new RegExp(`(${query})`, 'gi'),
+                '<span class="suggestion-highlight">$1</span>'
+            );
 
-        if (abbrevMap[q] && title.includes(abbrevMap[q])) return true;
+            div.innerHTML = `
+                <i class='${item.icon}'></i>
+                <div>
+                    <div>${highlightedTitle}</div>
+                    <small style="color:#6b7280; font-size:12px;">${item.category}</small>
+                </div>
+            `;
 
-        return false;
-    }).slice(0, 8); // Limit to top 8 results
-};
+            div.addEventListener('click', () => {
+                window.location.href = item.url;
+            });
 
-// Show dropdown with search results
-const showDropdown = (matches, query) => {
-    if (!searchDropdown) {
-        console.warn('Search dropdown element not found');
-        return;
-    }
-
-    // Clear previous results
-    searchDropdown.innerHTML = '';
-
-    // If no query, hide dropdown
-    if (!query || query.trim() === '') {
-        searchDropdown.classList.remove('visible');
-        return;
-    }
-
-    // If no matches found
-    if (matches.length === 0) {
-        searchDropdown.innerHTML = `
-            <div class="dropdown-no-results">
-                <i class='bx bx-search-alt'></i>
-                <p>No journals found for "<strong>${query}</strong>"</p>
-            </div>
-        `;
-        searchDropdown.classList.add('visible');
-        return;
-    }
-
-    // Display matching results
-    searchDropdown.innerHTML = matches.map(art => `
-        <div class="dropdown-item" data-id="${art.id}">
-            <i class='bx bx-book-open dropdown-item-icon'></i>
-            <div class="dropdown-item-text">
-                <div class="dropdown-item-title">${highlightMatch(art.title, query)}</div>
-                <div class="dropdown-item-category">${art.category}</div>
-            </div>
-            <i class='bx bx-chevron-right' style="color: #ccc; font-size: 1.2rem;"></i>
-        </div>
-    `).join('');
-
-    // Add click handlers to results
-    searchDropdown.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const selectedId = parseInt(item.dataset.id);
-            const selectedArticle = articlesData.find(a => a.id === selectedId);
-
-            if (selectedArticle) {
-                // Update search input
-                searchInput.value = selectedArticle.title;
-
-                // Hide dropdown
-                searchDropdown.classList.remove('visible');
-
-                // Reset locked article
-                if (typeof lockedArticleId !== 'undefined') {
-                    lockedArticleId = null;
-                }
-
-                // Switch to publications page if needed
-                if (typeof pages !== 'undefined' && pages.home && pages.home.style.display !== 'none') {
-                    if (typeof switchPage === 'function') {
-                        switchPage('publications');
-                    }
-                }
-
-                // Render filtered articles
-                if (typeof renderArticles === 'function') {
-                    renderArticles(selectedArticle.title);
-                }
-
-                // Update access button if function exists
-                if (typeof updateAccessButton === 'function') {
-                    updateAccessButton(selectedArticle);
-                }
-
-                // Scroll to top of publications
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            searchDropdown.appendChild(div);
         });
+
+        searchDropdown.classList.add('show');
+    }
+
+    // Input Event
+    searchInput.addEventListener('input', function () {
+        showSuggestions(this.value.trim());
     });
 
-    // Show dropdown
-    searchDropdown.classList.add('visible');
-};
-
-// Initialize search functionality
-if (searchInput && searchDropdown) {
-    // Clear initial value
-    searchInput.value = '';
-
-    // Input event listener
-    searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.trim();
-
-        // Reset locked article
-        if (typeof lockedArticleId !== 'undefined') {
-            lockedArticleId = null;
-        }
-
-        // Update publications page if visible
-        if (typeof pages !== 'undefined' && pages.publications && pages.publications.style.display !== 'none') {
-            if (typeof renderArticles === 'function') {
-                renderArticles(query);
-            }
-        }
-
-        // Show search suggestions
-        const matches = searchArticles(query);
-        showDropdown(matches, query);
-    });
-
-    // Focus event - show recent searches or placeholder
-    searchInput.addEventListener('focus', () => {
+    // Search Button Click
+    searchBtn.addEventListener('click', function () {
         const query = searchInput.value.trim();
         if (query) {
-            const matches = searchArticles(query);
-            showDropdown(matches, query);
+            // You can later create a dedicated search results page
+            window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
         }
     });
 
-    // Keyboard navigation
-    let highlightedIndex = -1;
-
-    searchInput.addEventListener('keydown', (e) => {
-        const items = searchDropdown.querySelectorAll('.dropdown-item');
-
-        if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            highlightedIndex = Math.min(highlightedIndex + 1, items.length - 1);
-            updateHighlight(items, highlightedIndex);
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            highlightedIndex = Math.max(highlightedIndex - 1, -1);
-            updateHighlight(items, highlightedIndex);
-        } else if (e.key === 'Enter') {
-            e.preventDefault();
-            if (highlightedIndex >= 0 && items[highlightedIndex]) {
-                items[highlightedIndex].click();
-            }
-        } else if (e.key === 'Escape') {
-            searchDropdown.classList.remove('visible');
-            searchInput.blur();
-            highlightedIndex = -1;
+    // Enter Key Support
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            searchBtn.click();
         }
     });
 
-    // Update highlighted item
-    const updateHighlight = (items, index) => {
-        items.forEach((item, i) => {
-            if (i === index) {
-                item.classList.add('highlighted');
-                item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-            } else {
-                item.classList.remove('highlighted');
-            }
-        });
-    };
-
-    // Click outside to close
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.search-autocomplete-wrapper')) {
-            searchDropdown.classList.remove('visible');
-            highlightedIndex = -1;
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+            searchDropdown.classList.remove('show');
         }
     });
 
-    // Prevent dropdown from closing when clicking inside
-    searchDropdown.addEventListener('click', (e) => {
-        e.stopPropagation();
+    // Optional: Show popular searches when focused and empty
+    searchInput.addEventListener('focus', function () {
+        if (this.value.trim() === '') {
+            // You can show trending searches here if you want
+        }
     });
-
-} else {
-    console.error('Search elements not found. Check your HTML IDs.');
-}
-
+});
 /* =====================================================
    MOBILE SEARCH (if separate element exists)
    ===================================================== */
