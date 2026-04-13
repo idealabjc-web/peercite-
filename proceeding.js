@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const journal = window.journalsData[journalId];
-        
+
         if (!journal) {
             console.error("❌ Journal not found:", journalId);
             window.location.href = "publications.html";

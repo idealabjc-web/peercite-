@@ -742,7 +742,7 @@ const JOURNALS_DATA = {
    Reads URL param and populates the page
    ===================================================== */
 
-(function() {
+(function () {
     // Only run on journal.html
     if (!document.getElementById('journal-hero')) return;
 
@@ -822,7 +822,7 @@ const JOURNALS_DATA = {
     </div>
 `).join('');
 
-document.getElementById("proceedingsList").innerHTML = proceedingsHTML;
+    document.getElementById("proceedingsList").innerHTML = proceedingsHTML;
 
 
     // ---- OTHER JOURNALS (show 4 random others) ----

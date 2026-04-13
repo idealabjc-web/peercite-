@@ -837,31 +837,27 @@ ul {
 }
 
 /* ==================== MAIN HEADER ==================== */
-.main-header {
+/* .main-header {
     position: sticky;
     top: 0;
-    z-index: 100;
-
     background: rgb(255, 255, 255);
-
-    /* background: rgb(191, 243, 199); */
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: var(--transition);
-}
+} */
 
-.main-header.scrolled {
+/* .main-header.scrolled {
     box-shadow: var(--shadow-md);
-}
+} */
 
-.main-header .container {
+/* .main-header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
     background-origin: padding-box;
-}
+} */
 
 /* Desktop Nav */
 .desktop-nav {
@@ -1084,13 +1080,13 @@ ul {
 }
 
 /* Header Actions */
-.header-actions {
+/* .header-actions {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
+} */
 
-.header-icon-btn {
+/* .header-icon-btn {
     width: 44px;
     height: 44px;
     display: flex;
@@ -1098,12 +1094,12 @@ ul {
     justify-content: center;
     border-radius: var(--radius-full);
     font-size: 1.2rem;
-}
+} */
 
-.header-icon-btn:hover {
+/* .header-icon-btn:hover {
     background: var(--gray-100);
     color: var(--primary);
-}
+} */
 
 /* Hamburger */
 .hamburger {
@@ -1134,80 +1130,12 @@ ul {
 
 /* ==================== SEARCH OVERLAY ==================== */
 /* =====================================================
-   NEW SEARCH BAR & OVERLAY STYLES
+   ENHANCED SEARCH DROPDOWN STYLES
    ===================================================== */
-
-/* 1. Header Search Bar Styling */
-.nav-controls {
-    flex-grow: 1;
-    max-width: 500px;
-    margin: 0 2rem;
-}
-
-.integrated-access-bar {
-    display: flex;
-    align-items: center;
-    background: var(--bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-full);
-    padding: 0.25rem;
-    padding-left: 1rem;
-    box-shadow: var(--shadow-sm);
-    cursor: pointer;
-    transition: all var(--transition);
-}
-
-.integrated-access-bar:hover {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-}
-
-.search-section {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.search-icon-ui {
-    color: var(--slate);
-    font-size: 1.2rem;
-}
-
-#journal-search-trigger {
-    width: 100%;
-    border: none;
-    background: transparent;
-    outline: none;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.95rem;
-    color: var(--slate-dark);
-    cursor: pointer;
-}
-
-#journal-search-trigger::placeholder {
-    color: var(--slate);
-}
-
-.access-divider {
-    width: 1px;
-    height: 24px;
-    background: var(--border-color);
-    margin: 0 0.5rem;
-}
-
-.nav-btn.journal-articles-btn {
-    background: var(--primary-light);
-    color: var(--primary);
-    border-radius: var(--radius-full);
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-}
 
 .search-autocomplete-wrapper {
     position: relative;
+    width: 100%;
 }
 
 .search-dropdown {
@@ -1215,23 +1143,23 @@ ul {
     top: calc(100% + 8px);
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-    z-index: 2000;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    /* Increased z-index */
     overflow: hidden;
-    max-height: 320px;
+    max-height: 400px;
     overflow-y: auto;
     display: none;
-    animation: dropdownFadeIn 0.2s ease;
+    animation: dropdownSlideIn 0.2s ease;
 }
 
-@keyframes dropdownFadeIn {
+@keyframes dropdownSlideIn {
     from {
         opacity: 0;
-        transform: translateY(-6px);
+        transform: translateY(-10px);
     }
 
     to {
@@ -1244,14 +1172,15 @@ ul {
     display: block;
 }
 
+/* Dropdown Items */
 .dropdown-item {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 0.75rem 1.2rem;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
     cursor: pointer;
-    transition: background 0.15s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .dropdown-item:last-child {
@@ -1264,47 +1193,120 @@ ul {
 }
 
 .dropdown-item-icon {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #10B981;
     flex-shrink: 0;
 }
 
 .dropdown-item-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
+    flex: 1;
     min-width: 0;
 }
 
 .dropdown-item-title {
-    font-size: 0.82rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: var(--text-main);
+    color: #111;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 0.25rem;
 }
 
 .dropdown-item-title mark {
-    background: transparent;
-    color: #10B981;
+    background: rgba(16, 185, 129, 0.2);
+    color: #059669;
     font-weight: 700;
+    padding: 0 2px;
+    border-radius: 2px;
 }
 
 .dropdown-item-category {
-    font-size: 0.72rem;
-    color: var(--text-muted);
+    font-size: 0.8rem;
+    color: #888;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
+/* No Results State */
 .dropdown-no-results {
-    padding: 1.2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
+    color: #888;
 }
 
+.dropdown-no-results i {
+    font-size: 2.5rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.dropdown-no-results p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.dropdown-no-results strong {
+    color: #10B981;
+}
+
+/* Custom Scrollbar */
+.search-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.search-dropdown::-webkit-scrollbar-thumb {
+    background: #10B981;
+    border-radius: 3px;
+}
+
+.search-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #059669;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .search-dropdown {
+        max-height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-item {
+        padding: 0.875rem 1rem;
+    }
+
+    .dropdown-item-title {
+        font-size: 0.875rem;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+    }
+
+    .dropdown-item-icon {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-dropdown {
+        max-height: 250px;
+    }
+
+    .dropdown-item {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .dropdown-no-results {
+        padding: 1.5rem 1rem;
+    }
+}
 
 /* ==================== MOBILE MENU ==================== */
 .mobile-overlay {
@@ -1882,14 +1884,14 @@ ul {
     margin-bottom: 1rem;
 }
 
-.section-header h2 {
+/* .section-header h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .section-header p {
     color: var(--gray-500);
-}
+} */
 
 /* ==================== FEATURED JOURNALS ==================== */
 .featured-section {
@@ -3159,7 +3161,7 @@ ul {
 }
 
 /* ==================== HEADER PRIMARY BUTTON ==================== */
-.btn-primary-header {
+/* .btn-primary-header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -3178,7 +3180,7 @@ ul {
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
-}
+} */
 
 /* Mobile CTA */
 .btn-mobile-cta {
@@ -4635,9 +4637,9 @@ ul {
     }
 
     /* Hero Slider */
-    .hero-slider {
+    /* .hero-slider {
         height: 300px;
-    }
+    } */
 
     .hero-content {
         padding: 1.5rem 1rem;
@@ -5326,158 +5328,7 @@ ul {
         font-size: 16px !important;
     }
 }
-/* =====================================================
-   HORIZONTAL SCROLL FIX - NO OVERFLOW ON ANY DEVICE
-   ===================================================== */
 
-/* ==================== GLOBAL OVERFLOW PREVENTION ==================== */
-html {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-}
-
-body {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-    max-width: 100vw;
-}
-
-/* Prevent all containers from causing overflow */
-* {
-    max-width: 100%;
-}
-
-.container {
-    overflow-x: hidden;
-    max-width: 100%;
-    width: 100%;
-}
-
-/* ==================== PRELOADER FIXES ==================== */
-.preloader {
-    overflow: hidden;
-    width: 100vw;
-    max-width: 100%;
-}
-
-.preloader-scene,
-.particles-bg,
-.floating-icons {
-    max-width: 100vw;
-    overflow: hidden;
-}
-
-.globe-container {
-    max-width: 90vw;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .orbit-ring.ring-1,
-    .orbit-ring.ring-2,
-    .orbit-ring.ring-3 {
-        display: none; /* Hide orbit rings that cause overflow on mobile */
-    }
-    
-    .floating-icons {
-        display: none; /* Already set but ensuring */
-    }
-}
-
-/* ==================== HEADER FIXES ==================== */
-.top-bar,
-.main-header {
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
-.top-bar .container,
-.main-header .container {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-
-/* Navigation Controls */
-.nav-controls {
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.integrated-access-bar {
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {
-    .top-bar .container {
-        padding: 0 1rem;
-    }
-    
-    .main-header .container {
-        padding: 0.3rem 1rem;
-    }
-    
-    .header-actions {
-        flex-shrink: 0;
-    }
-}
-
-/* ==================== HERO SLIDER FIXES ==================== */
-/* .hero-slider {
-    overflow: hidden;
-    max-width: 100vw;
-    width: 100%;
-} */
-
-/* .hero-slides-wrapper {
-    max-width: 100%;
-    overflow: hidden;
-} */
-/* 
-.hero-slide {
-    max-width: 100vw;
-    width: 100%;
-} */
-
-.hero-content {
-    max-width: 100%;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
-}
-
-.hero-content h2 {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-@media (max-width: 768px) {
-    .hero-arrow {
-        position: absolute;
-    }
-    
-    .hero-prev {
-        left: 0.5rem;
-    }
-    
-    .hero-next {
-        right: 0.5rem;
-    }
-    
-    .hero-buttons {
-        width: 100%;
-        padding: 0 1rem;
-        box-sizing: border-box;
-    }
-    
-    .btn-hero-primary,
-    .btn-hero-secondary {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-}
 
 /* ==================== STATS SECTION FIXES ==================== */
 .stats-section {
@@ -5600,24 +5451,27 @@ body {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
 .filter-categories::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
+    /* Chrome/Safari */
 }
 
 @media (max-width: 768px) {
     .filter-bar {
         padding: 0 0.5rem;
     }
-    
+
     .filter-categories {
         justify-content: flex-start;
         padding: 0.5rem 0;
     }
-    
+
     .filter-btn {
         white-space: nowrap;
         flex-shrink: 0;
@@ -5748,18 +5602,18 @@ body {
         max-width: 300px;
         margin: 0 auto;
     }
-    
+
     .journal-metrics {
         gap: 1rem;
         justify-content: center;
     }
-    
+
     .journal-actions {
         gap: 0.75rem;
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .journal-actions .btn-hero-primary,
     .journal-actions .btn-hero-secondary {
         width: 100%;
@@ -5796,7 +5650,7 @@ body {
         padding: 0 1rem;
         box-sizing: border-box;
     }
-    
+
     .proceeding-badge-wrap {
         flex-wrap: wrap;
     }
@@ -5880,7 +5734,7 @@ table {
         width: 100%;
         max-width: calc(100vw - 2rem);
     }
-    
+
     .mega-menu-inner {
         grid-template-columns: 1fr;
     }
@@ -5896,7 +5750,16 @@ table {
 }
 
 /* ==================== TEXT OVERFLOW PREVENTION ==================== */
-h1, h2, h3, h4, h5, h6, p, span, a, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -5910,24 +5773,25 @@ a[href^="http"] {
 
 /* ==================== MOBILE SPECIFIC OVERFLOW FIXES ==================== */
 @media (max-width: 768px) {
+
     /* Ensure all sections are contained */
     section {
         overflow-x: hidden;
         max-width: 100vw;
     }
-    
+
     /* Container padding adjustment */
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    
+
     /* Remove negative margins that might cause overflow */
     * {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-    
+
     /* Fix for flex items */
     .hero-buttons,
     .cta-buttons,
@@ -5938,7 +5802,7 @@ a[href^="http"] {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-    
+
     /* Button fixes */
     .btn-hero-primary,
     .btn-hero-secondary,
@@ -5954,6 +5818,7 @@ a[href^="http"] {
 
 /* ==================== SMALL MOBILE SPECIFIC (480px) ==================== */
 @media (max-width: 480px) {
+
     /* Force maximum container constraint */
     .container {
         max-width: 100vw;
@@ -5961,17 +5826,17 @@ a[href^="http"] {
         padding-right: 0.875rem;
         overflow-x: hidden;
     }
-    
+
     /* Hero content specific */
     .hero-content {
         padding: 1.5rem 0.875rem;
     }
-    
+
     /* Page hero specific */
     .page-hero-content {
         padding: 0 0.875rem;
     }
-    
+
     /* All cards padding adjustment */
     .journal-card,
     .publication-card,
@@ -5980,7 +5845,7 @@ a[href^="http"] {
     .guideline-card {
         padding: 1rem 0.875rem;
     }
-    
+
     /* Form inputs */
     .form-group input,
     .form-group select,
@@ -5989,7 +5854,8 @@ a[href^="http"] {
     .filter-search input {
         width: 100%;
         max-width: 100%;
-        font-size: 16px; /* Prevent zoom on iOS */
+        font-size: 16px;
+        /* Prevent zoom on iOS */
     }
 }
 
@@ -5999,7 +5865,7 @@ a[href^="http"] {
         max-height: 70vh;
         overflow: hidden;
     } */
-    
+
     .hero-content {
         padding: 1rem;
     }
@@ -6025,16 +5891,17 @@ code {
 
 /* ==================== SAFETY NET - FORCE CONSTRAINT ==================== */
 @media (max-width: 768px) {
+
     /* Absolutely force everything to stay within viewport */
     * {
         max-width: 100vw !important;
     }
-    
+
     /* Exception for properly contained elements */
-    .container > *,
-    .hero-content > *,
-    .page-hero-content > *,
-    section > .container > * {
+    .container>*,
+    .hero-content>*,
+    .page-hero-content>*,
+    section>.container>* {
         max-width: 100% !important;
     }
 }
@@ -6050,3 +5917,1647 @@ code {
         outline: 2px solid blue;
     }
 } */
+/* =====================================================
+   Z-INDEX FIX - PREVENT HERO SLIDER OVERLAP
+   ===================================================== */
+
+/* ==================== HEADER Z-INDEX ==================== */
+.top-bar {
+    position: relative;
+    z-index: 200;
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Increased from 100 */
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== DROPDOWN MENUS Z-INDEX ==================== */
+.dropdown-menu {
+    position: absolute;
+    z-index: 2000;
+    /* Higher than header */
+}
+
+.mega-menu {
+    z-index: 2000;
+    /* Higher than header */
+}
+
+/* Search Dropdown */
+.search-dropdown {
+    position: absolute;
+    z-index: 9999;
+    /* Highest priority */
+}
+
+.search-autocomplete-wrapper {
+    position: relative;
+    z-index: 100;
+}
+
+/* ==================== HERO SLIDER Z-INDEX ==================== */
+/* .hero-slider {
+    position: relative;
+    z-index: 1; 
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.hero-slide {
+    position: relative;
+    z-index: 1; 
+}
+
+.hero-slide::before {
+    position: absolute;
+    z-index: 2;
+} */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-arrow {
+    position: absolute;
+    z-index: 10;
+    /* Above content but below header */
+}
+
+.hero-dots {
+    position: absolute;
+    z-index: 10;
+}
+
+/* ==================== MOBILE MENU Z-INDEX ==================== */
+.mobile-overlay {
+    position: fixed;
+    z-index: 400;
+}
+
+.mobile-menu {
+    position: fixed;
+    z-index: 500;
+}
+
+/* ==================== PRELOADER Z-INDEX ==================== */
+.preloader {
+    position: fixed;
+    z-index: 99999;
+    /* Highest - covers everything */
+}
+
+/* ==================== BACK TO TOP Z-INDEX ==================== */
+.back-to-top {
+    position: fixed;
+    z-index: 100;
+}
+
+/* ==================== ENSURE PROPER STACKING ==================== */
+/* Create stacking context for header */
+.main-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation dropdowns */
+.nav-dropdown {
+    position: relative;
+    z-index: auto;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    z-index: 2000;
+}
+
+/* ==================== MOBILE FIXES ==================== */
+@media (max-width: 768px) {
+    .main-header {
+        z-index: 1000;
+    }
+
+    /* .hero-slider {
+        z-index: 1;
+        margin-top: 0;
+    } */
+
+    /* Ensure mobile menu is above everything except preloader */
+    .mobile-menu {
+        z-index: 5000;
+    }
+
+    .mobile-overlay {
+        z-index: 4000;
+    }
+}
+
+/* ==================== FILTER SECTION Z-INDEX ==================== */
+.filter-section {
+    position: sticky;
+    top: 70px;
+    z-index: 50;
+    /* Below header but above content */
+    background: var(--white);
+}
+
+/* ==================== PAGE SECTIONS Z-INDEX ==================== */
+/* Ensure all page sections are below header */
+.stats-section,
+.featured-section,
+.cta-section,
+.newsletter-section,
+.about-content-section,
+.values-section,
+.team-section,
+.steps-section,
+.guidelines-section,
+.contact-section,
+.faq-section,
+.how-section,
+.speakers-section,
+.partners-section,
+.proceedings-section,
+.publications-section,
+.journal-about-section,
+.conf-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* =====================================================
+   HEADER SPACING & LOGO FIX
+   ===================================================== */
+
+/* ==================== MAIN HEADER OPTIMIZATION ==================== */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    overflow: visible;
+    /* Allow dropdowns */
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    gap: 1rem;
+    /* Add gap between logo and nav */
+    overflow: visible;
+    height: auto;
+    min-height: 70px;
+    /* Fixed minimum height */
+}
+
+/* ==================== LOGO OPTIMIZATION ==================== */
+.logo-img {
+    height: 65px;
+    /* Reduced from 90px */
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    /* Prevent logo from shrinking */
+}
+
+/* ==================== DESKTOP NAV SPACING ==================== */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Increased from 0.25rem */
+    margin-left: 1.5rem;
+    /* Add space after logo */
+    overflow: visible;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.6rem 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+/* ==================== SEARCH CONTROLS OPTIMIZATION ==================== */
+.nav-controls {
+    flex-grow: 1;
+    max-width: 450px;
+    /* Reduced from 500px */
+    margin: 0 1rem;
+    /* Reduced from 2rem */
+    overflow: visible;
+}
+
+.integrated-access-bar {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 0.2rem;
+    /* Reduced from 0.25rem */
+    padding-left: 0.8rem;
+    /* Reduced from 1rem */
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition);
+    overflow: visible;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    overflow: visible;
+}
+
+.search-icon-ui {
+    color: var(--slate);
+    font-size: 1.1rem;
+    /* Reduced from 1.2rem */
+}
+
+#journal-search-trigger,
+#journal-search {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0.5rem 0.6rem;
+    /* Reduced from 0.6rem 0.8rem */
+    font-size: 0.875rem;
+    /* Reduced from 0.95rem */
+    color: var(--slate-dark);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#journal-search-trigger::placeholder,
+#journal-search::placeholder {
+    color: var(--slate);
+    font-size: 0.85rem;
+    /* Smaller placeholder */
+}
+
+.access-divider {
+    width: 1px;
+    height: 20px;
+    /* Reduced from 24px */
+    background: var(--border-color);
+    margin: 0 0.4rem;
+    /* Reduced from 0.5rem */
+}
+
+.nav-btn.journal-articles-btn {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    padding: 0.4rem 0.8rem;
+    /* Reduced from 0.5rem 1rem */
+    font-size: 0.75rem;
+    /* Reduced from 0.8rem */
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* ==================== HEADER ACTIONS OPTIMIZATION ==================== */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    /* Reduced from 0.5rem */
+    overflow: visible;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.header-icon-btn {
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
+    /* Reduced from 44px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    font-size: 1.1rem;
+    /* Reduced from 1.2rem */
+    flex-shrink: 0;
+}
+
+.header-icon-btn:hover {
+    background: var(--gray-100);
+    color: var(--primary);
+}
+
+/* ==================== REMOVE SCROLLBAR FROM HEADER ==================== */
+.main-header {
+    overflow: visible;
+    /* Changed from hidden to allow dropdowns */
+}
+
+.main-header .container {
+    overflow: visible;
+    /* Allow dropdowns to show */
+}
+
+.top-bar,
+.main-header {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.top-bar::-webkit-scrollbar,
+.main-header::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* ==================== RESPONSIVE HEADER ==================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .logo-img {
+        height: 55px;
+        /* Reduced */
+    }
+
+    .main-header .container {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        min-height: 60px;
+        gap: 0.75rem;
+    }
+
+    .nav-controls {
+        max-width: 350px;
+        margin: 0 0.75rem;
+    }
+
+    .desktop-nav {
+        margin-left: 1rem;
+        gap: 0.3rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+        /* Reduced */
+    }
+
+    .main-header .container {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        min-height: 60px;
+        gap: 0.5rem;
+    }
+
+    /* Hide desktop nav and search on mobile */
+    .desktop-nav,
+    .nav-controls {
+        display: none !important;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    .header-actions {
+        gap: 0.3rem;
+        margin-left: auto;
+    }
+
+    .header-icon-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .logo-img {
+        height: 45px;
+        /* Further reduced */
+    }
+
+    .main-header .container {
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        min-height: 55px;
+        gap: 0.4rem;
+    }
+
+    .header-icon-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .header-actions {
+        gap: 0.25rem;
+    }
+}
+
+/* ==================== TOP BAR OPTIMIZATION ==================== */
+.top-bar {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.4rem 0;
+    /* Reduced from 0.5rem */
+    font-size: 0.8rem;
+    /* Reduced from 0.85rem */
+    overflow: hidden;
+}
+
+.top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    /* Reduced from 1.5rem */
+    overflow: visible;
+}
+
+.top-bar-social {
+    width: 28px;
+    /* Reduced from 30px */
+    height: 28px;
+    /* Reduced from 30px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 0.85rem;
+    /* Reduced from 0.9rem */
+}
+
+/* ==================== COMPACT HEADER VARIANT (Optional) ==================== */
+.main-header.compact {
+    min-height: 60px;
+}
+
+.main-header.compact .logo-img {
+    height: 55px;
+}
+
+.main-header.compact .container {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+/* ==================== HAMBURGER MENU ==================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    /* Reduced from 5px */
+    padding: 0.4rem;
+    /* Reduced from 0.5rem */
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 22px;
+    /* Reduced from 24px */
+    height: 2px;
+    background: var(--dark);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+/* ==================== SCROLLED HEADER STATE ==================== */
+.main-header.scrolled {
+    box-shadow: var(--shadow-md);
+}
+
+.main-header.scrolled .logo-img {
+    height: 60px;
+    /* Slightly smaller when scrolled */
+    transition: height 0.3s ease;
+}
+
+/* ==================== FLEX ALIGNMENT FIX ==================== */
+.main-header .container>* {
+    flex-shrink: 0;
+    /* Prevent items from shrinking unexpectedly */
+}
+
+.desktop-nav {
+    flex-shrink: 1;
+    /* Allow nav to shrink if needed */
+}
+
+.nav-controls {
+    flex-shrink: 1;
+    /* Allow search to shrink if needed */
+}
+
+/* ==================== PREVENT OVERFLOW ==================== */
+.main-header,
+.main-header .container,
+.desktop-nav,
+.nav-controls,
+.header-actions {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   ABSOLUTE HORIZONTAL SCROLL PREVENTION
+   ===================================================== */
+
+/* ==================== GLOBAL OVERFLOW FIX ==================== */
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+
+/* Force all elements to respect viewport width */
+* {
+    max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== CONTAINER FIX ==================== */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--padding);
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* ==================== PRELOADER FIX ==================== */
+.preloader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.preloader-scene,
+.particles-bg,
+.floating-icons {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.globe-container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+/* Hide orbit rings on all devices to prevent overflow */
+.orbit-ring {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .orbit-ring {
+        display: block;
+    }
+}
+
+/* ==================== HEADER ABSOLUTE FIX ==================== */
+.top-bar {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.top-bar .container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: visible;
+    /* Allow dropdowns but prevent horizontal scroll */
+    width: 100%;
+    max-width: 100vw;
+}
+
+.main-header .container {
+    overflow: visible;
+    /* For dropdowns */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure nav doesn't overflow */
+.desktop-nav {
+    overflow: visible;
+    flex-wrap: nowrap;
+}
+
+/* Prevent search from causing overflow */
+.nav-controls {
+    overflow: visible;
+    max-width: 100%;
+}
+
+.integrated-access-bar {
+    overflow: visible;
+    max-width: 100%;
+}
+
+.search-autocomplete-wrapper {
+    position: relative;
+    overflow: visible;
+    max-width: 100%;
+}
+
+/* ==================== HERO SLIDER ABSOLUTE FIX ==================== */
+/* .hero-slider {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-slides-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-slide {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+} */
+
+.hero-content {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.hero-content h2,
+.hero-content p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+/* ==================== ALL SECTIONS FIX ==================== */
+section,
+.stats-section,
+.featured-section,
+.cta-section,
+.newsletter-section,
+.about-content-section,
+.values-section,
+.team-section,
+.steps-section,
+.guidelines-section,
+.contact-section,
+.faq-section,
+.how-section,
+.speakers-section,
+.partners-section,
+.proceedings-section,
+.publications-section,
+.journal-about-section,
+.conf-section,
+.page-hero,
+.filter-section {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* ==================== ALL GRIDS FIX ==================== */
+.journals-grid,
+.publications-grid,
+.stats-grid,
+.values-grid,
+.team-grid,
+.steps-grid,
+.guidelines-grid,
+.partners-grid,
+.partner-grid,
+.standards-grid,
+.how-grid,
+.speakers-grid,
+.about-grid,
+.contact-grid,
+.journal-about-grid,
+.proceedings-list,
+.other-journals-grid,
+.conf-grid,
+.faq-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* ==================== ALL CARDS FIX ==================== */
+.journal-card,
+.publication-card,
+.stat-card,
+.value-card,
+.team-card,
+.step-card,
+.guideline-card,
+.partner-card,
+.partner-info-card,
+.standard-card,
+.how-card,
+.speaker-card,
+.contact-info-card,
+.proceeding-card,
+.other-journal-card,
+.conf-card,
+.faq-item {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== IMAGES FIX ==================== */
+img,
+.journal-image img,
+.publication-image img,
+.about-image img,
+.team-image img,
+.speaker-image img,
+.conf-image img,
+.journal-cover img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==================== BUTTONS & ACTIONS FIX ==================== */
+.hero-buttons,
+.cta-buttons,
+.journal-actions,
+.journal-metrics,
+.conf-actions {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary,
+.btn-cta-primary,
+.btn-cta-secondary,
+.btn-view-all,
+.btn-mobile-cta,
+.btn-primary-header,
+.btn-radiant {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== FOOTER FIX ==================== */
+.site-footer {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.footer-main,
+.footer-bottom {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* ==================== MOBILE MENU FIX ==================== */
+.mobile-menu {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.mobile-overlay {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* ==================== FORMS FIX ==================== */
+.contact-form,
+.newsletter-form,
+.form-row,
+.form-group {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.newsletter-form input,
+.filter-search input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== TEXT OVERFLOW FIX ==================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+.dropdown-item-title,
+.result-title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+}
+
+/* ==================== TABLE FIX ==================== */
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* ==================== IFRAME & EMBED FIX ==================== */
+iframe,
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==================== CODE & PRE FIX ==================== */
+pre,
+code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* ==================== MOBILE SPECIFIC (768px and below) ==================== */
+@media (max-width: 768px) {
+
+    /* Force viewport constraint */
+    html,
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+    }
+
+    /* Container safety */
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Remove all negative margins */
+    * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Grid adjustments */
+    .journals-grid,
+    .publications-grid,
+    .stats-grid,
+    .values-grid,
+    .team-grid,
+    .steps-grid,
+    .guidelines-grid,
+    .partners-grid,
+    .partner-grid,
+    .standards-grid,
+    .how-grid,
+    .speakers-grid,
+    .conf-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Full width buttons */
+    .hero-buttons,
+    .cta-buttons,
+    .journal-actions {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary,
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Hero slider mobile */
+    .hero-slider {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem !important;
+        width: 100% !important;
+    }
+
+    /* Filter section mobile */
+    .filter-bar {
+        flex-direction: column;
+        padding: 0.5rem 1rem !important;
+        width: 100% !important;
+    }
+
+    .filter-search {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .filter-categories {
+        width: 100% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Newsletter mobile */
+    .newsletter-form {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100% !important;
+        border-radius: var(--radius-full) !important;
+    }
+
+    /* Footer mobile */
+    .footer-main {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    /* Cards mobile */
+    .journal-card,
+    .publication-card,
+    .conf-card,
+    .value-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Search dropdown mobile */
+    .search-dropdown {
+        left: 1rem !important;
+        right: 1rem !important;
+        max-width: calc(100vw - 2rem) !important;
+    }
+
+    /* Mega menu mobile */
+    .mega-menu {
+        display: none !important;
+    }
+
+    /* Proceeding page mobile */
+    .proceeding-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .proceeding-meta-row {
+        flex-wrap: wrap;
+        width: 100% !important;
+    }
+
+    /* Journal hero mobile */
+    .journal-hero-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .journal-metrics {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* About grid mobile */
+    .about-grid,
+    .contact-grid,
+    .journal-about-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==================== SMALL MOBILE (480px and below) ==================== */
+@media (max-width: 480px) {
+
+    /* Extra safety for small screens */
+    html,
+    body {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .container {
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+    }
+
+    /* Hero content */
+    .hero-content {
+        padding: 1rem 0.875rem !important;
+    }
+
+    /* All cards */
+    .journal-card,
+    .publication-card,
+    .value-card,
+    .step-card {
+        padding: 1rem !important;
+    }
+
+    /* Forms */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px !important;
+        /* Prevent zoom on iOS */
+    }
+
+    /* Buttons */
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ==================== SAFETY NET - FORCE EVERYTHING ==================== */
+@media (max-width: 768px) {
+
+    /* Nuclear option - force everything within viewport */
+    * {
+        max-width: 100vw !important;
+    }
+
+    /* But allow properly contained children */
+    .container *,
+    section>.container>* {
+        max-width: 100% !important;
+    }
+
+    /* Ensure no element creates horizontal scroll */
+    body>* {
+        max-width: 100vw !important;
+    }
+}
+
+/* ==================== HIDE HORIZONTAL SCROLLBAR ==================== */
+/* Even if content tries to overflow, hide the scrollbar */
+html::-webkit-scrollbar-track:horizontal,
+body::-webkit-scrollbar-track:horizontal {
+    display: none;
+}
+
+html::-webkit-scrollbar:horizontal,
+body::-webkit-scrollbar:horizontal {
+    display: none;
+    height: 0;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+/* Prevent horizontal scroll in Firefox */
+@-moz-document url-prefix() {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+}
+
+/* ==================== DEBUGGING (REMOVE IN PRODUCTION) ==================== */
+/* Uncomment to find overflow culprits */
+/*
+@media (max-width: 768px) {
+    * {
+        outline: 1px solid red !important;
+    }
+    
+    *:hover {
+        outline: 2px solid blue !important;
+    }
+}
+*/
+
+/* ==================== SPECIFIC ELEMENT FIXES ==================== */
+
+/* Fix specific elements that commonly cause overflow */
+
+/* Navigation */
+.desktop-nav {
+    max-width: 100%;
+    overflow: visible;
+}
+
+/* Top bar links */
+.top-bar-left,
+.top-bar-right {
+    max-width: 100%;
+    overflow: visible;
+}
+
+/* Hero arrows */
+.hero-arrow {
+    max-width: 52px;
+}
+
+.hero-prev {
+    left: 0.5rem;
+}
+
+.hero-next {
+    right: 0.5rem;
+}
+
+/* Stats grid */
+.stats-grid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* CTA section */
+.cta-content {
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+/* Newsletter */
+.newsletter-content {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Conference cards */
+.conf-content {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Proceeding hero */
+.proceeding-hero {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.proceeding-hero-inner {
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.breadcrumb::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==================== FINAL CONSTRAINT ==================== */
+/* Last resort: constrain everything */
+@media (max-width: 768px) {
+
+    #root,
+    #app,
+    main {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+}
+
+.publications ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publications>ul>li {
+    margin-bottom: 20px;
+}
+
+.publications h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.publications ul ul li {
+    margin-left: 15px;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   PUBLICATIONS DROPDOWN - CONSISTENT STYLING FIX
+   ===================================================== */
+
+/* ==================== MEGA MENU CONSISTENCY ==================== */
+
+/* Ensure all mega menu columns have the same structure */
+.mega-col {
+    padding: 0 1rem;
+    border-right: 1px solid var(--gray-100);
+    background: transparent;
+    /* Remove any background images */
+    position: relative;
+}
+
+.mega-col:last-child {
+    border-right: none;
+}
+
+/* Remove background images from all columns */
+.mega-col::before,
+.mega-col::after {
+    display: none;
+}
+
+/* Consistent title styling for all columns */
+.mega-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    color: var(--dark);
+    /* Ensure text is always dark */
+    background: transparent;
+}
+
+.mega-title i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* Consistent links styling for all columns */
+.mega-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-links a {
+    display: block;
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    /* Consistent text color */
+    background: transparent;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.mega-links a:hover {
+    color: var(--primary);
+    padding-left: 0.5rem;
+    background: transparent;
+}
+
+/* Remove any special styling from specific columns */
+.mega-col[data-category="medical"],
+.mega-col[data-category="technology"],
+.mega-col[data-category="environmental"] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* If there's a featured card in Environmental, style it like others */
+.mega-col .mega-featured-card {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    height: 100%;
+}
+
+/* Ensure no column has overlay text */
+.mega-col {
+    color: var(--dark);
+}
+
+/* Remove any absolute positioned elements */
+.mega-col>*:not(.mega-title):not(.mega-links):not(.mega-featured-card) {
+    position: static;
+}
+
+/* ==================== SPECIFIC FIX FOR ENVIRONMENTAL COLUMN ==================== */
+
+/* If Environmental has a special class, normalize it */
+.mega-col.environmental-col,
+.mega-col.env-special {
+    background: transparent !important;
+    background-image: none !important;
+    color: var(--dark) !important;
+}
+
+/* Remove any background overlays */
+.mega-col::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* Ensure all text is visible */
+.mega-col * {
+    color: inherit;
+    background: transparent;
+}
+
+.mega-col .mega-title {
+    color: var(--dark) !important;
+}
+
+.mega-col .mega-links a {
+    color: var(--gray-600) !important;
+}
+
+.mega-col .mega-links a:hover {
+    color: var(--primary) !important;
+}
+
+/* ==================== PREVENT IMAGE BACKGROUNDS ==================== */
+
+/* Remove any injected background styles */
+.mega-menu .mega-col[style*="background"] {
+    background: transparent !important;
+}
+
+/* Ensure no images are set as backgrounds */
+.mega-col img {
+    display: none;
+    /* Hide any images in the mega menu columns */
+}
+
+/* ==================== UNIFORM GRID LAYOUT ==================== */
+
+.mega-menu-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.5rem;
+    gap: 0;
+    /* No gap, borders handle spacing */
+    background: var(--white);
+}
+
+/* Each column should be equal */
+.mega-col {
+    min-height: 300px;
+    /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+}
+
+.mega-links {
+    flex: 1;
+    /* Take remaining space */
+}
+
+/* ==================== FEATURED CARD CONSISTENCY ==================== */
+
+/* If using featured cards, ensure they're in the 4th column only */
+.mega-col:nth-child(4) {
+    padding: 0;
+    /* No padding for featured card column */
+}
+
+.mega-featured-card {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mega-featured-card h4 {
+    color: var(--white) !important;
+}
+
+.mega-featured-card p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ==================== REMOVE EXPLORE BUTTONS FROM COLUMNS ==================== */
+
+/* If there are "Explore Publications" buttons in columns, style them consistently */
+.mega-col .explore-btn,
+.mega-col button {
+    display: none;
+    /* Hide or... */
+}
+
+/* ...or style them consistently */
+.mega-col .explore-btn {
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.mega-col .explore-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* ==================== TEXT OVERLAY FIX ==================== */
+
+/* Remove any overlaid text on images */
+.mega-col .overlay-text,
+.mega-col .image-overlay {
+    display: none;
+}
+
+/* Ensure normal text flow */
+.mega-col {
+    position: relative;
+}
+
+.mega-col>* {
+    position: static;
+    z-index: auto;
+}
+
+/* ==================== RESPONSIVE CONSISTENCY ==================== */
+
+@media (max-width: 768px) {
+    .mega-menu-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .mega-col {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-100);
+        min-height: auto;
+    }
+
+    .mega-col:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Journal Card Metadata Utilities */
+.journal-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.journal-date,
+.journal-issue {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.meta-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gray-300);
+}
+
+.badge-tag {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    z-index: 2;
+}
+
+.badge-trending {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.badge-new {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.badge-hot {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.badge-top {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}

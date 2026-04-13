@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How We Publish | PeerCite Publishers</title>
+    <meta name="description" content="Information for authors and researchers on how PeerCite Publishers collaborates with international conferences to archive and disseminate peer-reviewed proceedings.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,19 +41,11 @@
         <div class="container">
             <a href="index.html" class="header-logo">
                 <img src="assets/images/Peercite Logo..png" alt="PeerCite Logo" class="logo-img">
-                <div class="logo-text-wrapper">
-                </div>
             </a>
             <nav class="desktop-nav">
-                <!-- <div class="nav-dropdown"> -->
-                <a href="index.html" class="nav-link"><span>Home</span><i class='bx bx-chevron-down'></i></a>
-                <!-- <div class="dropdown-menu">
-                        <a href="index.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-home-alt'></i></div>
-                            <div class="dropdown-content"><span class="dropdown-title">Homepage</span><span class="dropdown-desc">Back to main page</span></div>
-                        </a>
-                    </div> -->
-                <!-- </div> -->
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-link"><span>Home</span><i class='bx bx-chevron-down'></i></a>
+                </div>
                 <div class="nav-dropdown mega-dropdown">
                     <a href="publications.html" class="nav-link active"><span>Publications</span><span
                             class="nav-badge">24+</span><i class='bx bx-chevron-down'></i></a>
@@ -68,7 +61,7 @@
                                 </ul>
                             </div>
                             <div class="mega-col">
-                                <h5 class="mega-title"><i class='bx bx-chip'></i> Science & Tech</h5>
+                                <h5 class="mega-title"><i class='bx bx-chip'></i> Technology</h5>
                                 <ul class="mega-links">
                                     <li><a href="journal.html?id=ai-machine-learning">AI & Machine Learning</a></li>
                                     <li><a href="journal.html?id=quantum-science">Quantum Science</a></li>
@@ -77,12 +70,12 @@
                                 </ul>
                             </div>
                             <div class="mega-col">
-                                <h5 class="mega-title"><i class='bx bx-group'></i> Social Sciences</h5>
+                                <h5 class="mega-title"><i class='bx bx-leaf'></i> Environmental Sciences</h5>
                                 <ul class="mega-links">
-                                    <li><a href="journal.html?id=womens-leadership">Women's Leadership</a></li>
-                                    <li><a href="journal.html?id=globalization">Globalization & Education</a></li>
-                                    <li><a href="journal.html?id=entrepreneurship">Entrepreneurship</a></li>
-                                    <li><a href="journal.html?id=metaphysics">Metaphysics & Mystery</a></li>
+                                    <li><a href="journal.html?id=environmental-sciences">Climate Studies</a></li>
+                                    <li><a href="journal.html?id=environmental-sciences">Sustainability</a></li>
+                                    <li><a href="journal.html?id=environmental-sciences">Marine Biology</a></li>
+                                    <li><a href="journal.html?id=environmental-sciences">Ecology</a></li>
                                 </ul>
                             </div>
                             <div class="mega-col mega-featured">
@@ -104,16 +97,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="nav-dropdown"> -->
-                <a href="authors.html" class="nav-link"><span>Authors Hub</span><i class='bx bx-chevron-down'></i></a>
-                <!-- <div class="dropdown-menu">
-                        <a href="conferences.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-calendar-event'></i></div>
-                            <div class="dropdown-content"><span class="dropdown-title">Past Conferences</span><span class="dropdown-desc">Browse archives</span></div>
-                        </a>
-                    </div>
-                </div> -->
+                <div class="nav-dropdown">
+                    <a href="authors.html" class="nav-link"><span>Authors Hub</span><i
+                            class='bx bx-chevron-down'></i></a>
+                </div>
                 <div class="nav-dropdown">
                     <a href="about.html" class="nav-link"><span>About</span><i class='bx bx-chevron-down'></i></a>
                     <div class="dropdown-menu">
@@ -131,24 +118,16 @@
                 </div>
                 <div class="nav-dropdown">
                     <a href="contact.html" class="nav-link"><span>Contact</span><i class='bx bx-chevron-down'></i></a>
-                    <div class="dropdown-menu">
-                        <a href="contact.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-envelope'></i></div>
-                            <div class="dropdown-content"><span class="dropdown-title">Get In Touch</span><span
-                                    class="dropdown-desc">Send us a message</span></div>
-                        </a>
-                        <a href="contact.html#faq" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-help-circle'></i></div>
-                            <div class="dropdown-content"><span class="dropdown-title">FAQs</span><span
-                                    class="dropdown-desc">Common questions</span></div>
-                        </a>
-                    </div>
                 </div>
             </nav>
-            <div class="header-actions">
-                <button class="header-icon-btn search-trigger" id="search-trigger"><i class='bx bx-search'></i></button>
-                <a href="publications.html" class="btn-primary-header"><i class='bx bx-book-reader'></i><span>Read
-                        Articles</span></a>
+            <div class="search-autocomplete-wrapper">
+                <div class="integrated-access-bar">
+                    <div class="search-section">
+                        <i class='bx bx-search search-icon-ui'></i>
+                        <input type="text" id="header-search" placeholder="Search journals" autocomplete="off">
+                        <div id="search-dropdown" class="search-dropdown"></div>
+                    </div>
+                </div>
             </div>
             <button class="hamburger" id="hamburger">
                 <span class="hamburger-line"></span><span class="hamburger-line"></span><span
@@ -176,8 +155,9 @@
                 <button class="mobile-nav-link"><i class='bx bx-book-open'></i><span>Publications</span><span
                         class="mobile-badge">24+</span><i class='bx bx-chevron-down chevron'></i></button>
                 <div class="mobile-dropdown-content">
-                    <a href="journal.html">Medical Sciences</a>
-                    <a href="journal.html">Technology</a>
+                    <a href="publications.html?filter=medical">Medical Sciences</a>
+                    <a href="publications.html?filter=science-tech">Technology</a>
+                    <a href="publications.html?filter=environmental">Environmental Sciences</a>
                     <a href="publications.html" class="view-all">View All →</a>
                 </div>
             </div>

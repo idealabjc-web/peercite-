@@ -126,91 +126,263 @@ startAuto();
 // =====================================================
 // NEW SEARCH OVERLAY SCRIPT
 // =====================================================
-const searchInput = document.getElementById('journal-search');
+/* =====================================================
+   SEARCH FUNCTIONALITY - FIXED & SEO OPTIMIZED
+   ===================================================== */
+
+const searchInputs = $$('#header-search, #journal-search');
 const searchDropdown = document.getElementById('search-dropdown');
 
+// Highlight matching text in search results
 const highlightMatch = (text, query) => {
     if (!query) return text;
-    const idx = text.toLowerCase().indexOf(query.toLowerCase());
-    if (idx === -1) return text;
-    return `${text.substring(0, idx)}<mark>${text.substring(idx, idx + query.length)}</mark>${text.substring(idx + query.length)}`;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
 };
 
-const showDropdown = (matches, query) => {
+// Enhanced search matching with better SEO
+const searchArticles = (query) => {
+    if (!query || !articlesData) return [];
+
+    const q = query.toLowerCase().trim();
+
+    return articlesData.filter(art => {
+        const title = art.title.toLowerCase();
+        const category = art.category.toLowerCase();
+
+        // SEO-friendly matching logic
+        // 1. Exact title match (highest priority)
+        if (title === q) return true;
+
+        // 2. Title starts with query
+        if (title.startsWith(q)) return true;
+
+        // 3. Title contains query as whole word
+        const words = title.split(/\s+/);
+        if (words.some(word => word.startsWith(q))) return true;
+
+        // 4. Title contains query anywhere
+        if (title.includes(q)) return true;
+
+        // 5. Category match
+        if (category.includes(q)) return true;
+
+        // 6. Special handling for common abbreviations
+        const abbrevMap = {
+            'ai': 'artificial intelligence',
+            'ml': 'machine learning',
+            'iot': 'internet of things',
+            'vr': 'virtual reality',
+            'ar': 'augmented reality'
+        };
+
+        if (abbrevMap[q] && title.includes(abbrevMap[q])) return true;
+
+        return false;
+    }).slice(0, 8); // Limit to top 8 results
+};
+
+// Initialize search functionality for all matching inputs
+searchInputs.forEach(searchInput => {
+    // Clear initial value
+    searchInput.value = '';
+
+    // Input event listener
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+
+        // Sync other search inputs if they exist (optional, but good for UX)
+        searchInputs.forEach(input => {
+            if (input !== searchInput) input.value = query;
+        });
+
+        // Reset locked article
+        if (typeof lockedArticleId !== 'undefined') {
+            lockedArticleId = null;
+        }
+
+        // Update publications page if visible
+        if (typeof pages !== 'undefined' && pages.publications && pages.publications.style.display !== 'none') {
+            if (typeof renderArticles === 'function') {
+                renderArticles(query);
+            }
+        }
+
+        // Internal filtering for publications.html
+        const publicationCards = $$('.publication-card');
+        if (publicationCards.length > 0) {
+            let visibleCount = 0;
+            publicationCards.forEach(card => {
+                const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+                const match = title.includes(query.toLowerCase()) || desc.includes(query.toLowerCase());
+                card.classList.toggle('hidden', !match);
+                if (match) visibleCount++;
+            });
+            const noResults = $('#no-results');
+            if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Show search suggestions
+        const matches = searchArticles(query);
+        showDropdown(matches, query, searchInput);
+    });
+
+    // Focus event - show recent searches or placeholder
+    searchInput.addEventListener('focus', () => {
+        const query = searchInput.value.trim();
+        if (query) {
+            const matches = searchArticles(query);
+            showDropdown(matches, query, searchInput);
+        }
+    });
+
+    // Keyboard navigation
+    let highlightedIndex = -1;
+
+    searchInput.addEventListener('keydown', (e) => {
+        const items = searchDropdown.querySelectorAll('.dropdown-item');
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            highlightedIndex = Math.min(highlightedIndex + 1, items.length - 1);
+            updateHighlight(items, highlightedIndex);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            highlightedIndex = Math.max(highlightedIndex - 1, -1);
+            updateHighlight(items, highlightedIndex);
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (highlightedIndex >= 0 && items[highlightedIndex]) {
+                items[highlightedIndex].click();
+            } else {
+                // If on publications page and enter is pressed without selection, just keep filter
+                searchDropdown.classList.remove('visible');
+            }
+        } else if (e.key === 'Escape') {
+            searchDropdown.classList.remove('visible');
+            searchInput.blur();
+            highlightedIndex = -1;
+        }
+    });
+});
+
+// Refactored showDropdown to position correctly relative to trigger
+const showDropdown = (matches, query, triggerEl) => {
     if (!searchDropdown) return;
-    if (!query || matches.length === 0) {
-        searchDropdown.innerHTML = query
-            ? `<div class="dropdown-no-results">No journals found for "<strong>${query}</strong>"</div>`
-            : '';
-        searchDropdown.classList.toggle('visible', !!query && matches.length === 0);
+
+    // Clear previous results
+    searchDropdown.innerHTML = '';
+
+    // If no query, hide dropdown
+    if (!query || query.trim() === '') {
+        searchDropdown.classList.remove('visible');
         return;
     }
 
-    searchDropdown.innerHTML = matches.map(art => `
-            <div class="dropdown-item" data-id="${art.id}">
-                <i class='bx bx-book-open dropdown-item-icon'></i>
-                <div class="dropdown-item-text">
-                    <div class="dropdown-item-title">${highlightMatch(art.title, query)}</div>
-                    <div class="dropdown-item-category">${art.category}</div>
-                </div>
-            </div>
-        `).join('');
+    // Position dropdown under the active input if it's the header search
+    if (triggerEl.id === 'header-search') {
+        const rect = triggerEl.getBoundingClientRect();
+        searchDropdown.style.left = `${rect.left}px`;
+        searchDropdown.style.width = `${rect.width}px`;
+        // In consolidated CSS, we use relative positioning in the wrapper, so no need for absolute positioning here
+    }
 
+    // If no matches found
+    if (matches.length === 0) {
+        searchDropdown.innerHTML = `
+            <div class="dropdown-no-results">
+                <i class='bx bx-search-alt'></i>
+                <p>No journals found for "<strong>${query}</strong>"</p>
+            </div>
+        `;
+        searchDropdown.classList.add('visible');
+        return;
+    }
+
+    // Display matching results
+    searchDropdown.innerHTML = matches.map(art => `
+        <div class="dropdown-item" data-id="${art.id}">
+            <i class='bx bx-book-open dropdown-item-icon'></i>
+            <div class="dropdown-item-text">
+                <div class="dropdown-item-title">${highlightMatch(art.title, query)}</div>
+                <div class="dropdown-item-category">${art.category}</div>
+            </div>
+            <i class='bx bx-chevron-right' style="color: #ccc; font-size: 1.2rem;"></i>
+        </div>
+    `).join('');
+
+    // Add click handlers to results
     searchDropdown.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('mousedown', (e) => {
+        item.addEventListener('click', (e) => {
             e.preventDefault();
             const selectedId = parseInt(item.dataset.id);
-            const selectedArticle = articlesData.find(a => a.id === selectedId);
+            // articlesData is assumed global from journals-data.js or elsewhere
+            const selectedArticle = (typeof articlesData !== 'undefined' ? articlesData : JOURNALS_DATA).find(a => a.id === selectedId || a.id === item.dataset.id);
+
             if (selectedArticle) {
-                searchInput.value = selectedArticle.title;
+                // Update all search inputs
+                searchInputs.forEach(input => input.value = selectedArticle.title);
+
+                // Hide dropdown
                 searchDropdown.classList.remove('visible');
-                lockedArticleId = null;
-                if (pages.home.style.display !== 'none') switchPage('publications');
-                renderArticles(selectedArticle.title);
-                updateAccessButton(selectedArticle);
+
+                // Redirect to journal page with ID
+                window.location.href = `journal.html?id=${selectedArticle.id}`;
             }
         });
     });
 
+    // Show dropdown
     searchDropdown.classList.add('visible');
 };
 
-if (searchInput) {
-    searchInput.value = '';
-    searchInput.addEventListener('input', (e) => {
-        const query = e.target.value;
-        lockedArticleId = null;
-        if (pages.publications.style.display !== 'none') {
+// Update highlighted item
+const updateHighlight = (items, index) => {
+    items.forEach((item, i) => {
+        if (i === index) {
+            item.classList.add('highlighted');
+            item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+            item.classList.remove('highlighted');
+        }
+    });
+};
+
+// Click outside to close
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-autocomplete-wrapper')) {
+        searchDropdown.classList.remove('visible');
+        highlightedIndex = -1;
+    }
+});
+
+// Prevent dropdown from closing when clicking inside
+searchDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+
+
+/* =====================================================
+   MOBILE SEARCH (if separate element exists)
+   ===================================================== */
+
+const mobileSearchInput = document.querySelector('.mobile-search input');
+if (mobileSearchInput) {
+    mobileSearchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+
+        if (typeof renderArticles === 'function') {
             renderArticles(query);
         }
 
-        const q = query.toLowerCase().trim();
-        if (!q) {
-            searchDropdown.classList.remove('visible');
-            return;
-        }
-        const matches = articlesData.filter(art => {
-            const t = art.title.toLowerCase();
-            if (q === 'ai' && t.includes('artificial intelligence')) return true;
-            return t.startsWith(q) || t.includes(` ${q}`) || art.category.toLowerCase().includes(q);
-        });
-        showDropdown(matches, query);
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.search-autocomplete-wrapper')) {
-            searchDropdown?.classList.remove('visible');
-        }
-    });
-
-    searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            searchDropdown?.classList.remove('visible');
-            searchInput.blur();
+        // Switch to publications page
+        if (query && typeof switchPage === 'function') {
+            switchPage('publications');
         }
     });
 }
-
 
 /* ==================== BACK TO TOP ==================== */
 const backToTop = $('#back-to-top');
