@@ -6283,18 +6283,34 @@ code {
 
     /* Hide desktop nav and search on mobile */
     .desktop-nav,
-    .nav-controls {
+    .nav-controls,
+    .search-autocomplete-wrapper,
+    .search-trigger {
         display: none !important;
     }
 
     /* Show hamburger */
     .hamburger {
-        display: flex;
+        display: flex !important;
+        align-items: center;
+        gap: 10px;
+        background: var(--gray-100);
+        padding: 8px 15px;
+        border-radius: var(--radius-full);
+        margin-left: auto;
+    }
+
+    .hamburger::after {
+        content: "MENU";
+        font-family: var(--font-heading);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--dark);
     }
 
     .header-actions {
-        gap: 0.3rem;
-        margin-left: auto;
+        display: none !important; /* Hide other header actions to make room for Menu in place of search */
     }
 
     .header-icon-btn {
