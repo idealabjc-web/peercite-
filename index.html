@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-rebuild.css">
 
     </script>
 </head>
@@ -107,7 +108,12 @@
 
         </div>
     </div>
-
+    <!-- FUTURISTIC BACKGROUND SYSTEM -->
+    <div class="grid-bg"></div>
+    <div class="cursor-glow"></div>
+    <div class="particles">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
     <!-- HEADER -->
     <header class="main-header" id="main-header">
         <div class="container">
@@ -119,9 +125,9 @@
 
             <nav class="desktop-nav">
                 <div class="nav-dropdown">
-                    <a href="index.html" class="nav-link active">
+                    <a href="index.html" class="nav-link ">
                         <span>Home</span>
-                        <i class='bx bx-chevron-down'></i>
+                        <!-- <i class='bx bx-chevron-down'></i> -->
                     </a>
                 </div>
 
@@ -179,92 +185,34 @@
                         </div> -->
                     </div>
                 </div>
-
+                <div class="nav-dropdown">
+                    <a href="contact.html" class="nav-link">
+                        <span>Proceedings</span>
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                </div>
                 <div class="nav-dropdown">
                     <a href="authors.html" class="nav-link">
                         <span>Authors Hub</span>
-                        <i class='bx bx-chevron-down'></i>
                     </a>
                 </div>
 
                 <div class="nav-dropdown">
                     <a href="about.html" class="nav-link">
                         <span>About</span>
-                        <i class='bx bx-chevron-down'></i>
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="about.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-building-house'></i></div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Our Story</span>
-                                <span class="dropdown-desc">Mission & vision</span>
-                            </div>
-                        </a>
-                        <a href="about.html#team" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-group'></i></div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Editorial Board</span>
-                                <span class="dropdown-desc">Meet our experts</span>
-                            </div>
-                        </a>
-                        <a href="about.html#partners" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-handshake'></i></div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Partners</span>
-                                <span class="dropdown-desc">Conference organizers</span>
-                            </div>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="nav-dropdown">
                     <a href="contact.html" class="nav-link">
                         <span>Contact</span>
-                        <i class='bx bx-chevron-down'></i>
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="contact.html" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-envelope'></i></div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Get In Touch</span>
-                                <span class="dropdown-desc">Send us a message</span>
-                            </div>
-                        </a>
-                        <a href="contact.html#faq" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-help-circle'></i></div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">FAQs</span>
-                                <span class="dropdown-desc">Common questions</span>
-                            </div>
-                        </a>
-                        <a href="contact.html#partner" class="dropdown-item">
-                            <div class="dropdown-icon"><i class='bx bx-link'></i></div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Partner With Us</span>
-                                <span class="dropdown-desc">For conference organizers</span>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </nav>
-
-            <!-- NEW INTEGRATED SEARCH BAR (goes in the header) -->
-            <!-- <div class="search-autocomplete-wrapper">
-                <div class="integrated-access-bar">
-                    <div class="search-section">
-                        <i class='bx bx-search search-icon-ui'></i>
-                        <input type="text" id="journal-search" placeholder="Search journals" autocomplete="off">
-                        <div id="search-dropdown" class="search-dropdown"></div>
-
-                    </div>
-                </div> -->
-            <!-- Dropdown MUST be inside wrapper -->
-            <!-- </div> -->
-            <!-- Replace your current search div with this -->
             <div class="search-autocomplete-wrapper">
                 <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Search journals, conferences, topics..."
-                        autocomplete="off" aria-label="Search PeerCite">
+                    <input type="text" id="search-input" placeholder="Search journals....." autocomplete="off"
+                        aria-label="Search PeerCite">
                     <button id="search-btn" class="search-btn">
                         <i class='bx bx-search'></i>
                     </button>
@@ -396,6 +344,26 @@
     <div id="page-home">
 
         <!-- Hero Slider -->
+        <!-- <section class="hero-futuristic">
+            <div class="hero-bg-glow"></div>
+
+            <div class="hero-content">
+                <h1>
+                    <span>Next-Gen</span><br>
+                    Academic Intelligence
+                </h1>
+
+                <p>
+                    Explore futuristic research, AI-driven discoveries, and global
+                    academic intelligence — all in one platform.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="publications.html" class="btn-neon">Explore Journals</a>
+                    <a href="#trending-journals" class="btn-glass">Trending Research</a>
+                </div>
+            </div>
+        </section> -->
         <section class="hero-slider" id="hero-slider">
             <div class="hero-slides-wrapper" id="hero-slides-wrapper">
                 <div class="hero-slide" style="background-image: url('https://picsum.photos/seed/lab1/1600/700');">
@@ -403,8 +371,8 @@
                         <h2>CUTTING EDGE<br>DISCOVERIES</h2>
                         <p>Peercite Journals brings the research community an outstanding editorial board that aims to
                             address several of the innovations and discoveries.</p>
-                        <button class="hero-cta-btn" id="hero-explore-btn">Explore Publications <i
-                                class='bx bx-right-arrow-alt'></i></button>
+                        <!-- <button class="hero-cta-btn" id="hero-explore-btn">Explore Publications <i
+                        class='bx bx-right-arrow-alt'></i></button> -->
                     </div>
                 </div>
                 <div class="hero-slide" style="background-image: url('https://picsum.photos/seed/science2/1600/700');">
@@ -412,8 +380,8 @@
                         <h2>PIONEERING<br>RESEARCH</h2>
                         <p>Explore peer-reviewed publications spanning Medical Sciences, Technology, Environmental
                             Studies and many more fields of discovery.</p>
-                        <button class="hero-cta-btn" id="hero-explore-btn2">Explore Publications <i
-                                class='bx bx-right-arrow-alt'></i></button>
+                        <!-- <button class="hero-cta-btn" id="hero-explore-btn2">Explore Publications <i 
+                        class='bx bx-right-arrow-alt'></i></button> -->
                     </div>
                 </div>
                 <div class="hero-slide" style="background-image: url('https://picsum.photos/seed/medical3/1600/700');">
@@ -421,8 +389,8 @@
                         <h2>ADVANCING<br>KNOWLEDGE</h2>
                         <p>Join thousands of researchers and academics who trust PeerCite Publishers for the latest in
                             scholarly, peer-reviewed publications.</p>
-                        <button class="hero-cta-btn" id="hero-explore-btn3">Explore Publications <i
-                                class='bx bx-right-arrow-alt'></i></button>
+                        <!-- <button class="hero-cta-btn" id="hero-explore-btn3">Explore Publications <i 
+                        class='bx bx-right-arrow-alt'></i></button> -->
                     </div>
                 </div>
             </div>
@@ -440,7 +408,7 @@
                     <span>Browse Journals</span>
                     <i class='bx bx-right-arrow-alt'></i>
                 </a>
-                <a href="#trending-journals" class="btn-radiant" style="margin-left: 0;">
+                <a href="#trending-journals" class="btn-hero-secondary">
                     <i class='bx bx-trending-up bx-fade-up'></i>
                     <span>Trending Journals</span>
                 </a>
@@ -452,17 +420,17 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <span class="stat-icon"><i class='bx bx-book-open'></i></span>
-                        <span class="stat-number" data-count="100">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-number" data-count="25">0</span><span class="stat-suffix">+</span>
                         <span class="stat-label">Academic Journals</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-icon"><i class='bx bx-calendar-event'></i></span>
-                        <span class="stat-number" data-count="150">0</span><span class="stat-suffix">+</span>
-                        <span class="stat-label">Conferences Covered</span>
+                        <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Articles Published</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-icon"><i class='bx bx-microphone'></i></span>
-                        <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-number" data-count="50">0</span><span class="stat-suffix">+</span>
                         <span class="stat-label">Featured Authors</span>
                     </div>
                     <div class="stat-card">
@@ -483,36 +451,12 @@
 
                 <!-- Section Header -->
                 <div class="section-header text-center">
-                    <span class="section-tag" style="background: rgba(99,102,241,0.1); color: #6366f1;">
+                    <span class="section-tag" style="background:linear-gradient(45deg, #ff007a, #7928ca, #ff007a);">
                         <i class='bx bx-trending-up'></i> Latest & Trending
                     </span>
                     <h2>Trending Journals</h2>
                     <p>Discover the most-read and recently published peer-reviewed journals across all disciplines.</p>
                 </div>
-
-                <!-- Filter Pills -->
-                <!-- <div style="display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center; margin-bottom:2.5rem;">
-                <button class="suggestion-tag"
-                    style="background:var(--primary); color:#fff; border:none; cursor:pointer; padding:0.5rem 1.25rem; border-radius:50px; font-size:0.875rem; font-weight:600;">
-                    All
-                </button>
-                <button class="suggestion-tag"
-                    style="border:none; cursor:pointer; padding:0.5rem 1.25rem; border-radius:50px; font-size:0.875rem; background:var(--white); color:var(--gray-700); font-weight:500; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
-                    Medical Sciences
-                </button>
-                <button class="suggestion-tag"
-                    style="border:none; cursor:pointer; padding:0.5rem 1.25rem; border-radius:50px; font-size:0.875rem; background:var(--white); color:var(--gray-700); font-weight:500; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
-                    Technology
-                </button>
-                <button class="suggestion-tag"
-                    style="border:none; cursor:pointer; padding:0.5rem 1.25rem; border-radius:50px; font-size:0.875rem; background:var(--white); color:var(--gray-700); font-weight:500; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
-                    Environmental
-                </button>
-                <button class="suggestion-tag"
-                    style="border:none; cursor:pointer; padding:0.5rem 1.25rem; border-radius:50px; font-size:0.875rem; background:var(--white); color:var(--gray-700); font-weight:500; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
-                    Engineering
-                </button>
-            </div> -->
 
                 <!-- Trending Journal Cards Grid -->
                 <div class="journals-grid">
@@ -521,8 +465,8 @@
                     <article class="journal-card">
                         <div class="journal-image">
                             <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
-                                alt="AI & Machine Learning Journal" loading="lazy">
-                            <span class="journal-category">Technology</span>
+                                alt="PeerCite Journal of Artificial Intelligence and Machine Learning" loading="lazy">
+                            <!-- <span class="journal-category">Technology</span> -->
                             <!-- Trending Badge -->
                             <span class="conf-badge bg-tech">
                                 <i class='bx bx-trending-up'></i> TRENDING
@@ -531,21 +475,16 @@
                         <div class="journal-content">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
                                 <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-calendar-alt'></i> April 2026
                                 </span>
                                 <span
                                     style="width:4px; height:4px; border-radius:50%; background:var(--gray-300);"></span>
                                 <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-time-five'></i> Volume 8, Issue 2
                                 </span>
                             </div>
-                            <h3>AI & Machine Learning in Modern Research</h3>
+                            <h3>PeerCite Journal of Artificial Intelligence and Machine Learning</h3>
                             <p>Cutting-edge peer-reviewed research exploring generative AI, deep learning architectures,
                                 and their transformative impact across scientific disciplines.</p>
                             <div class="journal-meta">
-                                <span><i class='bx bx-file-blank'></i> 62 Articles</span>
-                                <span><i class='bx bx-show'></i> 28K Reads</span>
-                                <span><i class='bx bx-download'></i> 9.4K Downloads</span>
                             </div>
                             <a href="journal.html" class="journal-link">Read Articles →</a>
                         </div>
@@ -556,29 +495,23 @@
                         <div class="journal-image">
                             <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop"
                                 alt="Mental Health Research Journal" loading="lazy">
-                            <span class="journal-category">Medical Sciences</span>
                             <span class="conf-badge bg-medical">
-                                <i class='bx bx-star'></i> NEW ISSUE
+                                <i class='bx bx-trending-up'></i> TRENDING
                             </span>
                         </div>
                         <div class="journal-content">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
                                 <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-calendar-alt'></i> March 2026
                                 </span>
                                 <span
                                     style="width:4px; height:4px; border-radius:50%; background:var(--gray-300);"></span>
                                 <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-time-five'></i> Volume 5, Issue 1
                                 </span>
                             </div>
-                            <h3>Mental Health & Neuroscience Research Journal</h3>
+                            <h3>PeerCite Journal of Mental Health & Neuroscience Research</h3>
                             <p>Leading psychiatrists and neuroscientists share findings on mental wellness, cognitive
                                 therapies, and the neurobiology of psychiatric disorders.</p>
                             <div class="journal-meta">
-                                <span><i class='bx bx-file-blank'></i> 45 Articles</span>
-                                <span><i class='bx bx-show'></i> 19K Reads</span>
-                                <span><i class='bx bx-download'></i> 6.1K Downloads</span>
                             </div>
                             <a href="journal.html" class="journal-link">Read Articles →</a>
                         </div>
@@ -587,138 +520,29 @@
                     <!-- Card 3 -->
                     <article class="journal-card">
                         <div class="journal-image">
-                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop"
-                                alt="Climate & Environmental Studies Journal" loading="lazy">
-                            <span class="journal-category">Environmental Sciences</span>
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop"
+                                alt="PeerCite Journal of Women's Leadership" loading="lazy">
                             <span class="conf-badge bg-environmental">
-                                <i class='bx bx-trending-up'></i> HOT
-                            </span>
-                        </div>
-                        <div class="journal-content">
-                            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
-                                <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-calendar-alt'></i> April 2026
-                                </span>
-                                <span
-                                    style="width:4px; height:4px; border-radius:50%; background:var(--gray-300);"></span>
-                                <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-time-five'></i> Volume 11, Issue 3
-                                </span>
-                            </div>
-                            <h3>Climate & Environmental Sustainability Studies</h3>
-                            <p>In-depth research addressing climate change, renewable energy transitions, carbon capture
-                                technologies, and global sustainability frameworks.</p>
-                            <div class="journal-meta">
-                                <span><i class='bx bx-file-blank'></i> 38 Articles</span>
-                                <span><i class='bx bx-show'></i> 15K Reads</span>
-                                <span><i class='bx bx-download'></i> 5.3K Downloads</span>
-                            </div>
-                            <a href="journal.html" class="journal-link">Read Articles →</a>
-                        </div>
-                    </article>
-
-                    <!-- Card 4 -->
-                    <article class="journal-card">
-                        <div class="journal-image">
-                            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600&h=400&fit=crop"
-                                alt="Quantum Science Journal" loading="lazy">
-                            <span class="journal-category">Physics & Engineering</span>
-                            <span class="conf-badge"
-                                style="position:absolute; top:0.75rem; left:0.75rem; background:linear-gradient(135deg,#ef4444,#dc2626); color:#fff; padding:0.3rem 0.8rem; border-radius:50px; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; display:flex; align-items:center; gap:0.3rem;">
-                                <i class='bx bx-award'></i> TOP CITED
-                            </span>
-                        </div>
-                        <div class="journal-content">
-                            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
-                                <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-calendar-alt'></i> February 2026
-                                </span>
-                                <span
-                                    style="width:4px; height:4px; border-radius:50%; background:var(--gray-300);"></span>
-                                <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-time-five'></i> Volume 3, Issue 4
-                                </span>
-                            </div>
-                            <h3>Quantum Computing & Advanced Physics Review</h3>
-                            <p>Exploring quantum entanglement, superposition mechanics, and next-generation computing
-                                architectures with implications for cryptography and materials science.</p>
-                            <div class="journal-meta">
-                                <span><i class='bx bx-file-blank'></i> 31 Articles</span>
-                                <span><i class='bx bx-show'></i> 22K Reads</span>
-                                <span><i class='bx bx-download'></i> 8.7K Downloads</span>
-                            </div>
-                            <a href="journal.html" class="journal-link">Read Articles →</a>
-                        </div>
-                    </article>
-
-                    <!-- Card 5 -->
-                    <article class="journal-card">
-                        <div class="journal-image">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&h=400&fit=crop"
-                                alt="Biotechnology Journal" loading="lazy">
-                            <span class="journal-category">Biotechnology</span>
-                            <span class="conf-badge"
-                                style="position:absolute; top:0.75rem; left:0.75rem; background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; padding:0.3rem 0.8rem; border-radius:50px; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; display:flex; align-items:center; gap:0.3rem;">
                                 <i class='bx bx-trending-up'></i> TRENDING
                             </span>
                         </div>
                         <div class="journal-content">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
                                 <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-calendar-alt'></i> March 2026
                                 </span>
                                 <span
                                     style="width:4px; height:4px; border-radius:50%; background:var(--gray-300);"></span>
                                 <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-time-five'></i> Volume 7, Issue 1
                                 </span>
                             </div>
-                            <h3>Biotechnology & Genomics Frontiers</h3>
-                            <p>Peer-reviewed research on CRISPR gene editing, personalized medicine, synthetic biology,
-                                and the latest breakthroughs in genomic sequencing technologies.</p>
+                            <h3>PeerCite Journal of Women's Leadership</h3>
+                            <p>Advancing gender equity through research on women in leadership, organizational
+                                behaviour, and policy reform.</p>
                             <div class="journal-meta">
-                                <span><i class='bx bx-file-blank'></i> 54 Articles</span>
-                                <span><i class='bx bx-show'></i> 17K Reads</span>
-                                <span><i class='bx bx-download'></i> 7.2K Downloads</span>
                             </div>
                             <a href="journal.html" class="journal-link">Read Articles →</a>
                         </div>
                     </article>
-
-                    <!-- Card 6 -->
-                    <article class="journal-card">
-                        <div class="journal-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
-                                alt="Data Science Journal" loading="lazy">
-                            <span class="journal-category">Data Science</span>
-                            <span class="conf-badge"
-                                style="position:absolute; top:0.75rem; left:0.75rem; background:linear-gradient(135deg,#10b981,#059669); color:#fff; padding:0.3rem 0.8rem; border-radius:50px; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; display:flex; align-items:center; gap:0.3rem;">
-                                <i class='bx bx-star'></i> NEW ISSUE
-                            </span>
-                        </div>
-                        <div class="journal-content">
-                            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
-                                <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-calendar-alt'></i> April 2026
-                                </span>
-                                <span
-                                    style="width:4px; height:4px; border-radius:50%; background:var(--gray-300);"></span>
-                                <span style="font-size:0.78rem; color:var(--gray-500);">
-                                    <i class='bx bx-time-five'></i> Volume 6, Issue 2
-                                </span>
-                            </div>
-                            <h3>Data Science & Analytics Quarterly</h3>
-                            <p>Comprehensive research on big data analytics, statistical modeling, data visualization,
-                                and real-world applications of machine learning in enterprise systems.</p>
-                            <div class="journal-meta">
-                                <span><i class='bx bx-file-blank'></i> 47 Articles</span>
-                                <span><i class='bx bx-show'></i> 20K Reads</span>
-                                <span><i class='bx bx-download'></i> 6.8K Downloads</span>
-                            </div>
-                            <a href="journal.html" class="journal-link">Read Articles →</a>
-                        </div>
-                    </article>
-
                 </div>
 
                 <!-- View All CTA -->
@@ -738,16 +562,17 @@
         <section class="how-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">How It Works</span>
-                    <h2>From Conference to Publication</h2>
-                    <p>We transform valuable conference content into accessible academic resources</p>
+                    <!-- <span class="section-tag">How It Works</span> -->
+                    <h2>From Research to Publication</h2>
+                    <p>We transform high-quality research into accessible, peer-reviewed academic resources.</p>
                 </div>
                 <div class="how-grid">
                     <div class="how-card">
                         <div class="how-number">01</div>
                         <div class="how-icon"><i class='bx bx-calendar-check'></i></div>
-                        <h4>Conference Held</h4>
-                        <p>Academic conferences and symposiums are conducted worldwide with expert speakers.</p>
+                        <h4>Journal Submission</h4>
+                        <p>Authors submit original research articles, reviews, or case studies through our secure
+                            platform.</p>
                     </div>
                     <div class="how-card">
                         <div class="how-number">02</div>
@@ -776,9 +601,11 @@
         <section class="featured-section" id="featured">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Latest Publications</span>
-                    <h2>Featured Conference Proceedings</h2>
-                    <p>Explore the latest articles from recent academic conferences</p>
+                    <!-- <span class="section-tag" style="background:linear-gradient(45deg, #ff007a, #7928ca, #ff007a);">
+                        <i class='bx bx-trending-up'></i> Latest publications
+                    </span> -->
+                    <h2>Featured Articles</h2>
+                    <p>Explore the latest articles from recent academic journals</p>
                 </div>
                 <div class="journals-grid">
                     <article class="journal-card">
@@ -788,13 +615,13 @@
                             <span class="journal-category">Medical Sciences</span>
                         </div>
                         <div class="journal-content">
-                            <span class="conference-badge"><i class='bx bx-calendar'></i> Global Health Summit
-                                2024</span>
-                            <h3>Mental Health Research Proceedings</h3>
+                            <!-- <span class="conference-badge"><i class='bx bx-calendar'></i> Global Health Summit
+                                2024</span> -->
+                            <h3>PeerCite Journal of Mental Health Research Proceedings</h3>
                             <p>45 articles from leading psychiatrists and researchers on mental wellness.</p>
                             <div class="journal-meta">
-                                <span><i class='bx bx-file'></i> 45 Articles</span>
-                                <span><i class='bx bx-show'></i> 12K Reads</span>
+                                <!-- <span><i class='bx bx-file'></i> 45 Articles</span>
+                                <span><i class='bx bx-show'></i> 12K Reads</span> -->
                             </div>
                             <a href="journal.html" class="journal-link">Read Articles →</a>
                         </div>
@@ -806,12 +633,12 @@
                             <span class="journal-category">Technology</span>
                         </div>
                         <div class="journal-content">
-                            <span class="conference-badge"><i class='bx bx-calendar'></i> AI World Congress 2024</span>
-                            <h3>AI & Machine Learning Today</h3>
+                            <!-- <span class="conference-badge"><i class='bx bx-calendar'></i> AI World Congress 2024</span> -->
+                            <h3>PeerCite Journal of AI & Machine Learning Today</h3>
                             <p>Cutting-edge research from the world's top AI researchers and engineers.</p>
                             <div class="journal-meta">
-                                <span><i class='bx bx-file'></i> 62 Articles</span>
-                                <span><i class='bx bx-show'></i> 28K Reads</span>
+                                <!-- <span><i class='bx bx-file'></i> 62 Articles</span>
+                                <span><i class='bx bx-show'></i> 28K Reads</span> -->
                             </div>
                             <a href="journal.html" class="journal-link">Read Articles →</a>
                         </div>
@@ -823,13 +650,13 @@
                             <span class="journal-category">Environmental Sciences</span>
                         </div>
                         <div class="journal-content">
-                            <span class="conference-badge"><i class='bx bx-calendar'></i> Climate Action Forum
-                                2024</span>
-                            <h3>Climate & Environmental Studies</h3>
+                            <!-- <span class="conference-badge"><i class='bx bx-calendar'></i> Climate Action Forum
+                                2024</span> -->
+                            <h3>PeerCite Journal of Climate & Environmental Studies</h3>
                             <p>Research addressing global environmental challenges and solutions.</p>
                             <div class="journal-meta">
-                                <span><i class='bx bx-file'></i> 38 Articles</span>
-                                <span><i class='bx bx-show'></i> 15K Reads</span>
+                                <!-- <span><i class='bx bx-file'></i> 38 Articles</span>
+                                <span><i class='bx bx-show'></i> 15K Reads</span> -->
                             </div>
                             <a href="journal.html" class="journal-link">Read Articles →</a>
                         </div>
@@ -846,8 +673,8 @@
         <section class="speakers-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Featured Contributors</span>
-                    <h2>World-Class Speakers</h2>
+                    <!-- <span class="section-tag">Featured Contributors</span> -->
+                    <h2>World-Class Authors</h2>
                     <p>Research and insights from leading academics and industry experts</p>
                 </div>
                 <div class="speakers-grid">
@@ -915,10 +742,9 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Discover Insights From Global Conferences</h2>
-                    <p>Access peer-reviewed research, keynote presentations, and expert insights from academic
-                        conferences
-                        worldwide.</p>
+                    <h2>Publishing the Future of Research</h2>
+                    <p>A global platform for high-impact, peer-reviewed journals across science, technology, and
+                        interdisciplinary domains.</p>
                     <div class="cta-buttons">
                         <a href="publications.html" class="btn-cta-primary">
                             <i class='bx bx-book-reader'></i> Browse All Articles
@@ -937,7 +763,7 @@
                 <div class="newsletter-content">
                     <div class="newsletter-text">
                         <h3>Stay Updated</h3>
-                        <p>Get notified when new conference proceedings are published.</p>
+                        <p>Get notified when new journals and articles are published.</p>
                     </div>
                     <form class="newsletter-form" id="newsletter-form">
                         <input type="email" placeholder="Enter your email" required>

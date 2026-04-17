@@ -802,14 +802,14 @@ const JOURNALS_DATA = {
     const proceedingsHTML = journal.proceedings.map(p => `
     <div class="proceeding-card" data-proceeding="${p.id}">
         <div class="proceeding-card-header">
-            <span class="badge ${p.status === 'Published' ? 'badge-green' : 'badge-outline'}">${p.status}</span>
+            <span class="badge badge-green">${p.status || 'Published'}</span>
             <h3>${p.title}</h3>
             <p class="proceeding-conference">${p.conference}</p>
         </div>
         <div class="proceeding-card-body">
             <p>${p.description}</p>
             <div class="proceeding-meta">
-                <span><i class='bx bx-calendar'></i> ${p.date}</span>
+                <span><i class='bx bx-calendar'></i> ${p.date || p.year}</span>
                 <span><i class='bx bx-file'></i> ${p.articles} Articles</span>
             </div>
         </div>

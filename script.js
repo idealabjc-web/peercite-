@@ -429,6 +429,31 @@ revealElements.forEach((el, index) => {
     el.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
     revealObserver.observe(el);
 });
+/* ===== CURSOR GLOW ===== */
+const glow = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", (e) => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+});
+
+/* ===== CARD 3D TILT ===== */
+// document.querySelectorAll(".journal-card").forEach(card => {
+//     card.addEventListener("mousemove", e => {
+//         const rect = card.getBoundingClientRect();
+//         const x = e.clientX - rect.left;
+//         const y = e.clientY - rect.top;
+
+//         const rotateX = (y / rect.height - 0.5) * -10;
+//         const rotateY = (x / rect.width - 0.5) * 10;
+
+//         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+//     });
+
+//     card.addEventListener("mouseleave", () => {
+//         card.style.transform = "";
+//     });
+// });
 
 
 console.log('🚀 PeerCite Publishers — Loaded Successfully');

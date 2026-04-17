@@ -1239,10 +1239,10 @@ ul {
     right: -100%;
     width: 90%;
     max-width: 400px;
-    height: 100vh;
+    height: 100%;
     background: var(--white);
     z-index: 500;
-    overflow-y: auto;
+    /* overflow-y: hidden; */
     transition: right 0.4s ease;
     display: flex;
     flex-direction: column;
@@ -1421,7 +1421,7 @@ ul {
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 490px;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -1478,6 +1478,7 @@ ul {
 
 .hero-content h2 {
     font-family: var(--header-font);
+    color: white;
     font-size: clamp(1.8rem, 4vw, 3.2rem);
     font-weight: 700;
     letter-spacing: 2px;
@@ -1492,7 +1493,7 @@ ul {
     opacity: 0.92;
     max-width: 500px;
     margin: 0 auto;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    /* text-shadow: 0 1px 8px rgb(255, 255, 255); */
 }
 
 /* Hero Arrows */
@@ -1556,6 +1557,7 @@ ul {
 }
 
 .hero-buttons {
+    padding-top: 2rem;
     display: flex;
     gap: 1rem;
     margin-bottom: 6rem;
@@ -1588,22 +1590,21 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: var(--white);
-    padding: 1.1rem 2.3rem;
+    background: linear-gradient(45deg, #ff007a, #7928ca, #ff007a);
+    color: #ffffff;
+    padding: 1rem 2rem;
     border-radius: var(--radius-full);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 0.8rem;
+    /* box-shadow: 0 8px 25px rgb(240, 89, 208); */
     transition: var(--transition);
 }
 
 .btn-hero-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: var(--primary);
+    background: linear-gradient(45deg, #ff007a, #7928ca, #ff007a);
     color: var(--white);
     transform: translateY(-3px);
+    /* box-shadow: 0 12px 35px rgba(16, 185, 129, 0.5); */
 }
 
 .stat-number {
@@ -1783,8 +1784,8 @@ ul {
 
 .section-tag {
     display: inline-block;
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--primary);
+    background: rgb(0, 0, 0);
+    color: #ffffff;
     padding: 0.4rem 1rem;
     border-radius: var(--radius-full);
     font-size: 0.8rem;
@@ -1861,11 +1862,11 @@ ul {
 /* Category Badges */
 .conf-badge {
     position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
+    /* top: 0.75rem;
+    left: 0.75rem; */
     color: #fff;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
+    padding: 0.3rem 0.1rem;
+    border-radius: 10px;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -1936,6 +1937,7 @@ ul {
 }
 
 .section-cta {
+    padding-top: 2rem;
     text-align: center;
 }
 
@@ -2226,7 +2228,7 @@ ul {
     font-size: 1.5rem;
     box-shadow: var(--shadow-lg);
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: var(--transition);
     z-index: 100;
 }
@@ -2443,14 +2445,14 @@ ul {
 .publications-grid {
     display: grid;
     background-color: rgba(0, 0, 0, 0.5);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
 .publication-card {
     background: var(--white);
     border-radius: var(--radius-lg);
-    overflow: hidden;
+    overflow: visible;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
@@ -3170,8 +3172,7 @@ ul {
 
 /* ==================== HOW IT WORKS SECTION ==================== */
 .how-section {
-    padding: 5rem 0;
-    background: var(--white);
+    overflow: hidden;
 }
 
 .how-grid {
@@ -6061,7 +6062,7 @@ code {
 
 /* ==================== LOGO OPTIMIZATION ==================== */
 .logo-img {
-    height: 65px;
+    height: 80px;
     /* Reduced from 90px */
     width: auto;
     object-fit: contain;
@@ -6310,7 +6311,8 @@ code {
     }
 
     .header-actions {
-        display: none !important; /* Hide other header actions to make room for Menu in place of search */
+        display: none !important;
+        /* Hide other header actions to make room for Menu in place of search */
     }
 
     .header-icon-btn {
@@ -6393,6 +6395,7 @@ code {
 
 .main-header.compact .logo-img {
     height: 55px;
+    /* Reduced from 55px */
 }
 
 .main-header.compact .container {
@@ -6426,7 +6429,7 @@ code {
 }
 
 .main-header.scrolled .logo-img {
-    height: 60px;
+    height: 90px;
     /* Slightly smaller when scrolled */
     transition: height 0.3s ease;
 }
