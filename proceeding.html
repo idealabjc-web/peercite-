@@ -6,37 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proceeding | PeerCite Publishers</title>
 
-    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-
-    <!-- Boxicons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme-rebuild.css">
 </head>
 
 <body>
-
-    <!-- ==================== TOP BAR ==================== -->
-    <!-- <div class="top-bar">
-        <div class="container top-bar-flex">
-            <div class="top-bar-left">
-                <span><i class='bx bx-phone'></i> +1 716 217 1471</span>
-                <span><i class='bx bx-envelope'></i> contact@peercite.org</span>
-            </div>
-            <div class="top-bar-right">
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- ==================== HEADER ==================== -->
     <header class="main-header" id="main-header">
         <div class="container">
             <a href="index.html" class="header-logo">
@@ -49,14 +27,12 @@
                 <div class="nav-dropdown">
                     <a href="index.html" class="nav-link ">
                         <span>Home</span>
-                        <!-- <i class='bx bx-chevron-down'></i> -->
                     </a>
                 </div>
 
                 <div class="nav-dropdown mega-dropdown">
                     <a href="publications.html" class="nav-link">
                         <span>Publications</span>
-                        <!-- <span class="nav-badge"></span> -->
                         <i class='bx bx-chevron-down'></i>
                     </a>
                     <div class="dropdown-menu mega-menu">
@@ -101,17 +77,60 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="mega-footer">
-                            <a href="publications.html" class="mega-footer-link">View All Publications <i
-                                    class='bx bx-right-arrow-alt'></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="nav-dropdown">
-                    <a href="contact.html" class="nav-link">
+                <div class="nav-dropdown proceedings-nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-link">
                         <span>Proceedings</span>
                         <i class='bx bx-chevron-down'></i>
                     </a>
+                    <div class="dropdown-menu proceedings-mega-menu">
+                        <div class="proceedings-mega-inner">
+
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-female-sign'></i> WL CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 1.0</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 1.1</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 2.0</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 2.1</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-heart-circle'></i> MH CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="journal.html?id=mental-health#proceedings"><i
+                                                class='bx bx-file-blank'></i> MH Conference Proceedings 1.0</a></li>
+                                    <li><a href="journal.html?id=mental-health#proceedings"><i
+                                                class='bx bx-file-blank'></i> MH Conference Proceedings 1.1</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-intersect'></i> WL-WH CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.0</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.1</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 2.0</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="nav-dropdown">
                     <a href="authors.html" class="nav-link">
@@ -140,7 +159,6 @@
                     </button>
                 </div>
 
-                <!-- Suggestions Dropdown -->
                 <div id="search-dropdown" class="search-dropdown"></div>
             </div>
 
@@ -151,7 +169,6 @@
         </div>
     </header>
 
-    <!-- ==================== SEARCH OVERLAY ==================== -->
     <div class="search-overlay" id="searchOverlay">
         <button class="search-close" id="searchClose"><i class='bx bx-x'></i></button>
         <div class="search-container">
@@ -159,10 +176,8 @@
         </div>
     </div>
 
-    <!-- ==================== MAIN CONTENT ==================== -->
     <main class="proceeding-page">
 
-        <!-- Breadcrumb -->
         <section class="breadcrumb-section">
             <div class="container">
                 <nav class="breadcrumb">
@@ -177,7 +192,6 @@
             </div>
         </section>
 
-        <!-- Hero -->
         <section class="proceeding-hero">
             <div class="container">
                 <div class="proceeding-hero-inner">
@@ -196,12 +210,10 @@
             </div>
         </section>
 
-        <!-- Content Area -->
         <section class="proceeding-content-section">
             <div class="container">
                 <div class="proceeding-grid">
 
-                    <!-- Left: Main Content -->
                     <div class="proceeding-main-content">
                         <div class="proceeding-abstract" id="proceedingAbstract">
                             <h2><i class='bx bx-clipboard'></i> About This Proceeding</h2>
@@ -223,7 +235,6 @@
                         </div>
                     </div>
 
-                    <!-- Right: Sidebar -->
                     <aside class="proceeding-sidebar">
                         <div class="sidebar-card access-info">
                             <h3><i class='bx bx-lock-open'></i> Access Information</h3>
@@ -261,7 +272,6 @@
 
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-main">
@@ -319,10 +329,8 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <button class="back-to-top" id="backToTop"><i class='bx bx-up-arrow-alt'></i></button>
 
-    <!-- Scripts -->
     <script src="journals-data.js"></script>
     <script src="proceeding.js"></script>
     <script src="script.js"></script>

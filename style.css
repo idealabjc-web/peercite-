@@ -53,6 +53,8 @@
 /* ==================== BASE ==================== */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -61,6 +63,16 @@ body {
     line-height: 1.6;
     color: var(--dark);
     background: var(--bg);
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    padding-top: 100px; /* Offset for fixed header */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Smaller offset for mobile */
+    }
 }
 
 body.no-scroll {
@@ -2388,25 +2400,28 @@ ul {
     position: sticky;
     top: 70px;
     z-index: 50;
+    /* padding-top: 2rem; */
 }
 
 .filter-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* padding-top: 1rem; */
 }
 
 .filter-search {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.6rem;
     background: var(--gray-100);
-    padding: 0.8rem 1.5rem;
-    border-radius: var(--radius-full);
-    flex: 1;
-    max-width: 400px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    /* max-width: 0%; */
+    width: 220px;
+    /* padding-top: 2rem; */
+    margin-left: auto;
 }
 
 .filter-search input {
@@ -2415,6 +2430,8 @@ ul {
     border: none;
     outline: none;
     font-size: 0.95rem;
+    /* width: 100%; */
+    font-size: 0.85rem;
 }
 
 .filter-categories {
@@ -2430,6 +2447,7 @@ ul {
     font-size: 0.85rem;
     font-weight: 600;
     transition: var(--transition);
+    /* max-width: 50px; */
 }
 
 .filter-btn:hover,
@@ -2533,13 +2551,17 @@ ul {
 /* ==================== ABOUT PAGE ==================== */
 .about-content-section {
     padding: 5rem 0;
+    overflow-x: hidden;
 }
 
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3rem;
+
+    max-width: 100%;
+    overflow: hidden;
+    /* stops bleed */
 }
 
 .about-text h2 {
@@ -2573,26 +2595,28 @@ ul {
 
 .about-image {
     position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    /* IMPORTANT */
+
 }
 
 .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
 }
 
 .about-badge {
     position: absolute;
-    bottom: -20px;
-    right: 20px;
-    background: var(--primary);
-    color: var(--white);
-    padding: 1rem 1.5rem;
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    box-shadow: var(--shadow-lg);
+    bottom: 1rem;
+    right: 1rem;
+
+    max-width: calc(100% - 2rem);
+    /* prevents overflow */
+    box-sizing: border-box;
 }
 
 .values-section {
@@ -2856,9 +2880,15 @@ ul {
 }
 
 .contact-info-wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .contact-info-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-info-card {
@@ -3245,16 +3275,16 @@ ul {
 }
 
 /* ==================== SPEAKERS SECTION ==================== */
-.speakers-section {
+/* .speakers-section {
     padding: 5rem 0;
     background: var(--gray-100);
 }
 
-.speakers-grid {
+ .speakers-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-}
+} 
 
 .speaker-card {
     background: var(--white);
@@ -3272,13 +3302,13 @@ ul {
 }
 
 .speaker-image {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 250px;
+    padding-bottom: 2rem;
     margin: 0 auto 1.5rem;
-    border-radius: 50%;
+    border-radius: var(--radius-md);
     overflow: hidden;
-    border: 4px solid var(--primary);
-    transition: var(--transition);
+    border: 2px solid var(--primary);
 }
 
 .speaker-card:hover .speaker-image {
@@ -3289,7 +3319,7 @@ ul {
 .speaker-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .speaker-info h4 {
@@ -3324,6 +3354,94 @@ ul {
     display: flex;
     align-items: center;
     gap: 0.3rem;
+}
+
+/* ==================== SPEAKERS AUTO-SLIDER ==================== */
+.speakers-slider {
+    overflow: hidden;
+    width: 100%;
+    /* padding: 3rem 0; */
+}
+
+.speakers-track {
+    display: flex;
+    gap: 2rem;
+    will-change: transform;
+}
+
+.speaker-card {
+    flex: 0 0 220px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--gray-200);
+    transition: 0.3s;
+}
+
+.speaker-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.speakers-group {
+    display: flex;
+    width: 50%;
+    gap: 2rem;
+}
+
+/* IMAGE */
+.speaker-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT */
+.speaker-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.speaker-role {
+    display: block;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.speaker-org {
+    display: block;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.speaker-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+}
+
+/* ANIMATION */
+@keyframes slide-speakers {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ==================== CONFERENCE BADGE ==================== */
@@ -3688,8 +3806,8 @@ ul {
 }
 
 .proceedings-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -3697,10 +3815,10 @@ ul {
     background: var(--white);
     border-radius: var(--radius-lg);
     padding: 2rem;
+    border: 1px solid var(--gray-200);
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    border: 1px solid var(--gray-200);
     transition: var(--transition);
 }
 
@@ -5272,7 +5390,7 @@ ul {
 /* ==================== STATS SECTION FIXES ==================== */
 .stats-section {
     overflow: hidden;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .stats-grid {
@@ -5305,7 +5423,7 @@ ul {
 .journal-about-section,
 .conf-section {
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -5372,7 +5490,7 @@ ul {
 /* ==================== FILTER SECTION FIXES ==================== */
 .filter-section {
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .filter-bar {
@@ -5442,7 +5560,7 @@ ul {
 /* ==================== FOOTER FIXES ==================== */
 .site-footer {
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .footer-main,
@@ -5470,7 +5588,7 @@ ul {
 
 /* ==================== MOBILE MENU FIXES ==================== */
 .mobile-menu {
-    max-width: 100vw;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -5486,7 +5604,7 @@ ul {
 /* ==================== PAGE HERO FIXES ==================== */
 .page-hero {
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -5505,12 +5623,18 @@ ul {
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.breadcrumb::-webkit-scrollbar {
+    display: none;
 }
 
 /* ==================== JOURNAL DETAIL PAGE FIXES ==================== */
 .journal-hero {
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .journal-hero-grid {
@@ -5563,7 +5687,7 @@ ul {
 .proceeding-hero,
 .proceeding-content-section {
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .proceeding-grid {
@@ -5643,7 +5767,7 @@ ul {
 
 /* ==================== SEARCH OVERLAY FIXES ==================== */
 .search-dropdown {
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100% - 2rem);
     left: 1rem;
     right: 1rem;
 }
@@ -5671,7 +5795,7 @@ table {
 @media (max-width: 768px) {
     .mega-menu {
         width: 100%;
-        max-width: calc(100vw - 2rem);
+        max-width: calc(100% - 2rem);
     }
 
     .mega-menu-inner {
@@ -5716,7 +5840,7 @@ a[href^="http"] {
     /* Ensure all sections are contained */
     section {
         overflow-x: hidden;
-        max-width: 100vw;
+        max-width: 100%;
     }
 
     /* Container padding adjustment */
@@ -5725,11 +5849,7 @@ a[href^="http"] {
         padding-right: 1rem;
     }
 
-    /* Remove negative margins that might cause overflow */
-    * {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
+    /* Removed aggressive margin reset that was breaking layout */
 
     /* Fix for flex items */
     .hero-buttons,
@@ -5738,8 +5858,8 @@ a[href^="http"] {
     .journal-metrics,
     .conf-actions {
         width: 100%;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        /* margin-left: 0 !important;
+        margin-right: 0 !important; */
     }
 
     /* Button fixes */
@@ -5760,7 +5880,7 @@ a[href^="http"] {
 
     /* Force maximum container constraint */
     .container {
-        max-width: 100vw;
+        max-width: 100%;
         padding-left: 0.875rem;
         padding-right: 0.875rem;
         overflow-x: hidden;
@@ -5833,7 +5953,7 @@ code {
 
     /* Absolutely force everything to stay within viewport */
     * {
-        max-width: 100vw !important;
+        max-width: 100% !important;
     }
 
     /* Exception for properly contained elements */
@@ -5867,10 +5987,11 @@ code {
 }
 
 .main-header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    /* Increased from 100 */
+    left: 0;
+    right: 0;
+    z-index: 2000;
     background: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -6035,9 +6156,11 @@ code {
 
 /* ==================== MAIN HEADER OPTIMIZATION ==================== */
 .main-header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 2000;
     background: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -6466,9 +6589,8 @@ code {
 
 /* ==================== GLOBAL OVERFLOW FIX ==================== */
 html {
-    overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     position: relative;
     scroll-behavior: smooth;
 }
@@ -6476,7 +6598,7 @@ html {
 body {
     overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     position: relative;
 }
 
@@ -6507,7 +6629,7 @@ body {
 .preloader {
     position: fixed;
     inset: 0;
-    width: 100vw;
+    width: 100%;
     max-width: 100%;
     overflow: hidden;
 }
@@ -6515,12 +6637,12 @@ body {
 .preloader-scene,
 .particles-bg,
 .floating-icons {
-    max-width: 100vw;
+    max-width: 100%;
     overflow: hidden;
 }
 
 .globe-container {
-    max-width: 90vw;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -6539,7 +6661,7 @@ body {
 .top-bar {
     overflow: hidden;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .top-bar .container {
@@ -6549,16 +6671,18 @@ body {
 }
 
 .main-header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 2000;
     background: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     overflow: visible;
     /* Allow dropdowns but prevent horizontal scroll */
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .main-header .container {
@@ -6651,7 +6775,7 @@ section,
 .filter-section {
     overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 /* ==================== ALL GRIDS FIX ==================== */
@@ -6742,7 +6866,7 @@ img,
 .site-footer {
     overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 .footer-main,
@@ -6753,12 +6877,12 @@ img,
 
 /* ==================== MOBILE MENU FIX ==================== */
 .mobile-menu {
-    max-width: 100vw;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
 .mobile-overlay {
-    max-width: 100vw;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -6830,10 +6954,9 @@ code {
 @media (max-width: 768px) {
 
     /* Force viewport constraint */
-    html,
     body {
         overflow-x: hidden !important;
-        max-width: 100vw !important;
+        max-width: 100% !important;
         width: 100% !important;
     }
 
@@ -6846,10 +6969,10 @@ code {
     }
 
     /* Remove all negative margins */
-    * {
+    /* * {
         margin-left: 0 !important;
         margin-right: 0 !important;
-    }
+    } */
 
     /* Grid adjustments */
     .journals-grid,
@@ -6887,10 +7010,10 @@ code {
 
     /* Hero slider mobile */
     .hero-slider {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        /* margin-left: 0 !important;
+        margin-right: 0 !important; */
     }
 
     .hero-content {
@@ -6951,7 +7074,7 @@ code {
     .search-dropdown {
         left: 1rem !important;
         right: 1rem !important;
-        max-width: calc(100vw - 2rem) !important;
+        max-width: calc(100% - 2rem) !important;
     }
 
     /* Mega menu mobile */
@@ -6991,9 +7114,8 @@ code {
 @media (max-width: 480px) {
 
     /* Extra safety for small screens */
-    html,
     body {
-        max-width: 100vw !important;
+        max-width: 100% !important;
         overflow-x: hidden !important;
     }
 
@@ -7036,7 +7158,7 @@ code {
 
     /* Nuclear option - force everything within viewport */
     * {
-        max-width: 100vw !important;
+        max-width: 100% !important;
     }
 
     /* But allow properly contained children */
@@ -7047,7 +7169,7 @@ code {
 
     /* Ensure no element creates horizontal scroll */
     body>* {
-        max-width: 100vw !important;
+        max-width: 100% !important;
     }
 }
 
@@ -7073,7 +7195,6 @@ html {
 /* Prevent horizontal scroll in Firefox */
 @-moz-document url-prefix() {
 
-    html,
     body {
         overflow-x: hidden !important;
     }
@@ -7150,7 +7271,7 @@ html {
 
 /* Proceeding hero */
 .proceeding-hero {
-    max-width: 100vw;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -7177,7 +7298,7 @@ html {
     #root,
     #app,
     main {
-        max-width: 100vw !important;
+        max-width: 100% !important;
         overflow-x: hidden !important;
     }
 }
@@ -7532,4 +7653,840 @@ html {
 /* Optional: active tab highlight (if needed) */
 .dropdown-column.active h4 {
     color: #10B981;
+}
+
+/* =====================================================
+   PROCEEDINGS MEGA DROPDOWN
+   ===================================================== */
+.proceedings-mega-menu {
+    min-width: 680px !important;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px) !important;
+}
+
+.nav-dropdown:hover .proceedings-mega-menu {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+.proceedings-mega-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 0.5rem;
+}
+
+.proceedings-group {
+    padding: 1.25rem 1rem;
+    border-right: 1px solid var(--gray-100);
+}
+
+.proceedings-group:last-child {
+    border-right: none;
+}
+
+.proceedings-group-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--primary);
+    line-height: 1.3;
+}
+
+.proceedings-group-title i {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.proceedings-group-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.proceedings-group-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.5rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.proceedings-group-links li a i {
+    color: var(--primary);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.proceedings-group-links li a:hover {
+    background: rgba(16, 185, 129, 0.08);
+    color: var(--primary);
+    padding-left: 0.75rem;
+}
+
+.proceedings-group-links li a:hover i {
+    opacity: 1;
+}
+
+/* =====================================================
+   PDF DOWNLOAD SECTION — JOURNAL PROCEEDING CARDS
+   ===================================================== */
+.pdf-download-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-100);
+}
+
+.pdf-download-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #e53e3e;
+}
+
+.pdf-download-label i {
+    font-size: 1.2rem;
+    color: #e53e3e;
+}
+
+.pdf-download-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-pdf {
+    background: #e53e3e;
+    color: #fff !important;
+    border: 1.5px solid #e53e3e;
+    border-radius: var(--radius-md);
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-pdf:hover {
+    background: #c53030;
+    border-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+.btn-pdf i {
+    font-size: 1rem;
+}
+
+/* Responsive: stack PDF download on small screens */
+@media (max-width: 480px) {
+    .pdf-download-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .proceedings-mega-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .proceedings-group {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-100);
+    }
+
+    .proceedings-group:last-child {
+        border-bottom: none;
+    }
+
+    .proceedings-mega-menu {
+        min-width: 300px !important;
+        left: 0 !important;
+        transform: translateY(10px) !important;
+    }
+
+    .nav-dropdown:hover .proceedings-mega-menu {
+        transform: translateY(0) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .proceedings-mega-menu {
+        min-width: 340px !important;
+    }
+
+    .proceedings-mega-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .proceedings-group {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-100);
+        padding: 0.9rem 0.75rem;
+    }
+}
+
+/* =====================================================
+   VOLUMES & ISSUES SECTION - SIDE BY SIDE LAYOUT
+   ===================================================== */
+.volumes-issues-section {
+    padding: 4rem 0;
+    background: var(--gray-100);
+}
+
+.volumes-issues-section .section-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.volumes-issues-section .section-header h2 i {
+    color: var(--primary);
+}
+
+.volumes-issues-section .section-header p {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+}
+
+/* Volumes Grid Container */
+.volumes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Volume Block */
+.volume-block {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.volume-block:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* When a volume is expanded, make it span full width */
+.volume-block.expanded {
+    grid-column: 1 / -1;
+}
+
+.volume-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-bottom: 2px solid var(--primary);
+    transition: var(--transition);
+}
+
+.volume-header:hover {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.volume-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.volume-icon {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.volume-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--dark);
+}
+
+.volume-year {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.volume-meta {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    margin: 0.25rem 0 0;
+}
+
+.volume-toggle {
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.volume-block.expanded .volume-toggle {
+    transform: rotate(180deg);
+}
+
+.volume-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.volume-content.open {
+    max-height: 100000px;
+    padding: 1.5rem 2rem 2rem;
+}
+
+/* Issues Grid - display issues side by side inside expanded volume */
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Issue Block */
+.issue-block {
+    background: #fafafa;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.issue-block:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
+}
+
+.issue-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.issue-header:hover {
+    background: #f0fdf4;
+}
+
+.issue-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.issue-badge {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.issue-header h4 {
+    font-size: 1.05rem;
+    margin: 0;
+    color: var(--dark);
+}
+
+.issue-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin: 0.25rem 0 0;
+    flex-wrap: wrap;
+}
+
+.issue-meta i {
+    color: var(--primary);
+}
+
+.issue-meta .separator {
+    color: var(--gray-300);
+}
+
+.issue-toggle {
+    font-size: 1.3rem;
+    color: var(--gray-500);
+    transition: transform 0.3s ease;
+}
+
+.issue-block.expanded .issue-toggle {
+    transform: rotate(180deg);
+}
+
+.issue-articles {
+    max-height: 0;
+    overflow: hidden;
+    background: #fafafa;
+    transition: max-height 0.4s ease;
+}
+
+.issue-articles.open {
+    max-height: 100000px;
+    padding: 0.5rem 0;
+}
+
+/* Article Row - Spacious card-style layout */
+.article-row {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    gap: 1.25rem;
+    padding: 1.5rem 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition);
+    align-items: start;
+    background: var(--white);
+    margin: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+}
+
+.article-row:last-child {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.article-row:hover {
+    background: #f0fdf4;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+    transform: translateY(-1px);
+}
+
+.article-icon-wrap {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.article-details {
+    min-width: 0;
+}
+
+.article-details h5 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    color: var(--dark);
+    line-height: 1.5;
+}
+
+.article-authors {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+}
+
+.article-authors i {
+    font-size: 0.95rem;
+}
+
+.article-abstract {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
+}
+
+.article-meta-row {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    flex-wrap: wrap;
+}
+
+.article-meta-row i {
+    color: var(--primary);
+    margin-right: 0.25rem;
+}
+
+.article-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.btn-view-pdf,
+.btn-download-pdf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    white-space: nowrap;
+}
+
+.btn-view-pdf {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-view-pdf:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-download-pdf {
+    background: var(--white);
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+}
+
+.btn-download-pdf:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.no-volumes {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--gray-500);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    grid-column: 1 / -1;
+}
+
+.no-volumes i {
+    font-size: 3rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* =====================================================
+   PDF MODAL VIEWER
+   ===================================================== */
+.pdf-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.pdf-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pdf-modal-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 1100px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: var(--dark);
+    color: var(--white);
+    border-bottom: 2px solid var(--primary);
+}
+
+.pdf-modal-header h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin: 0;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 1rem;
+}
+
+.pdf-modal-close {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.pdf-modal-close:hover {
+    background: #ef4444;
+    transform: rotate(90deg);
+}
+
+.pdf-modal-body {
+    flex: 1;
+    overflow: hidden;
+    background: #525659;
+}
+
+#pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+    .volumes-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .issues-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .volumes-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .issues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-row {
+        grid-template-columns: 42px 1fr;
+        gap: 1rem;
+    }
+
+    .article-actions {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        min-width: auto;
+    }
+
+    .btn-view-pdf,
+    .btn-download-pdf {
+        flex: 1;
+    }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+    .volumes-issues-section {
+        padding: 2.5rem 0;
+    }
+
+    .volumes-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .volume-header {
+        padding: 1rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .volume-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .volume-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .volume-header {
+        position: relative;
+    }
+
+    .volume-content.open {
+        padding: 1rem 1rem 1.25rem;
+    }
+
+    .issue-header {
+        padding: 0.85rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .issue-header h4 {
+        font-size: 0.95rem;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin: 0.4rem 0.5rem;
+        padding: 1.25rem 1rem;
+    }
+
+    .article-icon-wrap {
+        display: none;
+    }
+
+    .article-actions {
+        flex-direction: row;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .btn-view-pdf,
+    .btn-download-pdf {
+        flex: 1;
+        padding: 0.55rem 0.75rem;
+    }
+
+    .pdf-modal-content {
+        height: 95vh;
+        max-width: 100%;
+        border-radius: var(--radius-md);
+    }
+
+    .pdf-modal-header h3 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+    .volumes-issues-section .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .volumes-container {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    /* Even on mobile, collapsed volumes stack neatly */
+    .volume-block.expanded {
+        grid-column: 1 / -1;
+    }
+
+    .volume-header {
+        padding: 0.85rem 1rem;
+    }
+
+    .volume-icon {
+        font-size: 1.5rem;
+    }
+
+    .volume-header h3 {
+        font-size: 1rem;
+    }
+
+    .volume-content.open {
+        padding: 0.75rem 0.75rem 1rem;
+    }
+
+    .issue-header {
+        padding: 0.75rem;
+    }
+
+    .issue-badge {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.7rem;
+    }
+
+    .article-row {
+        margin: 0.35rem 0.4rem;
+        padding: 1rem 0.85rem;
+    }
+
+    .article-details h5 {
+        font-size: 0.9rem;
+    }
+
+    .article-abstract {
+        font-size: 0.8rem;
+    }
+
+    .article-meta-row {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .pdf-modal {
+        padding: 0.5rem;
+    }
 }

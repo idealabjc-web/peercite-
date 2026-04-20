@@ -50,10 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log("✅ Article collection found:", proceeding.title);
 
-        // Update Page Title
         document.title = `${proceeding.title} | PeerCite Publishers`;
-
-        // Breadcrumb
         const breadcrumbJournal = document.getElementById("breadcrumbJournal");
         if (breadcrumbJournal) {
             breadcrumbJournal.textContent = journal.title;
@@ -64,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (breadcrumbProceeding) {
             breadcrumbProceeding.textContent = proceeding.title;
         }
-
         // Hero Section
         document.getElementById("proceedingTitle").textContent = proceeding.title;
         document.getElementById("proceedingConference").textContent = proceeding.conference;

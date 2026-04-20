@@ -131,32 +131,47 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchDropdown = document.getElementById('search-dropdown');
     const searchBtn = document.getElementById('search-btn');
 
-    // Comprehensive searchable data (Add more as needed)
-    const searchData = [
-        { title: "Home", url: "index.html", category: "Page", icon: "bx bx-home" },
-        { title: "Publications", url: "publications.html", category: "Section", icon: "bx bx-book-open" },
-        { title: "Authors Hub", url: "authors.html", category: "Section", icon: "bx bx-feather" },
-        { title: "About Us", url: "about.html", category: "Page", icon: "bx bx-building-house" },
-        { title: "Contact", url: "contact.html", category: "Page", icon: "bx bx-envelope" },
+    // Comprehensive searchable data
+    let searchData = [
+        { title: "Home", url: "index.html", category: "Page", icon: "bx bx-home", type: "static" },
+        { title: "Publications", url: "publications.html", category: "Section", icon: "bx bx-book-open", type: "static" },
+        { title: "Authors Hub", url: "authors.html", category: "Section", icon: "bx bx-feather", type: "static" },
+        { title: "About Us", url: "about.html", category: "Page", icon: "bx bx-building-house", type: "static" },
+        { title: "Contact", url: "contact.html", category: "Page", icon: "bx bx-envelope", type: "static" },
 
-        // Journals & Topics
-        { title: "AI & Machine Learning in Modern Research", url: "journal.html", category: "Journal", icon: "bx bx-chip" },
-        { title: "Mental Health & Neuroscience Research Journal", url: "journal.html", category: "Journal", icon: "bx bx-heart-circle" },
-        { title: "Climate & Environmental Sustainability Studies", url: "journal.html", category: "Journal", icon: "bx bx-leaf" },
-        { title: "Quantum Computing & Advanced Physics Review", url: "journal.html", category: "Journal", icon: "bx bx-atom" },
-        { title: "Biotechnology & Genomics Frontiers", url: "journal.html", category: "Journal", icon: "bx bx-test-tube" },
-        { title: "Data Science & Analytics Quarterly", url: "journal.html", category: "Journal", icon: "bx bx-bar-chart-alt-2" },
-
-        // Popular Keywords
-        { title: "Artificial Intelligence", url: "journal.html", category: "Topic", icon: "bx bx-brain" },
-        { title: "Neuroscience", url: "journal.html", category: "Topic", icon: "bx bx-brain" },
-        { title: "Climate Change", url: "journal.html", category: "Topic", icon: "bx bx-leaf" },
-        { title: "Mental Health Research", url: "journal.html", category: "Topic", icon: "bx bx-heart-circle" },
-        { title: "Global Health Summit", url: "journal.html", category: "Conference", icon: "bx bx-calendar-event" },
-        { title: "AI World Congress", url: "journal.html", category: "Conference", icon: "bx bx-calendar-event" }
     ];
 
+    // Dynamically build from JOURNALS_DATA if available
+    if (typeof window.JOURNALS_DATA !== 'undefined' || typeof JOURNALS_DATA !== 'undefined') {
+        const journalsDataObj = typeof JOURNALS_DATA !== 'undefined' ? JOURNALS_DATA : window.JOURNALS_DATA;
+        Object.values(journalsDataObj).forEach(journal => {
+            // Add Journal
+            searchData.push({
+                title: journal.title,
+                url: `journal.html?id=${journal.id}`,
+                category: "Journal",
+                icon: "bx bx-book",
+                type: "journal"
+            });
+
+            // Add Proceedings
+            if (journal.proceedings && Array.isArray(journal.proceedings)) {
+                journal.proceedings.forEach((proc, index) => {
+                    const procId = proc.id || (proc.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + (index + 1));
+                    searchData.push({
+                        title: proc.title,
+                        url: `proceeding.html?journal=${journal.id}&proceeding=${procId}`,
+                        category: "Proceeding",
+                        icon: "bx bx-file",
+                        type: "proceeding"
+                    });
+                });
+            }
+        });
+    }
+
     function showSuggestions(query) {
+        if (!searchDropdown) return;
         searchDropdown.innerHTML = '';
 
         if (query.length < 2) {
@@ -164,9 +179,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const filtered = searchData.filter(item =>
+        let filtered = searchData.filter(item =>
             item.title.toLowerCase().includes(query.toLowerCase())
         );
+
+        // Sort: Priority to Journals (1), then Proceedings (2), then Static (3)
+        filtered.sort((a, b) => {
+            const types = { 'journal': 1, 'proceeding': 2, 'static': 3 };
+            return (types[a.type] || 4) - (types[b.type] || 4);
+        });
 
         if (filtered.length === 0) {
             searchDropdown.innerHTML = `
@@ -411,31 +432,40 @@ $$('a[href^="#"]').forEach(anchor => {
 });
 
 /* ==================== SCROLL REVEAL ANIMATIONS ==================== */
-const revealElements = $$('.how-card, .speaker-card, .journal-card, .publication-card, .value-card, .team-card, .partner-card, .step-card, .standard-card, .contact-info-card, .partner-info-card, .faq-item');
+/* ===== REVEAL ANIMATION (FIXED) ===== */
+const track = document.querySelector('.speakers-track');
 
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+let position = 0;
+let speed = 0.5; // adjust speed here
 
-revealElements.forEach((el, index) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
-    revealObserver.observe(el);
-});
+function animate() {
+    position -= speed;
+    track.style.transform = `translateX(${position}px)`;
+
+    const firstCard = track.children[0];
+    const firstWidth = firstCard.offsetWidth + 32; // card + gap
+
+    // when first card fully moved out
+    if (Math.abs(position) >= firstWidth) {
+        position += firstWidth;
+        track.appendChild(firstCard);
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+
 /* ===== CURSOR GLOW ===== */
 const glow = document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-});
+if (glow) {
+    document.addEventListener("mousemove", (e) => {
+        glow.style.left = e.clientX + "px";
+        glow.style.top = e.clientY + "px";
+    });
+}
 
 /* ===== CARD 3D TILT ===== */
 // document.querySelectorAll(".journal-card").forEach(card => {

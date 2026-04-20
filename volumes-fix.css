@@ -1,0 +1,167 @@
+/* =====================================================
+   VOLUMES FIX — side-by-side grid + clean expanded view
+   Add this AFTER style.css in journal.html
+   ===================================================== */
+
+/* ── 1. Make the container a proper grid ───────────────
+   The original CSS targeted .volumes-container (a class)
+   but the HTML uses id="volumes-container", so the grid
+   was never applied. Fixed below.                       */
+#volumes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* ── 2. Collapsed volume — card-style, sits in the grid */
+.volume-block {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    /* Do NOT set grid-column here so cards stay side-by-side */
+}
+
+.volume-block:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+/* ── 3. Expanded volume — breaks out to full width ─────
+   When the user clicks a volume it gets .expanded and
+   spans every column in the parent grid.                */
+.volume-block.expanded {
+    grid-column: 1 / -1;
+    /* span all columns  */
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+/* ── 4. Issues grid inside an open volume ──────────────
+   Issues sit in a responsive 2-up grid so they are wide
+   enough to read comfortably.                           */
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1.25rem;
+}
+
+/* ── 5. Tighten the open-content padding ───────────────*/
+.volume-content.open {
+    max-height: none !important;
+    /* remove the large magic number */
+    padding: 1.5rem 1.75rem 2rem;
+    overflow: visible;
+}
+
+/* ── 6. Issue block — full width inside its grid cell ──*/
+.issue-block {
+    width: 100%;
+    background: #fafafa;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.issue-block:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
+}
+
+/* ── 7. Article rows — prevent squished layout ──────── */
+.issue-articles.open {
+    max-height: none !important;
+    padding: 0.5rem 0;
+    overflow: visible;
+}
+
+.article-row {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 1.25rem;
+    align-items: start;
+    background: var(--white);
+    margin: 0.5rem 0.75rem;
+    padding: 1.25rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.article-row:hover {
+    background: #f0fdf4;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+    transform: translateY(-1px);
+}
+
+/* ── 8. Responsive adjustments ─────────────────────────*/
+
+/* Tablet: 2 columns for volumes, 1 for issues */
+@media (max-width: 1024px) {
+    #volumes-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .issues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-row {
+        grid-template-columns: 44px 1fr;
+    }
+
+    .article-actions {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        min-width: unset;
+    }
+
+    .btn-view-pdf,
+    .btn-download-pdf {
+        flex: 1;
+    }
+}
+
+/* Mobile: single column stack */
+@media (max-width: 640px) {
+    #volumes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .volume-block.expanded {
+        grid-column: 1 / -1;
+    }
+
+    .issues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1rem;
+        margin: 0.4rem 0.5rem;
+    }
+
+    .article-icon-wrap {
+        display: none;
+    }
+
+    .article-actions {
+        flex-direction: row;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .btn-view-pdf,
+    .btn-download-pdf {
+        flex: 1;
+        padding: 0.55rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}
