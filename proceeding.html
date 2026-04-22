@@ -169,12 +169,46 @@
         </div>
     </header>
 
-    <div class="search-overlay" id="searchOverlay">
+    <!-- MOBILE MENU -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo"><span class="logo-mark">P</span><span>PeerCite</span></div>
+            <button class="mobile-close" id="mobile-close"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="mobile-search"><i class='bx bx-search'></i><input type="search" placeholder="Search articles...">
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
+            <a href="publications.html" class="mobile-nav-link"><i class='bx bx-book-open'></i><span>Publications</span></a>
+            <a href="journal.html?id=womens-leadership#proceedings" class="mobile-nav-link"><i class='bx bx-file'></i><span>Proceedings</span></a>
+            <a href="authors.html" class="mobile-nav-link"><i class='bx bx-feather'></i><span>Authors Hub</span></a>
+            <a href="about.html" class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span></a>
+            <a href="contact.html" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
+        </nav>
+        <div class="mobile-menu-cta">
+            <a href="publications.html" class="btn-mobile-cta"><i class='bx bx-book-reader'></i> Read Articles</a>
+        </div>
+        <div class="mobile-menu-footer">
+            <div class="mobile-contact">
+                <a href="tel:+17162171471"><i class='bx bx-phone'></i> +1 716 217 1471</a>
+                <a href="mailto:contact@peercite.org"><i class='bx bx-envelope'></i> contact@peercite.org</a>
+            </div>
+            <div class="mobile-socials">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="search-overlay" id="searchOverlay">
         <button class="search-close" id="searchClose"><i class='bx bx-x'></i></button>
         <div class="search-container">
             <input type="text" placeholder="Search journals, proceedings, articles..." id="searchInput">
         </div>
-    </div>
+    </div> -->
 
     <main class="proceeding-page">
 
@@ -295,7 +329,7 @@
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="publications.html">Publications</a>
-                        <a href="conferences.html">Conferences</a>
+                        <a href="authors.html">Authors Hub</a>
                         <a href="about.html">About Us</a>
                         <a href="contact.html">Contact</a>
                     </div>

@@ -205,39 +205,17 @@
             <div class="mobile-logo"><span class="logo-mark">P</span><span>PeerCite</span></div>
             <button class="mobile-close" id="mobile-close"><i class='bx bx-x'></i></button>
         </div>
-        <div class="mobile-search"><i class='bx bx-search'></i><input type="search" placeholder="Search journals...">
+        <div class="mobile-search"><i class='bx bx-search'></i><input type="search" placeholder="Search articles...">
         </div>
         <nav class="mobile-nav">
-            <div class="mobile-dropdown">
-                <button class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span><i
-                        class='bx bx-chevron-down chevron'></i></button>
-                <div class="mobile-dropdown-content"><a href="index.html">Homepage</a></div>
-            </div>
-            <div class="mobile-dropdown">
-                <button class="mobile-nav-link"><i class='bx bx-book-open'></i><span>Publications</span><span
-                        class="mobile-badge">24+</span><i class='bx bx-chevron-down chevron'></i></button>
-                <div class="mobile-dropdown-content">
-                    <a href="journal.html?id=mental-health">Mental Health</a>
-                    <a href="journal.html?id=womens-leadership">Women's Leadership</a>
-                    <a href="journal.html?id=ai-machine-learning">AI & Machine Learning</a>
-                    <a href="publications.html" class="view-all">View All →</a>
-                </div>
-            </div>
-            <div class="mobile-dropdown">
-                <button class="mobile-nav-link"><i class='bx bx-calendar-event'></i><span>Conferences</span><i
-                        class='bx bx-chevron-down chevron'></i></button>
-                <div class="mobile-dropdown-content"><a href="conferences.html">Past Conferences</a></div>
-            </div>
-            <div class="mobile-dropdown">
-                <button class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span><i
-                        class='bx bx-chevron-down chevron'></i></button>
-                <div class="mobile-dropdown-content"><a href="about.html">Our Story</a></div>
-            </div>
-            <div class="mobile-dropdown">
-                <button class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span><i
-                        class='bx bx-chevron-down chevron'></i></button>
-                <div class="mobile-dropdown-content"><a href="contact.html">Get In Touch</a></div>
-            </div>
+            <a href="index.html" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
+            <a href="publications.html" class="mobile-nav-link"><i
+                    class='bx bx-book-open'></i><span>Publications</span></a>
+            <a href="journal.html?id=womens-leadership#proceedings" class="mobile-nav-link"><i
+                    class='bx bx-file'></i><span>Proceedings</span></a>
+            <a href="authors.html" class="mobile-nav-link"><i class='bx bx-feather'></i><span>Authors Hub</span></a>
+            <a href="about.html" class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span></a>
+            <a href="contact.html" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
         </nav>
         <div class="mobile-menu-cta">
             <a href="publications.html" class="btn-mobile-cta"><i class='bx bx-book-reader'></i> Read Articles</a>
@@ -782,6 +760,26 @@
                     </div>
                 </article>
 
+                <!-- 25. Fisheries and Aquatic Studies -->
+                <article class="publication-card" data-category="medical">
+                    <div class="publication-image">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=250&fit=crop"
+                            alt="Fisheries and Aquatic Studies" loading="lazy">
+                        <span class="publication-badge bg-medical">Medical Sciences</span>
+                    </div>
+                    <div class="publication-content">
+                        <h3>Peercite Journal of Fisheries and Aquatic Studies</h3>
+                        <p>Driving the next wave of aquatic science through precision research, sustainable innovation,
+                            and global academic excellence.</p>
+                        <div class="publication-stats">
+                            <span><i class='bx bx-calendar'></i> 2024</span>
+                            <span><i class='bx bx-file'></i> JF/AS Proceedings</span>
+                        </div>
+                        <a href="journal.html?id=fisheries-aquatic-studies" class="publication-link">Read Journal <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </article>
+
             </div>
 
             <!-- No Results -->
@@ -851,6 +849,7 @@
     </footer>
 
     <button class="back-to-top" id="back-to-top"><i class='bx bx-up-arrow-alt'></i></button>
+    <script src="journals-data.js"></script>
     <script src="script.js"></script>
 </body>
 

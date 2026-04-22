@@ -397,7 +397,8 @@ const otherJournalIds = [
     'obstetrics-gynecology', 'cell-biology', 'cardio-biology', 'dermatology-cosmetics',
     'blockchain', 'veterinary-science', 'nanostructured-materials', 'dental-care',
     'pediatrics', 'agriculture-food', 'pharmaceutical-sciences', 'applied-chemistry',
-    'entrepreneurship', 'microbiology', 'metaphysics', 'diagnostic-pathology'
+    'entrepreneurship', 'microbiology', 'metaphysics', 'diagnostic-pathology',
+    'fisheries-aquatic-studies'
 ];
 
 // Minimal data for other journals
@@ -421,7 +422,8 @@ const defaultOtherJournals = {
     'entrepreneurship': { title: 'PeerCite Journal of Entrepreneurship and Business Innovations', shortTitle: 'Entrepreneurship & Business', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop', abbr: 'EBI' },
     'microbiology': { title: 'PeerCite Journal of Microbiology and Infectious Diseases', shortTitle: 'Microbiology & Infectious Diseases', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'MID' },
     'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
-    'diagnostic-pathology': { title: 'PeerCite Journal of Diagnostic Pathology', shortTitle: 'Diagnostic Pathology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'DP' }
+    'diagnostic-pathology': { title: 'PeerCite Journal of Diagnostic Pathology', shortTitle: 'Diagnostic Pathology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'DP' },
+    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
 };
 
 // Fill in the rest of the journals with default structure

@@ -83,21 +83,6 @@ hamburger?.addEventListener('click', () => {
 mobileClose?.addEventListener('click', closeMobileMenu);
 mobileOverlay?.addEventListener('click', closeMobileMenu);
 
-/* ==================== MOBILE DROPDOWNS ==================== */
-$$('.mobile-dropdown').forEach(dropdown => {
-    const btn = dropdown.querySelector('.mobile-nav-link');
-    btn?.addEventListener('click', (e) => {
-        e.preventDefault();
-        const isOpen = dropdown.classList.contains('open');
-
-        // Close all other dropdowns
-        $$('.mobile-dropdown.open').forEach(d => {
-            if (d !== dropdown) d.classList.remove('open');
-        });
-
-        dropdown.classList.toggle('open', !isOpen);
-    });
-});
 
 /* ==================== AUTO-SCROLLING HERO CAROUSEL WITH DYNAMIC TEXT ==================== */
 const wrapper = document.getElementById('hero-slides-wrapper');
@@ -127,9 +112,10 @@ startAuto();
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const searchInput = document.getElementById('search-input');
+    const searchInputs = document.querySelectorAll('#search-input, .mobile-search input');
     const searchDropdown = document.getElementById('search-dropdown');
-    const searchBtn = document.getElementById('search-btn');
+    const searchBtns = document.querySelectorAll('#search-btn, .mobile-search i.bx-search');
+    let selectedSuggestionIndex = -1;
 
     // Comprehensive searchable data
     let searchData = [
@@ -138,13 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
         { title: "Authors Hub", url: "authors.html", category: "Section", icon: "bx bx-feather", type: "static" },
         { title: "About Us", url: "about.html", category: "Page", icon: "bx bx-building-house", type: "static" },
         { title: "Contact", url: "contact.html", category: "Page", icon: "bx bx-envelope", type: "static" },
-
     ];
 
     // Dynamically build from JOURNALS_DATA if available
-    if (typeof window.JOURNALS_DATA !== 'undefined' || typeof JOURNALS_DATA !== 'undefined') {
-        const journalsDataObj = typeof JOURNALS_DATA !== 'undefined' ? JOURNALS_DATA : window.JOURNALS_DATA;
-        Object.values(journalsDataObj).forEach(journal => {
+    if (typeof JOURNALS_DATA !== 'undefined') {
+        Object.values(JOURNALS_DATA).forEach(journal => {
             // Add Journal
             searchData.push({
                 title: journal.title,
@@ -170,9 +154,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function showSuggestions(query) {
+    function showSuggestions(query, inputElement) {
         if (!searchDropdown) return;
         searchDropdown.innerHTML = '';
+        selectedSuggestionIndex = -1;
 
         if (query.length < 2) {
             searchDropdown.classList.remove('show');
@@ -189,9 +174,27 @@ document.addEventListener('DOMContentLoaded', function () {
             return (types[a.type] || 4) - (types[b.type] || 4);
         });
 
+        // Position dropdown relative to the active input if it's the mobile one
+        if (inputElement.closest('.mobile-search')) {
+            // For mobile search, we might want to attach it differently, 
+            // but for now let's just show it in the fixed wrapper if possible.
+            // Actually, the search-dropdown is usually fixed or absolute in the header.
+            // On mobile, it might need to be under the mobile input.
+            const mobileSearch = inputElement.closest('.mobile-search');
+            if (mobileSearch && !mobileSearch.contains(searchDropdown)) {
+                mobileSearch.appendChild(searchDropdown);
+            }
+        } else {
+            // Re-attach to desktop wrapper if needed
+            const desktopWrapper = document.querySelector('.search-autocomplete-wrapper');
+            if (desktopWrapper && !desktopWrapper.contains(searchDropdown)) {
+                desktopWrapper.appendChild(searchDropdown);
+            }
+        }
+
         if (filtered.length === 0) {
             searchDropdown.innerHTML = `
-                <div class="suggestion-item">
+                <div class="suggestion-item no-results">
                     <i class='bx bx-info-circle'></i>
                     <span>No results found for "<strong>${query}</strong>"</span>
                 </div>`;
@@ -226,39 +229,99 @@ document.addEventListener('DOMContentLoaded', function () {
         searchDropdown.classList.add('show');
     }
 
-    // Input Event
-    searchInput.addEventListener('input', function () {
-        showSuggestions(this.value.trim());
+    function updateSelection() {
+        const items = searchDropdown.querySelectorAll('.suggestion-item:not(.no-results)');
+        items.forEach((item, index) => {
+            if (index === selectedSuggestionIndex) {
+                item.classList.add('active');
+                item.scrollIntoView({ block: 'nearest' });
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    // Input Events
+    searchInputs.forEach(input => {
+        input.addEventListener('input', function () {
+            showSuggestions(this.value.trim(), this);
+        });
+
+        // Keyboard Support (Arrows & Enter)
+        input.addEventListener('keydown', function (e) {
+            const items = searchDropdown.querySelectorAll('.suggestion-item:not(.no-results)'); // Target actual results
+            const query = this.value.trim();
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (items.length > 0) {
+                    selectedSuggestionIndex = (selectedSuggestionIndex + 1) % items.length;
+                    updateSelection();
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (items.length > 0) {
+                    selectedSuggestionIndex = (selectedSuggestionIndex - 1 + items.length) % items.length;
+                    updateSelection();
+                }
+            } else if (e.key === 'Enter') {
+                if (searchDropdown.classList.contains('show')) {
+                    // 1. If an item is highlighted via arrows
+                    if (selectedSuggestionIndex >= 0 && items[selectedSuggestionIndex]) {
+                        e.preventDefault();
+                        items[selectedSuggestionIndex].click();
+                        return;
+                    }
+
+                    // 2. If exactly 2 letters and Enter is pressed, pick the first suggestion if available
+                    if (query.length === 2 && items.length > 0) {
+                        e.preventDefault();
+                        items[0].click();
+                        return;
+                    }
+                }
+
+                // 3. Default search behavior
+                if (query) {
+                    window.location.href = `publications.html?q=${encodeURIComponent(query)}`;
+                }
+            } else if (e.key === 'Escape') {
+                searchDropdown.classList.remove('show');
+            }
+        });
     });
 
-    // Search Button Click
-    searchBtn.addEventListener('click', function () {
-        const query = searchInput.value.trim();
-        if (query) {
-            // You can later create a dedicated search results page
-            window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
-        }
-    });
-
-    // Enter Key Support
-    searchInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            searchBtn.click();
-        }
+    // Search Button Clicks
+    searchBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const input = this.parentElement.querySelector('input');
+            const query = input ? input.value.trim() : '';
+            if (query) {
+                window.location.href = `publications.html?q=${encodeURIComponent(query)}`;
+            }
+        });
     });
 
     // Close dropdown when clicking outside
     document.addEventListener('click', function (e) {
-        if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+        let isClickInside = false;
+        searchInputs.forEach(input => {
+            if (input.contains(e.target)) isClickInside = true;
+        });
+        if (searchDropdown && searchDropdown.contains(e.target)) isClickInside = true;
+
+        if (!isClickInside && searchDropdown) {
             searchDropdown.classList.remove('show');
         }
     });
 
     // Optional: Show popular searches when focused and empty
-    searchInput.addEventListener('focus', function () {
-        if (this.value.trim() === '') {
-            // You can show trending searches here if you want
-        }
+    searchInputs.forEach(input => {
+        input.addEventListener('focus', function () {
+            if (this.value.trim() === '') {
+                // You can show trending searches here if you want
+            }
+        });
     });
 });
 /* =====================================================

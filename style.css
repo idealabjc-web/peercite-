@@ -66,12 +66,14 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
-    padding-top: 100px; /* Offset for fixed header */
+    padding-top: 100px;
+    /* Offset for fixed header */
 }
 
 @media (max-width: 768px) {
     body {
-        padding-top: 80px; /* Smaller offset for mobile */
+        padding-top: 80px;
+        /* Smaller offset for mobile */
     }
 }
 
@@ -1167,8 +1169,14 @@ ul {
     transition: all 0.2s;
 }
 
-.suggestion-item:hover {
+.suggestion-item:hover,
+.suggestion-item.active {
     background: #f8fafc;
+}
+
+.suggestion-item.active {
+    background: #f1f5f9;
+    border-left: 4px solid #6366f1;
 }
 
 .suggestion-item i {
@@ -1317,7 +1325,10 @@ ul {
 
 .mobile-nav {
     flex: 1;
-    padding: 0 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .mobile-nav-link {
@@ -1327,61 +1338,21 @@ ul {
     padding: 1rem;
     font-family: var(--font-heading);
     font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark);
     border-radius: var(--radius-md);
-    width: 100%;
-    text-align: left;
+    transition: var(--transition);
+}
+
+.mobile-nav-link i {
+    font-size: 1.25rem;
+    color: var(--primary);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
     background: rgba(16, 185, 129, 0.08);
     color: var(--primary);
-}
-
-.mobile-nav-link i {
-    font-size: 1.2rem;
-    width: 24px;
-}
-
-.mobile-nav-link .chevron {
-    margin-left: auto;
-    transition: transform var(--transition);
-}
-
-.mobile-dropdown.open .chevron {
-    transform: rotate(180deg);
-}
-
-.mobile-badge {
-    background: var(--primary);
-    color: var(--white);
-    font-size: 0.65rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: var(--radius-full);
-}
-
-.mobile-dropdown-content {
-    display: none;
-    padding-left: 3.5rem;
-}
-
-.mobile-dropdown.open .mobile-dropdown-content {
-    display: block;
-}
-
-.mobile-dropdown-content a {
-    display: block;
-    padding: 0.6rem 0;
-    color: var(--gray-600);
-}
-
-.mobile-dropdown-content a:hover {
-    color: var(--primary);
-}
-
-.mobile-dropdown-content .view-all {
-    color: var(--primary);
-    font-weight: 600;
 }
 
 .mobile-menu-cta {
@@ -1657,12 +1628,12 @@ ul {
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 1024px) {
-    .hero {
-        min-height: 100vh;
+    .hero-slider {
+        height: 400px;
     }
 
-    .hero-title {
-        font-size: 3.5rem;
+    .hero-content h2 {
+        font-size: 2.8rem;
     }
 
     .carousel-controls {
@@ -1677,23 +1648,24 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        min-height: 100vh;
+    .hero-slider {
+        height: 350px;
         padding: 0 1rem;
     }
 
-    .hero-title {
-        font-size: 2.8rem;
+    .hero-content h2 {
+        font-size: 2.2rem;
     }
 
-    .hero-description {
-        font-size: 1.1rem;
-        margin-bottom: 2.5rem;
+    .hero-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        margin-bottom: 3rem;
     }
 
     .btn-hero-primary,
@@ -1703,7 +1675,7 @@ ul {
     }
 
     .stat-number {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .carousel-controls {
@@ -1725,12 +1697,12 @@ ul {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.2rem;
+    .hero-content h2 {
+        font-size: 1.8rem;
     }
 
-    .hero-description {
-        font-size: 1rem;
+    .hero-content p {
+        font-size: 0.85rem;
     }
 
     .stat-number {
@@ -3917,6 +3889,30 @@ ul {
 
     .other-journals-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .proceedings-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .proceedings-list {
+        grid-template-columns: 1fr;
+    }
+
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -6361,7 +6357,7 @@ code {
 
 /* ==================== RESPONSIVE HEADER ==================== */
 
-/* Tablet */
+/* Tablet & Mobile */
 @media (max-width: 1024px) {
     .logo-img {
         height: 55px;
@@ -6375,19 +6371,33 @@ code {
         gap: 0.75rem;
     }
 
-    .nav-controls {
-        max-width: 350px;
-        margin: 0 0.75rem;
+    /* Hide desktop nav and search on tablets/mobile */
+    .desktop-nav,
+    .nav-controls,
+    .search-autocomplete-wrapper,
+    .search-trigger,
+    .header-actions {
+        display: none !important;
     }
 
-    .desktop-nav {
-        margin-left: 1rem;
-        gap: 0.3rem;
+    /* Show hamburger earlier */
+    .hamburger {
+        display: flex !important;
+        align-items: center;
+        gap: 10px;
+        background: var(--gray-100);
+        padding: 8px 15px;
+        border-radius: var(--radius-full);
+        margin-left: auto;
     }
 
-    .nav-link {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.8rem;
+    .hamburger::after {
+        content: "MENU";
+        font-family: var(--font-heading);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--dark);
     }
 }
 
@@ -8489,4 +8499,47 @@ html {
     .pdf-modal {
         padding: 0.5rem;
     }
+}
+
+/* =====================================================
+   FINAL RESPONSIVE OVERRIDES (MOBILE & TABLET)
+   ==================================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --padding: 1.25rem;
+    }
+
+    .container {
+        padding: 0 var(--padding);
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .stat-card .stat-number {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --padding: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem !important;
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
 }
