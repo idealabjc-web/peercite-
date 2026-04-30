@@ -102,3 +102,32 @@ function toggleIssue(header) {
         renderVolumesAndIssues(window.JOURNALS_DATA[journalId]);
     }
 })();
+
+/* =====================================================
+   AUTHOR AFFILIATION TOGGLE (Inline expansion)
+   ===================================================== */
+function toggleAffiliation(element, event) {
+    if (event) event.stopPropagation();
+    
+    const isActive = element.classList.contains('active');
+    
+    // Close all other open affiliations in this specific article row
+    const container = element.closest('.article-authors');
+    if (container) {
+        container.querySelectorAll('.author-item').forEach(item => {
+            if (item !== element) item.classList.remove('active');
+        });
+    }
+    
+    // Toggle the clicked one
+    element.classList.toggle('active', !isActive);
+}
+
+// Close affiliations when clicking anywhere else on the page
+document.addEventListener('click', function (e) {
+    if (!e.target.closest('.author-item')) {
+        document.querySelectorAll('.author-item.active').forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+});

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     preloader.remove();
                 }
             }, 1000);
-        }, 2000); // Show for 2 seconds after load
+        }, 1000); // Show for 2 seconds after load
     });
 
     // Fallback: force hide after 5 seconds
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 preloader.remove();
             }
         }, 1000);
-    }, 5000);
+    }, 1000);
 });
 
 /* ==================== STICKY HEADER ==================== */
@@ -301,7 +301,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-
     // Close dropdown when clicking outside
     document.addEventListener('click', function (e) {
         let isClickInside = false;
@@ -468,13 +467,66 @@ contactForm?.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
     const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="bx bx-check"></i> Message Sent!';
-    btn.style.background = '#059669';
-    setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.style.background = '';
-        contactForm.reset();
-    }, 3000);
+
+    // Get form values
+    const name = document.getElementById('name')?.value || '';
+    const email = document.getElementById('email')?.value || '';
+    const subject = document.getElementById('subject')?.value || '';
+    const message = document.getElementById('message')?.value || '';
+
+    // TODO: Replace with your Web3Forms Access Key
+    // Get a free key at https://web3forms.com/
+    const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
+    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+        // Fallback to mailto if no API key is provided
+        alert("Please add your Web3Forms Access Key in script.js to enable seamless form submissions.\n\nFor now, we will open your default email client to send the message.");
+
+        const mailtoSubject = encodeURIComponent(`PeerCite Inquiry: ${subject}`);
+        const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:contact@peercite.org?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+        btn.innerHTML = '<i class="bx bx-check"></i> Opening Email...';
+        btn.style.background = '#059669';
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.style.background = '';
+            contactForm.reset();
+        }, 3000);
+        return;
+    }
+
+    // Process with Web3Forms if API key is set
+    btn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+
+    const formData = new FormData(contactForm);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    }).then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            btn.innerHTML = '<i class="bx bx-check"></i> Message Sent!';
+            btn.style.background = '#059669';
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = '';
+                contactForm.reset();
+            }, 3000);
+        } else {
+            console.log(response);
+            btn.innerHTML = '<i class="bx bx-x"></i> Error Sending';
+            btn.style.background = '#ef4444';
+            setTimeout(() => { btn.innerHTML = originalHTML; btn.style.background = ''; }, 3000);
+        }
+    }).catch(error => {
+        console.log(error);
+        btn.innerHTML = '<i class="bx bx-x"></i> Error Sending';
+        btn.style.background = '#ef4444';
+        setTimeout(() => { btn.innerHTML = originalHTML; btn.style.background = ''; }, 3000);
+    });
 });
 
 /* ==================== SMOOTH SCROLL FOR ANCHOR LINKS ==================== */
@@ -547,6 +599,56 @@ if (glow) {
 //         card.style.transform = "";
 //     });
 // });
+/* ==================== 3D ANIMATED BACKGROUND ==================== */
+document.addEventListener('DOMContentLoaded', () => {
+    // Make body transparent so background is visible
+    document.body.style.background = 'transparent';
 
+    const vantaBg = document.createElement('div');
+    vantaBg.id = 'vanta-bg';
+    Object.assign(vantaBg.style, {
+        position: 'fixed',
+        zIndex: '-1',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none'
+    });
+    document.body.prepend(vantaBg);
+
+    const loadScript = (src, callback) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = callback;
+        document.head.appendChild(script);
+    };
+
+    const dependencyScript = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
+    const effectScript = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js';
+
+    const initVanta = () => {
+        if (window.VANTA) window.VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x10b981,
+            backgroundColor: 0xfdf2f2,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+    };
+
+    // Load the correct Dependency then the selected Vanta effect
+    loadScript(dependencyScript, () => {
+        loadScript(effectScript, initVanta);
+    });
+});
 
 console.log('🚀 PeerCite Publishers — Loaded Successfully');

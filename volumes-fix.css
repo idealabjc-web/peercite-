@@ -18,7 +18,6 @@
 .volume-block {
     background: var(--white);
     border-radius: var(--radius-lg);
-    overflow: hidden;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--gray-200);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -62,7 +61,6 @@
     width: 100%;
     background: #fafafa;
     border-radius: var(--radius-md);
-    overflow: hidden;
     border: 1px solid var(--gray-200);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -90,6 +88,8 @@
     border-radius: var(--radius-md);
     border: 1px solid var(--gray-200);
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .article-row:hover {
@@ -97,6 +97,7 @@
     border-color: var(--primary);
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
     transform: translateY(-1px);
+    z-index: 10;
 }
 
 /* ── 8. Responsive adjustments ─────────────────────────*/
@@ -164,4 +165,88 @@
         padding: 0.55rem 0.75rem;
         font-size: 0.8rem;
     }
+}
+
+/* =====================================================
+   AUTHOR AFFILIATION (Click to expand below)
+   ===================================================== */
+.article-authors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.author-item {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: baseline;
+    transition: color 0.2s ease;
+}
+
+.author-name {
+    color: #334155;
+    font-weight: 500;
+}
+
+.aff-trigger {
+    cursor: pointer;
+    background: #f1f5f9;
+    color: var(--primary);
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-left: 2px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+    user-select: none;
+    border: 1px solid #e2e8f0;
+}
+
+.aff-trigger:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.author-item.active .aff-trigger {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.author-affiliation-block {
+    display: none; /* Hidden by default */
+    width: 100%; /* Force to next line */
+    background: #f8fafc;
+    border-left: 3px solid var(--primary);
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.85rem;
+    color: #475569;
+    animation: slideDown 0.2s ease-out;
+}
+
+.author-item.active .author-affiliation-block {
+    display: block;
+}
+
+.aff-content {
+    display: block;
+    line-height: 1.5;
+}
+
+.tooltip-num {
+    font-weight: 700;
+    color: var(--primary);
+    margin-right: 4px;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }

@@ -30,46 +30,73 @@ const JOURNALS_DATA = {
                 issues: [
                     {
                         issue: 1,
-                        title: 'Inaugural Issue',
+                        title: 'Psychedelics and Positive Psychology: Is It The Begining of A New Era, Positive Psychopharmacology?',
                         date: 'March 2023',
                         articles: [
                             {
                                 id: 'mh-v1-i1-a1',
-                                title: 'Modern Approaches to Depression Treatment',
-                                authors: 'Dr. Sarah Mitchell, Dr. James Chen',
-                                pages: '1-15',
+                                authors: [
+                                    {
+                                        name: "Hamide Eygoren",
+                                        aff: "Master of Applied Positive Psychology Program, University of Pennsylvania,USA"
+                                    }
+                                ],
+                                pages: '1-17',
                                 pdf: 'assets/pdfs/mental-health/mh-v1-i1-a1.pdf',
-                                abstract: 'An extensive review of contemporary treatment modalities for major depressive disorder.'
                             },
                         ]
                     },
                     {
                         issue: 2,
-                        title: 'Inaugural Issue',
+                        title: 'DNA Damage in Multiple Tissues of Different Genomic Silver Nanoparticles',
                         date: 'March 2023',
                         articles: [
                             {
-                                id: 'mh-v1-i1-a2',
-                                title: 'Anxiety Disorders in Adolescents',
-                                authors: 'Dr. Emily Rodriguez',
-                                pages: '16-32',
-                                pdf: 'pdfs/mental-health/v1-i1-a2.pdf',
-                                abstract: 'Research on emerging anxiety patterns among teenagers in the post-pandemic era.'
+                                id: 'mh-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr.Prasad Kovvuru",
+                                        aff: "Department of Health Sciences, Post-Doctoral Research, University at Albany, SUNY New York, USA"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/mental-health/mh-v1-i2-a2.pdf',
                             }
                         ]
                     },
                     {
                         issue: 3,
-                        title: 'Digital Mental Health',
+                        title: 'Psychology and Epidemiology Distress in Human Brain',
                         date: 'September 2023',
                         articles: [
                             {
-                                id: 'mh-v1-i2-a1',
-                                title: 'Telepsychiatry: The New Frontier',
-                                authors: 'Dr. Michael Brown, Dr. Lisa Wang',
-                                pages: '1-20',
-                                pdf: 'pdfs/mental-health/v1-i2-a1.pdf',
-                                abstract: 'How telepsychiatry is reshaping mental healthcare delivery.'
+                                id: 'mh-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Dr.Angelika Wagner",
+                                        aff: "Department of Psychology, Mental Health Center, UK"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/mental-health/mh-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Positive Energy in Psychology Treatment',
+                        date: 'September 2023',
+                        articles: [
+                            {
+                                id: 'mh-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Dr.Abdulkarim Kazemzade",
+                                        aff: "Founder of Online Psycho Therapy-OPT Co, Ltd, Vietnam"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/mental-health/mh-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -81,31 +108,37 @@ const JOURNALS_DATA = {
                 issues: [
                     {
                         issue: 1,
-                        title: 'Global Mental Health Summit',
+                        title: 'Nurturing Maternal Mental Health: Understanding and Supporting Pregnant Women',
                         date: 'April 2024',
                         articles: [
                             {
                                 id: 'mh-v2-i1-a1',
-                                title: 'Cross-Cultural Perspectives on Mental Wellness',
-                                authors: 'Dr. Raj Patel, Dr. Ana Silva',
-                                pages: '1-18',
-                                pdf: 'pdfs/mental-health/v2-i1-a1.pdf',
-                                abstract: 'Examining mental health frameworks across diverse cultures.'
+                                authors: [
+                                    {
+                                        name: "Dr. Geethika Sharma",
+                                        aff: "Founder of Online Psycho Therapy-OPT Co, Ltd, Australia"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/mental-health/mh-v2-i1-a1.pdf',
                             },
                         ]
                     },
                     {
                         issue: 2,
-                        title: 'Global Mental Health Summit',
+                        title: 'Supporting Young Minds: Promoting Mental Health in Children',
                         date: 'April 2024',
                         articles: [
                             {
-                                id: 'mh-v2-i1-a2',
-                                title: 'PTSD Treatment Innovations',
-                                authors: 'Dr. Robert Johnson',
-                                pages: '19-35',
-                                pdf: 'pdfs/mental-health/v2-i1-a2.pdf',
-                                abstract: 'New therapeutic approaches for post-traumatic stress disorder.'
+                                id: 'mh-v2-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr.Suresh V",
+                                        aff: "Department of Mental health,Research Group, Australia"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/mental-health/mh-v2-i2-a2.pdf',
                             }
                         ]
                     }
@@ -139,87 +172,121 @@ const JOURNALS_DATA = {
                 issues: [
                     {
                         issue: 1,
-                        title: 'Foundations of Leadership',
+                        title: 'Analyzing Differences Between Male and Female Leadership Styles, the Underrepresentation of Women in Leadership and the Negative Impacts it has.',
                         date: 'June 2023',
                         articles: [
                             {
                                 id: 'wl-v1-i1-a1',
-                                title: 'Breaking the Glass Ceiling: Executive Women in Fortune 500',
-                                authors: 'Dr. Jennifer Adams, Dr. Maria Gonzalez',
-                                pages: '1-22',
-                                pdf: 'pdfs/womens-leadership/v1-i1-a1.pdf',
-                                abstract: 'A decade of progress in female executive representation.'
+                                authors: [
+                                    {
+                                        name: "Dr. Tejeswi Gidadhubli",
+                                        aff: "University of Maryland, Aldie, Virginia, United States."
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/womens-leadership/wl-v1-i1-a1.pdf',
                             },
                         ]
                     },
                     {
-                        issue: 2,
-                        title: 'Inaugural Issue',
-                        date: 'March 2023',
+                        issue: "1 (2)",
+                        title: 'Nurturing Mental Strength and Fostering Inclusive Leadership in Women',
+                        date: 'December 2023',
                         articles: [
                             {
-                                id: 'wl-v1-i1-a2',
-                                title: 'Mentorship Programs for Women Leaders',
-                                authors: 'Dr. Priya Sharma',
-                                pages: '23-40',
-                                pdf: 'pdfs/womens-leadership/v1-i1-a2.pdf',
-                                abstract: 'Impact of structured mentorship on women in corporate leadership.'
+                                id: 'wl-v1-i1(s)-a1',
+                                authors: [
+                                    {
+                                        name: "Sabira Arefin",
+                                        aff: "Global HealthCare Leadership Program, Harvard University, Boston, USA."
+                                    },
+                                    {
+                                        name: "Gideon Kipkoech",
+                                        aff: "A writer focusing on AI and general human well-being research specializing in the intersection of artificial intelligence, mental health, psychology, and public health trends, Kenya."
+                                    },
+                                    {
+                                        name: " Samia Arefin",
+                                        aff: "Mental Health Doctor, Sydney, Australia"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/womens-leadership/wl-v1-i1(s)-a1.pdf',
                             }
                         ]
                     },
                     {
+                        issue: 2,
+                        title: 'The Premature Aging of Our Female Clients',
+                        date: 'March 2023',
+                        articles: [
+                            {
+                                id: 'wl-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr. Kokkori Eleftheria",
+                                        aff: "Marketing & Management in Cosmetology, National & Kapodistriakon University of Athens, Greece"
+                                    }
+                                ],
+                                pages: '1-2',
+                                pdf: './assets/pdfs/womens-leadership/wl-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+
+                    {
                         issue: 3,
-                        title: 'Women in STEM',
+                        title: 'Impact of Deletion and Sickle-Cell Trait on Ventilatory and Hemodynamic Responses to Maximum Exercise in Young Saudi Women',
                         date: 'December 2023',
                         articles: [
                             {
-                                id: 'wl-v1-i2-a1',
-                                title: 'Closing the Gender Gap in Technology',
-                                authors: 'Dr. Chen Wei, Dr. Rebecca Lee',
-                                pages: '1-25',
-                                pdf: 'pdfs/womens-leadership/v1-i2-a1.pdf',
-                                abstract: 'Strategies for increasing female representation in tech industries.'
+                                id: 'wl-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Dr. Sayed Abdul Azeez",
+                                        aff: "Department of Genetic Research, Institute for Research and Medical Consultation (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/womens-leadership/wl-v1-i3-a3.pdf',
                             }
                         ]
                     }
                 ]
             },
-            {
-                volume: 2,
-                year: 2024,
-                issues: [
-                    {
-                        issue: 1,
-                        title: 'Global Women Leaders Forum',
-                        date: 'March 2024',
-                        articles: [
-                            {
-                                id: 'wl-v2-i1-a1',
-                                title: 'Women Leadership in Emerging Economies',
-                                authors: 'Dr. Fatima Al-Hassan, Dr. Grace Okonkwo',
-                                pages: '1-30',
-                                pdf: 'pdfs/womens-leadership/v2-i1-a1.pdf',
-                                abstract: 'Analysis of women leaders driving change in developing nations.'
-                            },
-                        ]
-                    },
-                    {
-                        issue: 2,
-                        title: 'Inaugural Issue',
-                        date: 'March 2023',
-                        articles: [
-                            {
-                                id: 'wl-v2-i1-a2',
-                                title: 'Digital Leadership and Remote Teams',
-                                authors: 'Dr. Anna Kowalski',
-                                pages: '31-48',
-                                pdf: 'pdfs/womens-leadership/v2-i1-a2.pdf',
-                                abstract: 'How women leaders excel in virtual workplace environments.'
-                            }
-                        ]
-                    }
-                ]
-            }
+            // {
+            //     volume: 2,
+            //     year: 2024,
+            //     issues: [
+            //         {
+            //             issue: 1,
+            //             title: 'Global Women Leaders Forum',
+            //             date: 'March 2024',
+            //             articles: [
+            //                 {
+            //                     id: 'wl-v2-i1-a1',
+            //                     title: 'Women Leadership in Emerging Economies',
+            //                     authors: 'Dr. Fatima Al-Hassan, Dr. Grace Okonkwo',
+            //                     pages: '1-30',
+            //                     pdf: './pdfs/womens-leadership/v2-i1-a1.pdf',
+            //                 },
+            //             ]
+            //         },
+            //         {
+            //             issue: 2,
+            //             title: 'Inaugural Issue',
+            //             date: 'March 2023',
+            //             articles: [
+            //                 {
+            //                     id: 'wl-v2-i1-a2',
+            //                     title: 'Digital Leadership and Remote Teams',
+            //                     authors: 'Dr. Anna Kowalski',
+            //                     pages: '31-48',
+            //                     pdf: './pdfs/womens-leadership/v2-i1-a2.pdf',
+            //                 }
+            //             ]
+            //         }
+            //     ]
+            // }
         ]
     },
 
@@ -248,49 +315,76 @@ const JOURNALS_DATA = {
                 issues: [
                     {
                         issue: 1,
-                        title: 'Deep Learning Advances',
+                        title: 'Robotic Programming Development Around the World',
                         date: 'February 2023',
                         articles: [
                             {
                                 id: 'ai-v1-i1-a1',
-                                title: 'Transformer Architectures: A Comprehensive Review',
-                                authors: 'Dr. Alan Turing, Dr. Sofia Vasquez',
-                                pages: '1-28',
-                                pdf: 'pdfs/ai-ml/v1-i1-a1.pdf',
-                                abstract: 'Deep dive into modern transformer models and their applications.'
+                                authors: [
+                                    {
+                                        name: 'Erica L',
+                                        aff: "Department of Engineering, University of Shanghai for Science and Technology,Shanghai, China"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/ai-ml/ai-v1-i1-a1.pdf',
                             },
                         ]
                     },
                     {
                         issue: 2,
-                        title: 'Inaugural Issue',
+                        title: 'Research and Development of Innovative Machine Learning Technology for Reliability Testing Systems',
                         date: 'March 2023',
                         articles: [
                             {
-                                id: 'ai-v1-i1-a2',
-                                title: 'Generative AI: Opportunities and Ethical Concerns',
-                                authors: 'Dr. Kenji Tanaka',
-                                pages: '29-45',
-                                pdf: 'pdfs/ai-ml/v1-i1-a2.pdf',
-                                abstract: 'Balancing innovation with responsibility in generative AI.'
+                                id: 'ai-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Davide Cascella, Valeria Giardinieri, Mauro Pipponzi, Pietro Serafino",
+                                        aff: "Idea75 s.r.l., Eles Semiconductor Equipment S.P.A., Politecnico di Bari"
+                                    }
+                                ],
+                                pages: '1-2',
+                                pdf: 'assets/pdfs/ai-ml/ai-v1-i2-a2.pdf',
                             }
                         ]
                     },
                     {
                         issue: 3,
-                        title: 'Computer Vision',
+                        title: 'Air Quality Based Adaptive AI. Algorithms for Improving the Efficiency of Environmental Regulatory Systems',
                         date: 'August 2023',
                         articles: [
                             {
-                                id: 'ai-v1-i2-a1',
-                                title: 'Real-time Object Detection in Autonomous Vehicles',
-                                authors: 'Dr. Lars Hansen',
-                                pages: '1-22',
-                                pdf: 'pdfs/ai-ml/v1-i2-a1.pdf',
-                                abstract: 'State-of-the-art computer vision for self-driving cars.'
+                                id: 'ai-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Davide Cascella, Valeria Giardinieri, Mauro Pipponzi, Pietro Serafino",
+                                        aff: "Idea75 s.r.l., Eles Semiconductor Equipment S.P.A., Politecnico di Bari"
+                                    }
+                                ],
+                                pages: '1-2',
+                                pdf: 'assets/pdfs/ai-ml/ai-v1-i3-a3.pdf',
                             }
                         ]
-                    }
+                    },
+                    {
+                        issue: 4,
+                        title: 'Artificial Intelligence in Human Healthcare',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'ai-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Yamini Devi",
+                                        aff: "Department of Artificial Intelligence, Research study, India"
+                                    }
+                                ],
+                                pages: '1-3',
+                                pdf: 'assets/pdfs/ai-ml/ai-v1-i4-a4.pdf',
+                            }
+                        ]
+                    },
                 ]
             },
             {
@@ -299,49 +393,50 @@ const JOURNALS_DATA = {
                 issues: [
                     {
                         issue: 1,
-                        title: 'AI in Healthcare',
+                        title: 'The Role of Artificial Intelligence in Advancing Scientific Research',
                         date: 'January 2024',
                         articles: [
                             {
                                 id: 'ai-v2-i1-a1',
-                                title: 'Machine Learning for Early Disease Detection',
-                                authors: 'Dr. Ravi Kumar, Dr. Elena Petrova',
-                                pages: '1-24',
-                                pdf: 'pdfs/ai-ml/v2-i1-a1.pdf',
-                                abstract: 'How AI is revolutionizing diagnostic medicine.'
+                                authors: [
+                                    {
+                                        name: "Mahesh J",
+                                        aff: "Department of Artificial Intelligence, Research study, India"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/ai-ml/ai-v2-i1-a1.pdf',
                             }
                         ]
                     },
-                    {
-                        issue: 2,
-                        title: 'Large Language Models',
-                        date: 'July 2024',
-                        articles: [
-                            {
-                                id: 'ai-v2-i2-a1',
-                                title: 'Fine-tuning LLMs for Domain-Specific Tasks',
-                                authors: 'Dr. David Kim',
-                                pages: '1-30',
-                                pdf: 'pdfs/ai-ml/v2-i2-a1.pdf',
-                                abstract: 'Techniques for specialized LLM deployment.'
-                            },
-                        ]
-                    },
-                    {
-                        issue: 3,
-                        title: 'Inaugural Issue',
-                        date: 'March 2023',
-                        articles: [
-                            {
-                                id: 'ai-v2-i2-a2',
-                                title: 'Multimodal AI Systems',
-                                authors: 'Dr. Yuki Sato, Dr. Paul Werner',
-                                pages: '31-50',
-                                pdf: 'pdfs/ai-ml/v2-i2-a2.pdf',
-                                abstract: 'Integrating vision, language, and audio in unified models.'
-                            }
-                        ]
-                    }
+                    // {
+                    //     issue: 2,
+                    //     title: 'Large Language Models',
+                    //     date: 'July 2024',
+                    //     articles: [
+                    //         {
+                    //             id: 'ai-v2-i2-a1',
+                    //             title: 'Fine-tuning LLMs for Domain-Specific Tasks',
+                    //             authors: 'Dr. David Kim',
+                    //             pages: '1-30',
+                    //             pdf: 'pdfs/ai-ml/v2-i2-a1.pdf',
+                    //         },
+                    //     ]
+                    // },
+                    // {
+                    //     issue: 3,
+                    //     title: 'Inaugural Issue',
+                    //     date: 'March 2023',
+                    //     articles: [
+                    //         {
+                    //             id: 'ai-v2-i2-a2',
+                    //             title: 'Multimodal AI Systems',
+                    //             authors: 'Dr. Yuki Sato, Dr. Paul Werner',
+                    //             pages: '31-50',
+                    //             pdf: 'pdfs/ai-ml/v2-i2-a2.pdf',
+                    //         }
+                    //     ]
+                    // }
                 ]
             }
         ]
@@ -372,77 +467,95 @@ const JOURNALS_DATA = {
                 issues: [
                     {
                         issue: 1,
-                        title: 'Brain-Computer Interfaces',
+                        title: 'Prognostic and Validation of Microrna Goals in Animal Genomes',
                         date: 'May 2024',
                         articles: [
                             {
                                 id: 'ns-v1-i1-a1',
-                                title: 'Advances in Neural Prosthetics',
-                                authors: 'Dr. Stephen Walsh, Dr. Aisha Khan',
-                                pages: '1-26',
-                                pdf: 'pdfs/neuroscience/v1-i1-a1.pdf',
-                                abstract: 'Latest breakthroughs in brain-machine interface technology.'
+                                authors: [
+                                    {
+                                        name: "Dr. Prasad Kovvuru",
+                                        aff: "Department of Biomedical Sciences, Post-Doctoral Research, University at Albany, SUNY Newyork, USA"
+                                    }
+                                ],
+                                pages: '1-3',
+                                pdf: 'assets/pdfs/neuroscience/ns-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Novel Insights into the Underlying Neurobiology of Addiction',
+                        date: 'March 2023',
+                        articles: [
+                            {
+                                id: 'ns-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr. Angelika Wagner",
+                                        aff: "Grace Center Healing 85 Tottenham Court Road, London, England W1T 4TQ."
+                                    }
+                                ],
+                                pages: '1-17',
+                                pdf: 'assets/pdfs/neuroscience/ns-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Disorder in Children Playing Electronic Games',
+                        date: 'August 2023',
+                        articles: [
+                            {
+                                id: 'ns-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Dr. Ali Abdul Kadhim Ajjah AL Shamari",
+                                        aff: "Department of Higher Education & Scientific Research, University College of Education for Humanistic Sciences Post Graduate Masters, Iraq"
+                                    }
+                                ],
+                                pages: '1-2',
+                                pdf: 'assets/pdfs/neuroscience/ns-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Exploring the Neurological Effects of Music on the Human Brain',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'ns-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Charis M. Galanakis",
+                                        aff: "Department of neurology, Research group, India"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/neuroscience/ns-v1-i4-a4.pdf',
                             }
                         ]
                     }
                 ]
             }
         ]
-    }
-};
+    },
 
-// Add default volumes structure for other journals (empty for now)
-const otherJournalIds = [
-    'globalization', 'quantum-science', 'surgery-medicine', 'environmental-sciences',
-    'obstetrics-gynecology', 'cell-biology', 'cardio-biology', 'dermatology-cosmetics',
-    'blockchain', 'veterinary-science', 'nanostructured-materials', 'dental-care',
-    'pediatrics', 'agriculture-food', 'pharmaceutical-sciences', 'applied-chemistry',
-    'entrepreneurship', 'microbiology', 'metaphysics', 'diagnostic-pathology',
-    'fisheries-aquatic-studies'
-];
-
-// Minimal data for other journals
-const defaultOtherJournals = {
-    'globalization': { title: 'PeerCite Journal of Globalization, Societies and Education', shortTitle: 'Globalization & Education', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop', abbr: 'GSE' },
-    'quantum-science': { title: 'PeerCite Journal of Quantum Science and Technology', shortTitle: 'Quantum Science & Tech', category: 'Science & Technology', categoryFilter: 'science-tech', badge: 'Science & Tech', image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop', abbr: 'QST' },
-    'surgery-medicine': { title: 'PeerCite Journal of Surgery and Medicine', shortTitle: 'Surgery & Medicine', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&h=500&fit=crop', abbr: 'SM' },
-    'environmental-sciences': { title: 'PeerCite Journal of Environmental Sciences', shortTitle: 'Environmental Sciences', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=500&fit=crop', abbr: 'ES' },
-    'obstetrics-gynecology': { title: 'PeerCite Journal of Obstetrics and Gynecology', shortTitle: 'Obstetrics & Gynecology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop', abbr: 'OBG' },
-    'cell-biology': { title: 'PeerCite Journal of Cell Biology', shortTitle: 'Cell Biology', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'CB' },
-    'cardio-biology': { title: 'PeerCite Journal of Cardio Biology', shortTitle: 'Cardio Biology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&h=500&fit=crop', abbr: 'CVB' },
-    'dermatology-cosmetics': { title: 'PeerCite Journal of Dermatology & Cosmetics', shortTitle: 'Dermatology & Cosmetics', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&h=500&fit=crop', abbr: 'DC' },
-    'blockchain': { title: 'PeerCite Journal of Blockchain and Cryptocurrencies', shortTitle: 'Blockchain & Crypto', category: 'Science & Technology', categoryFilter: 'science-tech', badge: 'Science & Tech', image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop', abbr: 'BC' },
-    'veterinary-science': { title: 'PeerCite Journal of Veterinary Science', shortTitle: 'Veterinary Science', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=500&fit=crop', abbr: 'VS' },
-    'nanostructured-materials': { title: 'PeerCite Journal of Nanostructured and Green Materials', shortTitle: 'Nanostructured & Green Materials', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=500&fit=crop', abbr: 'NGM' },
-    'dental-care': { title: 'PeerCite Journal of Advanced Dental Care, Materials and Marketing', shortTitle: 'Advanced Dental Care', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=500&fit=crop', abbr: 'ADC' },
-    'pediatrics': { title: 'PeerCite Journal of Pediatrics', shortTitle: 'Pediatrics', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=800&h=500&fit=crop', abbr: 'PED' },
-    'agriculture-food': { title: 'PeerCite Journal of Agriculture and Food Research', shortTitle: 'Agriculture & Food Research', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=500&fit=crop', abbr: 'AFR' },
-    'pharmaceutical-sciences': { title: 'PeerCite Journal of Pharmaceutical Sciences', shortTitle: 'Pharmaceutical Sciences', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&h=500&fit=crop', abbr: 'PS' },
-    'applied-chemistry': { title: 'PeerCite Journal of Applied Chemistry', shortTitle: 'Applied Chemistry', category: 'Science & Technology', categoryFilter: 'science-tech', badge: 'Science & Tech', image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=500&fit=crop', abbr: 'AC' },
-    'entrepreneurship': { title: 'PeerCite Journal of Entrepreneurship and Business Innovations', shortTitle: 'Entrepreneurship & Business', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop', abbr: 'EBI' },
-    'microbiology': { title: 'PeerCite Journal of Microbiology and Infectious Diseases', shortTitle: 'Microbiology & Infectious Diseases', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'MID' },
-    'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
-    'diagnostic-pathology': { title: 'PeerCite Journal of Diagnostic Pathology', shortTitle: 'Diagnostic Pathology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'DP' },
-    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
-};
-
-// Fill in the rest of the journals with default structure
-Object.keys(defaultOtherJournals).forEach(id => {
-    const base = defaultOtherJournals[id];
-    JOURNALS_DATA[id] = {
-        id: id,
-        title: base.title,
-        shortTitle: base.shortTitle,
-        category: base.category,
-        categoryFilter: base.categoryFilter,
-        badge: base.badge,
-        image: base.image,
-        description: `Peer-reviewed research in ${base.shortTitle.toLowerCase()} from leading international conferences.`,
-        about1: `The ${base.title} publishes research from premier conferences and symposiums in the field.`,
-        about2: 'We curate high-quality research and make it freely accessible to the global academic community.',
-        scope: ['Research and innovation', 'Academic discourse', 'Conference proceedings', 'Peer-reviewed studies'],
+    'globalization': {
+        id: 'globalization',
+        title: 'PeerCite Journal of Globalization, Societies and Education',
+        shortTitle: 'Globalization & Education',
+        category: 'Social Sciences',
+        categoryFilter: 'social',
+        badge: 'Social Sciences',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        description: 'Latest discoveries in brain science, neural networks, cognitive function, neurological disorders, and neurotechnology from leading neuroscience conferences worldwide.',
+        about1: 'The PeerCite Journal of Globalization, Societies and Education publishes high-quality peer-reviewed research in the field.',
+        about2: 'We curate and provide open access to impactful research for the global academic community.',
+        scope: ['Research and innovation', 'Academic discourse', 'Peer-reviewed studies'],
         metrics: [
-            { value: base.abbr, label: 'Abbreviation' },
+            { value: 'GJSE', label: 'Abbreviation' },
             { value: '2024', label: 'Year' },
             { value: 'Open', label: 'Access' },
             { value: 'Peer', label: 'Reviewed' }
@@ -454,22 +567,551 @@ Object.keys(defaultOtherJournals).forEach(id => {
                 issues: [
                     {
                         issue: 1,
-                        title: 'Inaugural Issue',
+                        title: 'The Impact of Globalisation on Education Systems Worldwide',
+                        date: 'May 2024',
+                        articles: [
+                            {
+                                id: 'gt-v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Sravani D",
+                                        aff: "Department of Social and Science, Researcher, India"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/globalization/gt-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Globalisation and Its Effects on Curriculum Development',
+                        date: 'March 2023',
+                        articles: [
+                            {
+                                id: 'gt-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr.Vishnu A",
+                                        aff: "Department of Society Development, Development Group, India"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/globalization/gt-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Cultural Diversity and Social Integration: CelebratingDifferences in a Globalised World',
+                        date: 'August 2023',
+                        articles: [
+                            {
+                                id: 'gt-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Sowjanya R",
+                                        aff: "Department of Global and Society, Global and Society Group Research, India"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/globalization/gt-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'The Politics of Nationalism: Navigating Identity,Power and Global Dynamics',
                         date: 'January 2024',
                         articles: [
                             {
-                                id: `${id}-v1-i1-a1`,
-                                title: `Research Advances in ${base.shortTitle}`,
-                                authors: 'Research Team',
-                                pages: '1-20',
-                                pdf: `pdfs/${id}/v1-i1-a1.pdf`,
-                                abstract: 'Sample article abstract. Full content coming soon.'
+                                id: 'gt-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Deepak P",
+                                        aff: "Department of Global and Society, Global and Society Group, India"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/globalization/gt-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Income Inequality and Its Effects on Society: Exploring Dynamics, Impacts and Pathways Forward',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'gt-v2-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Narendra Varma",
+                                        aff: "Department of Global and Society, Global and Society Group, India"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/globalization/gt-v2-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'One World, One Nation, One Love-A New Social and Economic Organization',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'gt-v2-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Marc-Henri Ahoua",
+                                        aff: "Author, Freelance technical Translator, Sales Support Agent"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/globalization/gt-v2-i2-a2.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    },
+    'agriculture-food': {
+        title: 'PeerCite Journal of Agriculture and Food',
+        shortTitle: 'Agriculture & Food',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'Science & Tech',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        abbr: 'AF',
+        description: 'PeerCite Journal of Agriculture and Food publishes high-quality peer-reviewed research in the field.',
+        about1: 'PeerCite Journal of Agriculture and Food is a peer-reviewed scientific journal that publishes original research and reviews in all areas of agriculture and food science.',
+        about2: 'PeerCite Journal of Agriculture and Food is a peer-reviewed scientific journal that publishes original research and reviews in all areas of agriculture and food science.',
+        scope: ['Agriculture', 'Food Science', 'Food Technology'],
+        metrics: [
+            { value: 'AF', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'The Impact of Food On The Human Body: Exploring Future Possibilities',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'af-v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Dr. Charis M. Galanakis",
+                                        aff: "Department of Food Waste Recovery Group, ISEKI Food Association, Vienna, Austria"
+                                    }
+                                ],
+                                pages: '1-7',
+                                pdf: 'assets/pdfs/agriculture-food/af-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'The Application of Biotechnology in Enhancing Food Complexity',
+                        date: 'April 2024',
+                        articles: [
+                            {
+                                id: 'af-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr. Charis M. Galanakis",
+                                        aff: "Department of Food Waste Recovery Group, ISEKI Food Association, Vienna, Austria"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/agriculture-food/af-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Ensuring Adequate and Safe Food Supply for Daily Needs',
+                        date: 'July 2024',
+                        articles: [
+                            {
+                                id: 'af-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Dr. Fahim Shaltout",
+                                        aff: "Department of Food Hygiene, Faculty of Veterinary Medicine at Benha University. Banhā, Egypt"
+                                    }
+                                ],
+                                pages: '1-2',
+                                pdf: 'assets/pdfs/agriculture-food/af-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Understanding Food Groups in the Food-Based Dietary Guidelines: Insights from Brazilian Consumers',
+                        date: 'October 2024',
+                        articles: [
+                            {
+                                id: 'af-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Dr. Jordanna Santos Monteiro",
+                                        aff: "Department of Nutrition, School of Health Sciences, University of Brasilia, Campus Darcy Ribeiro, Asa Norte, Brasilia, Brazil"
+                                    }
+                                ],
+                                pages: '1-9',
+                                pdf: 'assets/pdfs/agriculture-food/af-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'A Review: On The Health Benefits of Organic Food and Its Distinctions from Conventional Food',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'af-v2-i1-a1',
+                                authors: [
+                                    {
+                                        name: "ENAS SHEHAB AHMED",
+                                        aff: "Department of Biomedical Engineering, College of Engineering, Al-Nahrain University, Jadriya, Baghdad, Iraq"
+                                    },
+                                    {
+                                        name: "RAWAA ADNAN KHALAF",
+                                        aff: "Department of Biotechnology Research Center/Al-Nahrain University, Iraq"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/agriculture-food/af-v2-i1-a1.pdf',
                             }
                         ]
                     }
                 ]
             }
         ]
+    },
+    'pharmaceutical-sciences': {
+        id: 'pharmaceutical-sciences',
+        title: 'PeerCite Journal of Pharmaceutical Sciences',
+        shortTitle: 'Pharmaceutical Sciences',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'Science & Tech',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        abbr: 'PS',
+        description: 'PeerCite Journal of Pharmaceutical Sciences publishes high-quality peer-reviewed research in the field.',
+        about1: 'PeerCite Journal of Pharmaceutical Sciences is a peer-reviewed scientific journal that publishes original research and reviews in all areas of pharmaceutical sciences.',
+        about2: 'PeerCite Journal of Pharmaceutical Sciences is a peer-reviewed scientific journal that publishes original research and reviews in all areas of pharmaceutical sciences.',
+        scope: ['Pharmaceutical Sciences'],
+        metrics: [
+            { value: 'PS', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Pharmaceutical Science: Bridging Bench to Bedside',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'ps-v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: 'Dr. Sowmya Sharma',
+                                        aff: "Department of Genetic Research, Institute for Research and Medical Consultations (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia"
+                                    }
+                                ],
+                                pages: '1-3',
+                                pdf: 'assets/pdfs/pharmaceutical-sciences/ps-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Examing the Anticancer Potential of Punica Granatum Linn: a Review',
+                        date: 'April 2024',
+                        articles: [
+                            {
+                                id: 'ps-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "M. Padmaa Paarakh",
+                                        aff: "Department of Pharmacognosy, The Oxford College of Pharmacy, Karnataka, India."
+                                    },
+                                    {
+                                        name: "Preethy Ani Jose",
+                                        aff: "Department of Pharmaceutics, The Oxford College of Pharmacy, Karnataka, India."
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/pharmaceutical-sciences/ps-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'The Rising Presence of Multidrug-Resistant Bacteria and Fungi in the Arabian Peninsula',
+                        date: 'July 2024',
+                        articles: [
+                            {
+                                id: 'ps-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Sayed AbdulAzeez",
+                                        aff: "Department of Genetic Research, Institute for Research and Medical Consultations (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/pharmaceutical-sciences/ps-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Identification of Autism Spectrum Disorder-related Variants Through Integration of Transcriptome and Exome Geno Typing',
+                        date: 'October 2024',
+                        articles: [
+                            {
+                                id: 'ps-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Sayed AbdulAzeez",
+                                        aff: "Department of Genetic Research, Institute for Research and Medical Consultations (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia"
+                                    }
+                                ],
+                                pages: '1-7',
+                                pdf: 'assets/pdfs/pharmaceutical-sciences/ps-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Advancements in Drug Delivery Systems: Innovations and Applications',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'ps-v2-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Sayed AbdulAzeez",
+                                        aff: "Department of Genetic Research, Institute for Research and Medical Consultations (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia"
+                                    }
+                                ],
+                                pages: '1-3',
+                                pdf: 'assets/pdfs/pharmaceutical-sciences/ps-v2-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'applied-chemistry': {
+        id: 'applied-chemistry',
+        title: 'PeerCite Journal of Applied Chemistry',
+        shortTitle: 'Applied Chemistry',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'Science & Tech',
+        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        abbr: 'AC',
+        description: 'PeerCite Journal of Applied Chemistry publishes high-quality peer-reviewed research in the field.',
+        about1: 'PeerCite Journal of Applied Chemistry is a peer-reviewed scientific journal that publishes original research and reviews in all areas of applied chemistry.',
+        about2: 'PeerCite Journal of Applied Chemistry is a peer-reviewed scientific journal that publishes original research and reviews in all areas of applied chemistry.',
+        scope: ['Applied Chemistry'],
+        metrics: [
+            { value: 'AC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Outcomes of Positional And Geometrical Isomerism on The Biological Hobby of Some Novel Oxazolidinones',
+                        date: 'January 2024',
+                        articles: [
+                            {
+                                id: 'ac-v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Jagattaran Das",
+                                        aff: "Discovery Research, Dr. Reddy’s Laboratories Ltd, Miyapur, Hyderabad 500049, India"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/applied-chemistry/ac-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Novel Oral Benzimidazoles Found to be Antagonists of Melanin Concentrating Hormone Receptor 1 (MCHR1)',
+                        date: 'April 2024',
+                        articles: [
+                            {
+                                id: 'ac-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Jagattaran Das",
+                                        aff: "Discovery Research, Dr. Reddy’s Laboratories Ltd, Miyapur, Hyderabad 500049, India"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/applied-chemistry/ac-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Improving Selective Kappa Opioid Agonists by Optimizing 2-Aminobenzimidazole Hits From in Silico Screening',
+                        date: 'July 2024',
+                        articles: [
+                            {
+                                id: 'ac-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Pradip K Sasmal",
+                                        aff: "Discovery Research, Dr. Reddy’s Laboratories Ltd, Miyapur, Hyderabad 500049, India"
+                                    }
+                                ],
+                                pages: '1-3',
+                                pdf: 'assets/pdfs/applied-chemistry/ac-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Chemical Equilibrium: Balancing Act of Nature',
+                        date: 'October 2024',
+                        articles: [
+                            {
+                                id: 'ac-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "A Sai Kiran",
+                                        aff: "Discovery Research, Dr. Reddy’s Laboratories Ltd, Miyapur, Hyderabad, India"
+                                    }
+                                ],
+                                pages: '1-3',
+                                pdf: 'assets/pdfs/applied-chemistry/ac-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+};
+// Add default volumes structure for other journals (empty for now)
+const otherJournalIds = [
+    'quantum-science', 'surgery-medicine', 'environmental-sciences',
+    'obstetrics-gynecology', 'cell-biology', 'cardio-biology', 'dermatology-cosmetics',
+    'veterinary-science', 'nanostructured-materials', 'dental-care',
+    'pediatrics',
+    'entrepreneurship', 'microbiology', 'metaphysics', 'diagnostic-pathology',
+    'fisheries-aquatic-studies'
+];
+const defaultOtherJournals = {
+    'quantum-science': { title: 'PeerCite Journal of Quantum Science and Technology', shortTitle: 'Quantum Science & Tech', category: 'Science & Technology', categoryFilter: 'science-tech', badge: 'Science & Tech', image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop', abbr: 'QST' },
+    'surgery-medicine': { title: 'PeerCite Journal of Surgery and Medicine', shortTitle: 'Surgery & Medicine', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&h=500&fit=crop', abbr: 'SM' },
+    'environmental-sciences': { title: 'PeerCite Journal of Environmental Sciences', shortTitle: 'Environmental Sciences', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=500&fit=crop', abbr: 'ES' },
+    'obstetrics-gynecology': { title: 'PeerCite Journal of Obstetrics and Gynecology', shortTitle: 'Obstetrics & Gynecology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop', abbr: 'OBG' },
+    'cell-biology': { title: 'PeerCite Journal of Cell Biology', shortTitle: 'Cell Biology', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'CB' },
+    'cardio-biology': { title: 'PeerCite Journal of Cardio Biology', shortTitle: 'Cardio Biology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&h=500&fit=crop', abbr: 'CVB' },
+    'dermatology-cosmetics': { title: 'PeerCite Journal of Dermatology & Cosmetics', shortTitle: 'Dermatology & Cosmetics', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&h=500&fit=crop', abbr: 'DC' },
+    'veterinary-science': { title: 'PeerCite Journal of Veterinary Science', shortTitle: 'Veterinary Science', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=500&fit=crop', abbr: 'VS' },
+    'nanostructured-materials': { title: 'PeerCite Journal of Nanostructured and Green Materials', shortTitle: 'Nanostructured & Green Materials', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=500&fit=crop', abbr: 'NGM' },
+    'dental-care': { title: 'PeerCite Journal of Advanced Dental Care, Materials and Marketing', shortTitle: 'Advanced Dental Care', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=500&fit=crop', abbr: 'ADC' },
+    'pediatrics': { title: 'PeerCite Journal of Pediatrics', shortTitle: 'Pediatrics', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=800&h=500&fit=crop', abbr: 'PED' },
+    'entrepreneurship': { title: 'PeerCite Journal of Entrepreneurship and Business Innovations', shortTitle: 'Entrepreneurship & Business', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop', abbr: 'EBI' },
+    'microbiology': { title: 'PeerCite Journal of Microbiology and Infectious Diseases', shortTitle: 'Microbiology & Infectious Diseases', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'MID' },
+    'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
+    'diagnostic-pathology': { title: 'PeerCite Journal of Diagnostic Pathology', shortTitle: 'Diagnostic Pathology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'DP' },
+    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
+};
+Object.keys(defaultOtherJournals).forEach(id => {
+    const base = defaultOtherJournals[id];
+    const defaultVolumes = [
+        {
+            volume: 1,
+            year: 2024,
+            issues: [
+                {
+                    issue: 1,
+                    title: 'Inaugural Issue',
+                    date: 'January 2024',
+                    articles: [
+                        {
+                            id: `${id}-v1-i1-a1`,
+                            title: `Research Advances in ${base.shortTitle}`,
+                            authors: 'Research Team',
+                            pages: '1-20',
+                            pdf: `./assets/pdfs/${id}/v1-i1-a1.pdf`,
+                            abstract: 'Sample article abstract. Full content coming soon.'
+                        }
+                    ]
+                }
+            ]
+        }
+    ];
+    JOURNALS_DATA[id] = {
+        id: id,
+        title: base.title,
+        shortTitle: base.shortTitle,
+        category: base.category,
+        categoryFilter: base.categoryFilter,
+        badge: base.badge,
+        image: base.image,
+        description: `Peer-reviewed research in ${base.shortTitle.toLowerCase()} from global academic contributors.`,
+        about1: `The ${base.title} publishes high-quality peer-reviewed research in the field.`,
+        about2: 'We curate and provide open access to impactful research for the global academic community.',
+        scope: ['Research and innovation', 'Academic discourse', 'Peer-reviewed studies'],
+        metrics: [
+            { value: base.abbr, label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: defaultVolumes
     };
 });
 
@@ -618,21 +1260,39 @@ function renderIssue(journalId, volumeNum, issue) {
 }
 
 function renderArticle(article) {
+    const safeTitle = (article.title || 'Article').replace(/'/g, "\\'");
+    let authorsHTML = '';
+    if (Array.isArray(article.authors)) {
+        authorsHTML = article.authors.map((author, index) => {
+            const num = index + 1;
+            return `<span class="author-item">
+                <span class="author-name">${author.name}</span><sup class="aff-trigger" onclick="toggleAffiliation(this.parentElement, event)">${num}</sup>
+                <span class="author-affiliation-block">
+                    <span class="aff-content">
+                        <span class="tooltip-num">${num}</span> ${author.aff}
+                    </span>
+                </span>
+            </span>`;
+        }).join(', ');
+    } else {
+        authorsHTML = article.authors || '';
+    }
+
     return `
         <div class="article-row">
             <div class="article-icon-wrap">
                 <i class='bx bx-file-blank'></i>
             </div>
             <div class="article-details">
-                <h5>${article.title}</h5>
-                <p class="article-authors"><i class='bx bx-user'></i> ${article.authors}</p>
-                <p class="article-abstract">${article.abstract}</p>
+
+                <p class="article-authors"><i class='bx bx-user'></i> ${authorsHTML}</p>
+                ${article.abstract ? `<p class="article-abstract">${article.abstract}</p>` : ''}
                 <div class="article-meta-row">
                     <span><i class='bx bx-bookmark'></i> Pages ${article.pages}</span>
                 </div>
             </div>
             <div class="article-actions">
-                <button class="btn-view-pdf" onclick="viewPDF('${article.pdf}', '${article.title.replace(/'/g, "\\'")}')">
+                <button class="btn-view-pdf" onclick="viewPDF('${article.pdf}', '${safeTitle}')">
                     <i class='bx bx-show'></i> View PDF
                 </button>
                 <a href="${article.pdf}" download class="btn-download-pdf">

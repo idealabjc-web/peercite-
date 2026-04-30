@@ -809,8 +809,8 @@ ul {
     display: flex;
     align-items: center;
     margin-left: 0px;
-    gap: 6px;
-    padding: 8px 12px;
+    gap: 4px;
+    padding: 8px 6px;
 }
 
 .nav-link:hover {
@@ -1649,12 +1649,19 @@ ul {
 
 @media (max-width: 768px) {
     .hero-slider {
-        height: 350px;
-        padding: 0 1rem;
+        height: 380px;
+        padding: 0;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+        width: 100%;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .hero-content p {
@@ -1678,7 +1685,7 @@ ul {
         font-size: 2rem;
     }
 
-    .carousel-controls {
+    .hero-arrow {
         display: none;
     }
 
@@ -1697,12 +1704,17 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .hero-slider {
+        height: 340px;
+    }
+
     .hero-content h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hero-content p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        padding: 0 10px;
     }
 
     .stat-number {
@@ -1710,7 +1722,13 @@ ul {
     }
 
     .hero-buttons {
-        gap: 0.8rem;
+        gap: 0.75rem;
+        padding: 0 1.5rem;
+    }
+
+    .btn-hero-secondary i {
+        animation: none !important;
+        /* Stop the erratic movement on tiny screens */
     }
 }
 
@@ -2196,6 +2214,52 @@ ul {
     color: var(--white);
 }
 
+/* Footer Copyright Link Styling */
+.cc-footer {
+    background: #0f172a;
+    /* dark professional */
+    color: #cbd5e1;
+    padding: 14px 20px;
+    font-size: 14px;
+    border-top: 1px solid #1e293b;
+}
+
+.cc-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+}
+
+.cc-footer a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cc-footer a:hover {
+    text-decoration: underline;
+}
+
+.cc-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cc-icons img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.9;
+}
+
+.author {
+    color: #66ccfc;
+    font-weight: 500;
+}
+
 /* ==================== BACK TO TOP ==================== */
 .back-to-top {
     position: fixed;
@@ -2428,33 +2492,42 @@ ul {
     color: var(--white);
 }
 
+/* ================= PUBLICATIONS ================= */
+
 .publications-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .publications-grid {
     display: grid;
-    background-color: rgba(0, 0, 0, 0.5);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
 }
+
+/* ================= CARD ================= */
 
 .publication-card {
     background: var(--white);
     border-radius: var(--radius-lg);
-    overflow: visible;
+    overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .publication-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
 }
 
+/* ================= IMAGE ================= */
+
 .publication-image {
     position: relative;
-    height: 180px;
+    height: 160px;
     overflow: hidden;
 }
 
@@ -2466,42 +2539,57 @@ ul {
 }
 
 .publication-card:hover .publication-image img {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
+
+/* ================= BADGE ================= */
 
 .publication-badge {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 0.8rem;
+    left: 0.8rem;
     background: var(--primary);
     color: var(--white);
-    padding: 0.3rem 0.8rem;
+    padding: 0.25rem 0.7rem;
     border-radius: var(--radius-full);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
 }
 
+/* ================= CONTENT ================= */
+
 .publication-content {
-    padding: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .publication-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
 }
 
+/* Limit text to avoid tall cards */
 .publication-content p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--gray-500);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
+/* ================= STATS ================= */
 
 .publication-stats {
     display: flex;
-    gap: 1rem;
-    font-size: 0.8rem;
+    gap: 0.8rem;
+    font-size: 0.75rem;
     color: var(--gray-500);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     flex-wrap: wrap;
 }
 
@@ -2511,13 +2599,39 @@ ul {
     gap: 0.3rem;
 }
 
+/* ================= LINK ================= */
+
 .publication-link {
+    margin-top: auto;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     color: var(--primary);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .publications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        flex-wrap: wrap;
+    }
+
+    .filter-search {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 /* ==================== ABOUT PAGE ==================== */
@@ -6193,10 +6307,8 @@ code {
 .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    /* Increased from 0.25rem */
-    margin-left: 1.5rem;
-    /* Add space after logo */
+    gap: 1rem;
+    margin-left: 1.0rem;
     overflow: visible;
 }
 
@@ -6204,8 +6316,8 @@ code {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.6rem 1rem;
+    gap: 0.2rem;
+    padding: 0.4rem 0.5rem;
     font-family: var(--font-heading);
     font-size: 0.85rem;
     font-weight: 600;
