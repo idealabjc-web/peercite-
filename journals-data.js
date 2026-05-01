@@ -31,7 +31,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'Psychedelics and Positive Psychology: Is It The Begining of A New Era, Positive Psychopharmacology?',
-                        date: 'March 2023',
+                        date: '26 June 2023',
                         articles: [
                             {
                                 id: 'mh-v1-i1-a1',
@@ -49,7 +49,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'DNA Damage in Multiple Tissues of Different Genomic Silver Nanoparticles',
-                        date: 'March 2023',
+                        date: 'February 02, 2023',
                         articles: [
                             {
                                 id: 'mh-v1-i2-a2',
@@ -67,7 +67,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Psychology and Epidemiology Distress in Human Brain',
-                        date: 'September 2023',
+                        date: 'August 22, 2023',
                         articles: [
                             {
                                 id: 'mh-v1-i3-a3',
@@ -85,7 +85,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'Positive Energy in Psychology Treatment',
-                        date: 'September 2023',
+                        date: 'October 21, 2023',
                         articles: [
                             {
                                 id: 'mh-v1-i4-a4',
@@ -109,7 +109,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'Nurturing Maternal Mental Health: Understanding and Supporting Pregnant Women',
-                        date: 'April 2024',
+                        date: 'January 22, 2024',
                         articles: [
                             {
                                 id: 'mh-v2-i1-a1',
@@ -127,7 +127,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'Supporting Young Minds: Promoting Mental Health in Children',
-                        date: 'April 2024',
+                        date: ' May 02, 2024',
                         articles: [
                             {
                                 id: 'mh-v2-i2-a2',
@@ -173,7 +173,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'Analyzing Differences Between Male and Female Leadership Styles, the Underrepresentation of Women in Leadership and the Negative Impacts it has.',
-                        date: 'June 2023',
+                        date: 'February 07 2023',
                         articles: [
                             {
                                 id: 'wl-v1-i1-a1',
@@ -191,7 +191,7 @@ const JOURNALS_DATA = {
                     {
                         issue: "1 (2)",
                         title: 'Nurturing Mental Strength and Fostering Inclusive Leadership in Women',
-                        date: 'December 2023',
+                        date: 'February 20, 2023',
                         articles: [
                             {
                                 id: 'wl-v1-i1(s)-a1',
@@ -217,7 +217,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'The Premature Aging of Our Female Clients',
-                        date: 'March 2023',
+                        date: 'April 27, 2023',
                         articles: [
                             {
                                 id: 'wl-v1-i2-a2',
@@ -236,7 +236,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Impact of Deletion and Sickle-Cell Trait on Ventilatory and Hemodynamic Responses to Maximum Exercise in Young Saudi Women',
-                        date: 'December 2023',
+                        date: 'September 07, 2023',
                         articles: [
                             {
                                 id: 'wl-v1-i3-a3',
@@ -316,7 +316,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'Robotic Programming Development Around the World',
-                        date: 'February 2023',
+                        date: 'February 07, 2023',
                         articles: [
                             {
                                 id: 'ai-v1-i1-a1',
@@ -334,7 +334,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'Research and Development of Innovative Machine Learning Technology for Reliability Testing Systems',
-                        date: 'March 2023',
+                        date: 'May 06, 2023',
                         articles: [
                             {
                                 id: 'ai-v1-i2-a2',
@@ -352,7 +352,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Air Quality Based Adaptive AI. Algorithms for Improving the Efficiency of Environmental Regulatory Systems',
-                        date: 'August 2023',
+                        date: 'May 06, 2023',
                         articles: [
                             {
                                 id: 'ai-v1-i3-a3',
@@ -370,7 +370,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'Artificial Intelligence in Human Healthcare',
-                        date: 'January 2024',
+                        date: 'October 06, 2023',
                         articles: [
                             {
                                 id: 'ai-v1-i4-a4',
@@ -394,7 +394,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'The Role of Artificial Intelligence in Advancing Scientific Research',
-                        date: 'January 2024',
+                        date: 'January 27, 2024',
                         articles: [
                             {
                                 id: 'ai-v2-i1-a1',
@@ -463,12 +463,12 @@ const JOURNALS_DATA = {
         volumes: [
             {
                 volume: 1,
-                year: 2024,
+                year: 2023,
                 issues: [
                     {
                         issue: 1,
                         title: 'Prognostic and Validation of Microrna Goals in Animal Genomes',
-                        date: 'May 2024',
+                        date: 'February 07, 2023',
                         articles: [
                             {
                                 id: 'ns-v1-i1-a1',
@@ -486,7 +486,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'Novel Insights into the Underlying Neurobiology of Addiction',
-                        date: 'March 2023',
+                        date: 'June 25, 2023',
                         articles: [
                             {
                                 id: 'ns-v1-i2-a2',
@@ -504,7 +504,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Disorder in Children Playing Electronic Games',
-                        date: 'August 2023',
+                        date: 'September 16, 2023',
                         articles: [
                             {
                                 id: 'ns-v1-i3-a3',
@@ -522,7 +522,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'Exploring the Neurological Effects of Music on the Human Brain',
-                        date: 'January 2024',
+                        date: 'April 06, 2023',
                         articles: [
                             {
                                 id: 'ns-v1-i4-a4',
@@ -563,12 +563,12 @@ const JOURNALS_DATA = {
         volumes: [
             {
                 volume: 1,
-                year: 2024,
+                year: 2023,
                 issues: [
                     {
                         issue: 1,
                         title: 'The Impact of Globalisation on Education Systems Worldwide',
-                        date: 'May 2024',
+                        date: 'February 19, 2023',
                         articles: [
                             {
                                 id: 'gt-v1-i1-a1',
@@ -586,7 +586,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'Globalisation and Its Effects on Curriculum Development',
-                        date: 'March 2023',
+                        date: 'June 15, 2023',
                         articles: [
                             {
                                 id: 'gt-v1-i2-a2',
@@ -604,7 +604,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Cultural Diversity and Social Integration: CelebratingDifferences in a Globalised World',
-                        date: 'August 2023',
+                        date: 'September 24, 2023',
                         articles: [
                             {
                                 id: 'gt-v1-i3-a3',
@@ -622,7 +622,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'The Politics of Nationalism: Navigating Identity,Power and Global Dynamics',
-                        date: 'January 2024',
+                        date: 'September 24, 2023',
                         articles: [
                             {
                                 id: 'gt-v1-i4-a4',
@@ -646,7 +646,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'Income Inequality and Its Effects on Society: Exploring Dynamics, Impacts and Pathways Forward',
-                        date: 'January 2024',
+                        date: 'February 01, 2024',
                         articles: [
                             {
                                 id: 'gt-v2-i1-a1',
@@ -664,7 +664,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'One World, One Nation, One Love-A New Social and Economic Organization',
-                        date: 'January 2024',
+                        date: 'May 09, 2024',
                         articles: [
                             {
                                 id: 'gt-v2-i2-a2',
@@ -705,12 +705,12 @@ const JOURNALS_DATA = {
         volumes: [
             {
                 volume: 1,
-                year: 2024,
+                year: 2023,
                 issues: [
                     {
                         issue: 1,
                         title: 'The Impact of Food On The Human Body: Exploring Future Possibilities',
-                        date: 'January 2024',
+                        date: 'February 06, 2023',
                         articles: [
                             {
                                 id: 'af-v1-i1-a1',
@@ -728,7 +728,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'The Application of Biotechnology in Enhancing Food Complexity',
-                        date: 'April 2024',
+                        date: 'April 06, 2023',
                         articles: [
                             {
                                 id: 'af-v1-i2-a2',
@@ -746,7 +746,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Ensuring Adequate and Safe Food Supply for Daily Needs',
-                        date: 'July 2024',
+                        date: 'September 06, 2023',
                         articles: [
                             {
                                 id: 'af-v1-i3-a3',
@@ -764,7 +764,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'Understanding Food Groups in the Food-Based Dietary Guidelines: Insights from Brazilian Consumers',
-                        date: 'October 2024',
+                        date: 'October 29, 2023',
                         articles: [
                             {
                                 id: 'af-v1-i4-a4',
@@ -788,7 +788,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'A Review: On The Health Benefits of Organic Food and Its Distinctions from Conventional Food',
-                        date: 'January 2024',
+                        date: ' February 16, 2024',
                         articles: [
                             {
                                 id: 'af-v2-i1-a1',
@@ -833,12 +833,12 @@ const JOURNALS_DATA = {
         volumes: [
             {
                 volume: 1,
-                year: 2024,
+                year: 2023,
                 issues: [
                     {
                         issue: 1,
                         title: 'Pharmaceutical Science: Bridging Bench to Bedside',
-                        date: 'January 2024',
+                        date: 'June 01 , 2023',
                         articles: [
                             {
                                 id: 'ps-v1-i1-a1',
@@ -856,7 +856,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'Examing the Anticancer Potential of Punica Granatum Linn: a Review',
-                        date: 'April 2024',
+                        date: ' May 06, 2023',
                         articles: [
                             {
                                 id: 'ps-v1-i2-a2',
@@ -878,7 +878,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'The Rising Presence of Multidrug-Resistant Bacteria and Fungi in the Arabian Peninsula',
-                        date: 'July 2024',
+                        date: 'August 03, 2023',
                         articles: [
                             {
                                 id: 'ps-v1-i3-a3',
@@ -896,7 +896,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'Identification of Autism Spectrum Disorder-related Variants Through Integration of Transcriptome and Exome Geno Typing',
-                        date: 'October 2024',
+                        date: ' November 27, 2023',
                         articles: [
                             {
                                 id: 'ps-v1-i4-a4',
@@ -920,7 +920,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 1,
                         title: 'Advancements in Drug Delivery Systems: Innovations and Applications',
-                        date: 'January 2024',
+                        date: 'March 1, 2024',
                         articles: [
                             {
                                 id: 'ps-v2-i1-a1',
@@ -961,12 +961,12 @@ const JOURNALS_DATA = {
         volumes: [
             {
                 volume: 1,
-                year: 2024,
+                year: 2023,
                 issues: [
                     {
                         issue: 1,
                         title: 'Outcomes of Positional And Geometrical Isomerism on The Biological Hobby of Some Novel Oxazolidinones',
-                        date: 'January 2024',
+                        date: 'February 15, 2023',
                         articles: [
                             {
                                 id: 'ac-v1-i1-a1',
@@ -984,7 +984,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 2,
                         title: 'Novel Oral Benzimidazoles Found to be Antagonists of Melanin Concentrating Hormone Receptor 1 (MCHR1)',
-                        date: 'April 2024',
+                        date: 'April 15, 2023',
                         articles: [
                             {
                                 id: 'ac-v1-i2-a2',
@@ -1002,7 +1002,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 3,
                         title: 'Improving Selective Kappa Opioid Agonists by Optimizing 2-Aminobenzimidazole Hits From in Silico Screening',
-                        date: 'July 2024',
+                        date: 'September 21, 2023',
                         articles: [
                             {
                                 id: 'ac-v1-i3-a3',
@@ -1020,7 +1020,7 @@ const JOURNALS_DATA = {
                     {
                         issue: 4,
                         title: 'Chemical Equilibrium: Balancing Act of Nature',
-                        date: 'October 2024',
+                        date: 'April 15, 2023',
                         articles: [
                             {
                                 id: 'ac-v1-i4-a4',
@@ -1039,33 +1039,1325 @@ const JOURNALS_DATA = {
             }
         ]
     },
-
+    'quantum-science': {
+        id: 'quantum-science',
+        title: 'PeerCite Journal of Quantum Science and Technology',
+        shortTitle: 'Quantum Science & Tech',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'Science & Tech',
+        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop',
+        abbr: 'QST',
+        description: 'Peer-reviewed research in quantum science and technology from global academic contributors.',
+        about1: 'The PeerCite Journal of Quantum Science and Technology publishes high-quality peer-reviewed research in the field.',
+        about2: 'We curate and provide open access to impactful research for the global academic community.',
+        scope: ['Research and innovation', 'Academic discourse', 'Peer-reviewed studies'],
+        metrics: [
+            { value: 'QST', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2023,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'The Science Of Quantum Cryptography: Harnessing Quantum Mechanical Properties',
+                        date: 'February 07, ,2023',
+                        articles: [
+                            {
+                                id: 'qs-v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Vijay Kumar",
+                                        aff: "Department of Quantum Science, Research group, India"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/quantum-science/v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Innovation at The Frontier: Progress in Quantum Information Science And Technology',
+                        date: 'February 07, ,2023',
+                        articles: [
+                            {
+                                id: 'qs-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Sowjanya R",
+                                        aff: "Department of Physics, Researcher, India"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/quantum-science/v1-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'surgery-medicine': {
+        id: 'surgery-medicine',
+        title: 'PeerCite Journal of Surgery and Medicine',
+        shortTitle: 'Surgery & Medicine',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop',
+        abbr: 'SM',
+        description: 'Peer-reviewed research in surgery and medicine from global academic contributors.',
+        about1: 'The PeerCite Journal of Surgery and Medicine publishes high-quality peer-reviewed research in the field.',
+        about2: 'We curate and provide open access to impactful research for the global academic community.',
+        scope: ['Research and innovation', 'Academic discourse', 'Peer-reviewed studies'],
+        metrics: [
+            { value: 'SM', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2023,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Preoperative Indicators of Ossicular Necrosis in Mucosal Chronic Suppurative Otitis Media',
+                        date: 'October 17, 2023',
+                        articles: [
+                            {
+                                id: 'sm-v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Dr. Sowmya",
+                                        aff: "Assistant Professor, Department of ENT ,Rajarajeswari Medical College, Bangalore."
+                                    },
+                                    {
+                                        name: " Dr. Sriranga Prasad ",
+                                        aff: "Professor, Department of ENT, Rajarajeswari Medical College , Bangalore."
+                                    },
+                                    {
+                                        name: "Dr. Sai Sarath",
+                                        aff: "Resident, Department of ENT, Rajarajeswari Medical College , Bangalore."
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Exonic Variation of Asic5 Gene Uncovered by Whole-Genome Sequencing Leads to Recurrent Pregnancy Loss',
+                        date: 'February 05, 2023',
+                        articles: [
+                            {
+                                id: 'sm-v1-i2-a2',
+                                authors: [
+                                    {
+                                        name: 'Noor B. Almandil',
+                                        aff: "Department of Genetic Research,Institute for Research andMedical Consultations, ImamAbdulrahman Bin FaisalUniversity, Dammam, Saudi Arabia"
+                                    },
+                                    {
+                                        name: 'Norah Fahad Alhur',
+                                        aff: "Department of Clinical PharmacyResearch, Institute for Researchand Medical Consultations, ImamAbdulrahman Bin FaisalUniversity, Dammam, SaudiArabia"
+                                    }
+                                ],
+                                pages: '1-7',
+                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i2-a2.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'A Study on Migraine in Saudi Arabians Using Pilot Mitochondrial Genome-Wide Association Analysis',
+                        date: 'July 08, 2023',
+                        articles: [
+                            {
+                                id: 'sm-v1-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Sayed AbdulAzeez",
+                                        aff: "Department of Genetic Research,Institute for Research and MedicalConsultations, Imam AbdulrahmanBin Faisal University, Dammam,Saudi Arabia"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i3-a3.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'The Impact of Gut Microbiota on Cellular Response to Multidrug Resistant Transporter Substrates In Vitro With Focus On P-Glycoprotein',
+                        date: 'December 06, 2023',
+                        articles: [
+                            {
+                                id: 'sm-v1-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Kalaimathi Govindarajan",
+                                        aff: "Department of APC Microbiome Institute, University College Cork, Cork, Ireland"
+                                    }
+                                ],
+                                pages: '1-11',
+                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i4-a4.pdf'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'environmental-sciences': {
+        id: 'environmental-sciences',
+        title: 'PeerCite Journal of Environmental Sciences',
+        shortTitle: 'Environmental Sciences',
+        category: 'Environmental Sciences',
+        categoryFilter: 'environmental',
+        badge: 'Environmental Sciences',
+        image: 'https://images.unsplash.com/photo-1534778708147-0dfa1754a1d0?w=800&h=500&fit=crop', abbr: 'ES',
+        description: 'Peer-reviewed research in environmental science from global academic contributors.',
+        about1: 'Research on climate change, ecological sustainability, and environmental policy from global environmental summits.',
+        scope: [
+            'Climate Change & Global Warming',
+            'Pollution Control & Waste Management',
+            'Renewable Energy Systems',
+            'Biodiversity & Conservation',
+            'Sustainable Agriculture & Food Security',
+            'Environmental Policy & Governance',
+            'Water Resource Management',
+            'Ecological Restoration & Remediation',
+            'Environmental Health & Toxicology',
+            'Green Technologies & Circular Economy'
+        ],
+        metrics: [
+            { name: 'IF', value: '9.542' },
+            { name: 'CiteScore', value: '10.3' },
+            { name: 'SJR', value: '2.1' },
+            { name: 'SNIP', value: '1.8' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Variability of Sea Ice During the 2007-2008 Canadian International Polar Year Program',
+                        date: 'February 09, 2023',
+                        articles: [
+                            {
+                                id: 'es-v1-i1-a1',
+                                authors: [
+                                    { name: "Dr. Scot Nickels", aff: "Department of Environment, University of Manitoba, MB, Canada" }
+                                ],
+                                pages: '1-8',
+                                pdf: './assets/pdfs/environmental-science/es-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Long-term Zooplankton Data Set with Precise Temporal and Spatial Resolution',
+                        date: 'June 05, 2023',
+                        articles: [
+                            {
+                                id: 'es-v1-i2-a2',
+                                authors: [
+                                    { name: "Dr. Randy Kerr", aff: "Department of ASL Environmental Sciences Inc., University of British Columbia, Canada" }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/environmental-science/es-v1-i2-a2.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Change in Sea Ice Trends In The Canadian International Polar Year Program',
+                        date: 'February 09, 2023',
+                        articles: [
+                            {
+                                id: 'es-v1-i3-a3',
+                                authors: [
+                                    { name: "Simon J. Prinsenberg", aff: "Department of Environment, University of Manitoba, MB, Canada" }
+                                ],
+                                pages: '1-3',
+                                pdf: './assets/pdfs/environmental-science/es-v1-i3-a3.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Progress in Renewable Energy: Driving Sustainable Development',
+                        date: 'February 09, 2023',
+                        articles: [
+                            {
+                                id: 'es-v1-i4-a4',
+                                authors: [
+                                    { name: "Vishnu Varma", aff: "Department of Environment,University of Manitoba, Canada" }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/environmental-science/es-v1-i4-a4.pdf'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'obstetrics-gynecology': {
+        id: 'obstetrics-gynecology',
+        title: 'PeerCite Journal of Obstetrics & Gynecology',
+        shortTitle: 'Obstetrics & Gynecology',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop',
+        abbr: 'OBG',
+        description: 'Peer-reviewed research in obstetrics and gynecology from around the world.',
+        about1: 'Research on pregnancy, childbirth, and women\'s health issues from global obstetric and gynecological conferences.',
+        about2: 'Submit your latest obstetric and gynecological research for peer review and publication.',
+        about3: 'PeerCite Journal of Obstetrics & Gynecology is a leading journal in the field of obstetrics and gynecology. It publishes original research articles, reviews, case reports, and letters to the editor on all aspects of obstetrics and gynecology.',
+        scope: [
+            'Pregnancy & Childbirth',
+            'Reproductive Health',
+            'Gynecological Cancers',
+            'Maternal-Fetal Medicine',
+            'Neonatology',
+            'Infertility & Assisted Reproduction',
+            'Women\'s Mental Health',
+            'Minimally Invasive Gynecology',
+            'Gynecological Endocrinology',
+            'Women\'s Health Policy'
+        ],
+        metrics: [
+            { name: 'IF', value: '8.995' },
+            { name: 'CiteScore', value: '9.5' },
+            { name: 'SJR', value: '1.8' },
+            { name: 'SNIP', value: '1.6' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Advancements in Reproductive Endocrinology and Infertility: A Comprehensive Review',
+                        date: 'February 17, 2023',
+                        articles: [
+                            {
+                                id: 'og-v1-i1-a1',
+                                authors: [
+                                    { name: "Dr. Lavanya A", aff: "Department of Gynaecology, Research Group, India" }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Advances in Menopausal Health: Understanding, Management and Quality of Life',
+                        date: 'April 17, 2023',
+                        articles: [
+                            {
+                                id: 'og-v1-i2-a2',
+                                authors: [
+                                    { name: " Vijay V", aff: "Department of Obstetrics and Gynaecology, Research Science, India" }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i2-a2.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Advancements in Maternal-Fetal Medicine: A Comprehensive Overview',
+                        date: 'September 24, 2023',
+                        articles: [
+                            {
+                                id: 'og-v1-i3-a3',
+                                authors: [
+                                    { name: "Nuvvula Anil", aff: "Department of Obstetrics and Gynaecology, Research Science, India" }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i3-a3.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Enhancing Care in Pregnancy: Strategies, Challenges and Innovations',
+                        date: 'November 18, 2023',
+                        articles: [
+                            {
+                                id: 'og-v1-i4-a4',
+                                authors: [
+                                    { name: "Teja M", aff: "Department of Obstetrics and Gynaecology, Research Science, India" }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i4-a4.pdf'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: '2024',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Navigating the Complexities of Abortion: An Introduction',
+                        date: 'January 22, 2024',
+                        articles: [
+                            {
+                                id: 'og-v1-i1-a1',
+                                authors: [
+                                    { name: "Naveen P", aff: "Department of Obstetrics and Gynaecology, Research Science,India" }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'cell-biology': {
+        id: 'cell-biology',
+        title: 'PeerCite Journal of Cell Biology',
+        shortTitle: 'Cell Biology',
+        category: 'Life Sciences',
+        categoryFilter: 'life',
+        badge: 'Life Sciences',
+        image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop',
+        abbr: 'CB',
+        description: 'PeerCite Journal of Cell Biology is a leading international peer-reviewed journal that publishes high-quality research in all areas of cell biology and related fields.',
+        about1: 'PeerCite Journal of Cell Biology is a premier international peer-reviewed journal committed to advancing the frontiers of cellular and molecular research. With a rich history of excellence, the journal serves as a vital platform for scientists worldwide to share groundbreaking discoveries that illuminate the fundamental mechanisms governing cell life, behavior, and interactions. We are dedicated to publishing rigorous, high-impact research that drives innovation across all domains of cell biology, from basic science to translational applications.',
+        about2: 'PeerCite Journal of Cell Biology is a trusted source for high-quality research in cell biology and related fields. Our journal is dedicated to publishing original research articles, reviews, and commentaries that make a significant contribution to the understanding of cell biology. We welcome submissions from all areas of cell biology, including cell signaling, cell cycle, apoptosis, cellular metabolism, and membrane trafficking. All submissions are subject to rigorous peer review and must meet the highest standards of scientific quality and integrity.',
+        scope: [
+            'Cell Signaling and Communication',
+            'Cell Cycle and Proliferation',
+            'Apoptosis and Cell Death',
+            'Cellular Metabolism and Bioenergetics',
+            'Membrane Trafficking and Dynamics',
+            'Cytoskeleton and Cell Movement',
+            'Nuclear Organization and Dynamics',
+            'Cellular Stress Responses',
+            'Stem Cells and Regenerative Medicine',
+            'Cellular Epigenetics and Gene Regulation',
+            'Mitochondrial Biology and Dynamics',
+            'Extracellular Matrix and Cell Adhesion'
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '15.2' },
+            { name: 'SJR', value: '2.5' },
+            { name: 'SNIP', value: '2.1' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Myh Mutations in Dna Genomic in Different Chromosomal Damage',
+                        date: 'February 06, 2023',
+                        articles: [
+                            {
+                                id: 'cb-v1-i1-a1',
+                                authors: [
+                                    { name: "Dr. Prasad Kovvuru", aff: "Department of Biomedical Sciences, Discovery Dr, Rensselaer, NY. Discovery Dr is in Rensselaer, NY, USA" }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/cell-biology/cb-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Pomegranate Extract in MCF-7 Breast Cancer Cells Effects of Antiproliferative',
+                        date: 'February 06, 2023',
+                        articles: [
+                            {
+                                id: 'cb-v1-i2-a2',
+                                authors: [
+                                    { name: "Prasad Kovvuru", aff: "Department of Biomedical Sciences, Discovery Dr, Rensselaer, NY. Discovery Dr is in Rensselaer, NY, USA" }
+                                ],
+                                pages: '1-3',
+                                pdf: './assets/pdfs/cell-biology/cb-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Caring for Infants in Diverse Locations',
+                        date: 'August 06, 2023',
+                        articles: [
+                            {
+                                id: 'cb-v1-i3-a3',
+                                authors: [
+                                    { name: "Jorelle Mae T. Buenviaje", aff: "Rory Meyers College of Nursing, New York University, New York, USA." }
+                                ],
+                                pages: '1-3',
+                                pdf: './assets/pdfs/cell-biology/cb-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Advancements in Cancer Therapy Through Mirna Manipulation',
+                        date: 'November 06, 2023',
+                        articles: [
+                            {
+                                id: 'cb-v1-i4-a4',
+                                authors: [
+                                    { name: "Kiruthika Balasubramanian", aff: "Secretary, New Jersey academy of Science, Kean University, NJ Center for Science & Technology, 1075 Morris Ave, Union, New Jersey, USA" }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/cell-biology/cb-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'cardio-biology': {
+        id: 'cardio-biology',
+        title: 'PeerCite Journal of Cardio Biology',
+        shortTitle: 'Cardio Biology',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&h=500&fit=crop',
+        abbr: 'CVB',
+        description: 'Peer-reviewed research in cardio biology from global academic contributors.',
+        about1: 'The journal "Cardio Biology" stands as a premier international platform dedicated to the comprehensive exploration of the cardiovascular system. It serves as a vital conduit for the exchange of high-quality research, innovative ideas, and cutting-edge advancements across the broad spectrum of cardio biology.',
+        about2: 'The journal publishes rigorous original research, comprehensive reviews, and thought-provoking editorials. Coverage spans fundamental molecular and cellular mechanisms underlying heart function and disease, to population-level studies on cardiovascular health and prevention. The journal welcomes studies on all aspects of cardiovascular biology.',
+        scope: [
+            'Cardiovascular Biology',
+            'Heart and Vascular Health',
+            'Cardiac Physiology',
+            'Cardiomyopathy Research',
+            'Heart Failure Studies',
+            'Vascular Biology and Disease',
+            'Cardiac Electrophysiology',
+            'Clinical Cardiology',
+            'Heart Regeneration',
+            'Vascular Medicine',
+            'Cardiac Metabolism',
+            'Genetic Cardiology',
+            'Biomarkers in Cardiovascular Disease',
+            'Interventional Cardiology',
+            'Preventive Cardiology'
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '15.2' },
+            { name: 'SJR', value: '2.5' },
+            { name: 'SNIP', value: '2.1' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Comparison of Left Ventricular Stroke Volume Assessment Using Two-Dimensional and Three-Dimensional Color Doppler Echocardiography',
+                        date: 'February 06, 2023',
+                        articles: [
+                            {
+                                id: 'cab-v1-i1-a1',
+                                authors: [
+                                    { name: 'Kambiz Shahgald', aff: 'Department of Cardiology and Clinical Physiology, Karolinska University Hospital, Sweden' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/cardio-biology/cab-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Review of Tricuspid Regurgitation in His Bundle Pacing: A Comprehensive Analysis',
+                        date: 'June 05, 2023',
+                        articles: [
+                            {
+                                id: 'cab-v1-i2-a2',
+                                authors: [
+                                    { name: 'Jahanzeb Malik', aff: 'Department of Cardiology and Clinical Physiology, Karolinska University Hospital, Sweden' }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/cardio-biology/cab-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Unveiling the Dynamics of Cell Growth in Cardiobiology: Implications for Cardiovascular Health and Regenerative Therapies',
+                        date: 'September 05, 2023',
+                        articles: [
+                            {
+                                id: 'cab-v1-i3-a3',
+                                authors: [
+                                    { name: 'Viswam Kumar', aff: 'Department of Cardiology and Clinical Physiology, Research group, India' }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/cardio-biology/cab-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Metabolism at the Heart of Cardiobiology: Unraveling the Interplay for Cardiovascular Health',
+                        date: 'June 05, 2023',
+                        articles: [
+                            {
+                                id: 'cab-v1-i4-a4',
+                                authors: [
+                                    { name: 'Deepak Varma', aff: 'Department of Cardiology, Research center, India' }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/cardio-biology/cab-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'dermatology-cosmetics': {
+        id: 'dermatology-cosmetics',
+        title: 'PeerCite Journal of Dermatology & Cosmetics',
+        shortTitle: 'Dermatology & Cosmetics',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&h=500&fit=crop',
+        abbr: 'DC',
+        description: 'Peer-reviewed research in dermatology and cosmetics from global academic contributors.',
+        about1: 'The PeerCite Journal of Dermatology & Cosmetics is an international, peer-reviewed journal dedicated to advancing the science and practice of dermatology and cosmetic dermatology. We publish high-quality original research, case reports, and review articles covering the full spectrum of dermatological science, skin health, and cosmetic innovations.',
+        about2: 'We provide a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on skin diseases, wound healing, dermatopathology, aesthetic dermatology, hair and nail disorders, and cosmetic science. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        scope: [
+            'Clinical Dermatology',
+            'Cosmetic Dermatology',
+            'Skin Health',
+            'Hair Care',
+            'Nail Care',
+            'Skin Diseases',
+            'Skin Cancer',
+            'Skin Infections',
+            'Skin Disorders',
+            'Skin Problems',
+            'Dermatopathology',
+            'Aesthetic Dermatology',
+            'Wound Healing'
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '15.2' },
+            { name: 'SJR', value: '2.5' },
+            { name: 'SNIP', value: '2.1' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Exploring Hair Health: Insights from Dermatological Perspectives',
+                        date: 'August 22, 2023',
+                        articles: [
+                            {
+                                id: 'dc-v1-i1-a1',
+                                authors: [
+                                    { name: 'A Sai Kiran', aff: 'Department of Dermatology, Psoriasis center, The University of Mumbai, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'The Marvel of Skin: Exploring its Incredible Functions and Complexities',
+                        date: 'April 26, 2023',
+                        articles: [
+                            {
+                                id: 'dc-v1-i2-a2',
+                                authors: [
+                                    { name: 'Vishnu Vamsi', aff: 'Department of Dermatology, Psoriasis center, The University of Mumbai, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Exploring Cosmetic Dermatology: Enhancing Appearance and Confidence',
+                        date: 'August 21, 2023',
+                        articles: [
+                            {
+                                id: 'dc-v1-i3-a3',
+                                authors: [
+                                    { name: 'Narendra A', aff: 'Department of Dermatology, Research unit, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v1-i3-a3.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: '2024',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Understanding Genetic Skin Diseases: A Comprehensive Overview',
+                        date: 'January 27, 2024',
+                        articles: [
+                            {
+                                id: 'dc-v2-i1-a1',
+                                authors: [
+                                    { name: 'Manoj kumar', aff: 'Department of Dermatology, Research Science, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v2-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'nanostructured-materials': {
+        id: 'nanostructured-materials',
+        title: 'PeerCite Journal of Nanostructured and Green Materials',
+        shortTitle: 'Nanostructured & Green Materials',
+        category: 'Environmental Sciences',
+        categoryFilter: 'environmental',
+        badge: 'Environmental Sciences',
+        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=500&fit=crop',
+        abbr: 'NGM',
+        description: 'Peer-reviewed research in nanostructured and green materials from global academic contributors.',
+        about1: 'The PeerCite Journal of Nanostructured and Green Materials is an international, peer-reviewed journal dedicated to advancing the science and practice of nanostructured and green materials. We publish high-quality original research, case reports, and review articles covering the full spectrum of nanostructured and green materials.',
+        about2: 'We provide a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on nanostructured and green materials. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        scope: [
+            'Nanostructured Materials',
+            'Green Materials',
+            'Nanomaterials',
+            'Nanocomposites',
+            'Nanoparticles',
+            'Nanowires',
+            'Nanotubes',
+            'Nanofibers',
+            'Nanostructured Polymers',
+            'Nanostructured Ceramics',
+            'Nanostructured Metals',
+            'Nanostructured Composites',
+            'Green Synthesis',
+            'Green Materials',
+            'Green Technology'
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '15.2' },
+            { name: 'SJR', value: '2.5' },
+            { name: 'SNIP', value: '2.1' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Biomaterials For Drug Delivery In Human Programs',
+                        date: 'June 05, 2023',
+                        articles: [
+                            {
+                                id: 'nm-v1-i1-a1',
+                                authors: [
+                                    { name: 'Paolo Trucillo', aff: 'Department of Cardiology, Research center, India' }
+                                ],
+                                pages: '1-10',
+                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'New Biomaterials For Modern Dentistry',
+                        date: 'June 05, 2023',
+                        articles: [
+                            {
+                                id: 'nm-v1-i2-a2',
+                                authors: [
+                                    { name: 'Artak Heboyan', aff: 'Department of Cardiology, Research center, India' }
+                                ],
+                                pages: '1-2',
+                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Advancements In Biomaterials: A Review Of Current Trends And Future Perspectives',
+                        date: 'June 05 , 2023',
+                        articles: [
+                            {
+                                id: 'nm-v1-i3-a3',
+                                authors: [
+                                    { name: 'Vishnu Vamsi', aff: 'Department of Science, Research unit, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Exploring Biocompatibility: Understanding Interactions Between Biomaterials and Biological Systems',
+                        date: 'June 05, 2023',
+                        articles: [
+                            {
+                                id: 'nm-v1-i4-a4',
+                                authors: [
+                                    { name: 'Deepak Varma', aff: 'Department of Biomaterials, Research unit, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'dental-care': {
+        id: 'dental-care',
+        title: 'PeerCite Journal of Dental Care, Materials and Marketing',
+        shortTitle: 'Advanced Dental Care',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=500&fit=crop',
+        abbr: 'ADC',
+        description: 'Peer-reviewed research in advanced dental care from global academic contributors.',
+        about1: 'The PeerCite Journal of Advanced Dental Care, Materials and Marketing is an international, peer-reviewed journal dedicated to advancing the science and practice of advanced dental care, materials and marketing. We publish high-quality original research, case reports, and review articles covering the full spectrum of advanced dental care, materials and marketing.',
+        about2: 'We provide a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on advanced dental care, materials and marketing. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        scope: [
+            'Advanced Dental Care',
+            'Dental Materials',
+            'Dental Marketing',
+            'Advanced Dental Care',
+            'Dental Materials',
+            'Dental Marketing',
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '15.2' },
+            { name: 'SJR', value: '2.5' },
+            { name: 'SNIP', value: '2.1' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Advancements and Innovations in Dental Treatments and Procedures: Enhancing Patient Care and Outcomes',
+                        date: 'February 09, 2023',
+                        articles: [
+                            {
+                                id: 'dc-v1-i1-a1',
+                                authors: [
+                                    { name: 'Prathyusha A', aff: 'Department of Dental, Researcher, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/advanced-dental-care/dc-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: "Tele-dentistry: Revolutionizing Access and Delivery of Dental Care",
+                        date: 'August 09, 2023',
+                        articles: [
+                            {
+                                id: 'dc-v1-i2-a2',
+                                authors: [
+                                    { name: 'Yamini Ema', aff: 'Department of Dental, Researcher, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/advanced-dental-care/dc-v1-i2-a2.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: '2024',
+                issues: [
+                    {
+                        issue: 1,
+                        title: "Advancements in Biocompatible Materials for Dental Applications: Innovations and Clinical Implications",
+                        date: 'February 09, 2024',
+                        articles: [
+                            {
+                                id: 'dc-v2-i1-a1',
+                                authors: [
+                                    { name: 'Sheik Abdullah', aff: 'Department of Dental, Researcher, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/advanced-dental-care/dc-v2-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'pediatrics': {
+        id: 'pediatrics',
+        title: 'PeerCite Journal of Pediatrics',
+        shortTitle: 'Pediatrics',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=800&h=500&fit=crop',
+        abbr: 'PED',
+        description: 'Peer-reviewed research in pediatrics from global academic contributors.',
+        about1: 'The PeerCite Journal of Pediatrics is an international, peer-reviewed journal dedicated to advancing the science and practice of pediatrics. We publish high-quality original research, case reports, and review articles covering the full spectrum of pediatrics.',
+        about2: 'We provide a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on pediatrics. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        scope: [
+            'Pediatrics',
+            'Child Health',
+            'Neonatal Care',
+            'Pediatric Surgery',
+            'Pediatric Dentistry',
+            'Pediatric Neurology',
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '15.2' },
+            { name: 'SJR', value: '2.5' },
+            { name: 'SNIP', value: '2.1' }
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Medicine Comparison in Adult and Pediatric',
+                        date: 'February 21, 2023',
+                        articles: [
+                            {
+                                id: 'pd-v1-i1-a1',
+                                authors: [
+                                    { name: 'Lavanya A', aff: 'Department of Pediatrics, Research, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/pediatrics/pd-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: "Young Hearts: A Guide to Children's Cardiovascular Health",
+                        date: 'February 21, 2023',
+                        articles: [
+                            {
+                                id: 'pd-v1-i2-a2',
+                                authors: [
+                                    { name: 'Mark Mani', aff: 'Department of Neonatal, Research Science, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/pediatrics/pd-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Young Hearts: A Guide to Childrens Cardiovascular Health',
+                        date: 'July 12, 2023',
+                        articles: [
+                            {
+                                id: 'pd-v1-i3-a3',
+                                authors: [
+                                    { name: 'Mahesh J', aff: 'Department of Pediatrics, Research, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/pediatrics/pd-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Understanding and Treating Pediatric Infections',
+                        date: 'October 12, 2023',
+                        articles: [
+                            {
+                                id: 'pd-v1-i4-a4',
+                                authors: [
+                                    { name: 'Sravani D', aff: 'Department of Pediatrics, Research, India' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/pediatrics/pd-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: '2024',
+                issues: [
+                    {
+                        issue: 1,
+                        title: "Advanced Medical Treatment for Pediatric Patients",
+                        date: 'January 15, 2024',
+                        articles: [
+                            {
+                                id: 'pd-v2-i1-a1',
+                                authors: [
+                                    { name: 'Vamsi M', aff: 'Department of Pediatrics, Research, India' }
+                                ],
+                                pages: '1-3',
+                                pdf: './assets/pdfs/pediatrics/pd-v2-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'entrepreneurship': {
+        id: 'entrepreneurship',
+        title: 'PeerCite Journal of Entrepreneurship and Business Innovations',
+        shortTitle: 'Entrepreneurship & Business',
+        category: 'Social Sciences',
+        categoryFilter: 'social',
+        badge: 'Social Sciences',
+        image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop',
+        abbr: 'EBI',
+        description: 'PeerCite Journal of Entrepreneurship and Business Innovations provides a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on entrepreneurship and business innovations. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        about1: 'We provide a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on entrepreneurship and business innovations. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        about2: 'The journal publishes original research articles, review articles, case studies, and editorials that address significant issues in entrepreneurship and business innovations. The journal welcomes submissions from both established and emerging scholars from around the world.',
+        scope: [
+            'Entrepreneurship',
+            'Business Innovations',
+            'Entrepreneurship',
+            'Business'],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '12.345' },
+            { name: 'SJR', value: '12.345' },
+            { name: 'SNIP', value: '12.345' },
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: '2023',
+                issues: [
+                    {
+                        issue: 1,
+                        title: "Industrial Automation Parameter Identification Of Electric Drives In Environment Of Cloud",
+                        date: 'February 18, 2023',
+                        articles: [
+                            {
+                                id: 'eb-v1-i1-a1',
+                                authors: [
+                                    { name: 'Angela Anguilano', aff: 'DOMENICO SCARAFILE, R&D Engineer, Idea75 srl' }
+                                ],
+                                pages: '1-2',
+                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: "Industrial Automation: Enhanced Electric Drive Parameter Identification In The Cloud",
+                        date: 'May 06, 2023',
+                        articles: [
+                            {
+                                id: 'eb-v1-i2-a2',
+                                authors: [
+                                    { name: 'Angela Anguilano', aff: 'DOMENICO SCARAFILE, R&D Engineer, Idea75 srl' }
+                                ],
+                                pages: '1-2',
+                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Analyzing Innovative Practices For Driving Business Growth',
+                        date: 'September 06, 2023',
+                        articles: [
+                            {
+                                id: 'eb-v1-i3-a3',
+                                authors: [
+                                    { name: 'Vishnu Varma', aff: 'Department of Economic, Research Group, India' }
+                                ],
+                                pages: '1-2',
+                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Methodology For Driving Business Innovations: A Strategic Framework',
+                        date: 'September 06, 2023',
+                        articles: [
+                            {
+                                id: 'eb-v1-i4-a4',
+                                authors: [
+                                    { name: 'Deepak Varma', aff: 'Department of Economic, Research Group, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'microbiology': {
+        id: 'microbiology',
+        title: 'PeerCite Journal of Microbiology and Infectious Diseases',
+        shortTitle: 'Microbiology & Infectious Diseases',
+        category: 'Life Sciences',
+        categoryFilter: 'life',
+        badge: 'Life Sciences',
+        image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop',
+        abbr: 'MID',
+        description: 'Peer-reviewed research in Microbiology and Infectious Diseases from global academic contributors.',
+        about1: 'The PeerCite Journal of Microbiology and Infectious Diseases provides a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on microbiology and infectious diseases. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        about2: 'The journal publishes original research articles, review articles, case studies, and editorials that address significant issues in microbiology and infectious diseases. The journal welcomes submissions from both established and emerging scholars from around the world.',
+        scope: [
+            'Microbiology',
+            'Infectious Diseases',
+            'Bacteriology',
+            'Virology',
+            'Mycology',
+            'Parasitology',
+            'Antimicrobial Resistance',
+            'Epidemiology and Public Health Microbiology',
+            'Clinical Microbiology and Infectious Diseases Diagnostics',
+            'Immunology and Vaccines',
+            'Microbial Pathogenesis and Host-Pathogen Interactions',
+            'Environmental and Food Microbiology',
+            'Biotechnology and Synthetic Biology',
+            'Infectious Disease Outbreaks and Management',
+            'Antibiotic Discovery and Development',
+            'Microbial Forensics and Biosecurity'
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '12.345' },
+            { name: 'SJR', value: '12.345' },
+            { name: 'SNIP', value: '12.345' },
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2023,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Parasitic Infections In Patients With Type 2 Diabetes Mellitus In Benghazi, Libya',
+                        date: 'February 15, 2023',
+                        articles: [
+                            {
+                                id: 'mid-v1-i1-a1',
+                                authors: [
+                                    { name: 'Eman Z Younis', aff: 'Department of Biology, Faculty of Education-Ghemines, University of Benghazi, Benghazi, Libya' },
+                                    { name: 'Adela H Elamami', aff: 'Department of Medicine, Faculty of Medicine, University of Benghazi, Benghazi, Libya' },
+                                    { name: 'Rugaia MEl-Salem', aff: 'Department of Zoology, Faculty of Science, University of Sebha, Libya' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/microbiology/mid-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Silver Nanoparticles: A Versatile Weapon Against Infections and Cancer',
+                        date: 'May 06, 2023',
+                        articles: [
+                            {
+                                id: 'mid-v1-i2-a2',
+                                authors: [
+                                    { name: 'Ardhendu Kumar Mandal', aff: 'Central Instrumentation Division,CSIR-Indian Institute of Chemical Sciences,Biology, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/microbiology/mid-v1-i2-a2.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 2,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Invisible Invaders: Microbiology and the World of Infectious Diseases',
+                        date: 'January 28, 2024',
+                        articles: [
+                            {
+                                id: 'mid-v2-i1-a1',
+                                authors: [
+                                    { name: 'Christiana J', aff: 'Department of Microbiology, University College Cork, Cork, Ireland.' }
+                                ],
+                                pages: '1-4',
+                                pdf: './assets/pdfs/microbiology/mid-v2-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    'diagnostic-pathology': {
+        id: 'diagnostic-pathology',
+        title: 'PeerCite Journal of Diagnostic Pathology',
+        shortTitle: 'Diagnostic Pathology',
+        category: 'Medical Sciences',
+        categoryFilter: 'medical',
+        badge: 'Medical Sciences',
+        image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop',
+        abbr: 'DP',
+        description: 'Peer-reviewed research in Diagnostic Pathology from global academic contributors.',
+        about1: 'The PeerCite Journal of Diagnostic Pathology provides a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on diagnostic pathology. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
+        about2: 'The journal publishes original research articles, review articles, case studies, and editorials that address significant issues in diagnostic pathology. The journal welcomes submissions from both established and emerging scholars from around the world.',
+        scope: [
+            'Diagnostic Pathology',
+            'Pathology',
+            'Histopathology',
+            'Cytopathology',
+            'Immunohistochemistry',
+            'Molecular Pathology',
+            'Forensic Pathology',
+            'Clinical Pathology',
+            'Diagnostic Microbiology',
+            'Diagnostic Virology',
+            'Diagnostic Hematology',
+            'Diagnostic Immunology',
+            'Diagnostic Toxicology',
+            'Diagnostic Genetics',
+            'Diagnostic Radiology',
+            'Diagnostic Ultrasonography'
+        ],
+        metrics: [
+            { name: 'IF', value: '12.345' },
+            { name: 'CiteScore', value: '12.345' },
+            { name: 'SJR', value: '12.345' },
+            { name: 'SNIP', value: '12.345' },
+        ],
+        volumes: [
+            {
+                volume: 1,
+                year: 2023,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Microrna-9 Inhibition of Cells and Identification of New Mir-9 Object by Transcriptome Profiling with Cancer Cells in Breast',
+                        date: 'February 07, 2023',
+                        articles: [
+                            {
+                                id: 'dp-v1-i1-a1',
+                                authors: [
+                                    { name: 'Dr. Prasad Kovvuru', aff: 'Cancer Research Center, Post-Doctoral Researcher, University at Albany, SUNY Newyork, USA' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'MCF-7 Breast Cancer Cells with Reduced DNA Repair Gene Expression',
+                        date: 'March 06, 2023',
+                        articles: [
+                            {
+                                id: 'dp-v1-i2-a2',
+                                authors: [
+                                    { name: 'Dr. Prasad Kovvuru', aff: 'Department of Health Sciences, Post-Doctoral Research, University at Albany, SUNY New York, USA' }
+                                ],
+                                pages: '1-6',
+                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Type 2 Diabetes Mellitus in Parasitic Infections Patients Libya',
+                        date: 'May 06, 2023',
+                        articles: [
+                            {
+                                id: 'dp-v1-i3-a3',
+                                authors: [
+                                    { name: 'Eman Z Younis', aff: 'Department of Biology, Faculty of Education-Ghemines, University of Benghazi, Benghazi, Libya' },
+                                    { name: 'Adela H Elamami', aff: 'Department of Medicine, Faculty of Medicine, University of Benghazi, Benghazi, Libya' },
+                                    { name: 'Rugaia MEl-Salem', aff: 'Department of Zoology, Faculty of Science, University of Sebha, Libya' }
+                                ],
+                                pages: '1-3',
+                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'A Survey on Knowledge, Attitude, and Practice of Virtual Schooling in Dental Undergraduate and Postgraduate Education',
+                        date: 'October 22, 2023',
+                        articles: [
+                            {
+                                id: 'dp-v1-i4-a4',
+                                authors: [
+                                    { name: 'Lichi Solanki', aff: 'Department of Orthodontics and Dentofacial Orthopaedics, Saveetha Dental College and Hospitals, Saveetha Institute of Medical and Technical Sciences, Saveetha University, Chennai, India' }
+                                ],
+                                pages: '1-5',
+                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i4-a4.pdf',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 };
+
 // Add default volumes structure for other journals (empty for now)
 const otherJournalIds = [
-    'quantum-science', 'surgery-medicine', 'environmental-sciences',
-    'obstetrics-gynecology', 'cell-biology', 'cardio-biology', 'dermatology-cosmetics',
-    'veterinary-science', 'nanostructured-materials', 'dental-care',
-    'pediatrics',
-    'entrepreneurship', 'microbiology', 'metaphysics', 'diagnostic-pathology',
+    'metaphysics',
     'fisheries-aquatic-studies'
 ];
 const defaultOtherJournals = {
-    'quantum-science': { title: 'PeerCite Journal of Quantum Science and Technology', shortTitle: 'Quantum Science & Tech', category: 'Science & Technology', categoryFilter: 'science-tech', badge: 'Science & Tech', image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop', abbr: 'QST' },
-    'surgery-medicine': { title: 'PeerCite Journal of Surgery and Medicine', shortTitle: 'Surgery & Medicine', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&h=500&fit=crop', abbr: 'SM' },
-    'environmental-sciences': { title: 'PeerCite Journal of Environmental Sciences', shortTitle: 'Environmental Sciences', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=500&fit=crop', abbr: 'ES' },
-    'obstetrics-gynecology': { title: 'PeerCite Journal of Obstetrics and Gynecology', shortTitle: 'Obstetrics & Gynecology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop', abbr: 'OBG' },
-    'cell-biology': { title: 'PeerCite Journal of Cell Biology', shortTitle: 'Cell Biology', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'CB' },
-    'cardio-biology': { title: 'PeerCite Journal of Cardio Biology', shortTitle: 'Cardio Biology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&h=500&fit=crop', abbr: 'CVB' },
-    'dermatology-cosmetics': { title: 'PeerCite Journal of Dermatology & Cosmetics', shortTitle: 'Dermatology & Cosmetics', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&h=500&fit=crop', abbr: 'DC' },
-    'veterinary-science': { title: 'PeerCite Journal of Veterinary Science', shortTitle: 'Veterinary Science', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=500&fit=crop', abbr: 'VS' },
-    'nanostructured-materials': { title: 'PeerCite Journal of Nanostructured and Green Materials', shortTitle: 'Nanostructured & Green Materials', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=500&fit=crop', abbr: 'NGM' },
-    'dental-care': { title: 'PeerCite Journal of Advanced Dental Care, Materials and Marketing', shortTitle: 'Advanced Dental Care', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=500&fit=crop', abbr: 'ADC' },
-    'pediatrics': { title: 'PeerCite Journal of Pediatrics', shortTitle: 'Pediatrics', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=800&h=500&fit=crop', abbr: 'PED' },
-    'entrepreneurship': { title: 'PeerCite Journal of Entrepreneurship and Business Innovations', shortTitle: 'Entrepreneurship & Business', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop', abbr: 'EBI' },
-    'microbiology': { title: 'PeerCite Journal of Microbiology and Infectious Diseases', shortTitle: 'Microbiology & Infectious Diseases', category: 'Life Sciences', categoryFilter: 'life', badge: 'Life Sciences', image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop', abbr: 'MID' },
     'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
-    'diagnostic-pathology': { title: 'PeerCite Journal of Diagnostic Pathology', shortTitle: 'Diagnostic Pathology', category: 'Medical Sciences', categoryFilter: 'medical', badge: 'Medical Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'DP' },
     'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
 };
 Object.keys(defaultOtherJournals).forEach(id => {
