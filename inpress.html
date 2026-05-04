@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Press Articles | PeerCite Publishers</title>
+    <meta name="description"
+        content="Early access to accepted articles prior to official publication in a specific volume/issue.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-rebuild.css">
+    <link rel="stylesheet" href="volumes-fix.css">
+
+    <style>
+        .inpress-page {
+            padding-bottom: 5rem;
+            min-height: 70vh;
+        }
+
+        .inpress-hero {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)),
+                url('https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1600&h=400&fit=crop') center/cover;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .inpress-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .inpress-hero p {
+            color: var(--gray-300);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .inpress-container {
+            margin-top: 3rem;
+            max-width: 1000px;
+        }
+
+        .inpress-article-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inpress-article-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .inpress-article-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--primary);
+        }
+
+        .inpress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .inpress-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--gray-900);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .inpress-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .inpress-authors {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .inpress-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            background: var(--gray-50);
+            padding: 0.75rem;
+            border-radius: 8px;
+        }
+
+        .inpress-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .inpress-meta i {
+            color: var(--primary);
+        }
+
+        .inpress-abstract {
+            color: var(--gray-700);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .inpress-actions {
+            display: flex;
+            gap: 1rem;
+            border-top: 1px solid var(--gray-200);
+            padding-top: 1.25rem;
+        }
+
+        .btn-inpress {
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-view {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+        }
+
+        .btn-view:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-download {
+            background: white;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-download:hover {
+            background: var(--gray-50);
+            border-color: var(--gray-400);
+            color: var(--gray-900);
+        }
+
+        .no-articles {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--gray-50);
+            border-radius: 12px;
+            color: var(--gray-500);
+        }
+
+        .no-articles i {
+            font-size: 3rem;
+            color: var(--gray-300);
+            margin-bottom: 1rem;
+        }
+
+        /* Tooltip styles from volumes-fix */
+        .author-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .aff-trigger {
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 2px;
+        }
+
+        .author-affiliation-block {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            width: max-content;
+            max-width: 300px;
+            z-index: 100;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .author-affiliation-block::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -6px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: #1e293b transparent transparent transparent;
+        }
+
+        .author-item.active .author-affiliation-block {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .inpress-header {
+                flex-direction: column;
+            }
+
+            .inpress-actions {
+                flex-direction: column;
+            }
+
+            .btn-inpress {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="assets/images/Peercite Logo..png" alt="PeerCite Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-link ">
+                        <span>Home</span>
+                    </a>
+                </div>
+
+                <div class="nav-dropdown mega-dropdown">
+                    <a href="publications.html" class="nav-link">
+                        <span>Publications</span>
+                        <!-- <span class="nav-badge"></span> -->
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col" data-category="medical">
+                                <h5 class="mega-title"><i class='bx bx-heart-circle'></i> Medical Sciences</h5>
+                                <ul class="mega-links">
+                                    <li><a href="journal.html">Mental Health Research</a></li>
+                                    <li><a href="journal.html">Neuroscience Advances</a></li>
+                                    <li><a href="journal.html">Clinical Medicine Today</a></li>
+                                    <li><a href="journal.html">Surgery & Innovation</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col" data-category="technology">
+                                <h5 class="mega-title"><i class='bx bx-chip'></i> Technology</h5>
+                                <ul class="mega-links">
+                                    <li><a href="journal.html">AI & Machine Learning</a></li>
+                                    <li><a href="journal.html">Cybersecurity Review</a></li>
+                                    <li><a href="journal.html">Data Science Quarterly</a></li>
+                                    <li><a href="journal.html">Robotics & Automation</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col" data-category="environmental">
+                                <h5 class="mega-title"><i class='bx bx-chip'></i> Environmental Sciences</h5>
+                                <ul class="mega-links">
+                                    <li><a href="journal.html">Climate Studies</a></li>
+                                    <li><a href="journal.html">Sustainability Research</a></li>
+                                    <li><a href="journal.html">Marine Biology</a></li>
+                                    <li><a href="journal.html">Ecology & Conservation</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col mega-featured">
+                                <div class="mega-featured-card">
+                                    <span class="featured-badge">Latest Issue</span>
+                                    <h4>AI in Healthcare 2024</h4>
+                                    <p>Conference proceedings from the Global Health Tech Summit.</p>
+                                    <div class="featured-stats">
+                                        <div class="stat"><strong>45</strong><span>Articles</span></div>
+                                        <div class="stat"><strong>12K</strong><span>Reads</span></div>
+                                    </div>
+                                    <a href="journal.html" class="mega-featured-btn">Read Now →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-dropdown proceedings-nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <span>Proceedings</span>
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown-menu proceedings-mega-menu">
+                        <div class="proceedings-mega-inner">
+
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-female-sign'></i> WL CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 1.0</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 1.1</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 2.0</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL Conference Proceedings 2.1</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-heart-circle'></i> MH CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="journal.html?id=mental-health#proceedings"><i
+                                                class='bx bx-file-blank'></i> MH Conference Proceedings 1.0</a></li>
+                                    <li><a href="journal.html?id=mental-health#proceedings"><i
+                                                class='bx bx-file-blank'></i> MH Conference Proceedings 1.1</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-intersect'></i> WL-WH CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.0</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.1</a></li>
+                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
+                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 2.0</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="authors.html" class="nav-link">
+                        <span>Authors Hub</span>
+                    </a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="inpress.html" class="nav-link">
+                        <span>In press</span>
+                    </a>
+                </div>
+
+                <div class="nav-dropdown">
+                    <a href="about.html" class="nav-link">
+                        <span>About</span>
+                    </a>
+                </div>
+
+                <div class="nav-dropdown">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="search-autocomplete-wrapper">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search journals....." autocomplete="off"
+                        aria-label="Search PeerCite">
+                    <button id="search-btn" class="search-btn">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </div>
+
+                <!-- Suggestions Dropdown -->
+                <div id="search-dropdown" class="search-dropdown"></div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span
+                    class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo"><span class="logo-mark">P</span><span>PeerCite</span></div>
+            <button class="mobile-close" id="mobile-close"><i class='bx bx-x'></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
+            <a href="publications.html" class="mobile-nav-link"><i
+                    class='bx bx-book-open'></i><span>Publications</span></a>
+            <a href="authors.html" class="mobile-nav-link"><i class='bx bx-feather'></i><span>Authors Hub</span></a>
+            <a href="inpress.html" class="mobile-nav-link"><i class='bx bx-file'></i><span>Inpress</span></a>
+            <a href="about.html" class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span></a>
+            <a href="contact.html" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
+        </nav>
+    </div>
+
+    <main class="inpress-page">
+        <section class="inpress-hero">
+            <div class="container">
+                <h1>Articles In Press</h1>
+                <p>Early access to peer-reviewed and accepted articles before they are assigned to a specific volume and
+                    issue.</p>
+            </div>
+        </section>
+
+        <section class="inpress-content">
+            <div class="container inpress-container" id="inpress-list">
+                <!-- Articles will be rendered here by inpress.js -->
+                <div class="loading-placeholder text-center py-5">
+                    <i class='bx bx-loader-alt bx-spin' style='font-size: 2rem; color: var(--primary);'></i>
+                    <p class="mt-2 text-gray-500">Loading in-press articles...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/images/Peercite Logo..png" alt="PeerCite Logo" class="logo-img">
+                    </div>
+                    <p class="footer-description">PeerCite Publishers curates and publishes academic content from
+                        world-class conferences, making cutting-edge research accessible to everyone.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.linkedin.com/company/peercite/" class="footer-social"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="footer-social"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="publications.html">Publications</a>
+                        <a href="authors.html">Authors Hub</a>
+                        <a href="inpress.html">Inpress</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Journals</h4>
+                    <div class="footer-links">
+                        <a href="journal.html">Mental Health Research</a>
+                        <a href="journal.html">AI & Machine Learning</a>
+                        <a href="journal.html">Neuroscience Advances</a>
+                        <a href="journal.html">Climate Studies</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><i class='bx bx-phone'></i><a href="tel:+17162171471">+1 716
+                            217
+                            1471</a></div>
+                    <div class="footer-contact-item"><i class='bx bx-envelope'></i><a
+                            href="mailto:contact@peercite.org">contact@peercite.org</a></div>
+                    <div class="footer-contact-item"><i class='bx bx-map'></i><span>Headquarters
+                            Peercite Research Group, Parklane West, Menands, Albany, New York 12204, US</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="cc-icons">
+                    <p>
+                        <strong>PeerCite Journals</strong> © 2026 All rights reserved by
+                        <span class="author">Prasad Kovvuru</span> is licensed under
+                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0
+                        </a>
+                    </p>
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="cookies.html">Cookies</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class='bx bx-up-arrow-alt'></i></button>
+
+    <script src="journals-data.js"></script>
+    <script src="inpress.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

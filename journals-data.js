@@ -2411,6 +2411,31 @@ Object.keys(defaultOtherJournals).forEach(id => {
 window.JOURNALS_DATA = JOURNALS_DATA;
 
 /* =====================================================
+   IN PRESS DATA
+   ===================================================== */
+const INPRESS_DATA = [
+    {
+        id: 'inpress-1',
+        title: 'Advanced Testicular Mixed Germ Cell Tumor with Discontinuous Spermatic Cord Metastasis: Expanded Case Report',
+        authors: [
+            { name: 'M. V. S. Sai Adithya', aff: 'MS GENERAL SURGERY' },
+            { name: 'K. A. Mohammed Asif', aff: 'MS GENERAL SURGERY' },
+            { name: 'K. Santhosh Kumar', aff: 'MS GENERAL SURGERY' },
+            { name: 'Jagadish Guptha', aff: 'MS GENERAL SURGERY' }
+        ],
+        journal: 'Peercite Journal of Surgery and Medicine',
+        journalId: 'peercite-journal-of-surgery-and-medicine',
+        date: 'Published: May 04, 2026',
+        abstract: 'Testicular germ cell tumors (TGCTs) are the most common solid malignancies in young men and are highly curable with stage-adapted multimodal therapy (Singla et al., 2025; Di Costanzo et al., 2025; Feldman et al., 2008; Gilligan et al., 2019). Mixed germ cell tumors (MGCTs), containing both seminomatous and non-seminomatous elements, often behave aggressively and are treated as non-seminoma (Singla et al., 2025; Gilligan et al., 2019; Chen et al., 2018). Discontinuous spermatic cord involvement has emerged as a distinctive adverse pathological feature linked to advanced stage (Pena et al., 2021; Alì et al., 2020; Sanfrancesco et al., 2018; Portillo, Rais-Bahrami and Magi-Galluzzi, 2022; Verrill et al., 2017).',
+        // pages: 'Online First',
+        pdf: 'assets/pdfs/surgery-medicine/PJSM-Article.pdf'
+    }
+
+];
+window.INPRESS_DATA = INPRESS_DATA;
+
+
+/* =====================================================
    JOURNAL PAGE RENDERER
    ===================================================== */
 
