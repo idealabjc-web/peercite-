@@ -409,34 +409,61 @@ const JOURNALS_DATA = {
                             }
                         ]
                     },
-                    // {
-                    //     issue: 2,
-                    //     title: 'Large Language Models',
-                    //     date: 'July 2024',
-                    //     articles: [
-                    //         {
-                    //             id: 'ai-v2-i2-a1',
-                    //             title: 'Fine-tuning LLMs for Domain-Specific Tasks',
-                    //             authors: 'Dr. David Kim',
-                    //             pages: '1-30',
-                    //             pdf: 'pdfs/ai-ml/v2-i2-a1.pdf',
-                    //         },
-                    //     ]
-                    // },
-                    // {
-                    //     issue: 3,
-                    //     title: 'Inaugural Issue',
-                    //     date: 'March 2023',
-                    //     articles: [
-                    //         {
-                    //             id: 'ai-v2-i2-a2',
-                    //             title: 'Multimodal AI Systems',
-                    //             authors: 'Dr. Yuki Sato, Dr. Paul Werner',
-                    //             pages: '31-50',
-                    //             pdf: 'pdfs/ai-ml/v2-i2-a2.pdf',
-                    //         }
-                    //     ]
-                    // }
+                    {
+                        issue: 'Special',
+                        title: 'Unveiling Ethical Complexities in AIs Role in Healthcare',
+                        date: 'August 16, 2024',
+                        articles: [
+                            {
+                                id: 'ai-v2-sp',
+                                authors: [
+                                    {
+                                        name: "Ewa J. Kleczyk",
+                                        aff: "The University of Maine, Orono, Maine, USA; Target RWE, Durham, NC, USA"
+                                    }
+                                ],
+                                pages: '1-13',
+                                pdf: 'assets/pdfs/ai-ml/ai-v2-sp.pdf',
+                            },
+                        ]
+                    },
+                    {
+                        issue: 'Special',
+                        title: 'The Fourth Industrial Revolution: Transforming Medicine and Pharmaceuticals',
+                        date: 'October 14, 2025',
+                        articles: [
+                            {
+                                id: 'ai-v2-sp2',
+                                authors: [
+                                    {
+                                        name: "Anu Ramchandran Nair",
+                                        aff: "Biotech Researcher | Experience in Academics Manufacturing & Research | Author"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/ai-ml/ai-v2-sp2.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 3,
+                year: 2025,
+                issues: [
+                    {
+                        issue: 'Special',
+                        title: 'Operational Endings, Emotional Impacts: Ethical Considerations When Project Teams Form Attachments to AI Collaborators',
+                        date: 'May 16, 2025',
+                        articles: [
+                            {
+                                id: 'ai-v3-sp',
+                                authors: "Sarah Dyson",
+                                pages: '1-15',
+                                pdf: 'assets/pdfs/ai-ml/ai-v3-sp1.pdf',
+                            }
+                        ]
+                    }
                 ]
             }
         ]
