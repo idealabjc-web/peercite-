@@ -7778,12 +7778,13 @@ html {
 }
 
 /* =====================================================
-   PROCEEDINGS MEGA DROPDOWN
+   PROCEEDINGS FLYOUT DROPDOWN
    ===================================================== */
 .proceedings-mega-menu {
-    min-width: 680px !important;
+    min-width: 350px !important;
     left: 50%;
     transform: translateX(-50%) translateY(10px) !important;
+    padding: 0.5rem 0;
 }
 
 .nav-dropdown:hover .proceedings-mega-menu {
@@ -7791,61 +7792,138 @@ html {
 }
 
 .proceedings-mega-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0;
-    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
+/* Each proceedings group = parent item with flyout */
 .proceedings-group {
-    padding: 1.25rem 1rem;
-    border-right: 1px solid var(--gray-100);
+    position: relative;
+    padding: 0;
+    border-right: none;
 }
 
 .proceedings-group:last-child {
     border-right: none;
 }
 
+/* The group title acts as the parent trigger */
 .proceedings-group-title {
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--primary);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--dark);
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-bottom: 0.85rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 2px solid var(--primary);
-    line-height: 1.3;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0.7rem 1.2rem;
+    padding-right: 2rem;
+    border-bottom: none;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    white-space: normal;
+    max-width: 280px;
+}
+
+.proceedings-group-title::after {
+    content: '›';
+    font-size: 1.3rem;
+    font-weight: 400;
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    transition: color 0.2s ease;
+    line-height: 1;
 }
 
 .proceedings-group-title i {
-    font-size: 1rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
+    color: var(--primary);
 }
 
+.proceedings-group:hover .proceedings-group-title {
+    background: rgba(16, 185, 129, 0.06);
+    color: var(--primary);
+}
+
+.proceedings-group:hover .proceedings-group-title::after {
+    color: var(--primary);
+}
+
+/* The sub-links = flyout submenu that appears on hover */
 .proceedings-group-links {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 300px;
+    max-width: 300px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--gray-100);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.25s ease;
+    z-index: 1000;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar for flyout */
+.proceedings-group-links::-webkit-scrollbar {
+    width: 5px;
+}
+
+.proceedings-group-links::-webkit-scrollbar-track {
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.proceedings-group-links::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 4px;
+}
+
+.proceedings-group-links::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+.proceedings-group:hover .proceedings-group-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .proceedings-group-links li a {
     display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.45rem 0.5rem;
-    font-size: 0.82rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.85rem;
     color: var(--gray-700);
-    border-radius: var(--radius-sm);
+    border-radius: 0;
     transition: all 0.2s ease;
     text-decoration: none;
     font-weight: 400;
+    white-space: normal;
+    line-height: 1.4;
+    word-break: break-word;
+    max-width: 220px;
 }
 
 .proceedings-group-links li a i {
@@ -7858,11 +7936,84 @@ html {
 .proceedings-group-links li a:hover {
     background: rgba(16, 185, 129, 0.08);
     color: var(--primary);
-    padding-left: 0.75rem;
+    padding-left: 1.4rem;
 }
 
 .proceedings-group-links li a:hover i {
     opacity: 1;
+}
+
+/* Separator between groups */
+.proceedings-group+.proceedings-group {
+    border-top: 1px solid var(--gray-100);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+    .proceedings-mega-menu {
+        min-width: 280px !important;
+        left: 0 !important;
+        transform: translateY(10px) !important;
+    }
+
+    .nav-dropdown:hover .proceedings-mega-menu {
+        transform: translateY(0) !important;
+    }
+
+    .proceedings-group-links {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        min-width: auto;
+        display: none;
+        background: var(--gray-50);
+    }
+
+    .proceedings-group:hover .proceedings-group-links,
+    .proceedings-group.active .proceedings-group-links {
+        display: flex;
+    }
+
+    .proceedings-group-links li a {
+        padding-left: 2.5rem;
+        font-size: 0.82rem;
+    }
+
+    .proceedings-group-links li a:hover {
+        padding-left: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .proceedings-mega-menu {
+        min-width: 300px !important;
+    }
+
+    .proceedings-group-links {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        min-width: auto;
+        display: none;
+        background: var(--gray-50);
+    }
+
+    .proceedings-group:hover .proceedings-group-links,
+    .proceedings-group.active .proceedings-group-links {
+        display: flex;
+    }
+
+    .proceedings-group-links li a {
+        padding-left: 2.5rem;
+    }
 }
 
 /* =====================================================
@@ -7931,45 +8082,6 @@ html {
     .pdf-download-section {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .proceedings-mega-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .proceedings-group {
-        border-right: none;
-        border-bottom: 1px solid var(--gray-100);
-    }
-
-    .proceedings-group:last-child {
-        border-bottom: none;
-    }
-
-    .proceedings-mega-menu {
-        min-width: 300px !important;
-        left: 0 !important;
-        transform: translateY(10px) !important;
-    }
-
-    .nav-dropdown:hover .proceedings-mega-menu {
-        transform: translateY(0) !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .proceedings-mega-menu {
-        min-width: 340px !important;
-    }
-
-    .proceedings-mega-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .proceedings-group {
-        border-right: none;
-        border-bottom: 1px solid var(--gray-100);
-        padding: 0.9rem 0.75rem;
     }
 }
 
