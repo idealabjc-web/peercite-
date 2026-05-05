@@ -34,7 +34,7 @@ const JOURNALS_DATA = {
                         date: '26 June 2023',
                         articles: [
                             {
-                                id: 'mh-v1-i1-a1',
+                                id: 'PJMH-v1-i1-a1',
                                 authors: [
                                     {
                                         name: "Hamide Eygoren",
@@ -42,7 +42,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-17',
-                                pdf: 'assets/pdfs/mental-health/mh-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/mental-health/PJMH-v1-i1-a1.pdf',
                             },
                         ]
                     },
@@ -52,7 +52,7 @@ const JOURNALS_DATA = {
                         date: 'February 02, 2023',
                         articles: [
                             {
-                                id: 'mh-v1-i2-a2',
+                                id: 'PJMH-v1-i2-a2',
                                 authors: [
                                     {
                                         name: "Dr.Prasad Kovvuru",
@@ -60,7 +60,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-6',
-                                pdf: 'assets/pdfs/mental-health/mh-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/mental-health/PJMH-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -70,7 +70,7 @@ const JOURNALS_DATA = {
                         date: 'August 22, 2023',
                         articles: [
                             {
-                                id: 'mh-v1-i3-a3',
+                                id: 'PJMH-v1-i3-a3',
                                 authors: [
                                     {
                                         name: "Dr.Angelika Wagner",
@@ -78,7 +78,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/mental-health/mh-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/mental-health/PJMH-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -88,7 +88,7 @@ const JOURNALS_DATA = {
                         date: 'October 21, 2023',
                         articles: [
                             {
-                                id: 'mh-v1-i4-a4',
+                                id: 'PJMH-v1-i4-a4',
                                 authors: [
                                     {
                                         name: "Dr.Abdulkarim Kazemzade",
@@ -96,7 +96,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/mental-health/mh-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/mental-health/PJMH-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -112,7 +112,7 @@ const JOURNALS_DATA = {
                         date: 'January 22, 2024',
                         articles: [
                             {
-                                id: 'mh-v2-i1-a1',
+                                id: 'PJMH-v2-i1-a1',
                                 authors: [
                                     {
                                         name: "Dr. Geethika Sharma",
@@ -120,7 +120,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/mental-health/mh-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/mental-health/PJMH-v2-i1-a1.pdf',
                             },
                         ]
                     },
@@ -130,7 +130,7 @@ const JOURNALS_DATA = {
                         date: ' May 02, 2024',
                         articles: [
                             {
-                                id: 'mh-v2-i2-a2',
+                                id: 'PJMH-v2-i2-a2',
                                 authors: [
                                     {
                                         name: "Dr.Suresh V",
@@ -138,7 +138,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/mental-health/mh-v2-i2-a2.pdf',
+                                pdf: 'assets/pdfs/mental-health/PJMH-v2-i2-a2.pdf',
                             }
                         ]
                     }
@@ -176,7 +176,7 @@ const JOURNALS_DATA = {
                         date: 'February 07 2023',
                         articles: [
                             {
-                                id: 'wl-v1-i1-a1',
+                                id: 'PJWL-v1-i1-a1',
                                 authors: [
                                     {
                                         name: "Dr. Tejeswi Gidadhubli",
@@ -184,7 +184,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/womens-leadership/wl-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/womens-leadership/PJWL-v1-i1-a1.pdf',
                             },
                         ]
                     },
@@ -194,7 +194,7 @@ const JOURNALS_DATA = {
                         date: 'February 20, 2023',
                         articles: [
                             {
-                                id: 'wl-v1-i1(s)-a1',
+                                id: 'PJWL-v1-i1(s)-a1',
                                 authors: [
                                     {
                                         name: "Sabira Arefin",
@@ -210,7 +210,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-6',
-                                pdf: 'assets/pdfs/womens-leadership/wl-v1-i1(s)-a1.pdf',
+                                pdf: 'assets/pdfs/womens-leadership/PJWL-v1-i1(s)-a1.pdf',
                             }
                         ]
                     },
@@ -220,7 +220,7 @@ const JOURNALS_DATA = {
                         date: 'April 27, 2023',
                         articles: [
                             {
-                                id: 'wl-v1-i2-a2',
+                                id: 'PJWL-v1-i2-a2',
                                 authors: [
                                     {
                                         name: "Dr. Kokkori Eleftheria",
@@ -228,7 +228,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-2',
-                                pdf: './assets/pdfs/womens-leadership/wl-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/womens-leadership/PJWL-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -239,7 +239,7 @@ const JOURNALS_DATA = {
                         date: 'September 07, 2023',
                         articles: [
                             {
-                                id: 'wl-v1-i3-a3',
+                                id: 'PJWL-v1-i3-a3',
                                 authors: [
                                     {
                                         name: "Dr. Sayed Abdul Azeez",
@@ -247,7 +247,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/womens-leadership/wl-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/womens-leadership/PJWL-v1-i3-a3.pdf',
                             }
                         ]
                     }
@@ -267,7 +267,7 @@ const JOURNALS_DATA = {
             //                     title: 'Women Leadership in Emerging Economies',
             //                     authors: 'Dr. Fatima Al-Hassan, Dr. Grace Okonkwo',
             //                     pages: '1-30',
-            //                     pdf: './pdfs/womens-leadership/v2-i1-a1.pdf',
+            //                     pdf: 'assets/pdfs/./pdfs/womens-leadership/v2-i1-a1.pdf',
             //                 },
             //             ]
             //         },
@@ -281,7 +281,7 @@ const JOURNALS_DATA = {
             //                     title: 'Digital Leadership and Remote Teams',
             //                     authors: 'Dr. Anna Kowalski',
             //                     pages: '31-48',
-            //                     pdf: './pdfs/womens-leadership/v2-i1-a2.pdf',
+            //                     pdf: 'assets/pdfs/./pdfs/womens-leadership/v2-i1-a2.pdf',
             //                 }
             //             ]
             //         }
@@ -319,7 +319,7 @@ const JOURNALS_DATA = {
                         date: 'February 07, 2023',
                         articles: [
                             {
-                                id: 'ai-v1-i1-a1',
+                                id: 'PJAIML-v1-i1-a1',
                                 authors: [
                                     {
                                         name: 'Erica L',
@@ -327,7 +327,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/ai-ml/ai-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v1-i1-a1.pdf',
                             },
                         ]
                     },
@@ -337,7 +337,7 @@ const JOURNALS_DATA = {
                         date: 'May 06, 2023',
                         articles: [
                             {
-                                id: 'ai-v1-i2-a2',
+                                id: 'PJAIML-v1-i2-a2',
                                 authors: [
                                     {
                                         name: "Davide Cascella, Valeria Giardinieri, Mauro Pipponzi, Pietro Serafino",
@@ -345,7 +345,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-2',
-                                pdf: 'assets/pdfs/ai-ml/ai-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -355,7 +355,7 @@ const JOURNALS_DATA = {
                         date: 'May 06, 2023',
                         articles: [
                             {
-                                id: 'ai-v1-i3-a3',
+                                id: 'PJAIML-v1-i3-a3',
                                 authors: [
                                     {
                                         name: "Davide Cascella, Valeria Giardinieri, Mauro Pipponzi, Pietro Serafino",
@@ -363,7 +363,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-2',
-                                pdf: 'assets/pdfs/ai-ml/ai-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -373,7 +373,7 @@ const JOURNALS_DATA = {
                         date: 'October 06, 2023',
                         articles: [
                             {
-                                id: 'ai-v1-i4-a4',
+                                id: 'PJAIML-v1-i4-a4',
                                 authors: [
                                     {
                                         name: "Yamini Devi",
@@ -381,7 +381,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-3',
-                                pdf: 'assets/pdfs/ai-ml/ai-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v1-i4-a4.pdf',
                             }
                         ]
                     },
@@ -397,7 +397,7 @@ const JOURNALS_DATA = {
                         date: 'January 27, 2024',
                         articles: [
                             {
-                                id: 'ai-v2-i1-a1',
+                                id: 'PJAIML-v2-i1-a1',
                                 authors: [
                                     {
                                         name: "Mahesh J",
@@ -405,7 +405,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/ai-ml/ai-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v2-i1-a1.pdf',
                             }
                         ]
                     },
@@ -415,7 +415,7 @@ const JOURNALS_DATA = {
                         date: 'August 16, 2024',
                         articles: [
                             {
-                                id: 'ai-v2-sp',
+                                id: 'PJAIML-v2-sp',
                                 authors: [
                                     {
                                         name: "Ewa J. Kleczyk",
@@ -423,17 +423,17 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-13',
-                                pdf: 'assets/pdfs/ai-ml/ai-v2-sp.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v2-sp.pdf',
                             },
                         ]
                     },
                     {
                         issue: 'Special',
                         title: 'The Fourth Industrial Revolution: Transforming Medicine and Pharmaceuticals',
-                        date: 'October 14, 2025',
+                        date: 'October 14, 2024',
                         articles: [
                             {
-                                id: 'ai-v2-sp2',
+                                id: 'PJAIML-v2-sp2',
                                 authors: [
                                     {
                                         name: "Anu Ramchandran Nair",
@@ -441,7 +441,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/ai-ml/ai-v2-sp2.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v2-sp2.pdf',
                             }
                         ]
                     }
@@ -454,13 +454,31 @@ const JOURNALS_DATA = {
                     {
                         issue: 'Special',
                         title: 'Operational Endings, Emotional Impacts: Ethical Considerations When Project Teams Form Attachments to AI Collaborators',
-                        date: 'May 16, 2025',
+                        date: ' May 16, 2025',
                         articles: [
                             {
-                                id: 'ai-v3-sp',
+                                id: 'PJAIML-v3-sp',
                                 authors: "Sarah Dyson",
                                 pages: '1-15',
-                                pdf: 'assets/pdfs/ai-ml/ai-v3-sp1.pdf',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v3-sp1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 'Special',
+                        title: 'Artificial Intelligence in Healthcare: Trends,Integration, and the Future of the Clinical Workforce',
+                        date: 'May 26, 2025',
+                        articles: [
+                            {
+                                id: 'PJAIML-v3-sp2',
+                                authors: [
+                                    {
+                                        name: "Dr. Ewa J. Kleczyk",
+                                        aff: "SVP of Operations, Target RWE, Durham, NC; Graduate Faculty, School of Economics, the University of Maine, Orono, Maine; Co-founder of Kleczyk - Strout Foundation, Lansdale, PA"
+                                    }
+                                ],
+                                pages: '1-9',
+                                pdf: 'assets/pdfs/ai-ml/PJAIML-v3-sp2.pdf',
                             }
                         ]
                     }
@@ -684,7 +702,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/globalization/gt-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./globalization/gt-v2-i1-a1.pdf',
                             }
                         ]
                     },
@@ -702,7 +720,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/globalization/gt-v2-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./globalization/gt-v2-i2-a2.pdf',
                             }
                         ]
                     }
@@ -1104,7 +1122,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/quantum-science/v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./quantum-science/v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1122,7 +1140,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/quantum-science/v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./quantum-science/v1-i1-a1.pdf',
                             }
                         ]
                     }
@@ -1160,7 +1178,7 @@ const JOURNALS_DATA = {
                         date: 'October 17, 2023',
                         articles: [
                             {
-                                id: 'sm-v1-i1-a1',
+                                id: 'PJSM-v1-i1-a1',
                                 authors: [
                                     {
                                         name: "Dr. Sowmya",
@@ -1176,7 +1194,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/surgery-medicine/PJSM-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1186,7 +1204,7 @@ const JOURNALS_DATA = {
                         date: 'February 05, 2023',
                         articles: [
                             {
-                                id: 'sm-v1-i2-a2',
+                                id: 'PJSM-v1-i2-a2',
                                 authors: [
                                     {
                                         name: 'Noor B. Almandil',
@@ -1198,7 +1216,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-7',
-                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i2-a2.pdf'
+                                pdf: 'assets/pdfs/surgery-medicine/PJSM-v1-i2-a2.pdf'
                             }
                         ]
                     },
@@ -1208,7 +1226,7 @@ const JOURNALS_DATA = {
                         date: 'July 08, 2023',
                         articles: [
                             {
-                                id: 'sm-v1-i3-a3',
+                                id: 'PJSM-v1-i3-a3',
                                 authors: [
                                     {
                                         name: "Sayed AbdulAzeez",
@@ -1216,7 +1234,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i3-a3.pdf'
+                                pdf: 'assets/pdfs/surgery-medicine/PJSM-v1-i3-a3.pdf'
                             }
                         ]
                     },
@@ -1226,7 +1244,7 @@ const JOURNALS_DATA = {
                         date: 'December 06, 2023',
                         articles: [
                             {
-                                id: 'sm-v1-i4-a4',
+                                id: 'PJSM-v1-i4-a4',
                                 authors: [
                                     {
                                         name: "Kalaimathi Govindarajan",
@@ -1234,7 +1252,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-11',
-                                pdf: './assets/pdfs/surgery-medicine/sm-v1-i4-a4.pdf'
+                                pdf: 'assets/pdfs/surgery-medicine/PJSM-v1-i4-a4.pdf'
                             }
                         ]
                     }
@@ -1286,7 +1304,7 @@ const JOURNALS_DATA = {
                                     { name: "Dr. Scot Nickels", aff: "Department of Environment, University of Manitoba, MB, Canada" }
                                 ],
                                 pages: '1-8',
-                                pdf: './assets/pdfs/environmental-science/es-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./environmental-science/es-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1301,7 +1319,7 @@ const JOURNALS_DATA = {
                                     { name: "Dr. Randy Kerr", aff: "Department of ASL Environmental Sciences Inc., University of British Columbia, Canada" }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/environmental-science/es-v1-i2-a2.pdf'
+                                pdf: 'assets/pdfs/./environmental-science/es-v1-i2-a2.pdf'
                             }
                         ]
                     },
@@ -1316,7 +1334,7 @@ const JOURNALS_DATA = {
                                     { name: "Simon J. Prinsenberg", aff: "Department of Environment, University of Manitoba, MB, Canada" }
                                 ],
                                 pages: '1-3',
-                                pdf: './assets/pdfs/environmental-science/es-v1-i3-a3.pdf'
+                                pdf: 'assets/pdfs/./environmental-science/es-v1-i3-a3.pdf'
                             }
                         ]
                     },
@@ -1331,7 +1349,7 @@ const JOURNALS_DATA = {
                                     { name: "Vishnu Varma", aff: "Department of Environment,University of Manitoba, Canada" }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/environmental-science/es-v1-i4-a4.pdf'
+                                pdf: 'assets/pdfs/./environmental-science/es-v1-i4-a4.pdf'
                             }
                         ]
                     }
@@ -1386,7 +1404,7 @@ const JOURNALS_DATA = {
                                     { name: "Dr. Lavanya A", aff: "Department of Gynaecology, Research Group, India" }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./obstetrics-gynecology/og-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1401,7 +1419,7 @@ const JOURNALS_DATA = {
                                     { name: " Vijay V", aff: "Department of Obstetrics and Gynaecology, Research Science, India" }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i2-a2.pdf'
+                                pdf: 'assets/pdfs/./obstetrics-gynecology/og-v1-i2-a2.pdf'
                             }
                         ]
                     },
@@ -1416,7 +1434,7 @@ const JOURNALS_DATA = {
                                     { name: "Nuvvula Anil", aff: "Department of Obstetrics and Gynaecology, Research Science, India" }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i3-a3.pdf'
+                                pdf: 'assets/pdfs/./obstetrics-gynecology/og-v1-i3-a3.pdf'
                             }
                         ]
                     },
@@ -1431,7 +1449,7 @@ const JOURNALS_DATA = {
                                     { name: "Teja M", aff: "Department of Obstetrics and Gynaecology, Research Science, India" }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i4-a4.pdf'
+                                pdf: 'assets/pdfs/./obstetrics-gynecology/og-v1-i4-a4.pdf'
                             }
                         ]
                     }
@@ -1452,7 +1470,7 @@ const JOURNALS_DATA = {
                                     { name: "Naveen P", aff: "Department of Obstetrics and Gynaecology, Research Science,India" }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/obstetrics-gynecology/og-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./obstetrics-gynecology/og-v1-i1-a1.pdf',
                             }
                         ]
                     }
@@ -1508,7 +1526,7 @@ const JOURNALS_DATA = {
                                     { name: "Dr. Prasad Kovvuru", aff: "Department of Biomedical Sciences, Discovery Dr, Rensselaer, NY. Discovery Dr is in Rensselaer, NY, USA" }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/cell-biology/cb-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./cell-biology/cb-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1523,7 +1541,7 @@ const JOURNALS_DATA = {
                                     { name: "Prasad Kovvuru", aff: "Department of Biomedical Sciences, Discovery Dr, Rensselaer, NY. Discovery Dr is in Rensselaer, NY, USA" }
                                 ],
                                 pages: '1-3',
-                                pdf: './assets/pdfs/cell-biology/cb-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./cell-biology/cb-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -1538,7 +1556,7 @@ const JOURNALS_DATA = {
                                     { name: "Jorelle Mae T. Buenviaje", aff: "Rory Meyers College of Nursing, New York University, New York, USA." }
                                 ],
                                 pages: '1-3',
-                                pdf: './assets/pdfs/cell-biology/cb-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./cell-biology/cb-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -1553,7 +1571,7 @@ const JOURNALS_DATA = {
                                     { name: "Kiruthika Balasubramanian", aff: "Secretary, New Jersey academy of Science, Kean University, NJ Center for Science & Technology, 1075 Morris Ave, Union, New Jersey, USA" }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/cell-biology/cb-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/./cell-biology/cb-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -1612,7 +1630,7 @@ const JOURNALS_DATA = {
                                     { name: 'Kambiz Shahgald', aff: 'Department of Cardiology and Clinical Physiology, Karolinska University Hospital, Sweden' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/cardio-biology/cab-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./cardio-biology/cab-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1627,7 +1645,7 @@ const JOURNALS_DATA = {
                                     { name: 'Jahanzeb Malik', aff: 'Department of Cardiology and Clinical Physiology, Karolinska University Hospital, Sweden' }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/cardio-biology/cab-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./cardio-biology/cab-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -1642,7 +1660,7 @@ const JOURNALS_DATA = {
                                     { name: 'Viswam Kumar', aff: 'Department of Cardiology and Clinical Physiology, Research group, India' }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/cardio-biology/cab-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./cardio-biology/cab-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -1657,7 +1675,7 @@ const JOURNALS_DATA = {
                                     { name: 'Deepak Varma', aff: 'Department of Cardiology, Research center, India' }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/cardio-biology/cab-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/./cardio-biology/cab-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -1714,7 +1732,7 @@ const JOURNALS_DATA = {
                                     { name: 'A Sai Kiran', aff: 'Department of Dermatology, Psoriasis center, The University of Mumbai, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./dermatology-cosmetics/dc-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1729,7 +1747,7 @@ const JOURNALS_DATA = {
                                     { name: 'Vishnu Vamsi', aff: 'Department of Dermatology, Psoriasis center, The University of Mumbai, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./dermatology-cosmetics/dc-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -1744,7 +1762,7 @@ const JOURNALS_DATA = {
                                     { name: 'Narendra A', aff: 'Department of Dermatology, Research unit, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./dermatology-cosmetics/dc-v1-i3-a3.pdf',
                             }
                         ]
                     }
@@ -1765,7 +1783,7 @@ const JOURNALS_DATA = {
                                     { name: 'Manoj kumar', aff: 'Department of Dermatology, Research Science, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/dermatology-cosmetics/dc-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./dermatology-cosmetics/dc-v2-i1-a1.pdf',
                             }
                         ]
                     }
@@ -1824,7 +1842,7 @@ const JOURNALS_DATA = {
                                     { name: 'Paolo Trucillo', aff: 'Department of Cardiology, Research center, India' }
                                 ],
                                 pages: '1-10',
-                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./nanostructured-materials/nm-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1839,7 +1857,7 @@ const JOURNALS_DATA = {
                                     { name: 'Artak Heboyan', aff: 'Department of Cardiology, Research center, India' }
                                 ],
                                 pages: '1-2',
-                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./nanostructured-materials/nm-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -1854,7 +1872,7 @@ const JOURNALS_DATA = {
                                     { name: 'Vishnu Vamsi', aff: 'Department of Science, Research unit, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./nanostructured-materials/nm-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -1869,7 +1887,7 @@ const JOURNALS_DATA = {
                                     { name: 'Deepak Varma', aff: 'Department of Biomaterials, Research unit, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/nanostructured-materials/nm-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/./nanostructured-materials/nm-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -1919,7 +1937,7 @@ const JOURNALS_DATA = {
                                     { name: 'Prathyusha A', aff: 'Department of Dental, Researcher, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/advanced-dental-care/dc-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./advanced-dental-care/dc-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -1934,7 +1952,7 @@ const JOURNALS_DATA = {
                                     { name: 'Yamini Ema', aff: 'Department of Dental, Researcher, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/advanced-dental-care/dc-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./advanced-dental-care/dc-v1-i2-a2.pdf',
                             }
                         ]
                     }
@@ -1955,7 +1973,7 @@ const JOURNALS_DATA = {
                                     { name: 'Sheik Abdullah', aff: 'Department of Dental, Researcher, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/advanced-dental-care/dc-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./advanced-dental-care/dc-v2-i1-a1.pdf',
                             }
                         ]
                     }
@@ -2005,7 +2023,7 @@ const JOURNALS_DATA = {
                                     { name: 'Lavanya A', aff: 'Department of Pediatrics, Research, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/pediatrics/pd-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./pediatrics/pd-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -2020,7 +2038,7 @@ const JOURNALS_DATA = {
                                     { name: 'Mark Mani', aff: 'Department of Neonatal, Research Science, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/pediatrics/pd-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./pediatrics/pd-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -2035,7 +2053,7 @@ const JOURNALS_DATA = {
                                     { name: 'Mahesh J', aff: 'Department of Pediatrics, Research, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/pediatrics/pd-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./pediatrics/pd-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -2050,7 +2068,7 @@ const JOURNALS_DATA = {
                                     { name: 'Sravani D', aff: 'Department of Pediatrics, Research, India' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/pediatrics/pd-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/./pediatrics/pd-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -2071,7 +2089,7 @@ const JOURNALS_DATA = {
                                     { name: 'Vamsi M', aff: 'Department of Pediatrics, Research, India' }
                                 ],
                                 pages: '1-3',
-                                pdf: './assets/pdfs/pediatrics/pd-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./pediatrics/pd-v2-i1-a1.pdf',
                             }
                         ]
                     }
@@ -2118,7 +2136,7 @@ const JOURNALS_DATA = {
                                     { name: 'Angela Anguilano', aff: 'DOMENICO SCARAFILE, R&D Engineer, Idea75 srl' }
                                 ],
                                 pages: '1-2',
-                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./entrepreneurship/eb-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -2133,7 +2151,7 @@ const JOURNALS_DATA = {
                                     { name: 'Angela Anguilano', aff: 'DOMENICO SCARAFILE, R&D Engineer, Idea75 srl' }
                                 ],
                                 pages: '1-2',
-                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./entrepreneurship/eb-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -2148,7 +2166,7 @@ const JOURNALS_DATA = {
                                     { name: 'Vishnu Varma', aff: 'Department of Economic, Research Group, India' }
                                 ],
                                 pages: '1-2',
-                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./entrepreneurship/eb-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -2163,7 +2181,7 @@ const JOURNALS_DATA = {
                                     { name: 'Deepak Varma', aff: 'Department of Economic, Research Group, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/entrepreneurship/eb-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/./entrepreneurship/eb-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -2225,7 +2243,7 @@ const JOURNALS_DATA = {
                                     { name: 'Rugaia MEl-Salem', aff: 'Department of Zoology, Faculty of Science, University of Sebha, Libya' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/microbiology/mid-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./microbiology/mid-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -2240,7 +2258,7 @@ const JOURNALS_DATA = {
                                     { name: 'Ardhendu Kumar Mandal', aff: 'Central Instrumentation Division,CSIR-Indian Institute of Chemical Sciences,Biology, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/microbiology/mid-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./microbiology/mid-v1-i2-a2.pdf',
                             }
                         ]
                     }
@@ -2261,7 +2279,7 @@ const JOURNALS_DATA = {
                                     { name: 'Christiana J', aff: 'Department of Microbiology, University College Cork, Cork, Ireland.' }
                                 ],
                                 pages: '1-4',
-                                pdf: './assets/pdfs/microbiology/mid-v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./microbiology/mid-v2-i1-a1.pdf',
                             }
                         ]
                     }
@@ -2321,7 +2339,7 @@ const JOURNALS_DATA = {
                                     { name: 'Dr. Prasad Kovvuru', aff: 'Cancer Research Center, Post-Doctoral Researcher, University at Albany, SUNY Newyork, USA' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/./diagnostic-pathology/dp-v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -2336,7 +2354,7 @@ const JOURNALS_DATA = {
                                     { name: 'Dr. Prasad Kovvuru', aff: 'Department of Health Sciences, Post-Doctoral Research, University at Albany, SUNY New York, USA' }
                                 ],
                                 pages: '1-6',
-                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/./diagnostic-pathology/dp-v1-i2-a2.pdf',
                             }
                         ]
                     },
@@ -2353,7 +2371,7 @@ const JOURNALS_DATA = {
                                     { name: 'Rugaia MEl-Salem', aff: 'Department of Zoology, Faculty of Science, University of Sebha, Libya' }
                                 ],
                                 pages: '1-3',
-                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i3-a3.pdf',
+                                pdf: 'assets/pdfs/./diagnostic-pathology/dp-v1-i3-a3.pdf',
                             }
                         ]
                     },
@@ -2368,7 +2386,7 @@ const JOURNALS_DATA = {
                                     { name: 'Lichi Solanki', aff: 'Department of Orthodontics and Dentofacial Orthopaedics, Saveetha Dental College and Hospitals, Saveetha Institute of Medical and Technical Sciences, Saveetha University, Chennai, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: './assets/pdfs/diagnostic-pathology/dp-v1-i4-a4.pdf',
+                                pdf: 'assets/pdfs/./diagnostic-pathology/dp-v1-i4-a4.pdf',
                             }
                         ]
                     }
@@ -2404,7 +2422,7 @@ Object.keys(defaultOtherJournals).forEach(id => {
                             title: `Research Advances in ${base.shortTitle}`,
                             authors: 'Research Team',
                             pages: '1-20',
-                            pdf: `./assets/pdfs/${id}/v1-i1-a1.pdf`,
+                            pdf: `./${id}/v1-i1-a1.pdf`,
                             abstract: 'Sample article abstract. Full content coming soon.'
                         }
                     ]
@@ -2636,9 +2654,9 @@ function renderArticle(article) {
                 </div>
             </div>
             <div class="article-actions">
-                <button class="btn-view-pdf" onclick="viewPDF('${article.pdf}', '${safeTitle}')">
+                <a href="${article.pdf}" target="_blank" class="btn-view-pdf" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center;">
                     <i class='bx bx-show'></i> View PDF
-                </button>
+                </a>
                 <a href="${article.pdf}" download class="btn-download-pdf">
                     <i class='bx bx-download'></i> Download
                 </a>
@@ -2664,48 +2682,3 @@ function toggleIssue(header) {
     toggle.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
 }
 
-/* =====================================================
-   PDF VIEWER
-   ===================================================== */
-function viewPDF(pdfUrl, title) {
-    // Create modal if doesn't exist
-    let modal = document.getElementById('pdf-modal');
-    if (!modal) {
-        modal = document.createElement('div');
-        modal.id = 'pdf-modal';
-        modal.className = 'pdf-modal';
-        modal.innerHTML = `
-            <div class="pdf-modal-content">
-                <div class="pdf-modal-header">
-                    <h3 id="pdf-modal-title"></h3>
-                    <button class="pdf-modal-close" onclick="closePDF()">
-                        <i class='bx bx-x'></i>
-                    </button>
-                </div>
-                <div class="pdf-modal-body">
-                    <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
-                </div>
-            </div>
-        `;
-        document.body.appendChild(modal);
-    }
-
-    document.getElementById('pdf-modal-title').textContent = title;
-    document.getElementById('pdf-viewer').src = pdfUrl;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closePDF() {
-    const modal = document.getElementById('pdf-modal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.getElementById('pdf-viewer').src = '';
-        document.body.style.overflow = '';
-    }
-}
-
-// Close modal on ESC
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closePDF();
-});

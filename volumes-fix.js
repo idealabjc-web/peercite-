@@ -102,9 +102,9 @@ function renderArticle(article, pjCode) {
                 </div>
             </div>
             <div class="article-actions">
-                <button class="btn-view-pdf" onclick="viewPDF('${article.pdf}', '${safeTitle}')">
+                <a href="${article.pdf}" target="_blank" class="btn-view-pdf" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center;">
                     <i class='bx bx-show'></i> View PDF
-                </button>
+                </a>
                 <a href="${article.pdf}" download class="btn-download-pdf">
                     <i class='bx bx-download'></i> Download
                 </a>

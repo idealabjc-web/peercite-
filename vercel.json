@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/pjsm/:id",
+      "destination": "/assets/pdfs/surgery-medicine/pjsm-:id-a1.pdf"
+    },
+    {
+      "source": "/wl/:id",
+      "destination": "/assets/pdfs/womens-leadership/wl-:id-a1.pdf"
+    }
+  ]
+}

@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     
                     <div class="inpress-actions">
-                        <button class="btn-inpress btn-view" onclick="viewPDF('${article.pdf}', '${safeTitle}')">
+                        <a href="${article.pdf}" target="_blank" class="btn-inpress btn-view" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center;">
                             <i class='bx bx-show'></i> View PDF
-                        </button>
+                        </a>
                         
                     </div>
                 </article>

@@ -1,0 +1,14 @@
+# Peercite Journal of Surgery and Medicine (PJSM)
+/pjsm/:id   /assets/pdfs/surgery-medicine/pjsm-:id-a1.pdf   200
+
+# Womens Leadership (WL)
+/wl/:id     /assets/pdfs/womens-leadership/wl-:id-a1.pdf    200
+
+# Add new journals below following the same pattern:
+# /shortcode/:id  /assets/pdfs/folder-name/shortcode-:id-a1.pdf  200
+
+# ===================================================================
+# ALTERNATIVE (Recommended if you have multiple articles per issue):
+# If your clean URLs look like /pjsm/v1-i1-a1, use this pattern:
+# /pjsm/:splat   /assets/pdfs/surgery-medicine/pjsm-:splat.pdf   200
+# /wl/:splat     /assets/pdfs/womens-leadership/wl-:splat.pdf    200
