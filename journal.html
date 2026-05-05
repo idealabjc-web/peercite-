@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!-- ROUTER: must be first script, no defer/async -->
+    <script src="router.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal | PeerCite Publishers</title>
@@ -18,46 +20,24 @@
 
 <body>
 
-    <!-- TOP BAR -->
-    <!-- <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-left">
-                <a href="tel:+17162171471" class="top-bar-link"><i class='bx bx-phone-call'></i><span>+1 716 217 1471</span></a>
-                <div class="top-bar-divider"></div>
-                <a href="mailto:contact@peercite.org" class="top-bar-link"><i class='bx bx-envelope'></i><span>contact@peercite.org</span></a>
-            </div>
-            <div class="top-bar-right">
-                <div class="top-bar-socials">
-                    <a href="#" class="top-bar-social facebook"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" class="top-bar-social linkedin"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#" class="top-bar-social twitter"><i class='bx bxl-twitter'></i></a>
-                    <a href="#" class="top-bar-social instagram"><i class='bx bxl-instagram'></i></a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <!-- HEADER -->
     <header class="main-header" id="main-header">
         <div class="container">
-            <a href="index.html" class="header-logo">
+            <a href="/" class="header-logo">
                 <img src="assets/images/Peercite Logo..png" alt="PeerCite Logo" class="logo-img">
-                <div class="logo-text-wrapper">
-                </div>
+                <div class="logo-text-wrapper"></div>
             </a>
 
             <nav class="desktop-nav">
                 <div class="nav-dropdown">
-                    <a href="index.html" class="nav-link ">
+                    <a href="/" class="nav-link">
                         <span>Home</span>
-                        <!-- <i class='bx bx-chevron-down'></i> -->
                     </a>
                 </div>
 
                 <div class="nav-dropdown mega-dropdown">
-                    <a href="publications.html" class="nav-link">
+                    <a href="/publications" class="nav-link">
                         <span>Publications</span>
-                        <!-- <span class="nav-badge"></span> -->
                         <i class='bx bx-chevron-down'></i>
                     </a>
                     <div class="dropdown-menu mega-menu">
@@ -65,28 +45,28 @@
                             <div class="mega-col" data-category="medical">
                                 <h5 class="mega-title"><i class='bx bx-heart-circle'></i> Medical Sciences</h5>
                                 <ul class="mega-links">
-                                    <li><a href="journal.html">Mental Health Research</a></li>
-                                    <li><a href="journal.html">Neuroscience Advances</a></li>
-                                    <li><a href="journal.html">Clinical Medicine Today</a></li>
-                                    <li><a href="journal.html">Surgery & Innovation</a></li>
+                                    <li><a href="/pjmh">Mental Health Research</a></li>
+                                    <li><a href="/pjns">Neuroscience Advances</a></li>
+                                    <li><a href="/pjsm">Surgery & Innovation</a></li>
+                                    <li><a href="/pjog">Obstetrics & Gynecology</a></li>
                                 </ul>
                             </div>
                             <div class="mega-col" data-category="technology">
                                 <h5 class="mega-title"><i class='bx bx-chip'></i> Technology</h5>
                                 <ul class="mega-links">
-                                    <li><a href="journal.html">AI & Machine Learning</a></li>
-                                    <li><a href="journal.html">Cybersecurity Review</a></li>
-                                    <li><a href="journal.html">Data Science Quarterly</a></li>
-                                    <li><a href="journal.html">Robotics & Automation</a></li>
+                                    <li><a href="/pjaiml">AI & Machine Learning</a></li>
+                                    <li><a href="/pjqs">Quantum Science</a></li>
+                                    <li><a href="/pjac">Applied Chemistry</a></li>
+                                    <li><a href="/pjnm">Nanostructured Materials</a></li>
                                 </ul>
                             </div>
                             <div class="mega-col" data-category="environmental">
                                 <h5 class="mega-title"><i class='bx bx-chip'></i> Environmental Sciences</h5>
                                 <ul class="mega-links">
-                                    <li><a href="journal.html">Climate Studies</a></li>
-                                    <li><a href="journal.html">Sustainability Research</a></li>
-                                    <li><a href="journal.html">Marine Biology</a></li>
-                                    <li><a href="journal.html">Ecology & Conservation</a></li>
+                                    <li><a href="/pjes">Environmental Sciences</a></li>
+                                    <li><a href="/pjaf">Agriculture & Food</a></li>
+                                    <li><a href="/pjfas">Fisheries & Aquatic Studies</a></li>
+                                    <li><a href="/pjcb">Cell Biology</a></li>
                                 </ul>
                             </div>
                             <div class="mega-col mega-featured">
@@ -98,16 +78,13 @@
                                         <div class="stat"><strong>45</strong><span>Articles</span></div>
                                         <div class="stat"><strong>12K</strong><span>Reads</span></div>
                                     </div>
-                                    <a href="journal.html" class="mega-featured-btn">Read Now →</a>
+                                    <a href="/pjaiml" class="mega-featured-btn">Read Now →</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="mega-footer">
-                            <a href="publications.html" class="mega-footer-link">View All Publications <i
-                                    class='bx bx-right-arrow-alt'></i></a>
-                        </div> -->
                     </div>
                 </div>
+
                 <div class="nav-dropdown proceedings-nav-dropdown">
                     <a href="javascript:void(0)" class="nav-link">
                         <span>Proceedings</span>
@@ -121,14 +98,14 @@
                                     <i class='bx bx-female-sign'></i> WL CONFERENCE PROCEEDINGS
                                 </h5>
                                 <ul class="proceedings-group-links">
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL Conference Proceedings 1.0</a></li>
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL Conference Proceedings 1.1</a></li>
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL Conference Proceedings 2.0</a></li>
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL Conference Proceedings 2.1</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL Conference
+                                            Proceedings 1.0</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL Conference
+                                            Proceedings 1.1</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL Conference
+                                            Proceedings 2.0</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL Conference
+                                            Proceedings 2.1</a></li>
                                 </ul>
                             </div>
 
@@ -137,10 +114,10 @@
                                     <i class='bx bx-heart-circle'></i> MH CONFERENCE PROCEEDINGS
                                 </h5>
                                 <ul class="proceedings-group-links">
-                                    <li><a href="journal.html?id=mental-health#proceedings"><i
-                                                class='bx bx-file-blank'></i> MH Conference Proceedings 1.0</a></li>
-                                    <li><a href="journal.html?id=mental-health#proceedings"><i
-                                                class='bx bx-file-blank'></i> MH Conference Proceedings 1.1</a></li>
+                                    <li><a href="/pjmh#proceedings"><i class='bx bx-file-blank'></i> MH Conference
+                                            Proceedings 1.0</a></li>
+                                    <li><a href="/pjmh#proceedings"><i class='bx bx-file-blank'></i> MH Conference
+                                            Proceedings 1.1</a></li>
                                 </ul>
                             </div>
 
@@ -149,41 +126,41 @@
                                     <i class='bx bx-intersect'></i> WL-WH CONFERENCE PROCEEDINGS
                                 </h5>
                                 <ul class="proceedings-group-links">
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.0</a></li>
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.1</a></li>
-                                    <li><a href="journal.html?id=womens-leadership#proceedings"><i
-                                                class='bx bx-file-blank'></i> WL-WH Conference Proceedings 2.0</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL-WH Conference
+                                            Proceedings 1.0</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL-WH Conference
+                                            Proceedings 1.1</a></li>
+                                    <li><a href="/pjwl#proceedings"><i class='bx bx-file-blank'></i> WL-WH Conference
+                                            Proceedings 2.0</a></li>
                                 </ul>
                             </div>
 
                         </div>
                     </div>
                 </div>
+
                 <div class="nav-dropdown">
-                    <a href="authors.html" class="nav-link">
+                    <a href="/authors" class="nav-link">
                         <span>Authors Hub</span>
                     </a>
                 </div>
                 <div class="nav-dropdown">
-                    <a href="inpress.html" class="nav-link">
+                    <a href="/inpress" class="nav-link">
                         <span>In press</span>
                     </a>
                 </div>
-
                 <div class="nav-dropdown">
-                    <a href="about.html" class="nav-link">
+                    <a href="/about" class="nav-link">
                         <span>About</span>
                     </a>
                 </div>
-
                 <div class="nav-dropdown">
-                    <a href="contact.html" class="nav-link">
+                    <a href="/contact" class="nav-link">
                         <span>Contact</span>
                     </a>
                 </div>
             </nav>
+
             <div class="search-autocomplete-wrapper">
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="Search journals....." autocomplete="off"
@@ -192,14 +169,13 @@
                         <i class='bx bx-search'></i>
                     </button>
                 </div>
-
-                <!-- Suggestions Dropdown -->
                 <div id="search-dropdown" class="search-dropdown"></div>
             </div>
 
             <button class="hamburger" id="hamburger">
-                <span class="hamburger-line"></span><span class="hamburger-line"></span><span
-                    class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
         </div>
     </header>
@@ -211,21 +187,23 @@
             <div class="mobile-logo"><span class="logo-mark">P</span><span>PeerCite</span></div>
             <button class="mobile-close" id="mobile-close"><i class='bx bx-x'></i></button>
         </div>
-        <div class="mobile-search"><i class='bx bx-search'></i><input type="search" placeholder="Search articles...">
+        <div class="mobile-search">
+            <i class='bx bx-search'></i>
+            <input type="search" placeholder="Search articles...">
         </div>
         <nav class="mobile-nav">
-            <a href="index.html" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
-            <a href="publications.html" class="mobile-nav-link"><i
-                    class='bx bx-book-open'></i><span>Publications</span></a>
-            <a href="journal.html?id=womens-leadership#proceedings" class="mobile-nav-link"><i
-                    class='bx bx-file'></i><span>Proceedings</span></a>
-            <a href="authors.html" class="mobile-nav-link"><i class='bx bx-feather'></i><span>Authors Hub</span></a>
-            <a href="inpress.html" class="mobile-nav-link"><i class='bx bx-file'></i><span>Inpress</span></a>
-            <a href="about.html" class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span></a>
-            <a href="contact.html" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
+            <a href="/" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
+            <a href="/publications" class="mobile-nav-link"><i class='bx bx-book-open'></i><span>Publications</span></a>
+            <a href="/pjwl#proceedings" class="mobile-nav-link"><i class='bx bx-file'></i><span>Proceedings</span></a>
+            <a href="/authors" class="mobile-nav-link"><i class='bx bx-feather'></i><span>Authors Hub</span></a>
+            <a href="/inpress" class="mobile-nav-link"><i class='bx bx-file'></i><span>Inpress</span></a>
+            <a href="/about" class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span></a>
+            <a href="/contact" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
         </nav>
         <div class="mobile-menu-cta">
-            <a href="publications.html" class="btn-mobile-cta"><i class='bx bx-book-reader'></i> Read Articles</a>
+            <a href="/publications" class="btn-mobile-cta">
+                <i class='bx bx-book-reader'></i> Read Articles
+            </a>
         </div>
         <div class="mobile-menu-footer">
             <div class="mobile-contact">
@@ -240,16 +218,6 @@
         </div>
     </div>
 
-    <!-- SEARCH OVERLAY -->
-    <!-- <div class="search-overlay" id="search-overlay">
-        <div class="search-overlay-inner">
-            <button class="search-close" id="search-close"><i class='bx bx-x'></i></button>
-            <h2>Search Articles & Journals</h2>
-            <div class="search-form"><i class='bx bx-search'></i><input type="search" id="search-input"
-                    placeholder="Search..."><kbd>ESC</kbd></div>
-        </div>
-    </div> -->
-
     <!-- JOURNAL HERO — populated by JS -->
     <section class="journal-hero" id="journal-hero">
         <div class="container">
@@ -259,9 +227,9 @@
                 </div>
                 <div class="journal-info" id="journal-info">
                     <nav class="breadcrumb">
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                         <i class='bx bx-chevron-right'></i>
-                        <a href="publications.html">Publications</a>
+                        <a href="/publications">Publications</a>
                         <i class='bx bx-chevron-right'></i>
                         <span id="journal-breadcrumb">Journal</span>
                     </nav>
@@ -273,7 +241,7 @@
                         <a href="#proceedings" class="btn-hero-primary">
                             <i class='bx bx-book-reader'></i> View Proceedings
                         </a>
-                        <a href="publications.html" class="btn-hero-secondary">
+                        <a href="/publications" class="btn-hero-secondary">
                             <i class='bx bx-arrow-back'></i> All Journals
                         </a>
                     </div>
@@ -321,6 +289,7 @@
             </div>
         </div>
     </section>
+
     <!-- VOLUMES & ISSUES SECTION -->
     <section class="volumes-issues-section" id="articles">
         <div class="container">
@@ -334,23 +303,8 @@
         </div>
     </section>
 
-    <!-- PROCEEDINGS LIST -->
-
     <!-- ARTICLES COLLECTIONS SECTION -->
     <section class="proceedings-section">
-        <!-- VOLUMES & ISSUES SECTION -->
-        <!-- <section class="volumes-issues-section" id="articles">
-            <div class="container">
-                <div class="section-header" style="text-align:left; max-width:100%;">
-                    <span class="section-tag">Published Research</span>
-                    <h2><i class='bx bx-library'></i> Volumes & Issues</h2>
-                    <p>Browse all published volumes, issues, and articles. Click to expand and view full research
-                        papers.</p>
-                </div>
-                <div id="volumes-container"></div>
-            </div>
-        </section> -->
-
 
         <!-- OTHER JOURNALS -->
         <section class="other-journals-section" style="padding: 4rem 0; background: var(--gray-100);">
@@ -363,7 +317,7 @@
                     <!-- Populated by JS -->
                 </div>
                 <div class="section-cta">
-                    <a href="publications.html" class="btn-view-all">View All 24 Journals <i
+                    <a href="/publications" class="btn-view-all">View All 24 Journals <i
                             class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
@@ -390,28 +344,27 @@
                     <div class="footer-column">
                         <h4>Quick Links</h4>
                         <div class="footer-links">
-                            <a href="index.html">Home</a>
-                            <a href="publications.html">Publications</a>
-                            <a href="authors.html">Authors Hub</a>
-                            <a href="inpress.html">Inpress</a>
-                            <a href="about.html">About Us</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="/">Home</a>
+                            <a href="/publications">Publications</a>
+                            <a href="/authors">Authors Hub</a>
+                            <a href="/inpress">Inpress</a>
+                            <a href="/about">About Us</a>
+                            <a href="/contact">Contact</a>
                         </div>
                     </div>
                     <div class="footer-column">
                         <h4>Popular Journals</h4>
                         <div class="footer-links">
-                            <a href="journal.html?id=mental-health">Mental Health</a>
-                            <a href="journal.html?id=womens-leadership">Women's Leadership</a>
-                            <a href="journal.html?id=ai-machine-learning">AI & Machine Learning</a>
-                            <a href="journal.html?id=neuroscience">Neuroscience</a>
+                            <a href="/pjmh">Mental Health</a>
+                            <a href="/pjwl">Women's Leadership</a>
+                            <a href="/pjaiml">AI & Machine Learning</a>
+                            <a href="/pjns">Neuroscience</a>
                         </div>
                     </div>
                     <div class="footer-column">
                         <h4>Contact</h4>
                         <div class="footer-contact-item"><i class='bx bx-phone'></i><a href="tel:+17162171471">+1 716
-                                217
-                                1471</a></div>
+                                217 1471</a></div>
                         <div class="footer-contact-item"><i class='bx bx-envelope'></i><a
                                 href="mailto:contact@peercite.org">contact@peercite.org</a></div>
                         <div class="footer-contact-item"><i class='bx bx-map'></i><span>Headquarters
@@ -425,8 +378,7 @@
                         <p>
                             <strong>PeerCite Journals</strong> © 2026 All rights reserved by
                             <span class="author">Prasad Kovvuru</span> is licensed under
-                            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0
-                            </a>
+                            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
                         </p>
                         <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
                         <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
@@ -436,9 +388,14 @@
         </footer>
 
         <button class="back-to-top" id="back-to-top"><i class='bx bx-up-arrow-alt'></i></button>
-        <script src="script.js"></script>
+
+        <!-- Scripts: order matters -->
         <script src="journals-data.js"></script>
         <script src="volumes-fix.js"></script>
+        <script src="script.js"></script>
+        <!-- LINK REWRITER: runs last, after all dynamic HTML is rendered -->
+        <script src="journal-links.js" defer></script>
+
 </body>
 
 </html>

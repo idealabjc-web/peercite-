@@ -19,7 +19,10 @@ function renderVolumesAndIssues(journal) {
     }
 
     const sortedVolumes = [...journal.volumes].sort((a, b) => b.volume - a.volume);
-    const pjCode = window.JOURNAL_CODE_MAP ? window.JOURNAL_CODE_MAP[journal.id] : '';
+    // FIX: journal.id is uppercase (e.g. 'PJWL') — use ID_TO_CODE_MAP, not JOURNAL_CODE_MAP
+    const pjCode = (window.ID_TO_CODE_MAP && window.ID_TO_CODE_MAP[journal.id])
+        ? window.ID_TO_CODE_MAP[journal.id]
+        : '';
 
     container.innerHTML = sortedVolumes.map((vol) => {
         return `
@@ -115,8 +118,12 @@ function renderArticle(article, pjCode) {
 
 /* ---------- URL Management for Articles ---------- */
 function updateArticleURL(pjCode, articleId) {
-    if (!pjCode || !articleId || window.location.protocol === 'file:') return;
-    const newPath = window.location.pathname.split('journal/')[0] + 'journal/' + pjCode + '/' + articleId;
+    // Skip on local dev — clean URLs only work on Netlify/Vercel
+    if (!pjCode || !articleId) return;
+    if (window.location.protocol === 'file:') return;
+    if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') return;
+    // FIX: use a direct clean path instead of broken split logic
+    const newPath = '/' + pjCode + '/' + articleId;
     window.history.replaceState(null, '', newPath);
 }
 

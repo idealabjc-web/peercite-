@@ -1,14 +1,136 @@
-# Peercite Journal of Surgery and Medicine (PJSM)
-/pjsm/:id   /assets/pdfs/surgery-medicine/pjsm-:id-a1.pdf   200
+# ================================================================
+#  PEERCITE PUBLISHERS — Netlify _redirects
+#  Rules are evaluated TOP → BOTTOM. First match wins.
+#  All rules use status 200 (rewrite: URL stays clean in browser)
+# ================================================================
 
-# Womens Leadership (WL)
-/wl/:id     /assets/pdfs/womens-leadership/wl-:id-a1.pdf    200
 
-# Add new journals below following the same pattern:
-# /shortcode/:id  /assets/pdfs/folder-name/shortcode-:id-a1.pdf  200
+# ----------------------------------------------------------------
+# 1. STATIC PAGE CLEAN URLS  (remove .html)
+#    Must come before the catch-all fallback at the bottom.
+# ----------------------------------------------------------------
+/about          /about.html         200
+/publications   /publications.html  200
+/contact        /contact.html       200
+/authors        /authors.html       200
+/inpress        /inpress.html       200
 
-# ===================================================================
-# ALTERNATIVE (Recommended if you have multiple articles per issue):
-# If your clean URLs look like /pjsm/v1-i1-a1, use this pattern:
-# /pjsm/:splat   /assets/pdfs/surgery-medicine/pjsm-:splat.pdf   200
-# /wl/:splat     /assets/pdfs/womens-leadership/wl-:splat.pdf    200
+
+# ----------------------------------------------------------------
+# 2. PDF CLEAN URLS — /shortcode/article-id  →  actual PDF file
+#    MUST appear BEFORE the journal page rules (more specific).
+#
+#    Pattern: /<shortcode>/:splat
+#    Maps to: /assets/pdfs/<FOLDER>/<shortcode>-:splat.pdf
+#
+#    Article IDs in the data look like: v1-i1-a1, v2-sp, etc.
+#    Clean URL example: /pjmh/v1-i1-a1
+# ----------------------------------------------------------------
+
+## Mental Health (PJMH)
+/pjmh/*         /assets/pdfs/PJMH/:splat.pdf           200
+
+## Women's Leadership (PJWL)
+/pjwl/*         /assets/pdfs/PJWL/:splat.pdf           200
+
+## AI & Machine Learning (PJAIML)
+/pjaiml/*       /assets/pdfs/PJAIML/:splat.pdf         200
+
+## Neuroscience (PJNS)
+/pjns/*         /assets/pdfs/PJNS/:splat.pdf           200
+
+## Globalization & Education (PJGSE)
+/pjgse/*        /assets/pdfs/PJGSE/:splat.pdf          200
+
+## Agriculture & Food (PJAF)
+/pjaf/*         /assets/pdfs/PJAF/:splat.pdf           200
+
+## Pharmaceutical Sciences (PJPS)
+/pjps/*         /assets/pdfs/PJPS/:splat.pdf           200
+
+## Applied Chemistry (PJAC)
+/pjac/*         /assets/pdfs/PJAC/:splat.pdf           200
+
+## Quantum Science (PJQS)
+/pjqs/*         /assets/pdfs/PJQS/:splat.pdf           200
+
+## Surgery & Medicine (PJSM)
+/pjsm/*         /assets/pdfs/PJSM/:splat.pdf           200
+
+## Environmental Sciences (PJES)
+/pjes/*         /assets/pdfs/PJES/:splat.pdf           200
+
+## Obstetrics & Gynecology (PJOG)
+/pjog/*         /assets/pdfs/PJOG/:splat.pdf           200
+
+## Cell Biology (PJCB)
+/pjcb/*         /assets/pdfs/PJCB/:splat.pdf           200
+
+## Cardio Biology (PJCDB)
+/pjcdb/*        /assets/pdfs/PJCDB/:splat.pdf          200
+
+## Dermatology & Cosmetics (PJD)
+/pjd/*          /assets/pdfs/PJD/:splat.pdf            200
+
+## Nanostructured Materials (PJNM)
+/pjnm/*         /assets/pdfs/PJNM/:splat.pdf           200
+
+## Dental Care (PJDC)
+/pjdc/*         /assets/pdfs/PJDC/:splat.pdf           200
+
+## Pediatrics (PJPD)
+/pjpd/*         /assets/pdfs/PJPD/:splat.pdf           200
+
+## Entrepreneurship (PJE)
+/pje/*          /assets/pdfs/PJE/:splat.pdf            200
+
+## Microbiology (PJMB)
+/pjmb/*         /assets/pdfs/PJMB/:splat.pdf           200
+
+## Diagnostic Pathology (PJDP)
+/pjdp/*         /assets/pdfs/PJDP/:splat.pdf           200
+
+## Metaphysics & Mystery (PJMM)
+/pjmm/*         /assets/pdfs/PJMM/:splat.pdf           200
+
+## Fisheries & Aquatic Studies (PJFAS)
+/pjfas/*        /assets/pdfs/PJFAS/:splat.pdf          200
+
+
+# ----------------------------------------------------------------
+# 3. JOURNAL PAGE CLEAN URLS — /shortcode  →  journal.html
+#    Netlify passes the ?id= query string through transparently.
+#    The browser URL stays as /pjmh; journal.html script reads
+#    window.PEERCITE_JOURNAL_ID (set by router.js) instead of
+#    URLSearchParams, so no query string is needed client-side.
+# ----------------------------------------------------------------
+/pjmh           /journal.html?id=mental-health              200
+/pjwl           /journal.html?id=womens-leadership          200
+/pjaiml         /journal.html?id=ai-machine-learning        200
+/pjns           /journal.html?id=neuroscience               200
+/pjgse          /journal.html?id=globalization              200
+/pjaf           /journal.html?id=agriculture-food           200
+/pjps           /journal.html?id=pharmaceutical-sciences    200
+/pjac           /journal.html?id=applied-chemistry          200
+/pjqs           /journal.html?id=quantum-science            200
+/pjsm           /journal.html?id=surgery-medicine           200
+/pjes           /journal.html?id=environmental-sciences     200
+/pjog           /journal.html?id=obstetrics-gynecology      200
+/pjcb           /journal.html?id=cell-biology               200
+/pjcdb          /journal.html?id=cardio-biology             200
+/pjd            /journal.html?id=dermatology-cosmetics      200
+/pjnm           /journal.html?id=nanostructured-materials   200
+/pjdc           /journal.html?id=dental-care                200
+/pjpd           /journal.html?id=pediatrics                 200
+/pje            /journal.html?id=entrepreneurship           200
+/pjmb           /journal.html?id=microbiology               200
+/pjdp           /journal.html?id=diagnostic-pathology       200
+/pjmm           /journal.html?id=metaphysics                200
+/pjfas          /journal.html?id=fisheries-aquatic-studies  200
+
+
+# ----------------------------------------------------------------
+# 4. SPA FALLBACK — serves index.html for any unmatched route
+#    Keep this LAST.
+# ----------------------------------------------------------------
+/*              /index.html         200

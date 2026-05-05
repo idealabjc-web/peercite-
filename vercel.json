@@ -1,13 +1,190 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/pjsm/:id",
-      "destination": "/assets/pdfs/surgery-medicine/pjsm-:id-a1.pdf"
+      "source": "/pjmh/:articleId",
+      "destination": "/assets/pdfs/PJMH/:articleId.pdf"
     },
     {
-      "source": "/wl/:id",
-      "destination": "/assets/pdfs/womens-leadership/wl-:id-a1.pdf"
+      "source": "/pjwl/:articleId",
+      "destination": "/assets/pdfs/PJWL/:articleId.pdf"
+    },
+    {
+      "source": "/pjaiml/:articleId",
+      "destination": "/assets/pdfs/PJAIML/:articleId.pdf"
+    },
+    {
+      "source": "/pjns/:articleId",
+      "destination": "/assets/pdfs/PJNS/:articleId.pdf"
+    },
+    {
+      "source": "/pjgse/:articleId",
+      "destination": "/assets/pdfs/PJGSE/:articleId.pdf"
+    },
+    {
+      "source": "/pjaf/:articleId",
+      "destination": "/assets/pdfs/PJAF/:articleId.pdf"
+    },
+    {
+      "source": "/pjps/:articleId",
+      "destination": "/assets/pdfs/PJPS/:articleId.pdf"
+    },
+    {
+      "source": "/pjac/:articleId",
+      "destination": "/assets/pdfs/PJAC/:articleId.pdf"
+    },
+    {
+      "source": "/pjqs/:articleId",
+      "destination": "/assets/pdfs/PJQS/:articleId.pdf"
+    },
+    {
+      "source": "/pjsm/:articleId",
+      "destination": "/assets/pdfs/PJSM/:articleId.pdf"
+    },
+    {
+      "source": "/pjes/:articleId",
+      "destination": "/assets/pdfs/PJES/:articleId.pdf"
+    },
+    {
+      "source": "/pjog/:articleId",
+      "destination": "/assets/pdfs/PJOG/:articleId.pdf"
+    },
+    {
+      "source": "/pjcb/:articleId",
+      "destination": "/assets/pdfs/PJCB/:articleId.pdf"
+    },
+    {
+      "source": "/pjcdb/:articleId",
+      "destination": "/assets/pdfs/PJCDB/:articleId.pdf"
+    },
+    {
+      "source": "/pjd/:articleId",
+      "destination": "/assets/pdfs/PJD/:articleId.pdf"
+    },
+    {
+      "source": "/pjnm/:articleId",
+      "destination": "/assets/pdfs/PJNM/:articleId.pdf"
+    },
+    {
+      "source": "/pjdc/:articleId",
+      "destination": "/assets/pdfs/PJDC/:articleId.pdf"
+    },
+    {
+      "source": "/pjpd/:articleId",
+      "destination": "/assets/pdfs/PJPD/:articleId.pdf"
+    },
+    {
+      "source": "/pje/:articleId",
+      "destination": "/assets/pdfs/PJE/:articleId.pdf"
+    },
+    {
+      "source": "/pjmb/:articleId",
+      "destination": "/assets/pdfs/PJMB/:articleId.pdf"
+    },
+    {
+      "source": "/pjdp/:articleId",
+      "destination": "/assets/pdfs/PJDP/:articleId.pdf"
+    },
+    {
+      "source": "/pjmm/:articleId",
+      "destination": "/assets/pdfs/PJMM/:articleId.pdf"
+    },
+    {
+      "source": "/pjfas/:articleId",
+      "destination": "/assets/pdfs/PJFAS/:articleId.pdf"
+    },
+    {
+      "source": "/pjmh",
+      "destination": "/journal.html?id=mental-health"
+    },
+    {
+      "source": "/pjwl",
+      "destination": "/journal.html?id=womens-leadership"
+    },
+    {
+      "source": "/pjaiml",
+      "destination": "/journal.html?id=ai-machine-learning"
+    },
+    {
+      "source": "/pjns",
+      "destination": "/journal.html?id=neuroscience"
+    },
+    {
+      "source": "/pjgse",
+      "destination": "/journal.html?id=globalization"
+    },
+    {
+      "source": "/pjaf",
+      "destination": "/journal.html?id=agriculture-food"
+    },
+    {
+      "source": "/pjps",
+      "destination": "/journal.html?id=pharmaceutical-sciences"
+    },
+    {
+      "source": "/pjac",
+      "destination": "/journal.html?id=applied-chemistry"
+    },
+    {
+      "source": "/pjqs",
+      "destination": "/journal.html?id=quantum-science"
+    },
+    {
+      "source": "/pjsm",
+      "destination": "/journal.html?id=surgery-medicine"
+    },
+    {
+      "source": "/pjes",
+      "destination": "/journal.html?id=environmental-sciences"
+    },
+    {
+      "source": "/pjog",
+      "destination": "/journal.html?id=obstetrics-gynecology"
+    },
+    {
+      "source": "/pjcb",
+      "destination": "/journal.html?id=cell-biology"
+    },
+    {
+      "source": "/pjcdb",
+      "destination": "/journal.html?id=cardio-biology"
+    },
+    {
+      "source": "/pjd",
+      "destination": "/journal.html?id=dermatology-cosmetics"
+    },
+    {
+      "source": "/pjnm",
+      "destination": "/journal.html?id=nanostructured-materials"
+    },
+    {
+      "source": "/pjdc",
+      "destination": "/journal.html?id=dental-care"
+    },
+    {
+      "source": "/pjpd",
+      "destination": "/journal.html?id=pediatrics"
+    },
+    {
+      "source": "/pje",
+      "destination": "/journal.html?id=entrepreneurship"
+    },
+    {
+      "source": "/pjmb",
+      "destination": "/journal.html?id=microbiology"
+    },
+    {
+      "source": "/pjdp",
+      "destination": "/journal.html?id=diagnostic-pathology"
+    },
+    {
+      "source": "/pjmm",
+      "destination": "/journal.html?id=metaphysics"
+    },
+    {
+      "source": "/pjfas",
+      "destination": "/journal.html?id=fisheries-aquatic-studies"
     }
   ]
 }
