@@ -2474,7 +2474,7 @@ const INPRESS_DATA = [
         date: 'Published: May 04, 2026',
         abstract: 'Testicular germ cell tumors (TGCTs) are the most common solid malignancies in young men and are highly curable with stage-adapted multimodal therapy (Singla et al., 2025; Di Costanzo et al., 2025; Feldman et al., 2008; Gilligan et al., 2019). Mixed germ cell tumors (MGCTs), containing both seminomatous and non-seminomatous elements, often behave aggressively and are treated as non-seminoma (Singla et al., 2025; Gilligan et al., 2019; Chen et al., 2018). Discontinuous spermatic cord involvement has emerged as a distinctive adverse pathological feature linked to advanced stage (Pena et al., 2021; Alì et al., 2020; Sanfrancesco et al., 2018; Portillo, Rais-Bahrami and Magi-Galluzzi, 2022; Verrill et al., 2017).',
         // pages: 'Online First',
-        pdf: 'assets/pdfs/surgery-medicine/PJSM-Article.pdf'
+        pdf: 'assets/pdfs/PJSM/Article.pdf'
     }
 
 ];
