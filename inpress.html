@@ -17,246 +17,192 @@
     <link rel="stylesheet" href="volumes-fix.css">
 
     <style>
+        :root {
+            --inpress-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --accent-radiant: linear-gradient(45deg, #ff007a, #7928ca);
+        }
+
         .inpress-page {
             padding-bottom: 5rem;
-            min-height: 70vh;
-        }
-
-        .inpress-hero {
-            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)),
-                url('https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1600&h=400&fit=crop') center/cover;
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-            border-bottom: 4px solid var(--primary);
-        }
-
-        .inpress-hero h1 {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .inpress-hero p {
-            color: var(--gray-300);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .inpress-container {
-            margin-top: 3rem;
-            max-width: 1000px;
-        }
-
-        .inpress-article-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s ease;
+            min-height: 80vh;
+            background: #020617;
             position: relative;
             overflow: hidden;
         }
 
-        .inpress-article-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
-            border-color: var(--primary);
-        }
-
-        .inpress-article-card::before {
+        /* Ambient Background Glows */
+        .inpress-page::before,
+        .inpress-page::after {
             content: '';
             position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: var(--primary);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
         }
 
-        .inpress-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            gap: 1rem;
+        .inpress-page::before {
+            top: -100px;
+            right: -100px;
+            background: #7928ca;
         }
 
-        .inpress-title {
-            font-family: var(--font-heading);
-            font-size: 1.25rem;
-            color: var(--gray-900);
-            margin: 0;
-            line-height: 1.4;
+        .inpress-page::after {
+            bottom: -100px;
+            left: -100px;
+            background: #ff007a;
         }
 
-        .inpress-badge {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            white-space: nowrap;
-            border: 1px solid rgba(16, 185, 129, 0.2);
+        .inpress-hero {
+            position: relative;
+            padding: 8rem 0 6rem;
+            text-align: center;
+            overflow: hidden;
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .inpress-authors {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .inpress-hero-content {
+            position: relative;
+            z-index: 2;
         }
 
-        .inpress-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: var(--gray-500);
-            background: var(--gray-50);
-            padding: 0.75rem;
-            border-radius: 8px;
-        }
-
-        .inpress-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .inpress-meta i {
-            color: var(--primary);
-        }
-
-        .inpress-abstract {
-            color: var(--gray-700);
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .inpress-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
             margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom, #fff 30%, rgba(255, 255, 255, 0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
         }
 
-        .inpress-actions {
-            display: flex;
-            gap: 1rem;
-            border-top: 1px solid var(--gray-200);
-            padding-top: 1.25rem;
+        .inpress-hero p {
+            color: #94a3b8;
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
-        .btn-inpress {
-            padding: 0.5rem 1.25rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.2s;
-            cursor: pointer;
-            border: none;
-            text-decoration: none;
+        .inpress-container {
+            position: relative;
+            z-index: 1;
+            margin-top: 4rem;
+            max-width: 900px;
         }
 
-        .btn-view {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--primary);
-        }
-
-        .btn-view:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-download {
-            background: white;
-            color: var(--gray-700);
-            border: 1px solid var(--gray-300);
-        }
-
-        .btn-download:hover {
-            background: var(--gray-50);
-            border-color: var(--gray-400);
-            color: var(--gray-900);
-        }
-
+        /* Elegant Empty State Card */
         .no-articles {
             text-align: center;
-            padding: 4rem 2rem;
-            background: var(--gray-50);
-            border-radius: 12px;
-            color: var(--gray-500);
+            padding: 6rem 3rem;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .no-articles i {
-            font-size: 3rem;
-            color: var(--gray-300);
-            margin-bottom: 1rem;
+        .no-articles:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
         }
 
-        /* Tooltip styles from volumes-fix */
-        .author-item {
-            position: relative;
-            display: inline-block;
+        .no-articles-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(121, 40, 202, 0.15), rgba(255, 0, 122, 0.15));
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2.5rem;
+            color: #fff;
+            font-size: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: morph 8s ease-in-out infinite;
         }
 
-        .aff-trigger {
-            color: var(--primary);
-            cursor: pointer;
-            font-weight: bold;
-            margin-left: 2px;
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
         }
 
-        .author-affiliation-block {
-            display: none;
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1e293b;
+        .no-articles h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.25rem;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .no-articles p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .check-back-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-radiant);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            width: max-content;
-            max-width: 300px;
-            z-index: 100;
-            margin-bottom: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 2rem;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 0 15px 30px rgba(121, 40, 202, 0.3);
+            transition: all 0.3s ease;
         }
 
-        .author-affiliation-block::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -6px;
-            border-width: 6px;
-            border-style: solid;
-            border-color: #1e293b transparent transparent transparent;
+        .check-back-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(121, 40, 202, 0.4);
         }
 
-        .author-item.active .author-affiliation-block {
-            display: block;
+        /* Loading Placeholder */
+        .loading-placeholder {
+            padding: 10rem 0;
+            text-align: center;
+        }
+
+        .loader-glow {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #7928ca;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(121, 40, 202, 0.2);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         @media (max-width: 768px) {
-            .inpress-header {
-                flex-direction: column;
+            .inpress-hero h1 {
+                font-size: 2.5rem;
             }
-
-            .inpress-actions {
-                flex-direction: column;
+            .no-articles {
+                padding: 4rem 1.5rem;
             }
-
-            .btn-inpress {
-                width: 100%;
-                justify-content: center;
+            .no-articles h3 {
+                font-size: 1.75rem;
             }
         }
     </style>
@@ -436,18 +382,20 @@
     <main class="inpress-page">
         <section class="inpress-hero">
             <div class="container">
-                <h1>Articles In Press</h1>
-                <p>Early access to peer-reviewed and accepted articles before they are assigned to a specific volume and
-                    issue.</p>
+                <div class="inpress-hero-content">
+                    <h1>Articles In Press</h1>
+                    <p>Early access to peer-reviewed and accepted articles before they are assigned to a specific volume and
+                        issue.</p>
+                </div>
             </div>
         </section>
 
         <section class="inpress-content">
             <div class="container inpress-container" id="inpress-list">
                 <!-- Articles will be rendered here by inpress.js -->
-                <div class="loading-placeholder text-center py-5">
-                    <i class='bx bx-loader-alt bx-spin' style='font-size: 2rem; color: var(--primary);'></i>
-                    <p class="mt-2 text-gray-500">Loading in-press articles...</p>
+                <div class="loading-placeholder">
+                    <div class="loader-glow"></div>
+                    <p style="color: #94a3b8; font-family: 'Space Grotesk', sans-serif;">Synchronizing Academic Intelligence...</p>
                 </div>
             </div>
         </section>

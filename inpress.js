@@ -18,9 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!articles || articles.length === 0) {
             inpressList.innerHTML = `
                 <div class="no-articles">
-                    <i class='bx bx-file-blank'></i>
-                    <h3>No articles in press</h3>
-                    <p>There are currently no articles waiting for publication.</p>
+                    <div class="no-articles-icon">
+                        <i class='bx bx-time-five'></i>
+                    </div>
+                    <h3>Upcoming Articles Are Being Processed</h3>
+                    <p>Accepted manuscripts undergoing editorial review and publication formatting will appear here shortly.</p>
+                    <div class="check-back-badge">Please check back soon</div>
                 </div>
             `;
             return;
