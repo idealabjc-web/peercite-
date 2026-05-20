@@ -8810,3 +8810,420 @@ body {
     max-width: 100%;
     box-sizing: border-box;
 }
+
+/* =========================================
+   IN PRESS PAGE - PEERCITE PUBLISHERS
+========================================= */
+
+#inpress-list {
+    width: 100%;
+    max-width: 980px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* =========================================
+   ARTICLE CARD
+========================================= */
+
+.inpress-article-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 1.4rem 1.5rem;
+
+    margin-bottom: 1.2rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.inpress-article-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.inpress-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    margin-bottom: 0.8rem;
+}
+
+.inpress-title {
+    font-size: 1.15rem;
+
+    line-height: 1.45;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    margin: 0;
+
+    flex: 1;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.inpress-badge {
+    background: linear-gradient(135deg, #7B2FBE, #5B3DF5);
+
+    color: white;
+
+    padding: 0.45rem 0.9rem;
+
+    border-radius: 999px;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   AUTHORS
+========================================= */
+
+.inpress-authors {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.5rem;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 0.7rem;
+
+    color: #374151;
+
+    font-size: 0.93rem;
+}
+
+.inpress-authors i {
+    color: #7B2FBE;
+
+    font-size: 1rem;
+
+    margin-top: 2px;
+}
+
+.author-item {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.12rem;
+}
+
+.author-name {
+    color: #111827;
+
+    font-weight: 500;
+}
+
+/* =========================================
+   AFFILIATION NUMBER
+========================================= */
+
+.aff-trigger {
+    width: 18px;
+    height: 18px;
+
+    background: #7B2FBE;
+
+    color: white;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.65rem;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.aff-trigger:hover {
+    transform: scale(1.08);
+}
+
+/* =========================================
+   AFFILIATION TOOLTIP
+========================================= */
+
+.author-affiliation-block {
+    position: absolute;
+
+    top: 28px;
+    left: 0;
+
+    background: #ffffff;
+
+    padding: 0.75rem 0.9rem;
+
+    border-radius: 12px;
+
+    min-width: 220px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(8px);
+
+    transition: 0.25s ease;
+
+    z-index: 999;
+}
+
+.author-item.active .author-affiliation-block {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.aff-content {
+    color: #111827;
+
+    font-size: 0.85rem;
+
+    line-height: 1.5;
+}
+
+.tooltip-num {
+    color: #7B2FBE;
+
+    font-weight: 700;
+}
+
+/* =========================================
+   META
+========================================= */
+
+.inpress-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-bottom: 0.9rem;
+
+    color: #6B7280;
+
+    font-size: 0.88rem;
+}
+
+.inpress-meta i {
+    color: #7B2FBE;
+
+    margin-right: 0.25rem;
+}
+
+/* =========================================
+   ABSTRACT
+========================================= */
+
+.inpress-abstract {
+    background: #F9FAFB;
+
+    padding: 0.9rem 1rem;
+
+    border-radius: 12px;
+
+    margin-bottom: 1rem;
+
+    color: #374151;
+
+    line-height: 1.65;
+
+    font-size: 0.92rem;
+}
+
+.inpress-abstract strong {
+    color: #111827;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.inpress-actions {
+    display: flex;
+
+    gap: 0.8rem;
+
+    margin-top: 0.3rem;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-inpress {
+    border: none;
+
+    outline: none;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.btn-view {
+    background: linear-gradient(135deg, #7B2FBE, #5B3DF5);
+
+    color: white;
+}
+
+.btn-view:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(123, 47, 190, 0.25);
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.no-articles {
+    background: #ffffff;
+
+    padding: 3rem 2rem;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.no-articles-icon {
+    font-size: 3rem;
+
+    color: #7B2FBE;
+
+    margin-bottom: 1rem;
+}
+
+.no-articles h3 {
+    color: #111827;
+
+    margin-bottom: 0.8rem;
+}
+
+.no-articles p {
+    color: #6B7280;
+
+    line-height: 1.7;
+}
+
+.check-back-badge {
+    display: inline-block;
+
+    margin-top: 1rem;
+
+    background: #F3F4F6;
+
+    color: #7B2FBE;
+
+    padding: 0.6rem 1rem;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #inpress-list {
+        padding: 0 0.8rem;
+    }
+
+    .inpress-article-card {
+        padding: 1rem;
+    }
+
+    .inpress-header {
+        flex-direction: column;
+
+        gap: 0.7rem;
+    }
+
+    .inpress-title {
+        font-size: 1rem;
+    }
+
+    .inpress-meta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.5rem;
+    }
+
+    .author-affiliation-block {
+        min-width: 200px;
+    }
+
+    .btn-inpress {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .inpress-actions {
+        width: 100%;
+    }
+}

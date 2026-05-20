@@ -13,21 +13,54 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const articles = window.INPRESS_DATA;
+        window.INPRESS_DATA = [
+  {
+    id: "article-1",
+    title: "Bilateral Gluteal Tuberous Xanthomas in a Young Male with Suspected Familial Hypercholesterolemia and Severe Aortic Stenosis: A Case Report",
 
-        if (!articles || articles.length === 0) {
-            inpressList.innerHTML = `
-                <div class="no-articles">
-                    <div class="no-articles-icon">
-                        <i class='bx bx-time-five'></i>
-                    </div>
-                    <h3>Upcoming Articles Are Being Processed</h3>
-                    <p>Accepted manuscripts undergoing editorial review and publication formatting will appear here shortly.</p>
-                    <div class="check-back-badge">Please check back soon</div>
-                </div>
-            `;
-            return;
-        }
+    authors: [
+      {
+        name: "K . Santhosh kumar",
+        aff: "MS GENERAL SURGERY"
+      },
+      {
+        name: "Ankit D. Chinchulkar",
+        aff: "MS GENERAL SURGERY"
+      },
+      {
+        name: "V.S.S.V Aditya",
+        aff: "MS GENERAL SURGERY"
+      },
+      {
+        name: "Jagadish Guptha",
+        aff: "MS GENERAL SURGERY"
+      }
+    ],
+
+    journal: "Peercite Journal of Surgery and Medicine",
+    date: "May 20, 2026",
+
+    abstract: "Tuberous xanthomas are rare skin manifestations of severe lipid metabolism disorders...",
+
+    pdf: "assets/pdfs/PJSM/v4-i2-sp-a2.pdf"
+  }
+];
+
+const articles = window.INPRESS_DATA;
+
+        // if (!articles || articles.length === 0) {
+        //     inpressList.innerHTML = `
+        //         <div class="no-articles">
+        //             <div class="no-articles-icon">
+        //                 <i class='bx bx-time-five'></i>
+        //             </div>
+        //             <h3>Upcoming Articles Are Being Processed</h3>
+        //             <p>Accepted manuscripts undergoing editorial review and publication formatting will appear here shortly.</p>
+        //             <div class="check-back-badge">Please check back soon</div>
+        //         </div>
+        //     `;
+        //     return;
+        // }
 
         let html = '';
 
