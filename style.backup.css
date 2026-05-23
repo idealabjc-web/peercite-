@@ -870,6 +870,45 @@ ul {
     /* invisible bridge */
 }
 
+.dropdown-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-radius: var(--radius-md);
+}
+
+.dropdown-item:hover {
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.dropdown-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-100);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.dropdown-item:hover .dropdown-icon {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.dropdown-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.dropdown-desc {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
 /* Mega Menu */
 .mega-menu {
     width: 750px;
@@ -1165,11 +1204,35 @@ ul {
         border-radius: 8px;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
+
+    .dropdown-item {
+        padding: 0.875rem 1rem;
+    }
+
+    .dropdown-item-title {
+        font-size: 0.875rem;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+    }
+
+    .dropdown-item-icon {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 480px) {
     .search-dropdown {
         max-height: 250px;
+    }
+
+    .dropdown-item {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .dropdown-no-results {
+        padding: 1.5rem 1rem;
     }
 }
 
@@ -1550,8 +1613,18 @@ ul {
 }
 
 /* Text Transition Effects */
+#hero-tag-text,
+#hero-title-line1,
+#hero-title-highlight,
+#hero-title-line2,
+#hero-description {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
 
 /* Remove Side Image (No Longer Needed) */
+.hero-image {
+    display: none;
+}
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 1024px) {
@@ -1561,6 +1634,16 @@ ul {
 
     .hero-content h2 {
         font-size: 2.8rem;
+    }
+
+    .carousel-controls {
+        padding: 0 1rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 }
 
@@ -1604,6 +1687,19 @@ ul {
 
     .hero-arrow {
         display: none;
+    }
+
+    .carousel-indicators {
+        bottom: 20px;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .indicator.active {
+        width: 30px;
     }
 }
 
@@ -2100,6 +2196,10 @@ ul {
     justify-content: space-between;
 }
 
+.footer-copyright {
+    font-size: 0.85rem;
+}
+
 .footer-bottom-links {
     display: flex;
     gap: 2rem;
@@ -2115,6 +2215,33 @@ ul {
 }
 
 /* Footer Copyright Link Styling */
+.cc-footer {
+    background: #0f172a;
+    /* dark professional */
+    color: #cbd5e1;
+    padding: 14px 20px;
+    font-size: 14px;
+    border-top: 1px solid #1e293b;
+}
+
+.cc-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+}
+
+.cc-footer a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cc-footer a:hover {
+    text-decoration: underline;
+}
 
 .cc-icons {
     display: flex;
@@ -2176,9 +2303,19 @@ ul {
         display: flex;
     }
 
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
     .stats-grid,
     .journals-grid,
-    .how-grid {
+    .how-grid,
+    .speakers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -2194,13 +2331,18 @@ ul {
         display: none;
     }
 
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
     .hero-buttons {
         flex-direction: column;
     }
 
     .stats-grid,
     .journals-grid,
-    .how-grid {
+    .how-grid,
+    .speakers-grid {
         grid-template-columns: 1fr;
     }
 
@@ -3135,6 +3277,9 @@ ul {
 
 
 /* FORCE HIDE HEADER BUTTON - HOMEPAGE */
+.header-actions .btn-primary-header {
+    display: none !important;
+}
 
 /* FORCE HIDE MOBILE MENU CTA BUTTON */
 .mobile-menu .btn-mobile-cta {
@@ -3746,6 +3891,39 @@ ul {
     background: var(--gray-100);
 }
 
+.proceedings-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.proceeding-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--gray-200);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    transition: var(--transition);
+}
+
+.proceeding-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.proceeding-conference {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
 /* No Proceedings State */
 
 /* Other Journals Grid */
@@ -3829,12 +4007,37 @@ ul {
 }
 
 /* Tablet */
+@media (max-width: 992px) {
+    .proceedings-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /* Mobile */
+@media (max-width: 576px) {
+    .proceedings-list {
+        grid-template-columns: 1fr;
+    }
+
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 @media (max-width: 768px) {
     .scope-list {
         grid-template-columns: 1fr;
+    }
+
+    .proceeding-card {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .other-journals-grid {
@@ -3892,6 +4095,11 @@ ul {
    ============================================ */
 
 /* Breadcrumb */
+.breadcrumb-section {
+    background: #fad2fc;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
 
 .breadcrumb {
     display: flex;
@@ -3917,12 +4125,178 @@ ul {
 }
 
 /* Proceeding Hero */
+.proceeding-hero {
+    background: linear-gradient(135deg, #111 0%, #1a1a2e 100%);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.proceeding-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.proceeding-badge-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.proceeding-hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    margin: 0 0 15px;
+    line-height: 1.2;
+}
+
+.proceeding-subtitle {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.proceeding-meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 14px;
+    color: #888;
+}
+
+.proceeding-meta-row span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.proceeding-meta-row i {
+    color: #10B981;
+    font-size: 18px;
+}
 
 /* Content Grid */
+.proceeding-content-section {
+    padding: 60px 0;
+    background: #f5dec9;
+}
+
+.proceeding-grid {
+    display: grid;
+    grid-template-columns: 2fr 320px;
+    gap: 40px;
+}
 
 /* Main Content */
+.proceeding-main-content h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.proceeding-main-content h2 i {
+    color: #10B981;
+}
+
+.proceeding-abstract {
+    background: #fff;
+    border-left: 4px solid #10B981;
+    padding: 30px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.proceeding-abstract p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
 
 /* Articles List */
+.proceeding-articles-list {
+    margin-bottom: 40px;
+}
+
+.articles-count {
+    background: #c1cefa;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.article-placeholder-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.article-placeholder-card:hover {
+    border-color: #10B981;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);
+}
+
+.article-icon {
+    width: 50px;
+    height: 50px;
+    background: #F0FDF4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #10B981;
+    font-size: 24px;
+}
+
+.article-info h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.article-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+.article-status {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #10B981;
+    font-weight: 500;
+}
+
+.coming-soon-badge {
+    background: #FFF7ED;
+    color: #F97316;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.more-articles {
+    text-align: center;
+    padding: 15px;
+    color: #888;
+    font-size: 14px;
+}
 
 .no-articles {
     text-align: center;
@@ -3981,8 +4355,70 @@ ul {
 }
 
 /* Actions */
+.proceeding-actions {
+    margin-top: 30px;
+}
 
 /* Sidebar */
+.proceeding-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.sidebar-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-card h3 i {
+    color: #10B981;
+}
+
+.access-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.access-info li {
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.access-info li i {
+    color: #10B981;
+}
+
+.citation-tools .btn {
+    margin-bottom: 8px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.related-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
 
 /* Loading Placeholder */
 .loading-placeholder {
@@ -3997,10 +4433,73 @@ ul {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+    .proceeding-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proceeding-sidebar {
+        position: static;
+    }
+
+    .proceeding-hero h1 {
+        font-size: 28px;
+    }
+
+    .proceeding-meta-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
 
 /* ============================================
    CONFERENCE PAGE STYLES
    ============================================ */
+.conference-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.conf-section {
+    padding: 4rem 0;
+    min-height: 50vh;
+}
+
+.conf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.btn-radiant {
+    background: linear-gradient(45deg, #ff007a, #7928ca, #ff007a);
+    background-size: 200% auto;
+    color: white !important;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4);
+    transition: 0.5s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    animation: gradientPulse 3s infinite linear;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.btn-radiant:hover {
+    background-position: right center;
+    box-shadow: 0 6px 20px rgba(121, 40, 202, 0.6);
+    transform: translateY(-2px);
+}
 
 @keyframes gradientPulse {
     0% {
@@ -4014,6 +4513,38 @@ ul {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.conf-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.conf-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.conf-image {
+    position: relative;
+    height: 250px;
+}
+
+.conf-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.conf-card:hover .conf-image img {
+    transform: scale(1.05);
 }
 
 .conf-badge {
@@ -4032,6 +4563,19 @@ ul {
     letter-spacing: 0.05em;
 }
 
+.conf-badge.pulse-badge {
+    background: rgba(239, 68, 68, 0.9);
+    animation: flash 2s infinite;
+}
+
+.conf-badge.upcoming {
+    background: rgba(52, 211, 153, 0.9);
+}
+
+.conf-badge.past {
+    background: rgba(107, 114, 128, 0.9);
+}
+
 @keyframes flash {
 
     0%,
@@ -4044,9 +4588,127 @@ ul {
     }
 }
 
+.conf-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.conf-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.conf-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.conf-meta i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.conf-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+.conf-content p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.conf-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .conf-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =====================================================
    NEW STYLES FOR DYNAMIC SEARCH RESULTS
    ===================================================== */
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--slate-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: var(--bg);
+}
+
+.result-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.result-text {
+    flex-grow: 1;
+}
+
+.result-title {
+    display: block;
+    font-weight: 600;
+    color: var(--slate-darkest);
+    margin-bottom: 0.25rem;
+}
+
+.result-category {
+    font-size: 0.85rem;
+    color: var(--slate);
+}
+
+.result-arrow {
+    font-size: 1.5rem;
+    color: var(--slate-light);
+    margin-left: 1rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-result-item:hover .result-arrow {
+    color: var(--primary);
+    transform: translateX(5px);
+}
+
+.no-search-results {
+    padding: 2rem;
+    text-align: center;
+    color: var(--slate);
+}
 
 /* =====================================================
    MOBILE RESPONSIVE ENHANCEMENTS
@@ -4086,6 +4748,10 @@ ul {
     }
 
     /* Search Bar */
+    .nav-controls {
+        max-width: 400px;
+        margin: 0;
+    }
 
     /* Hero Slider */
     .hero-slider {
@@ -4159,7 +4825,8 @@ ul {
     }
 
     /* Hide Desktop Nav */
-    .desktop-nav {
+    .desktop-nav,
+    .nav-controls {
         display: none !important;
     }
 
@@ -4169,6 +4836,15 @@ ul {
     }
 
     /* Header Actions */
+    .header-actions {
+        gap: 0.3rem;
+    }
+
+    .header-icon-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
 
     /* Hero Slider */
     /* .hero-slider {
@@ -4433,6 +5109,10 @@ ul {
         padding: 3rem 0;
     }
 
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+
     /* Partners */
     .partners-section {
         padding: 3rem 0;
@@ -4494,13 +5174,45 @@ ul {
         padding: 3rem 0;
     }
 
+    .proceeding-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .other-journals-grid {
         grid-template-columns: 1fr;
     }
 
     /* Conference */
+    .conf-section {
+        padding: 3rem 0;
+    }
+
+    .conf-grid {
+        grid-template-columns: 1fr;
+    }
 
     /* Proceeding Page */
+    .proceeding-hero {
+        padding: 40px 0;
+    }
+
+    .proceeding-hero h1 {
+        font-size: 28px;
+    }
+
+    .proceeding-meta-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .proceeding-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proceeding-sidebar {
+        position: static;
+    }
 }
 
 /* ==================== SMALL MOBILE (480px) ==================== */
@@ -4534,6 +5246,11 @@ ul {
     }
 
     /* Header */
+    .header-icon-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
 
     /* Hero Slider */
     /* .hero-slider {
@@ -4731,8 +5448,38 @@ ul {
     }
 
     /* Proceeding */
+    .proceeding-hero h1 {
+        font-size: 22px;
+    }
+
+    .proceeding-subtitle {
+        font-size: 15px;
+    }
+
+    .article-placeholder-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     /* Conference */
+    .conf-image {
+        height: 200px;
+    }
+
+    .conf-content {
+        padding: 1.5rem;
+    }
+
+    .conf-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-radiant {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
 
     /* Mobile Menu */
     .mobile-menu {
@@ -4771,14 +5518,16 @@ ul {
 
     /* Increase tap targets */
     .nav-link,
-    .filter-btn {
+    .filter-btn,
+    .btn-primary-header {
         min-height: 44px;
         min-width: 44px;
     }
 
     /* Remove hover effects on touch devices */
     .journal-card:hover,
-    .publication-card:hover {
+    .publication-card:hover,
+    .conf-card:hover {
         transform: none;
     }
 
@@ -4824,7 +5573,8 @@ ul {
 .partners-section,
 .proceedings-section,
 .publications-section,
-.journal-about-section {
+.journal-about-section,
+.conf-section {
     overflow-x: hidden;
     max-width: 100%;
     width: 100%;
@@ -4842,10 +5592,13 @@ ul {
 .partner-grid,
 .standards-grid,
 .how-grid,
+.speakers-grid,
 .about-grid,
 .contact-grid,
 .journal-about-grid,
+.proceedings-list,
 .other-journals-grid,
+.conf-grid,
 .faq-grid {
     width: 100%;
     max-width: 100%;
@@ -4866,7 +5619,9 @@ ul {
 .how-card,
 .speaker-card,
 .contact-info-card,
+.proceeding-card,
 .other-journal-card,
+.conf-card,
 .faq-item {
     max-width: 100%;
     box-sizing: border-box;
@@ -4878,6 +5633,7 @@ ul {
 .about-image img,
 .team-image img,
 .speaker-image img,
+.conf-image img,
 .journal-cover img {
     max-width: 100%;
     height: auto;
@@ -5081,8 +5837,62 @@ ul {
 }
 
 /* ==================== PROCEEDING PAGE FIXES ==================== */
+.proceeding-hero,
+.proceeding-content-section {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.proceeding-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.proceeding-main-content,
+.proceeding-sidebar {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.article-placeholder-card {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .proceeding-meta-row {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .proceeding-badge-wrap {
+        flex-wrap: wrap;
+    }
+}
 
 /* ==================== CONFERENCE PAGE FIXES ==================== */
+.conf-card {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.conf-content {
+    max-width: 100%;
+}
+
+.conf-actions {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .btn-radiant {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
 
 /* ==================== FORM FIXES ==================== */
 .contact-form,
@@ -5115,7 +5925,24 @@ ul {
     right: 1rem;
 }
 
+.dropdown-item {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 /* ==================== TABLE/RESPONSIVE CONTENT FIXES ==================== */
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+}
 
 /* ==================== MEGA MENU FIXES ==================== */
 @media (max-width: 768px) {
@@ -5132,6 +5959,7 @@ ul {
 /* ==================== IMAGE GALLERY FIXES ==================== */
 .journal-image,
 .publication-image,
+.conf-image,
 .other-journal-img {
     overflow: hidden;
     max-width: 100%;
@@ -5143,6 +5971,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 p,
 span,
 a,
@@ -5153,7 +5982,7 @@ li {
 }
 
 /* Long URLs and email addresses */
-
+a[href^="mailto:"],
 a[href^="http"] {
     word-break: break-all;
 }
@@ -5179,7 +6008,8 @@ a[href^="http"] {
     .hero-buttons,
     .cta-buttons,
     .journal-actions,
-    .journal-metrics {
+    .journal-metrics,
+    .conf-actions {
         width: 100%;
         /* margin-left: 0 !important;
         margin-right: 0 !important; */
@@ -5191,7 +6021,8 @@ a[href^="http"] {
     .btn-cta-primary,
     .btn-cta-secondary,
     .btn-view-all,
-    .btn-mobile-cta {
+    .btn-mobile-cta,
+    .btn-primary-header {
         max-width: 100%;
         box-sizing: border-box;
     }
@@ -5253,14 +6084,16 @@ a[href^="http"] {
 }
 
 /* ==================== IFRAME & EMBED FIXES ==================== */
-
-object {
+iframe,
+embed,
+object,
+video {
     max-width: 100%;
     height: auto;
 }
 
 /* ==================== PRE & CODE FIXES ==================== */
-
+pre,
 code {
     max-width: 100%;
     overflow-x: auto;
@@ -5464,7 +6297,8 @@ code {
 .partners-section,
 .proceedings-section,
 .publications-section,
-.journal-about-section {
+.journal-about-section,
+.conf-section {
     position: relative;
     z-index: 1;
 }
@@ -5537,8 +6371,45 @@ code {
 }
 
 /* ==================== SEARCH CONTROLS OPTIMIZATION ==================== */
+.nav-controls {
+    flex-grow: 1;
+    max-width: 450px;
+    /* Reduced from 500px */
+    margin: 0 1rem;
+    /* Reduced from 2rem */
+    overflow: visible;
+}
 
+.integrated-access-bar {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 0.2rem;
+    /* Reduced from 0.25rem */
+    padding-left: 0.8rem;
+    /* Reduced from 1rem */
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition);
+    overflow: visible;
+}
 
+.search-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    overflow: visible;
+}
+
+.search-icon-ui {
+    color: var(--slate);
+    font-size: 1.1rem;
+    /* Reduced from 1.2rem */
+}
+
+#journal-search-trigger,
 #journal-search {
     width: 100%;
     border: none;
@@ -5555,14 +6426,64 @@ code {
     text-overflow: ellipsis;
 }
 
-
+#journal-search-trigger::placeholder,
 #journal-search::placeholder {
     color: var(--slate);
     font-size: 0.85rem;
     /* Smaller placeholder */
 }
 
+.access-divider {
+    width: 1px;
+    height: 20px;
+    /* Reduced from 24px */
+    background: var(--border-color);
+    margin: 0 0.4rem;
+    /* Reduced from 0.5rem */
+}
+
+.nav-btn.journal-articles-btn {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    padding: 0.4rem 0.8rem;
+    /* Reduced from 0.5rem 1rem */
+    font-size: 0.75rem;
+    /* Reduced from 0.8rem */
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
 /* ==================== HEADER ACTIONS OPTIMIZATION ==================== */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    /* Reduced from 0.5rem */
+    overflow: visible;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.header-icon-btn {
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
+    /* Reduced from 44px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    font-size: 1.1rem;
+    /* Reduced from 1.2rem */
+    flex-shrink: 0;
+}
+
+.header-icon-btn:hover {
+    background: var(--gray-100);
+    color: var(--primary);
+}
 
 /* ==================== REMOVE SCROLLBAR FROM HEADER ==================== */
 .main-header {
@@ -5607,7 +6528,10 @@ code {
 
     /* Hide desktop nav and search on tablets/mobile */
     .desktop-nav,
-    .search-autocomplete-wrapper {
+    .nav-controls,
+    .search-autocomplete-wrapper,
+    .search-trigger,
+    .header-actions {
         display: none !important;
     }
 
@@ -5648,7 +6572,9 @@ code {
 
     /* Hide desktop nav and search on mobile */
     .desktop-nav,
-    .search-autocomplete-wrapper {
+    .nav-controls,
+    .search-autocomplete-wrapper,
+    .search-trigger {
         display: none !important;
     }
 
@@ -5671,6 +6597,17 @@ code {
         letter-spacing: 1px;
         color: var(--dark);
     }
+
+    .header-actions {
+        display: none !important;
+        /* Hide other header actions to make room for Menu in place of search */
+    }
+
+    .header-icon-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
 }
 
 /* Small Mobile */
@@ -5685,6 +6622,16 @@ code {
         padding-bottom: 0.3rem;
         min-height: 55px;
         gap: 0.4rem;
+    }
+
+    .header-icon-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .header-actions {
+        gap: 0.25rem;
     }
 }
 
@@ -5730,6 +6677,19 @@ code {
 }
 
 /* ==================== COMPACT HEADER VARIANT (Optional) ==================== */
+.main-header.compact {
+    min-height: 60px;
+}
+
+.main-header.compact .logo-img {
+    height: 55px;
+    /* Reduced from 55px */
+}
+
+.main-header.compact .container {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
 
 /* ==================== HAMBURGER MENU ==================== */
 .hamburger {
@@ -5773,10 +6733,17 @@ code {
     /* Allow nav to shrink if needed */
 }
 
+.nav-controls {
+    flex-shrink: 1;
+    /* Allow search to shrink if needed */
+}
+
 /* ==================== PREVENT OVERFLOW ==================== */
 .main-header,
 .main-header .container,
-.desktop-nav {
+.desktop-nav,
+.nav-controls,
+.header-actions {
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -5898,6 +6865,15 @@ body {
 }
 
 /* Prevent search from causing overflow */
+.nav-controls {
+    overflow: visible;
+    max-width: 100%;
+}
+
+.integrated-access-bar {
+    overflow: visible;
+    max-width: 100%;
+}
 
 .search-autocomplete-wrapper {
     position: relative;
@@ -5959,6 +6935,7 @@ section,
 .proceedings-section,
 .publications-section,
 .journal-about-section,
+.conf-section,
 .page-hero,
 .filter-section {
     overflow-x: hidden;
@@ -5978,10 +6955,13 @@ section,
 .partner-grid,
 .standards-grid,
 .how-grid,
+.speakers-grid,
 .about-grid,
 .contact-grid,
 .journal-about-grid,
+.proceedings-list,
 .other-journals-grid,
+.conf-grid,
 .faq-grid {
     width: 100%;
     max-width: 100%;
@@ -6003,7 +6983,9 @@ section,
 .how-card,
 .speaker-card,
 .contact-info-card,
+.proceeding-card,
 .other-journal-card,
+.conf-card,
 .faq-item {
     max-width: 100%;
     box-sizing: border-box;
@@ -6016,6 +6998,7 @@ img,
 .about-image img,
 .team-image img,
 .speaker-image img,
+.conf-image img,
 .journal-cover img {
     max-width: 100%;
     height: auto;
@@ -6026,7 +7009,8 @@ img,
 .hero-buttons,
 .cta-buttons,
 .journal-actions,
-.journal-metrics {
+.journal-metrics,
+.conf-actions {
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -6036,7 +7020,9 @@ img,
 .btn-cta-primary,
 .btn-cta-secondary,
 .btn-view-all,
-.btn-mobile-cta {
+.btn-mobile-cta,
+.btn-primary-header,
+.btn-radiant {
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -6090,10 +7076,13 @@ h2,
 h3,
 h4,
 h5,
+h6,
 p,
 span,
 a,
-li {
+li,
+.dropdown-item-title,
+.result-title {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -6101,16 +7090,24 @@ li {
 }
 
 /* ==================== TABLE FIX ==================== */
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
 
 /* ==================== IFRAME & EMBED FIX ==================== */
-
-object {
+iframe,
+embed,
+object,
+video {
     max-width: 100%;
     height: auto;
 }
 
 /* ==================== CODE & PRE FIX ==================== */
-
+pre,
 code {
     max-width: 100%;
     overflow-x: auto;
@@ -6153,7 +7150,9 @@ code {
     .partners-grid,
     .partner-grid,
     .standards-grid,
-    .how-grid {
+    .how-grid,
+    .speakers-grid,
+    .conf-grid {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
     }
@@ -6230,6 +7229,7 @@ code {
     /* Cards mobile */
     .journal-card,
     .publication-card,
+    .conf-card,
     .value-card {
         width: 100% !important;
         max-width: 100% !important;
@@ -6248,6 +7248,14 @@ code {
     }
 
     /* Proceeding page mobile */
+    .proceeding-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .proceeding-meta-row {
+        flex-wrap: wrap;
+        width: 100% !important;
+    }
 
     /* Journal hero mobile */
     .journal-hero-grid {
@@ -6421,8 +7429,21 @@ html {
 }
 
 /* Conference cards */
+.conf-content {
+    max-width: 100%;
+    overflow: hidden;
+}
 
 /* Proceeding hero */
+.proceeding-hero {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.proceeding-hero-inner {
+    max-width: 100%;
+    padding: 0 1rem;
+}
 
 /* Breadcrumb */
 .breadcrumb {
@@ -6440,6 +7461,7 @@ html {
 @media (max-width: 768px) {
 
     #root,
+    #app,
     main {
         max-width: 100% !important;
         overflow-x: hidden !important;
@@ -6566,6 +7588,12 @@ html {
 /* ==================== SPECIFIC FIX FOR ENVIRONMENTAL COLUMN ==================== */
 
 /* If Environmental has a special class, normalize it */
+.mega-col.environmental-col,
+.mega-col.env-special {
+    background: transparent !important;
+    background-image: none !important;
+    color: var(--dark) !important;
+}
 
 /* Remove any background overlays */
 .mega-col::before {
@@ -6658,17 +7686,38 @@ html {
 /* ==================== REMOVE EXPLORE BUTTONS FROM COLUMNS ==================== */
 
 /* If there are "Explore Publications" buttons in columns, style them consistently */
-
+.mega-col .explore-btn,
 .mega-col button {
     display: none;
     /* Hide or... */
 }
 
 /* ...or style them consistently */
+.mega-col .explore-btn {
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.mega-col .explore-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
 
 /* ==================== TEXT OVERLAY FIX ==================== */
 
 /* Remove any overlaid text on images */
+.mega-col .overlay-text,
+.mega-col .image-overlay {
+    display: none;
+}
 
 /* Ensure normal text flow */
 .mega-col {
@@ -6699,22 +7748,77 @@ html {
 }
 
 /* Common column styling */
+.dropdown-column {
+    flex: 1;
+    padding: 20px 30px;
+    border-right: 1px solid #e5e5e5;
+}
 
 /* Remove border from last column */
+.dropdown-column:last-child {
+    border-right: none;
+}
 
 /* Section titles (Medical, Technology, Environmental) */
+.dropdown-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    position: relative;
+}
 
 /* Active underline (same for all) */
+.dropdown-column h4::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #10B981;
+    /* your green theme */
+}
 
 /* List items */
+.dropdown-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-column ul li {
+    font-size: 15px;
+    color: #555;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
 
 /* Hover effect */
+.dropdown-column ul li:hover {
+    color: #10B981;
+}
 
 /* 🔥 FIX FOR ENVIRONMENTAL COLUMN */
+.dropdown-column.environmental {
+    opacity: 1 !important;
+    /* remove faded look */
+    color: #1a1a1a !important;
+}
 
 /* Ensure text inside is not faded */
+.dropdown-column.environmental ul li {
+    color: #555 !important;
+}
 
 /* Optional: active tab highlight (if needed) */
+.dropdown-column.active h4 {
+    color: #10B981;
+}
 
 /* =====================================================
    PROCEEDINGS FLYOUT DROPDOWN
@@ -6958,8 +8062,71 @@ html {
 /* =====================================================
    PDF DOWNLOAD SECTION — JOURNAL PROCEEDING CARDS
    ===================================================== */
+.pdf-download-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-100);
+}
+
+.pdf-download-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #e53e3e;
+}
+
+.pdf-download-label i {
+    font-size: 1.2rem;
+    color: #e53e3e;
+}
+
+.pdf-download-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-pdf {
+    background: #e53e3e;
+    color: #fff !important;
+    border: 1.5px solid #e53e3e;
+    border-radius: var(--radius-md);
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-pdf:hover {
+    background: #c53030;
+    border-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+.btn-pdf i {
+    font-size: 1rem;
+}
 
 /* Responsive: stack PDF download on small screens */
+@media (max-width: 480px) {
+    .pdf-download-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
 /* =====================================================
    VOLUMES & ISSUES SECTION - SIDE BY SIDE LAYOUT
@@ -7327,6 +8494,90 @@ html {
 /* =====================================================
    PDF MODAL VIEWER
    ===================================================== */
+.pdf-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.pdf-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pdf-modal-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 1100px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: var(--dark);
+    color: var(--white);
+    border-bottom: 2px solid var(--primary);
+}
+
+.pdf-modal-header h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin: 0;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 1rem;
+}
+
+.pdf-modal-close {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.pdf-modal-close:hover {
+    background: #ef4444;
+    transform: rotate(90deg);
+}
+
+.pdf-modal-body {
+    flex: 1;
+    overflow: hidden;
+    background: #525659;
+}
+
+#pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 /* =====================================================
    RESPONSIVE BREAKPOINTS
@@ -7441,6 +8692,16 @@ html {
         flex: 1;
         padding: 0.55rem 0.75rem;
     }
+
+    .pdf-modal-content {
+        height: 95vh;
+        max-width: 100%;
+        border-radius: var(--radius-md);
+    }
+
+    .pdf-modal-header h3 {
+        font-size: 0.9rem;
+    }
 }
 
 /* Mobile portrait */
@@ -7500,6 +8761,10 @@ html {
     .article-meta-row {
         flex-direction: column;
         gap: 0.4rem;
+    }
+
+    .pdf-modal {
+        padding: 0.5rem;
     }
 }
 
