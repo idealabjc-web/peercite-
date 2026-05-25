@@ -8,63 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const loadPage = () => {
         if (!window.INPRESS_DATA) {
-            console.log("⏳ Waiting for data...");
-            setTimeout(loadPage, 100);
+            window.INPRESS_DATA = [];
+        }
+
+        if (window.INPRESS_DATA.length === 0) {
+            inpressList.innerHTML = `
+                <div class="no-articles" style="text-align: center; padding: 4rem 1rem;">
+                    <div class="no-articles-icon" style="font-size: 4rem; color: #cbd5e1; margin-bottom: 1rem;">
+                        <i class='bx bx-time-five'></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; color: #334155; margin-bottom: 0.5rem;">Upcoming Articles Are Being Processed</h3>
+                    <p style="color: #64748b; max-width: 500px; margin: 0 auto 1.5rem;">Accepted manuscripts undergoing editorial review and publication formatting will appear here shortly.</p>
+                    <div class="check-back-badge" style="display: inline-block; background: #f1f5f9; color: #475569; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Please check back soon</div>
+                </div>
+            `;
             return;
         }
 
-        window.INPRESS_DATA = [
-  {
-    id: "article-1",
-    title: "Bilateral Gluteal Tuberous Xanthomas in a Young Male with Suspected Familial Hypercholesterolemia and Severe Aortic Stenosis: A Case Report",
-
-    authors: [
-      {
-        name: "K . Santhosh kumar",
-        aff: "MS GENERAL SURGERY"
-      },
-      {
-        name: "Ankit D. Chinchulkar",
-        aff: "MS GENERAL SURGERY"
-      },
-      {
-        name: "V.S.S.V Aditya",
-        aff: "MS GENERAL SURGERY"
-      },
-      {
-        name: "Jagadish Guptha",
-        aff: "MS GENERAL SURGERY"
-      }
-    ],
-
-    journal: "Peercite Journal of Surgery and Medicine",
-    date: "May 20, 2026",
-
-    abstract: "Tuberous xanthomas are rare skin manifestations of severe lipid metabolism disorders...",
-
-    pdf: "assets/pdfs/PJSM/v4-i2-sp-a2.pdf"
-  }
-];
-
-const articles = window.INPRESS_DATA;
-
-        // if (!articles || articles.length === 0) {
-        //     inpressList.innerHTML = `
-        //         <div class="no-articles">
-        //             <div class="no-articles-icon">
-        //                 <i class='bx bx-time-five'></i>
-        //             </div>
-        //             <h3>Upcoming Articles Are Being Processed</h3>
-        //             <p>Accepted manuscripts undergoing editorial review and publication formatting will appear here shortly.</p>
-        //             <div class="check-back-badge">Please check back soon</div>
-        //         </div>
-        //     `;
-        //     return;
-        // }
-
         let html = '';
 
-        articles.forEach(article => {
+        window.INPRESS_DATA.forEach(article => {
             const safeTitle = (article.title || 'Article').replace(/'/g, "\\'");
             let authorsHTML = '';
             if (Array.isArray(article.authors)) {

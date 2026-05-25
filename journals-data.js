@@ -11,7 +11,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Mental Health',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: 3067-4131',
         image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=500&fit=crop',
         description: 'A premier open-access journal publishing peer-reviewed research on mental wellness, psychiatric disorders, psychological interventions, and behavioral health from global medical conferences.',
         about1: 'The PeerCite Journal of Mental Health is dedicated to advancing the understanding and treatment of mental health conditions through the dissemination of high-quality research sourced directly from international psychiatric conferences and health summits.',
@@ -143,6 +143,134 @@ const JOURNALS_DATA = {
                         ]
                     }
                 ]
+            },
+            {
+                volume: 3,
+                year: 2025,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'The Power of Authenticity: A Case Study on Its Role in Fostering Self-Awareness and Personal Empowerment',
+                        date: 'January 07, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Dr. Ruchi Mishra Sharma",
+                                        aff: "Trauma informed therapist MBBS, MSOphthalmology"
+                                    }
+                                ],
+                                pages: '1-7',
+                                pdf: 'assets/pdfs/PJMH/v3-i1-a1.pdf',
+                            },
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Rethinking the Human Mind: How AI Can RevolutionizeMental Health and Empower Our True Potential',
+                        date: ' April 17, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Naomi Riley",
+                                        aff: "Thought  Leader,  Writer  MotivationalSpeaker, Researcher, Program Developer,Safety First - AI Certified Genius"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/PJMH/v3-i2-a2.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Trauma-Informed Perspectives: A Case Study Approach  to  Understanding  and  Addressing Trauma',
+                        date: 'January 18, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i3-si-a3',
+                                authors: [
+                                    {
+                                        name: "Vana McCreary",
+                                        aff: "National  University,  John  F.  Kennedy School of Psychology & Social Sciences"
+                                    }
+                                ],
+                                pages: '1-8',
+                                pdf: 'assets/pdfs/PJMH/v3-i3-si-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Exploring the effects of Game-based activities on spatial-temporal reasoning in Children aged 6 to 11 years',
+                        date: '  August 06, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Ann Johanna Samy",
+                                        aff: "B.Sc  Psychology  Honors  (graduate), and Pursuing Masters of Cournseling, Reahbiliation and Mental Health."
+                                    }
+                                ],
+                                pages: '1-13',
+                                pdf: 'assets/pdfs/PJMH/v3-i4-a4.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 5,
+                        title: 'Pixelated Love: Unmasking Pink Parasites and Hidden Swans in Modern Relationships',
+                        date: 'September 22, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i5-a5',
+                                authors: [
+                                    {
+                                        name: "Shimul Rajput",
+                                        aff: "Registered psychotherapist (Qualifying)"
+                                    }
+                                ],
+                                pages: '1-12',
+                                pdf: 'assets/pdfs/PJMH/v3-i5-a5.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 4,
+                year: 2026,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Mental Health Diversity and Integrative Recovery: A Lived-Experience Case Study of Voluntary, Trauma-Informed, and Culturally Responsive Care',
+                        date: ' February 19, 2026',
+                        articles: [
+                            {
+                                id: 'v4-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Dr. Letitia Antoinette ",
+                                        aff: "Founder/President, Letitia Antoinette World University"
+                                    },
+                                    {
+                                        name: "Dr. Daniel Kapuscinski",
+                                        aff: "Registrar General, Awedu Institute of Business Management and Leadership"
+                                    },
+                                    {
+                                        name: "LaVada S. England",
+                                        aff: "Academic Director, Letitia Antoinette World University"
+                                    }
+                                ],
+                                pages: '1-11',
+                                pdf: 'assets/pdfs/PJMH/v4-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -153,7 +281,7 @@ const JOURNALS_DATA = {
         shortTitle: "Women's Leadership",
         category: 'Social Sciences',
         categoryFilter: 'social',
-        badge: 'Social Sciences',
+        badge: 'ISSN: 3067-4182',
         image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop',
         description: "A peer-reviewed open-access journal advancing gender equity through research on women in leadership, organizational behaviour, policy reform, and professional development.",
         about1: "The PeerCite Journal of Women's Leadership publishes transformative research from international conferences focused on gender equity, women's empowerment, and leadership development across industries and cultures.",
@@ -253,40 +381,30 @@ const JOURNALS_DATA = {
                     }
                 ]
             },
-            // {
-            //     volume: 2,
-            //     year: 2024,
-            //     issues: [
-            //         {
-            //             issue: 1,
-            //             title: 'Global Women Leaders Forum',
-            //             date: 'March 2024',
-            //             articles: [
-            //                 {
-            //                     id: 'wl-v2-i1-a1',
-            //                     title: 'Women Leadership in Emerging Economies',
-            //                     authors: 'Dr. Fatima Al-Hassan, Dr. Grace Okonkwo',
-            //                     pages: '1-30',
-            //                     pdf: 'assets/pdfs/./pdfs/womens-leadership/v2-i1-a1.pdf',
-            //                 },
-            //             ]
-            //         },
-            //         {
-            //             issue: 2,
-            //             title: 'Inaugural Issue',
-            //             date: 'March 2023',
-            //             articles: [
-            //                 {
-            //                     id: 'wl-v2-i1-a2',
-            //                     title: 'Digital Leadership and Remote Teams',
-            //                     authors: 'Dr. Anna Kowalski',
-            //                     pages: '31-48',
-            //                     pdf: 'assets/pdfs/./pdfs/womens-leadership/v2-i1-a2.pdf',
-            //                 }
-            //             ]
-            //         }
-            //     ]
-            // }
+            {
+                volume: 2,
+                year: 2025,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Rewriting the Narrative: Midlife Career Transitions and the Shift from Hustle to Purpose',
+                        date: 'April 08, 2025',
+                        articles: [
+                            {
+                                id: 'v2-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Jennifer Warfield",
+                                        aff: "Empowering Purpose-Driven Success, Founder, Speaker, Consultant"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/PJWL/v2-i1-a1.pdf',
+                            },
+                        ]
+                    }
+                ]
+            }
         ]
     },
 
@@ -296,7 +414,7 @@ const JOURNALS_DATA = {
         shortTitle: 'AI & Machine Learning',
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
-        badge: 'Science & Tech',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop',
         description: 'Cutting-edge artificial intelligence research, deep learning breakthroughs, and machine learning applications from the world\'s most prestigious technology conferences.',
         about1: 'The PeerCite Journal of Artificial Intelligence and Machine Learning is the definitive source for AI research originating from international technology conferences, including keynote addresses from leading AI scientists and engineers.',
@@ -481,7 +599,25 @@ const JOURNALS_DATA = {
                                 pdf: 'assets/pdfs/PJAIML/v3-sp2.pdf',
                             }
                         ]
-                    }
+                    },
+                    {
+                        issue: 'Special',
+                        title: 'Operational  Endings,  Emotional  Impacts:Ethical Considerations When Project TeamsForm Attachments to AI Collaborators',
+                        date: 'May 15, 2025',
+                        articles: [
+                            {
+                                id: 'v3-sp3',
+                                authors: [
+                                    {
+                                        name: "Sarah Dyson",
+                                        aff: "Leadership Empowerment Through Emotional Intelligence, Project Management, BehavioralInsights | Researcher | Generative AI Innovator"
+                                    }
+                                ],
+                                pages: '1-15',
+                                pdf: 'assets/pdfs/PJAIML/v3-sp3.pdf',
+                            }
+                        ]
+                    },
                 ]
             }
         ]
@@ -493,7 +629,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Neuroscience',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=500&fit=crop',
         description: 'Latest discoveries in brain science, neural networks, cognitive function, neurological disorders, and neurotechnology from leading neuroscience conferences worldwide.',
         about1: 'The PeerCite Journal of Neuroscience publishes groundbreaking brain research from international neuroscience conferences, capturing keynotes from the world\'s leading neuroscientists and clinical neurologists.',
@@ -593,7 +729,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Globalization & Education',
         category: 'Social Sciences',
         categoryFilter: 'social',
-        badge: 'Social Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
         description: 'Latest discoveries in brain science, neural networks, cognitive function, neurological disorders, and neurotechnology from leading neuroscience conferences worldwide.',
         about1: 'The PeerCite Journal of Globalization, Societies and Education publishes high-quality peer-reviewed research in the field.',
@@ -735,7 +871,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Agriculture & Food',
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
-        badge: 'Science & Tech',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
         abbr: 'AF',
         description: 'PeerCite Journal of Agriculture and Food publishes high-quality peer-reviewed research in the field.',
@@ -863,7 +999,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Pharmaceutical Sciences',
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
-        badge: 'Science & Tech',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
         abbr: 'PS',
         description: 'PeerCite Journal of Pharmaceutical Sciences publishes high-quality peer-reviewed research in the field.',
@@ -991,7 +1127,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Applied Chemistry',
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
-        badge: 'Science & Tech',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
         abbr: 'AC',
         description: 'PeerCite Journal of Applied Chemistry publishes high-quality peer-reviewed research in the field.',
@@ -1091,7 +1227,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Quantum Science & Tech',
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
-        badge: 'Science & Tech',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop',
         abbr: 'QST',
         description: 'Peer-reviewed research in quantum science and technology from global academic contributors.',
@@ -1155,7 +1291,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Surgery & Medicine',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop',
         abbr: 'SM',
         description: 'Peer-reviewed research in surgery and medicine from global academic contributors.',
@@ -1277,9 +1413,39 @@ const JOURNALS_DATA = {
                                     { name: 'K. Santhosh Kumar', aff: 'MS GENERAL SURGERY' },
                                     { name: 'Jagadish Guptha', aff: 'MS GENERAL SURGERY' }
                                 ],
-                                abstract: 'Testicular germ cell tumors (TGCTs) are the most common solid malignancies in young men and are highly curable with stage-adapted multimodal therapy (Singla et al., 2025; Di Costanzo et al., 2025; Feldman et al., 2008; Gilligan et al., 2019). Mixed germ cell tumors (MGCTs), containing both seminomatous and non-seminomatous elements, often behave aggressively and are treated as non-seminoma (Singla et al., 2025; Gilligan et al., 2019; Chen et al., 2018). Discontinuous spermatic cord involvement has emerged as a distinctive adverse pathological feature linked to advanced stage (Pena et al., 2021; Alì et al., 2020; Sanfrancesco et al., 2018; Portillo, Rais-Bahrami and Magi-Galluzzi, 2022; Verrill et al., 2017).',
                                 pages: '1-7',
                                 pdf: 'assets/pdfs/PJSM/v4-i1-sp-a1.pdf'
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        date: ' May 20, 2026',
+                        title: 'Bilateral Gluteal Tuberous Xanthomas in a Young Male with Suspected Familial Hypercholesterolemia and Severe Aortic Stenosis: A Case Report',
+                        articles: [
+                            {
+                                id: 'v4-i2-sp-a2',
+                                title: 'Bilateral Gluteal Tuberous Xanthomas in a Young Male with Suspected Familial Hypercholesterolemia and Severe Aortic Stenosis: A Case Report',
+                                authors: [
+                                    {
+                                        name: "K . Santhosh kumar",
+                                        aff: "MS GENERAL SURGERY"
+                                    },
+                                    {
+                                        name: "Ankit D. Chinchulkar",
+                                        aff: "MS GENERAL SURGERY"
+                                    },
+                                    {
+                                        name: "V.S.S.V Aditya",
+                                        aff: "MS GENERAL SURGERY"
+                                    },
+                                    {
+                                        name: "Jagadish Guptha",
+                                        aff: "MS GENERAL SURGERY"
+                                    }
+                                ],
+                                pages: '1-8',
+                                pdf: 'assets/pdfs/PJSM/v4-i2-sp-a2.pdf'
                             }
                         ]
                     }
@@ -1293,7 +1459,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Environmental Sciences',
         category: 'Environmental Sciences',
         categoryFilter: 'environmental',
-        badge: 'Environmental Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1534778708147-0dfa1754a1d0?w=800&h=500&fit=crop', abbr: 'ES',
         description: 'Peer-reviewed research in environmental science from global academic contributors.',
         about1: 'Research on climate change, ecological sustainability, and environmental policy from global environmental summits.',
@@ -1390,7 +1556,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Obstetrics & Gynecology',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop',
         abbr: 'OBG',
         description: 'Peer-reviewed research in obstetrics and gynecology from around the world.',
@@ -1511,7 +1677,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Cell Biology',
         category: 'Life Sciences',
         categoryFilter: 'life',
-        badge: 'Life Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop',
         abbr: 'CB',
         description: 'PeerCite Journal of Cell Biology is a leading international peer-reviewed journal that publishes high-quality research in all areas of cell biology and related fields.',
@@ -1612,7 +1778,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Cardio Biology',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&h=500&fit=crop',
         abbr: 'CVB',
         description: 'Peer-reviewed research in cardio biology from global academic contributors.',
@@ -1716,7 +1882,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Dermatology & Cosmetics',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&h=500&fit=crop',
         abbr: 'DC',
         description: 'Peer-reviewed research in dermatology and cosmetics from global academic contributors.',
@@ -1824,7 +1990,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Nanostructured & Green Materials',
         category: 'Environmental Sciences',
         categoryFilter: 'environmental',
-        badge: 'Environmental Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=500&fit=crop',
         abbr: 'NGM',
         description: 'Peer-reviewed research in nanostructured and green materials from global academic contributors.',
@@ -1928,7 +2094,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Advanced Dental Care',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=500&fit=crop',
         abbr: 'ADC',
         description: 'Peer-reviewed research in advanced dental care from global academic contributors.',
@@ -2014,7 +2180,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Pediatrics',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=800&h=500&fit=crop',
         abbr: 'PED',
         description: 'Peer-reviewed research in pediatrics from global academic contributors.',
@@ -2130,7 +2296,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Entrepreneurship & Business',
         category: 'Social Sciences',
         categoryFilter: 'social',
-        badge: 'Social Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop',
         abbr: 'EBI',
         description: 'PeerCite Journal of Entrepreneurship and Business Innovations provides a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on entrepreneurship and business innovations. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
@@ -2222,7 +2388,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Microbiology & Infectious Diseases',
         category: 'Life Sciences',
         categoryFilter: 'life',
-        badge: 'Life Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop',
         abbr: 'MID',
         description: 'Peer-reviewed research in Microbiology and Infectious Diseases from global academic contributors.',
@@ -2320,7 +2486,7 @@ const JOURNALS_DATA = {
         shortTitle: 'Diagnostic Pathology',
         category: 'Medical Sciences',
         categoryFilter: 'medical',
-        badge: 'Medical Sciences',
+        badge: 'ISSN: XXXX-XXXX',
         image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop',
         abbr: 'DP',
         description: 'Peer-reviewed research in Diagnostic Pathology from global academic contributors.',
@@ -2429,8 +2595,8 @@ const otherJournalIds = [
     'fisheries-aquatic-studies'
 ];
 const defaultOtherJournals = {
-    'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'Social Sciences', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
-    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'Environmental Sciences', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
+    'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'ISSN: XXXX-XXXX', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
+    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'ISSN: XXXX-XXXX', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
 };
 Object.keys(defaultOtherJournals).forEach(id => {
     const base = defaultOtherJournals[id];
