@@ -1416,6 +1416,36 @@ ul {
     /* text-shadow: 0 1px 8px rgb(255, 255, 255); */
 }
 
+/* Hero Crossref Badge */
+.hero-crossref-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 1.5rem;
+    padding: 10px 24px 10px 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    animation: heroFadeIn 1s ease 0.4s both;
+}
+
+.hero-crossref-badge span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-crossref-logo {
+    height: 42px;
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
 /* Hero Arrows */
 .hero-arrow {
     position: absolute;
@@ -2090,8 +2120,60 @@ ul {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0f1626;
     padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-indexing-strip {
+    background: #151e32;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-indexing-strip .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-indexing-strip .container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+.footer-indexing-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-indexing-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-indexing-logo {
+    height: 36px;
+    width: auto;
+    border-radius: 4px;
+    filter: brightness(0.9) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.footer-indexing-logo:hover {
+    filter: brightness(1) contrast(1.1);
 }
 
 .footer-bottom .container {
@@ -3009,13 +3091,21 @@ ul {
 .indexing-logos {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .indexing-logos span {
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 0.8rem;
-    border-radius: var(--radius-full);
+    border-radius: 50px;
     font-size: 0.75rem;
+}
+
+.indexing-logo-img {
+    height: 24px;
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
 }
 
 /* ==================== RESPONSIVE ==================== */

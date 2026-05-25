@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Add Journal
             searchData.push({
                 title: journal.title,
-                url: `journal.html?id=${journal.id}`,
+                url: `/${journal.id}`,
                 category: "Journal",
                 icon: "bx bx-book",
                 type: "journal"

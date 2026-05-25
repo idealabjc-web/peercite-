@@ -184,7 +184,7 @@ function toggleIssue(header) {
 
             const journalLink = document.getElementById('journal-link');
             if (journalLink) {
-                journalLink.href = `journal.html?id=${journalId}`;
+                journalLink.href = `/${journalId}`;
                 journalLink.textContent = journal.shortTitle;
             }
         }

@@ -156,35 +156,35 @@ const JOURNALS_DATA = {
                             {
                                 id: 'v3-i2-a2',
                                 title: 'The Pursuit of External validation',
-                                authors: [ { name: "Dr. Ruchi Mishra Sharma" } ],
+                                authors: [{ name: "Dr. Ruchi Mishra Sharma" }],
                                 pages: '624-629',
                                 pdf: 'assets/pdfs/PJMH/v3-i2-a2.pdf'
                             },
                             {
                                 id: 'v3-i3-a3',
                                 title: 'Rethinking the Human Mind: How AI Can Revolutionize Mental Health and Empower Our True Potential',
-                                authors: [ { name: "Naomi Riley" } ],
+                                authors: [{ name: "Naomi Riley" }],
                                 pages: '684-686',
                                 pdf: 'assets/pdfs/PJMH/v3-i3-a3.pdf'
                             },
                             {
                                 id: 'v3-i4-si-a4',
                                 title: 'A Concise History and Examination of Trauma',
-                                authors: [ { name: "Vana McCreary" } ],
+                                authors: [{ name: "Vana McCreary" }],
                                 pages: '630-636',
                                 pdf: 'assets/pdfs/PJMH/v3-i4-si-a4.pdf'
                             },
                             {
                                 id: 'v3-i5-a5',
                                 title: 'Exploring the effects of Game-based activities on spatial-temporal reasoning in Children aged 6 to 11 years',
-                                authors: [ { name: "Ann Johanna Sam", aff: "B.Sc Psychology Honors" } ],
+                                authors: [{ name: "Ann Johanna Sam", aff: "B.Sc Psychology Honors" }],
                                 pages: '706-717',
                                 pdf: 'assets/pdfs/PJMH/v3-i5-a5.pdf'
                             },
                             {
                                 id: 'v3-i6-a6',
                                 title: 'Pixelated Love: Unmasking Pink Parasites and Hidden Swans in Modern Relationships',
-                                authors: [ { name: "Shimul Rajput", aff: "Registered psychotherapist" } ],
+                                authors: [{ name: "Shimul Rajput", aff: "Registered psychotherapist" }],
                                 pages: '718-725',
                                 pdf: 'assets/pdfs/PJMH/v3-i6-a6.pdf'
                             }
@@ -204,7 +204,7 @@ const JOURNALS_DATA = {
                             {
                                 id: 'v4-i1-a1',
                                 title: 'Mental Health Diversity and Integrative Recovery: A Lived-Experience Case Study of Voluntary, Trauma-Informed, and Culturally Responsive Care',
-                                authors: [ { name: "Dr. Letitia Antoinette", aff: "Founder/President, Letitia Antoinette World University" } ],
+                                authors: [{ name: "Dr. Letitia Antoinette", aff: "Founder/President, Letitia Antoinette World University" }],
                                 pages: '736-744',
                                 pdf: 'assets/pdfs/PJMH/v4-i1-a1.pdf'
                             }
@@ -321,41 +321,6 @@ const JOURNALS_DATA = {
                     }
                 ]
             },
-            // {
-            //     volume: 2,
-            //     year: 2024,
-            //     issues: [
-            //         {
-            //             issue: 1,
-            //             title: 'Global Women Leaders Forum',
-            //             date: 'March 2024',
-            //             articles: [
-            //                 {
-            //                     id: 'wl-v2-i1-a1',
-            //                     title: 'Women Leadership in Emerging Economies',
-            //                     authors: 'Dr. Fatima Al-Hassan, Dr. Grace Okonkwo',
-            //                     pages: '1-30',
-            //                     pdf: 'assets/pdfs/./pdfs/womens-leadership/v2-i1-a1.pdf',
-            //                 },
-            //             ]
-            //         },
-            //         {
-            //             issue: 2,
-            //             title: 'Inaugural Issue',
-            //             date: 'March 2023',
-            //             articles: [
-            //                 {
-            //                     id: 'wl-v2-i1-a2',
-            //                     title: 'Digital Leadership and Remote Teams',
-            //                     authors: 'Dr. Anna Kowalski',
-            //                     pages: '31-48',
-            //                     pdf: 'assets/pdfs/./pdfs/womens-leadership/v2-i1-a2.pdf',
-            //                 }
-            //             ]
-            //         }
-            //     ]
-            // }
-            },
             {
                 volume: 3,
                 year: 2025,
@@ -368,7 +333,7 @@ const JOURNALS_DATA = {
                             {
                                 id: 'v3-i1-a1',
                                 title: 'Rewriting the Narrative: Midlife Career Transitions and the Shift from Hustle to Purpose',
-                                authors: [ { name: "Jennifer Warfield", aff: "Founder, Speaker, Consultant" } ],
+                                authors: [{ name: "Jennifer Warfield", aff: "Founder, Speaker, Consultant" }],
                                 pages: '1136-1139',
                                 pdf: 'assets/pdfs/PJWL/v3-i1-a1.pdf'
                             }
@@ -2678,7 +2643,7 @@ window.INPRESS_DATA = INPRESS_DATA;
     const otherGrid = document.getElementById('other-journals-grid');
     if (otherGrid) {
         otherGrid.innerHTML = otherJournals.map(j => `
-            <a href="journal.html?id=${j.id}" class="other-journal-card">
+            <a href="/${j.id}" class="other-journal-card">
                 <div class="other-journal-img">
                     <img src="${j.image}" alt="${j.title}" loading="lazy">
                 </div>

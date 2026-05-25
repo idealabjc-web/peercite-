@@ -91,8 +91,7 @@
         return new URLSearchParams(window.location.search).get('id') || journalSlug;
     };
     window.PEERCITE.journalURL = function (slug) {
-        var c = SLUG_TO_CODE[slug];
-        return c ? '/' + c : '/journal?id=' + slug;
+        return 'journal.html?id=' + slug;
     };
     window.PEERCITE.pdfURL = function (slug, articleId) {
         var c = SLUG_TO_CODE[slug];

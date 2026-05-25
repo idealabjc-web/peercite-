@@ -1292,7 +1292,7 @@ const JOURNALS_DATA = {
         category: 'Medical Sciences',
         categoryFilter: 'medical',
         badge: 'ISSN: XXXX-XXXX',
-        image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop',
+        image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&h=500&fit=crop',
         abbr: 'SM',
         description: 'Peer-reviewed research in surgery and medicine from global academic contributors.',
         about1: 'The PeerCite Journal of Surgery and Medicine publishes high-quality peer-reviewed research in the field.',
@@ -2710,15 +2710,15 @@ window.INPRESS_DATA = INPRESS_DATA;
     renderVolumesAndIssues(journal);
 
     // ---- OTHER JOURNALS ----
-    const otherJournals = Object.values(JOURNALS_DATA)
-        .filter(j => j.id !== journal.id)
+    const otherJournals = Object.entries(JOURNALS_DATA)
+        .filter(([slug, j]) => j.id !== journal.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 4);
 
     const otherGrid = document.getElementById('other-journals-grid');
     if (otherGrid) {
-        otherGrid.innerHTML = otherJournals.map(j => `
-            <a href="journal.html?id=${j.id}" class="other-journal-card">
+        otherGrid.innerHTML = otherJournals.map(([slug, j]) => `
+            <a href="journal.html?id=${slug}" class="other-journal-card">
                 <div class="other-journal-img">
                     <img src="${j.image}" alt="${j.title}" loading="lazy">
                 </div>

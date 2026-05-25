@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PeerCite Publishers - In Press Page Renderer
  */
 
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const loadPage = () => {
         if (!window.INPRESS_DATA) {
-            console.log("ΓÅ│ Waiting for data...");
+            console.log("GŦ Waiting for data...");
             setTimeout(loadPage, 100);
             return;
         }

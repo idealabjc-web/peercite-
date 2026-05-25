@@ -130,7 +130,32 @@
 
 
 # ----------------------------------------------------------------
+/mental-health              /journal.html?id=mental-health              200
+/womens-leadership          /journal.html?id=womens-leadership          200
+/ai-machine-learning        /journal.html?id=ai-machine-learning        200
+/neuroscience               /journal.html?id=neuroscience               200
+/globalization              /journal.html?id=globalization              200
+/agriculture-food           /journal.html?id=agriculture-food           200
+/pharmaceutical-sciences    /journal.html?id=pharmaceutical-sciences    200
+/applied-chemistry          /journal.html?id=applied-chemistry          200
+/quantum-science            /journal.html?id=quantum-science            200
+/surgery-medicine           /journal.html?id=surgery-medicine           200
+/environmental-sciences     /journal.html?id=environmental-sciences     200
+/obstetrics-gynecology      /journal.html?id=obstetrics-gynecology      200
+/cell-biology               /journal.html?id=cell-biology               200
+/cardio-biology             /journal.html?id=cardio-biology             200
+/dermatology-cosmetics      /journal.html?id=dermatology-cosmetics      200
+/nanostructured-materials   /journal.html?id=nanostructured-materials   200
+/dental-care                /journal.html?id=dental-care                200
+/pediatrics                 /journal.html?id=pediatrics                 200
+/entrepreneurship           /journal.html?id=entrepreneurship           200
+/microbiology               /journal.html?id=microbiology               200
+/diagnostic-pathology       /journal.html?id=diagnostic-pathology       200
+/metaphysics                /journal.html?id=metaphysics                200
+/fisheries-aquatic-studies  /journal.html?id=fisheries-aquatic-studies  200
+
 # 4. SPA FALLBACK — serves index.html for any unmatched route
 #    Keep this LAST.
 # ----------------------------------------------------------------
 /*              /index.html         200
+
