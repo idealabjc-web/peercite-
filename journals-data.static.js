@@ -1401,10 +1401,10 @@ const JOURNALS_DATA = {
             'Green Technologies & Circular Economy'
         ],
         metrics: [
-            { name: 'IF', value: '9.542' },
-            { name: 'CiteScore', value: '10.3' },
-            { name: 'SJR', value: '2.1' },
-            { name: 'SNIP', value: '1.8' }
+            { value: 'ES', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1501,10 +1501,10 @@ const JOURNALS_DATA = {
             'Women\'s Health Policy'
         ],
         metrics: [
-            { name: 'IF', value: '8.995' },
-            { name: 'CiteScore', value: '9.5' },
-            { name: 'SJR', value: '1.8' },
-            { name: 'SNIP', value: '1.6' }
+            { value: 'OBG', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1623,10 +1623,10 @@ const JOURNALS_DATA = {
             'Extracellular Matrix and Cell Adhesion'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'CB', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1727,10 +1727,10 @@ const JOURNALS_DATA = {
             'Preventive Cardiology'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'CVB', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1829,10 +1829,10 @@ const JOURNALS_DATA = {
             'Wound Healing'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'DC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1939,10 +1939,10 @@ const JOURNALS_DATA = {
             'Green Technology'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'NGM', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2034,10 +2034,10 @@ const JOURNALS_DATA = {
             'Dental Marketing',
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'ADC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2120,10 +2120,10 @@ const JOURNALS_DATA = {
             'Pediatric Neurology',
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'PED', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2233,10 +2233,10 @@ const JOURNALS_DATA = {
             'Entrepreneurship',
             'Business'],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '12.345' },
-            { name: 'SJR', value: '12.345' },
-            { name: 'SNIP', value: '12.345' },
+            { value: 'EBI', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2338,10 +2338,10 @@ const JOURNALS_DATA = {
             'Microbial Forensics and Biosecurity'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '12.345' },
-            { name: 'SJR', value: '12.345' },
-            { name: 'SNIP', value: '12.345' },
+            { value: 'MID', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2436,10 +2436,10 @@ const JOURNALS_DATA = {
             'Diagnostic Ultrasonography'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '12.345' },
-            { name: 'SJR', value: '12.345' },
-            { name: 'SNIP', value: '12.345' },
+            { value: 'DP', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2612,8 +2612,8 @@ window.INPRESS_DATA = INPRESS_DATA;
     const metricsEl = document.getElementById('journal-metrics');
     metricsEl.innerHTML = journal.metrics.map(m => `
         <div class="metric">
-            <span class="metric-value">${m.value}</span>
-            <span class="metric-label">${m.label}</span>
+            <span class="metric-value">${m.value || ''}</span>
+            <span class="metric-label">${m.label || m.name || ''}</span>
         </div>
     `).join('');
 

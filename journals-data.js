@@ -141,6 +141,168 @@ const JOURNALS_DATA = {
                                 pdf: 'assets/pdfs/PJMH/v2-i2-a2.pdf',
                             }
                         ]
+                    },
+                    {
+                        issue: 3,
+                        title: 'Overcoming Pre-Set Identities to Achieve AuthenticSelf-Awareness',
+                        date: ' June 11, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i3-a3',
+                                authors: [
+                                    {
+                                        name: "Al West",
+                                        aff: "Randall University Library, USA"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/PJMH/v2-i3-a3.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 4,
+                        title: 'Strategies for Continuous Self-Improvement',
+                        date: 'July 16, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i4-a4',
+                                authors: [
+                                    {
+                                        name: "Al West",
+                                        aff: "Randall University Library, USA"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/PJMH/v2-i4-a4.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 5,
+                        title: 'Psychology and Sacred Geometry: Impact on Mental Health',
+                        date: 'July 20, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i5-a5',
+                                authors: [
+                                    {
+                                        name: "Kusum Gandhi Vig",
+                                        aff: "Counselling Psychologist, Certified NLP Trainer, Enneagram Master Coach, Author: Trinity-Mastering the Integrated Self"
+                                    }
+                                ],
+                                pages: '1-6',
+                                pdf: 'assets/pdfs/PJMH/v2-i5-a5.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 6,
+                        title: 'Navigating the Landscape of Anxiety and Stress: Embracing Personal Growth and Empowerment',
+                        date: 'September 03, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i6-a6',
+                                authors: [
+                                    {
+                                        name: "Parveen Smith",
+                                        aff: "Mentor / Coach / Trainer / Global Speaker"
+                                    }
+                                ],
+                                pages: '1-9',
+                                pdf: 'assets/pdfs/PJMH/v2-i6-a6.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 7,
+                        title: 'How to Leverage Your Mindset to Cultivate a Life of Significance and Satisfaction in Order to Discover Your Purpose',
+                        date: 'October 15, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i7-a7',
+                                authors: [
+                                    {
+                                        name: "Deborah Dickinson",
+                                        aff: "Motivational Speaker, Mindset Life Coach, The Feminine Warrior"
+                                    }
+                                ],
+                                pages: '1-8',
+                                pdf: 'assets/pdfs/PJMH/v2-i7-a7.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 8,
+                        title: 'Mapping Inpatient Psychiatric Environments: Exploring the Intersection of Trauma, Recovery, and the Geographyof Psychiatric Spaces',
+                        date: 'September 09, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i8-a8',
+                                authors: [
+                                    {
+                                        name: "Ella Asnin",
+                                        aff: "Receiving a dual degree Masters in Science in Global Mental Health in London, from Kings College and LSHTM"
+                                    }
+                                ],
+                                pages: '1-9',
+                                pdf: 'assets/pdfs/PJMH/v2-i8-a8.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 9,
+                        title: 'Advanced  thinking  on  Trauma:  Victims  of Crime in the Mental Health Context',
+                        date: 'November14, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i9-a9',
+                                authors: [
+                                    {
+                                        name: "Mary Catherine McKenzie",
+                                        aff: "MA  Developmental  Psychopathology; MA  ICM;  BA  (Psych,  soc);  B  NursingPSYCHOLOGIST."
+                                    }
+                                ],
+                                pages: '1-8',
+                                pdf: 'assets/pdfs/PJMH/v2-i9-a9.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 10,
+                        title: 'Reversing Mental Health & Chronic Stress Related Diseases',
+                        date: 'October 31, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i10-a10',
+                                authors: [
+                                    {
+                                        name: "Dr Elsa Wagdy",
+                                        aff: "PhDx2, IMD, DNM, MHM, MA, MBA"
+                                    }
+                                ],
+                                pages: '1-22',
+                                pdf: 'assets/pdfs/PJMH/v2-i10-a10.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 11,
+                        title: 'Experiencing Bipolar Disorder: An Individual\'s Account of Diagnosis and Rehabilitation',
+                        date: 'December 18, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i11-a11',
+                                authors: [
+                                    {
+                                        name: "Nicole S Brown",
+                                        aff: "Author and Educator"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/PJMH/v2-i11-a11.pdf',
+                            }
+                        ]
                     }
                 ]
             },
@@ -235,6 +397,96 @@ const JOURNALS_DATA = {
                                 ],
                                 pages: '1-12',
                                 pdf: 'assets/pdfs/PJMH/v3-i5-a5.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 6,
+                        title: 'The Power of Authenticity: A Case Study on Its Role in Fostering Self-Awareness and Personal Empowerment',
+                        date: 'January 07, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i6-a6',
+                                authors: [
+                                    {
+                                        name: "Dr. Ruchi Mishra Sharma",
+                                        aff: "Trauma informed therapist MBBS, MSOphthalmology"
+                                    }
+                                ],
+                                pages: '1-7',
+                                pdf: 'assets/pdfs/PJMH/v3-i6-a6.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 7,
+                        title: 'Revolutionizing  Mental  Health  Care:  A Case Study on Compassionate and Person-Centered Approaches',
+                        date: 'January 25, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i7-a7',
+                                authors: [
+                                    {
+                                        name: "Fatima Zaman",
+                                        aff: "Mental Health, Training, Treatment, FRSA"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/PJMH/v3-i7-a7.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 8,
+                        title: 'The Importance of Incorporating Risk Management and Assessing for Perilous Traits During Job Recruitment Interviews, Performance Appraisals, and Post-critical Incidents.',
+                        date: ' April 04, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i8-a8',
+                                authors: [
+                                    {
+                                        name: "Mary Catherine McKenzie",
+                                        aff: "MA Developmental Psychopathology; MA ICM; BA (Psych, soc); B Nursing PSYCHOLOGIST."
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/PJMH/v3-i8-a8.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 9,
+                        title: 'Spell Out Grief: A Journey Through Loss and Love',
+                        date: 'November 04, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i9-a9',
+                                authors: [
+                                    {
+                                        name: "Donnette Martelle",
+                                        aff: "Mental Health Counselor GHMS MA Counseling Psychology"
+                                    }
+                                ],
+                                pages: '1-4',
+                                pdf: 'assets/pdfs/PJMH/v3-i9-a9.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 10,
+                        title: 'The Recipe for Wellbeing: An Integral Model to Enhance Happiness and Wellbeing in Personal and Professional Life',
+                        date: 'December 11, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i10-a10',
+                                authors: [
+                                    {
+                                        name: "Ignacio Bonasa Alzuria",
+                                        aff: "Postdoctoral Studies in Wellbeing & Organizational Transformation – Universidad Claustro Humanista, Mexico"
+                                    }
+                                ],
+                                pages: '1-7',
+                                pdf: 'assets/pdfs/PJMH/v3-i10-a10.pdf',
                             }
                         ]
                     }
@@ -383,6 +635,48 @@ const JOURNALS_DATA = {
             },
             {
                 volume: 2,
+                year: 2024,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Pathways to Equality: Mapping Gender Wage Equityby State and Industry',
+                        date: 'March 25, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Ronald Sowadski",
+                                        aff: "Business Consultant, Grand Canyon University, Arizona, United States"
+                                    }
+                                ],
+                                pages: '1-10',
+                                pdf: 'assets/pdfs/PJWL/v2-i1-a1.pdf',
+                            }
+                        ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Roles of Women in Today’s Society',
+                        date: 'July 30, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Zsa Zsa Tudos",
+                                        aff: "Esoteric Knowledge Expert, PhoenixInitiated Master of Egyptian Knowledge,Philosopher, Author, Educator"
+                                    }
+                                ],
+                                pages: '1-10',
+                                pdf: 'assets/pdfs/PJWL/v3-i2-a2.pdf',
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 3,
                 year: 2025,
                 issues: [
                     {
@@ -402,7 +696,25 @@ const JOURNALS_DATA = {
                                 pdf: 'assets/pdfs/PJWL/v2-i1-a1.pdf',
                             },
                         ]
-                    }
+                    },
+                    {
+                        issue: 2,
+                        title: 'Emotional Intelligence and NeuroscientificApproaches in Women’s Leadership',
+                        date: 'December 05, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i2-a2',
+                                authors: [
+                                    {
+                                        name: "Dr. Pelin Vardarlier",
+                                        aff: "Human Resources Management & Social Media Strategy Consultant"
+                                    }
+                                ],
+                                pages: '1-10',
+                                pdf: 'assets/pdfs/PJWL/v3-i2-a2.pdf',
+                            },
+                        ]
+                    },
                 ]
             }
         ]
@@ -1476,10 +1788,10 @@ const JOURNALS_DATA = {
             'Green Technologies & Circular Economy'
         ],
         metrics: [
-            { name: 'IF', value: '9.542' },
-            { name: 'CiteScore', value: '10.3' },
-            { name: 'SJR', value: '2.1' },
-            { name: 'SNIP', value: '1.8' }
+            { value: 'ES', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1576,10 +1888,10 @@ const JOURNALS_DATA = {
             'Women\'s Health Policy'
         ],
         metrics: [
-            { name: 'IF', value: '8.995' },
-            { name: 'CiteScore', value: '9.5' },
-            { name: 'SJR', value: '1.8' },
-            { name: 'SNIP', value: '1.6' }
+            { value: 'OBG', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1698,10 +2010,10 @@ const JOURNALS_DATA = {
             'Extracellular Matrix and Cell Adhesion'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'CB', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1802,10 +2114,10 @@ const JOURNALS_DATA = {
             'Preventive Cardiology'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'CVB', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -1904,10 +2216,10 @@ const JOURNALS_DATA = {
             'Wound Healing'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'DC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2014,10 +2326,10 @@ const JOURNALS_DATA = {
             'Green Technology'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'NGM', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2109,10 +2421,10 @@ const JOURNALS_DATA = {
             'Dental Marketing',
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'ADC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2195,10 +2507,10 @@ const JOURNALS_DATA = {
             'Pediatric Neurology',
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '15.2' },
-            { name: 'SJR', value: '2.5' },
-            { name: 'SNIP', value: '2.1' }
+            { value: 'PED', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2308,10 +2620,10 @@ const JOURNALS_DATA = {
             'Entrepreneurship',
             'Business'],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '12.345' },
-            { name: 'SJR', value: '12.345' },
-            { name: 'SNIP', value: '12.345' },
+            { value: 'EBI', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2413,10 +2725,10 @@ const JOURNALS_DATA = {
             'Microbial Forensics and Biosecurity'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '12.345' },
-            { name: 'SJR', value: '12.345' },
-            { name: 'SNIP', value: '12.345' },
+            { value: 'MID', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2511,10 +2823,10 @@ const JOURNALS_DATA = {
             'Diagnostic Ultrasonography'
         ],
         metrics: [
-            { name: 'IF', value: '12.345' },
-            { name: 'CiteScore', value: '12.345' },
-            { name: 'SJR', value: '12.345' },
-            { name: 'SNIP', value: '12.345' },
+            { value: 'DP', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: [
             {
@@ -2687,8 +2999,8 @@ window.INPRESS_DATA = INPRESS_DATA;
     const metricsEl = document.getElementById('journal-metrics');
     metricsEl.innerHTML = journal.metrics.map(m => `
         <div class="metric">
-            <span class="metric-value">${m.value}</span>
-            <span class="metric-label">${m.label}</span>
+            <span class="metric-value">${m.value || ''}</span>
+            <span class="metric-label">${m.label || m.name || ''}</span>
         </div>
     `).join('');
 
