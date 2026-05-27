@@ -158,21 +158,21 @@ const JOURNALS_DATA = {
                                 title: 'The Pursuit of External validation',
                                 authors: [{ name: "Dr. Ruchi Mishra Sharma" }],
                                 pages: '624-629',
-                                pdf: 'assets/pdfs/PJMH/v3-i2-a2.pdf'
+                                pdf: 'assets/pdfs/PJMH/v3-i1-a1.pdf'
                             },
                             {
                                 id: 'v3-i3-a3',
                                 title: 'Rethinking the Human Mind: How AI Can Revolutionize Mental Health and Empower Our True Potential',
                                 authors: [{ name: "Naomi Riley" }],
                                 pages: '684-686',
-                                pdf: 'assets/pdfs/PJMH/v3-i3-a3.pdf'
+                                pdf: 'assets/pdfs/PJMH/v3-i2-a2.pdf'
                             },
                             {
                                 id: 'v3-i4-si-a4',
                                 title: 'A Concise History and Examination of Trauma',
                                 authors: [{ name: "Vana McCreary" }],
                                 pages: '630-636',
-                                pdf: 'assets/pdfs/PJMH/v3-i4-si-a4.pdf'
+                                pdf: 'assets/pdfs/PJMH/v3-i3-si-a3.pdf'
                             },
                             {
                                 id: 'v3-i5-a5',
@@ -521,7 +521,7 @@ const JOURNALS_DATA = {
                                     { name: "Jennifer Williams" }
                                 ],
                                 pages: '1-15',
-                                pdf: 'assets/pdfs/PJAIML/Sarah Dyson Article (1).pdf',
+                                pdf: 'assets/pdfs/PJAIML/v3-sp1.pdf',
                             }
                         ]
                     },
@@ -2361,7 +2361,7 @@ const JOURNALS_DATA = {
                                     { name: 'Rugaia MEl-Salem', aff: 'Department of Zoology, Faculty of Science, University of Sebha, Libya' }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/PJMD/v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/PJMB/v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -2376,7 +2376,7 @@ const JOURNALS_DATA = {
                                     { name: 'Ardhendu Kumar Mandal', aff: 'Central Instrumentation Division,CSIR-Indian Institute of Chemical Sciences,Biology, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/PJMD/v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/PJMB/v1-i2-a2.pdf',
                             }
                         ]
                     }
@@ -2397,7 +2397,7 @@ const JOURNALS_DATA = {
                                     { name: 'Christiana J', aff: 'Department of Microbiology, University College Cork, Cork, Ireland.' }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/PJMD/v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/PJMB/v2-i1-a1.pdf',
                             }
                         ]
                     }

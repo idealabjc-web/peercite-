@@ -669,7 +669,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-10',
-                                pdf: 'assets/pdfs/PJWL/v3-i2-a2.pdf',
+                                pdf: 'assets/pdfs/PJWL/v2-i2-a2.pdf',
                             },
                         ]
                     }
@@ -2748,7 +2748,7 @@ const JOURNALS_DATA = {
                                     { name: 'Rugaia MEl-Salem', aff: 'Department of Zoology, Faculty of Science, University of Sebha, Libya' }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/PJMD/v1-i1-a1.pdf',
+                                pdf: 'assets/pdfs/PJMB/v1-i1-a1.pdf',
                             }
                         ]
                     },
@@ -2763,7 +2763,7 @@ const JOURNALS_DATA = {
                                     { name: 'Ardhendu Kumar Mandal', aff: 'Central Instrumentation Division,CSIR-Indian Institute of Chemical Sciences,Biology, India' }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/PJMD/v1-i2-a2.pdf',
+                                pdf: 'assets/pdfs/PJMB/v1-i2-a2.pdf',
                             }
                         ]
                     }
@@ -2784,7 +2784,7 @@ const JOURNALS_DATA = {
                                     { name: 'Christiana J', aff: 'Department of Microbiology, University College Cork, Cork, Ireland.' }
                                 ],
                                 pages: '1-4',
-                                pdf: 'assets/pdfs/PJMD/v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/PJMB/v2-i1-a1.pdf',
                             }
                         ]
                     }
