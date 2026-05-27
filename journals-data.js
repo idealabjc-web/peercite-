@@ -685,7 +685,7 @@ const JOURNALS_DATA = {
                         date: 'April 08, 2025',
                         articles: [
                             {
-                                id: 'v2-i1-a1',
+                                id: 'v3-i1-a1',
                                 authors: [
                                     {
                                         name: "Jennifer Warfield",
@@ -693,7 +693,7 @@ const JOURNALS_DATA = {
                                     }
                                 ],
                                 pages: '1-5',
-                                pdf: 'assets/pdfs/PJWL/v2-i1-a1.pdf',
+                                pdf: 'assets/pdfs/PJWL/v3-i1-a1.pdf',
                             },
                         ]
                     },
