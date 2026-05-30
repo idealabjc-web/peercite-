@@ -1184,7 +1184,7 @@ const JOURNALS_DATA = {
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
         badge: 'ISSN: XXXX-XXXX',
-        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=500&fit=crop',
         abbr: 'AF',
         description: 'PeerCite Journal of Agriculture and Food publishes high-quality peer-reviewed research in the field.',
         about1: 'PeerCite Journal of Agriculture and Food is a peer-reviewed scientific journal that publishes original research and reviews in all areas of agriculture and food science.',
@@ -1312,7 +1312,7 @@ const JOURNALS_DATA = {
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
         badge: 'ISSN: XXXX-XXXX',
-        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        image: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&h=500&fit=crop',
         abbr: 'PS',
         description: 'PeerCite Journal of Pharmaceutical Sciences publishes high-quality peer-reviewed research in the field.',
         about1: 'PeerCite Journal of Pharmaceutical Sciences is a peer-reviewed scientific journal that publishes original research and reviews in all areas of pharmaceutical sciences.',
@@ -1440,7 +1440,7 @@ const JOURNALS_DATA = {
         category: 'Science & Technology',
         categoryFilter: 'science-tech',
         badge: 'ISSN: XXXX-XXXX',
-        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&fit=crop',
+        image: 'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=800&h=500&fit=crop',
         abbr: 'AC',
         description: 'PeerCite Journal of Applied Chemistry publishes high-quality peer-reviewed research in the field.',
         about1: 'PeerCite Journal of Applied Chemistry is a peer-reviewed scientific journal that publishes original research and reviews in all areas of applied chemistry.',
@@ -2701,7 +2701,7 @@ const JOURNALS_DATA = {
         category: 'Life Sciences',
         categoryFilter: 'life',
         badge: 'ISSN: XXXX-XXXX',
-        image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=500&fit=crop',
+        image: 'https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=800&h=500&fit=crop',
         abbr: 'MID',
         description: 'Peer-reviewed research in Microbiology and Infectious Diseases from global academic contributors.',
         about1: 'The PeerCite Journal of Microbiology and Infectious Diseases provides a platform for researchers, clinicians, and industry experts to share cutting-edge knowledge on microbiology and infectious diseases. The journal upholds rigorous scientific standards with a commitment to rapid review and publication of impactful research.',
@@ -2908,7 +2908,7 @@ const otherJournalIds = [
 ];
 const defaultOtherJournals = {
     'metaphysics': { title: 'PeerCite Journal of Metaphysics & Mystery', shortTitle: 'Metaphysics & Mystery', category: 'Social Sciences', categoryFilter: 'social', badge: 'ISSN: XXXX-XXXX', image: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&h=500&fit=crop', abbr: 'MM' },
-    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'ISSN: XXXX-XXXX', image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop', abbr: 'FAS' }
+    'fisheries-aquatic-studies': { title: 'PeerCite Journal of Fisheries and Aquatic Studies', shortTitle: 'Fisheries and Aquatic Studies', category: 'Environmental Sciences', categoryFilter: 'environmental', badge: 'ISSN: XXXX-XXXX', image: 'https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&h=500&fit=crop', abbr: 'FAS' }
 };
 Object.keys(defaultOtherJournals).forEach(id => {
     const base = defaultOtherJournals[id];
