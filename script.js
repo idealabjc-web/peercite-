@@ -128,11 +128,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Dynamically build from JOURNALS_DATA if available
     if (typeof JOURNALS_DATA !== 'undefined') {
-        Object.values(JOURNALS_DATA).forEach(journal => {
+        Object.entries(JOURNALS_DATA).forEach(([slug, journal]) => {
             // Add Journal
             searchData.push({
                 title: journal.title,
-                url: `/${journal.id}`,
+                url: `journal.html?id=${slug}`,
                 category: "Journal",
                 icon: "bx bx-book",
                 type: "journal"
