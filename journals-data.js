@@ -881,19 +881,19 @@ const JOURNALS_DATA = {
                 volume: 3,
                 year: 2025,
                 issues: [
-                    {
-                        issue: 'Special',
-                        title: 'Operational Endings, Emotional Impacts: Ethical Considerations When Project Teams Form Attachments to AI Collaborators',
-                        date: ' May 16, 2025',
-                        articles: [
-                            {
-                                id: 'v3-sp',
-                                authors: "Sarah Dyson",
-                                pages: '1-15',
-                                pdf: 'assets/pdfs/PJAIML/v3-sp1.pdf',
-                            }
-                        ]
-                    },
+                    // {
+                    //     issue: 'Special',
+                    //     title: 'Operational Endings, Emotional Impacts: Ethical Considerations When Project Teams Form Attachments to AI Collaborators',
+                    //     date: ' May 16, 2025',
+                    //     articles: [
+                    //         {
+                    //             id: 'v3-sp',
+                    //             authors: "Sarah Dyson",
+                    //             pages: '1-15',
+                    //             pdf: 'assets/pdfs/PJAIML/v3-sp1.pdf',
+                    //         }
+                    //     ]
+                    // },
                     {
                         issue: 'Special',
                         title: 'Artificial Intelligence in Healthcare: Trends,Integration, and the Future of the Clinical Workforce',
@@ -2787,6 +2787,42 @@ const JOURNALS_DATA = {
                                 pdf: 'assets/pdfs/PJMB/v2-i1-a1.pdf',
                             }
                         ]
+                    },
+                    {
+                        issue: 2,
+                        title: 'Kojic Acid : Bridging Sustainability and Innovation with Fungal Biotechnology, Applications in Cosmetics and Food Industries',
+                        date: 'August 12, 2024',
+                        articles: [
+                            {
+                                id: 'v2-i2-a2',
+                                authors: [
+                                    { name: 'Challa Yamini', aff: 'Msc Microbiology, 2021-2023, Sri Venkateswara University' }
+                                ],
+                                pages: '1-10',
+                                pdf: 'assets/pdfs/PJMB/v2-i2-a2.pdf',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                volume: 3,
+                year: 2025,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Microbial Communication In Stressful Environments: The Role Of Quorum Sensing And Biofilm Formation In Nutrient-Limited Habitats',
+                        date: 'February 17, 2025',
+                        articles: [
+                            {
+                                id: 'v3-i1-a1',
+                                authors: [
+                                    { name: 'Challa Yamini', aff: 'Msc Microbiology, 2021-2023, Sri Venkateswara University' }
+                                ],
+                                pages: '1-13',
+                                pdf: 'assets/pdfs/PJMB/v3-i1-a1.pdf',
+                            }
+                        ]
                     }
                 ]
             }
@@ -2979,7 +3015,7 @@ window.INPRESS_DATA = INPRESS_DATA;
     const journal = JOURNALS_DATA[journalId];
 
     if (!journal) {
-        window.location.href = 'publications.html';
+        window.location.href = 'index.html';
         return;
     }
 

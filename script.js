@@ -9,9 +9,17 @@ const $$ = (sel) => document.querySelectorAll(sel);
 
 /* ==================== 3D GLOBE PRELOADER ==================== */
 document.addEventListener('DOMContentLoaded', () => {
+    const isFirstVisit = !sessionStorage.getItem('preloaderShown');
+    sessionStorage.setItem('preloaderShown', 'true');
+
     const preloader = document.getElementById('preloader');
 
     if (!preloader) return;
+
+    if (!isFirstVisit) {
+        preloader.remove();
+        return;
+    }
 
     // Region hover tooltips
     const continents = document.querySelectorAll('.continent');
@@ -120,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Comprehensive searchable data
     let searchData = [
         { title: "Home", url: "index.html", category: "Page", icon: "bx bx-home", type: "static" },
-        { title: "Publications", url: "publications.html", category: "Section", icon: "bx bx-book-open", type: "static" },
+        { title: "Publications", url: "index.html#publications-filter", category: "Section", icon: "bx bx-book-open", type: "static" },
         { title: "Authors Hub", url: "authors.html", category: "Section", icon: "bx bx-feather", type: "static" },
         { title: "About Us", url: "about.html", category: "Page", icon: "bx bx-building-house", type: "static" },
         { title: "Contact", url: "contact.html", category: "Page", icon: "bx bx-envelope", type: "static" },
@@ -283,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // 3. Default search behavior
                 if (query) {
-                    window.location.href = `publications.html?q=${encodeURIComponent(query)}`;
+                    window.location.href = `index.html?q=${encodeURIComponent(query)}`;
                 }
             } else if (e.key === 'Escape') {
                 searchDropdown.classList.remove('show');
@@ -297,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const input = this.parentElement.querySelector('input');
             const query = input ? input.value.trim() : '';
             if (query) {
-                window.location.href = `publications.html?q=${encodeURIComponent(query)}`;
+                window.location.href = `index.html?q=${encodeURIComponent(query)}`;
             }
         });
     });
@@ -322,6 +330,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Handle search query from URL on the homepage
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlQuery = urlParams.get('q');
+    if (urlQuery) {
+        const journalSearch = document.getElementById('journal-search');
+        if (journalSearch) {
+            journalSearch.value = urlQuery;
+            // Trigger input event to filter the list
+            journalSearch.dispatchEvent(new Event('input'));
+            // Scroll to the filter section
+            setTimeout(() => {
+                const filterSection = document.getElementById('publications-filter');
+                if (filterSection) {
+                    filterSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }
 });
 /* =====================================================
    MOBILE SEARCH (if separate element exists)

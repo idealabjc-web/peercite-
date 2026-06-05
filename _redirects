@@ -10,7 +10,6 @@
 #    Must come before the catch-all fallback at the bottom.
 # ----------------------------------------------------------------
 /about          /about.html         200
-/publications   /publications.html  200
 /contact        /contact.html       200
 /authors        /authors.html       200
 /inpress        /inpress.html       200

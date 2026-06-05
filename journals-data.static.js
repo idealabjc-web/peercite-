@@ -2592,7 +2592,7 @@ window.INPRESS_DATA = INPRESS_DATA;
     const journal = JOURNALS_DATA[journalId];
 
     if (!journal) {
-        window.location.href = 'publications.html';
+        window.location.href = 'index.html';
         return;
     }
 

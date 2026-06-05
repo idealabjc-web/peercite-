@@ -32,6 +32,13 @@
 </head>
 
 <body>
+    <script>
+        if (sessionStorage.getItem('preloaderShown')) {
+            var style = document.createElement('style');
+            style.innerHTML = '#preloader { display: none !important; }';
+            document.head.appendChild(style);
+        }
+    </script>
 
     <!-- 3D GLOBE PRELOADER -->
     <div class="preloader" id="preloader">
@@ -143,7 +150,7 @@
                 </div>
 
                 <div class="nav-dropdown mega-dropdown">
-                    <a href="publications.html" class="nav-link">
+                    <a href="#publications-filter" class="nav-link">
                         <span>Publications</span>
                         <!-- <span class="nav-badge"></span> -->
                         <i class='bx bx-chevron-down'></i>
@@ -298,7 +305,7 @@
         </div>
         <nav class="mobile-nav">
             <a href="index.html" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
-            <a href="publications.html" class="mobile-nav-link"><i
+            <a href="#publications-filter" class="mobile-nav-link"><i
                     class='bx bx-book-open'></i><span>Publications</span></a>
             <a href="journal.html?id=womens-leadership#proceedings" class="mobile-nav-link"><i
                     class='bx bx-file'></i><span>Proceedings</span></a>
@@ -308,7 +315,7 @@
             <a href="contact.html" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
         </nav>
         <div class="mobile-menu-cta">
-            <a href="publications.html" class="btn-mobile-cta">
+            <a href="#publications-filter" class="btn-mobile-cta">
                 <i class='bx bx-book-reader'></i> Read Articles
             </a>
         </div>
@@ -368,7 +375,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a href="publications.html" class="btn-neon">Explore Journals</a>
+                    <a href="#publications-filter" class="btn-neon">Explore Journals</a>
                     <a href="#trending-journals" class="btn-glass">Trending Research</a>
                 </div>
             </div>
@@ -551,8 +558,7 @@
                             <p>Peer-reviewed research on mental wellness, psychiatric disorders, and psychological
                                 interventions from global health conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> MH Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJMH Proceedings</span>
                             </div>
                             <a href="journal.html?id=mental-health" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -571,8 +577,7 @@
                             <p>Advancing gender equity through research on women in leadership, organizational
                                 behaviour, and policy reform.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> WL Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJWL Proceedings</span>
                             </div>
                             <a href="journal.html?id=womens-leadership" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -591,8 +596,7 @@
                             <p>Advanced surgical techniques, clinical innovations, and evidence-based medical research
                                 from leading surgical conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> SM Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJSM Proceedings</span>
                             </div>
                             <a href="journal.html?id=surgery-medicine" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -611,8 +615,7 @@
                             <p>Cutting-edge AI research, deep learning breakthroughs, and machine learning applications
                                 from top technology conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> AI Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJAI Proceedings</span>
                             </div>
                             <a href="journal.html?id=ai-machine-learning" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -631,8 +634,7 @@
                             <p>Cross-cultural research on global education systems, societal transformation, and
                                 intercultural dynamics.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> GSE Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJGSE Proceedings</span>
                             </div>
                             <a href="journal.html?id=globalization" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -651,8 +653,7 @@
                             <p>Pioneering research in quantum computing, quantum communication, and next-generation
                                 technology applications.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> QST Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJQST Proceedings</span>
                             </div>
                             <a href="journal.html?id=quantum-science" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -671,8 +672,7 @@
                             <p>Research on climate change, ecological sustainability, and environmental policy from
                                 global environmental summits.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> ES Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJES Proceedings</span>
                             </div>
                             <a href="journal.html?id=environmental-sciences" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -691,8 +691,7 @@
                             <p>Women's reproductive health research, maternal care innovations, and gynecological
                                 advances from international medical conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> OG Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJOG Proceedings</span>
                             </div>
                             <a href="journal.html?id=obstetrics-gynecology" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -711,8 +710,7 @@
                             <p>Groundbreaking research on cellular mechanisms, molecular biology, and cell-based
                                 therapies from life sciences conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> CB Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJCB Proceedings</span>
                             </div>
                             <a href="journal.html?id=cell-biology" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -731,8 +729,7 @@
                             <p>Latest discoveries in brain science, neural networks, cognitive function, and
                                 neurological disorder treatments.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> NS Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJNS Proceedings</span>
                             </div>
                             <a href="journal.html?id=neuroscience" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -751,8 +748,7 @@
                             <p>Research on cardiovascular health, cardiac biology, heart disease prevention, and
                                 innovative cardiology treatments.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> CVB Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJCVB Proceedings</span>
                             </div>
                             <a href="journal.html?id=cardio-biology" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -771,8 +767,7 @@
                             <p>Advances in skin science, cosmetic dermatology, aesthetic medicine, and skin disease
                                 treatments from global conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> DC Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJDC Proceedings</span>
                             </div>
                             <a href="journal.html?id=dermatology-cosmetics" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -791,8 +786,7 @@
                             <p>Research on decentralized technology, cryptocurrency markets, DeFi, and blockchain
                                 applications across industries.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> BC Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJBC Proceedings</span>
                             </div>
                             <a href="journal.html?id=blockchain" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -811,8 +805,7 @@
                             <p>Animal health research, veterinary medicine innovations, and zoonotic disease studies
                                 from international veterinary conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> VS Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJVS Proceedings</span>
                             </div>
                             <a href="journal.html?id=veterinary-science" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -831,8 +824,7 @@
                             <p>Research on nanomaterials, sustainable green chemistry, and eco-friendly material
                                 innovations for a better future.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> NGM Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJNGM Proceedings</span>
                             </div>
                             <a href="journal.html?id=nanostructured-materials" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -851,8 +843,7 @@
                             <p>Innovations in dental technology, oral health research, dental materials science, and
                                 dental practice management.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> ADC Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJADC Proceedings</span>
                             </div>
                             <a href="journal.html?id=dental-care" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -871,8 +862,7 @@
                             <p>Child health research, pediatric medicine innovations, neonatal care, and childhood
                                 disease studies from leading conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> PED Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJPED Proceedings</span>
                             </div>
                             <a href="journal.html?id=pediatrics" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -891,8 +881,7 @@
                             <p>Agricultural innovation, food security research, sustainable farming practices, and food
                                 science from global agri-conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> AFR Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJAFR Proceedings</span>
                             </div>
                             <a href="journal.html?id=agriculture-food" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -911,8 +900,7 @@
                             <p>Drug discovery, pharmaceutical innovation, clinical pharmacology, and medication research
                                 from international pharma conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> PS Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJPS Proceedings</span>
                             </div>
                             <a href="journal.html?id=pharmaceutical-sciences" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -931,8 +919,7 @@
                             <p>Industrial chemistry applications, chemical engineering innovations, and materials
                                 chemistry research from global chemistry summits.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> AC Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJAC Proceedings</span>
                             </div>
                             <a href="journal.html?id=applied-chemistry" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -951,8 +938,7 @@
                             <p>Startup ecosystems, business innovation research, entrepreneurial leadership, and
                                 economic development insights.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> EBI Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJEBI Proceedings</span>
                             </div>
                             <a href="journal.html?id=entrepreneurship" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -971,8 +957,7 @@
                             <p>Microbial research, infectious disease studies, antimicrobial resistance, and
                                 epidemiology from global health conferences.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> MID Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJMID Proceedings</span>
                             </div>
                             <a href="journal.html?id=microbiology" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -991,8 +976,7 @@
                             <p>Advances in disease diagnosis, pathological analysis, laboratory medicine, and diagnostic
                                 technology research.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> DP Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJDP Proceedings</span>
                             </div>
                             <a href="journal.html?id=diagnostic-pathology" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -1011,8 +995,7 @@
                             <p>Driving the next wave of aquatic science through precision research, sustainable innovation,
                                 and global academic excellence.</p>
                             <div class="publication-stats">
-                                <span><i class='bx bx-calendar'></i> 2024</span>
-                                <span><i class='bx bx-file'></i> JF/AS Proceedings</span>
+                                <span><i class='bx bx-file'></i> PJJF/AS Proceedings</span>
                             </div>
                             <a href="journal.html?id=fisheries-aquatic-studies" class="publication-link">Read Journal <i
                                     class='bx bx-right-arrow-alt'></i></a>
@@ -1210,7 +1193,7 @@
                     <p>A global platform for high-impact, peer-reviewed journals across science, technology, and
                         interdisciplinary domains.</p>
                     <div class="cta-buttons">
-                        <a href="publications.html" class="btn-cta-primary">
+                        <a href="#publications-filter" class="btn-cta-primary">
                             <i class='bx bx-book-reader'></i> Browse All Articles
                         </a>
                         <a href="contact.html#partner" class="btn-cta-secondary">
@@ -1259,7 +1242,7 @@
                         <h4>Quick Links</h4>
                         <div class="footer-links">
                             <a href="index.html">Home</a>
-                            <a href="publications.html">Publications</a>
+                            <a href="#publications-filter">Publications</a>
                             <a href="authors.html">Authors Hub</a>
                             <a href="inpress.html">Inpress</a>
                             <a href="about.html">About Us</a>
