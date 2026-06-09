@@ -2603,7 +2603,7 @@ ul {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-}
+}aaaaa
 
 .publication-content h3 {
     font-size: 1rem;
@@ -8169,7 +8169,6 @@ body {
     justify-content: center;
     backdrop-filter: blur(5px);
 }
-
 .image-modal .modal-content {
     max-width: 90%;
     max-height: 90vh;
@@ -8178,12 +8177,10 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
 }
-
 @keyframes zoomIn {
     from {transform: scale(0.9); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
 }
-
 .image-modal .close-modal {
     position: absolute;
     top: 20px;
@@ -8195,7 +8192,6 @@ body {
     transition: 0.3s;
     z-index: 100001;
 }
-
 .image-modal .close-modal:hover,
 .image-modal .close-modal:focus {
     color: var(--primary);
