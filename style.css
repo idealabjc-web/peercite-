@@ -2531,6 +2531,9 @@ ul {
     overflow: hidden;
 }
 
+
+
+
 .publication-image img {
     width: 100%;
     height: 100%;
@@ -2559,15 +2562,26 @@ ul {
 /* ================= CONTENT ================= */
 
 .publication-content {
-    padding: 1rem;
+    position: relative;
+    padding: 1.5rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .publication-content h3 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 40px 1.2rem 15px 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    z-index: 5;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    box-sizing: border-box;
 }
 
 /* Limit text to avoid tall cards */
