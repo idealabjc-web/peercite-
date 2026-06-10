@@ -576,13 +576,21 @@ $$('a[href^="#"]').forEach(anchor => {
 /* ==================== AUTHORS MARQUEE ==================== */
 (function () {
     const authorsData = [
-        { name: 'Anu Ramchandran Nair',       role: 'Featured Author', img: 'assets/images/a1.png' },
-        { name: 'Donnette Martelle',           role: 'Featured Author', img: 'assets/images/a2.png' },
-        { name: 'Dr. Ignacio Bonasa Alzuria',  role: 'Featured Author', img: 'assets/images/a3.png' },
-        { name: 'Mike Ike',                    role: 'Featured Author', img: 'assets/images/a4.png' },
-        { name: 'Vana McCreary',               role: 'Featured Author', img: 'assets/images/a5.png' },
-        { name: 'Shimul Rajput',               role: 'Featured Author', img: 'assets/images/a6.png' },
-        { name: 'Ann Johanna Sam',             role: 'Featured Author', img: 'assets/images/a7.png' },
+        { name: 'Dr. Ruchi Mishra Sharma', img: 'assets/images/a1.png' },
+        { name: 'Vana McCreary', img: 'assets/images/a2.png' },
+        { name: 'Noreen Palmer', img: 'assets/images/a3.png' },
+        { name: 'Dr.Wendy Muhlahauser', img: 'assets/images/a4.png' },
+        { name: 'Deborah Dickinson', img: 'assets/images/a5.png' },
+        { name: 'Fatim Zaman', img: 'assets/images/a6.png' },
+        { name: 'Mary Catherine McKenzie', img: 'assets/images/a7.png' },
+        { name: 'Naomi Riley', img: 'assets/images/a8.png' },
+        { name: 'Kusum Gandhi Vig', img: 'assets/images/a9.png' },
+        { name: 'Michele LaFemina', img: 'assets/images/a10.png' },
+        { name: 'Nicole S Brown', img: 'assets/images/a11.png' },
+        { name: 'Parveen Smith', img: 'assets/images/a12.png' },
+        { name: 'Ai West', img: 'assets/images/a13.png' },
+        { name: 'Dr.Elsa Wagdy', img: 'assets/images/a14.png' },
+        { name: 'Ella Asnin', img: 'assets/images/a15.png' },
     ];
 
     const marqueeTrack = document.getElementById('speakers-marquee-track');
@@ -599,7 +607,7 @@ $$('a[href^="#"]').forEach(anchor => {
             </div>
             <div class="speaker-info">
                 <h4>${author.name}</h4>
-                <span>${author.role}</span>
+                <!-- <span>${author.role}</span> -->
             </div>`;
         return card;
     });
