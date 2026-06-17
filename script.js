@@ -641,16 +641,6 @@ $$('a[href^="#"]').forEach(anchor => {
 })();
 
 
-/* ===== CURSOR GLOW ===== */
-const glow = document.querySelector(".cursor-glow");
-
-if (glow) {
-    document.addEventListener("mousemove", (e) => {
-        glow.style.left = e.clientX + "px";
-        glow.style.top = e.clientY + "px";
-    });
-}
-
 /* ===== CARD 3D TILT ===== */
 // document.querySelectorAll(".journal-card").forEach(card => {
 //     card.addEventListener("mousemove", e => {
@@ -668,56 +658,189 @@ if (glow) {
 //         card.style.transform = "";
 //     });
 // });
-/* ==================== 3D ANIMATED BACKGROUND ==================== */
+
+/* ==================== CITATION NETWORK CANVAS BACKGROUND ==================== */
+class CitationNetwork {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.particles = [];
+        this.resize();
+        this.init();
+        
+        window.addEventListener('resize', () => this.resize());
+    }
+
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        // Balance node count with performance across screen sizes
+        this.maxParticles = Math.min(80, Math.floor((this.canvas.width * this.canvas.height) / 22000));
+        if (this.particles.length > 0) this.init();
+    }
+
+    init() {
+        this.particles = [];
+        for (let i = 0; i < this.maxParticles; i++) {
+            // Assign a depth layer (0 = background/faint, 1 = mid, 2 = foreground/prominent)
+            const depth = Math.floor(Math.random() * 3);
+            let radius, baseOpacity, speedFactor;
+            
+            if (depth === 0) {
+                radius = Math.random() * 1.0 + 1.0;
+                baseOpacity = Math.random() * 0.12 + 0.08;
+                speedFactor = 0.3;
+            } else if (depth === 1) {
+                radius = Math.random() * 1.5 + 2.0;
+                baseOpacity = Math.random() * 0.15 + 0.18;
+                speedFactor = 0.55;
+            } else {
+                radius = Math.random() * 2.0 + 3.5;
+                baseOpacity = Math.random() * 0.2 + 0.35;
+                speedFactor = 0.85;
+            }
+
+            this.particles.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                vx: (Math.random() - 0.5) * speedFactor * 0.6,
+                vy: (Math.random() - 0.5) * speedFactor * 0.6,
+                radius: radius,
+                depth: depth,
+                baseOpacity: baseOpacity,
+                currentOpacity: baseOpacity,
+                // Assign pulsing properties to some foreground particles
+                pulse: depth === 2 && Math.random() > 0.4,
+                pulseTime: Math.random() * 100,
+                // Soft glow shadow settings for foreground particles
+                glow: depth === 2,
+                color: depth === 2 
+                    ? 'rgba(16, 185, 129, 0.8)' 
+                    : depth === 1 
+                        ? 'rgba(52, 211, 153, 0.45)' 
+                        : 'rgba(16, 185, 129, 0.2)'
+            });
+        }
+    }
+
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        const time = Date.now();
+        
+        for (let i = 0; i < this.particles.length; i++) {
+            const p = this.particles[i];
+            
+            // Pulse opacity if pulsing enabled
+            if (p.pulse) {
+                p.pulseTime += 0.015;
+                p.currentOpacity = p.baseOpacity + Math.sin(p.pulseTime) * 0.12;
+            } else {
+                p.currentOpacity = p.baseOpacity;
+            }
+
+            // Boundary checks
+            if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+
+            // Move particle
+            p.x += p.vx;
+            p.y += p.vy;
+
+            // Draw particle
+            this.ctx.beginPath();
+            this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            
+            // Set glowing properties if foreground particle
+            if (p.glow) {
+                this.ctx.shadowBlur = 8;
+                this.ctx.shadowColor = 'rgba(16, 185, 129, 0.4)';
+            } else {
+                this.ctx.shadowBlur = 0;
+            }
+
+            // Use correct opacity
+            const match = p.color.match(/rgba\((\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\)/);
+            if (match) {
+                this.ctx.fillStyle = `rgba(${match[1]}, ${match[2]}, ${match[3]}, ${p.currentOpacity})`;
+            } else {
+                this.ctx.fillStyle = p.color;
+            }
+            this.ctx.fill();
+
+            // Reset shadow blur for connection lines
+            this.ctx.shadowBlur = 0;
+
+            // Draw links between nodes
+            for (let j = i + 1; j < this.particles.length; j++) {
+                const p2 = this.particles[j];
+                // Only connect nodes of similar/adjacent depth for layered parallax effect
+                if (Math.abs(p.depth - p2.depth) > 1) continue;
+
+                const dx = p.x - p2.x;
+                const dy = p.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                const connectLimit = 160;
+
+                if (dist < connectLimit) {
+                    // Line opacity depends on distance and layers
+                    const depthFactor = (p.depth + p2.depth) / 4; // 0 to 1
+                    const alpha = ((connectLimit - dist) / connectLimit) * (0.05 + depthFactor * 0.15);
+                    
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(p.x, p.y);
+                    this.ctx.lineTo(p2.x, p2.y);
+                    this.ctx.strokeStyle = `rgba(16, 185, 129, ${alpha})`;
+                    this.ctx.lineWidth = 0.5 + depthFactor * 1.2;
+                    this.ctx.stroke();
+
+                    // Information citation packets: draw glowing signal moving along connection lines
+                    if (p.depth > 0 && dist > 40) {
+                        // Progression speed scales with particle velocity
+                        const progress = (time * 0.0006 + (i * 0.05)) % 1.0;
+                        const px = p.x + (p2.x - p.x) * progress;
+                        const py = p.y + (p2.y - p.y) * progress;
+
+                        this.ctx.beginPath();
+                        this.ctx.arc(px, py, 1.2 + p.depth * 0.4, 0, Math.PI * 2);
+                        this.ctx.fillStyle = `rgba(16, 185, 129, ${alpha * 3.5})`;
+                        this.ctx.shadowBlur = 4;
+                        this.ctx.shadowColor = '#10B981';
+                        this.ctx.fill();
+                        this.ctx.shadowBlur = 0;
+                    }
+                }
+            }
+        }
+
+        requestAnimationFrame(() => this.animate());
+    }
+}
+
+/* ==================== PROFESSIONAL BACKGROUND SYSTEM ==================== */
 document.addEventListener('DOMContentLoaded', () => {
     // Make body transparent so background is visible
     document.body.style.background = 'transparent';
 
-    const vantaBg = document.createElement('div');
-    vantaBg.id = 'vanta-bg';
-    Object.assign(vantaBg.style, {
-        position: 'fixed',
-        zIndex: '-1',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        pointerEvents: 'none'
-    });
-    document.body.prepend(vantaBg);
+    // Inject background animation container if it doesn't exist
+    let bgContainer = document.querySelector('.site-bg-animation');
+    if (!bgContainer) {
+        bgContainer = document.createElement('div');
+        bgContainer.className = 'site-bg-animation';
+        bgContainer.innerHTML = `
+            <div class="bg-blob blob-1"></div>
+            <div class="bg-blob blob-2"></div>
+            <div class="bg-blob blob-3"></div>
+            <div class="bg-grid"></div>
+            <canvas class="bg-canvas"></canvas>
+        `;
+        document.body.prepend(bgContainer);
+    }
 
-    const loadScript = (src, callback) => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.onload = callback;
-        document.head.appendChild(script);
-    };
-
-    const dependencyScript = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
-    const effectScript = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js';
-
-    const initVanta = () => {
-        if (window.VANTA) window.VANTA.NET({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x10b981,
-            backgroundColor: 0xfdf2f2,
-            points: 12.00,
-            maxDistance: 22.00,
-            spacing: 18.00
-        });
-    };
-
-    // Load the correct Dependency then the selected Vanta effect
-    loadScript(dependencyScript, () => {
-        loadScript(effectScript, initVanta);
-    });
+    const canvas = bgContainer.querySelector('.bg-canvas');
+    if (canvas) {
+        const network = new CitationNetwork(canvas);
+        network.animate();
+    }
 });
 
 console.log('🚀 PeerCite Publishers — Loaded Successfully');
