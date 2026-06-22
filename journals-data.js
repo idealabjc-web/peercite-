@@ -1760,6 +1760,37 @@ const JOURNALS_DATA = {
                                 pdf: 'assets/pdfs/PJSM/v4-i2-sp-a2.pdf'
                             }
                         ]
+                    },
+                    {
+                        issue: 3,
+                        date: 'June 22, 2026',
+                        title: 'Pre-operative Hypoalbuminemia as a Predictor of Post operative Outcomes Following Emergency Exploratory Laparotomy: A Prospective Observational Study',
+                        articles: [
+                            {
+                                id: 'v4-i3-a3',
+                                title: 'Pre-operative Hypoalbuminemia as a Predictor of Post operative Outcomes Following Emergency Exploratory Laparotomy: A Prospective Observational Study',
+                                authors: [
+                                    {
+                                        name: "Dr C. Ranjith kumar",
+                                        aff: "General Surgery, MMIMSR"
+                                    },
+                                    {
+                                        name: "Dr Dipesh Goel",
+                                        aff: "General Surgery, MMIMSR"
+                                    },
+                                    {
+                                        name: "Dr Tavleen Kaur",
+                                        aff: "General Surgery, MMIMSR"
+                                    },
+                                    {
+                                        name: "Dr K. Ramya Bhargavi",
+                                        aff: "Anaesthesia, MMIMSR"
+                                    }
+                                ],
+                                pages: '1-5',
+                                pdf: 'assets/pdfs/PJSM/v4-i3-a3.pdf'
+                            }
+                        ]
                     }
                 ]
             }
