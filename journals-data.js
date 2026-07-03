@@ -931,6 +931,30 @@ const JOURNALS_DATA = {
                         ]
                     },
                 ]
+            },
+            {
+                volume: 4,
+                year: 2026,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'The Soul of AI, A Humanized, Ethical and Transformative Approach to Artificial Intelligence',
+                        date: 'July 03, 2026',
+                        articles: [
+                            {
+                                id: 'v4-i1-a1',
+                                authors: [
+                                    {
+                                        name: "Ignacio Bonasa Alzuria",
+                                        aff: "Postdoctoral Studies in Wellbeing and also Organizational Transformation Universidad Claustro Humanista, Mexico"
+                                    }
+                                ],
+                                pages: '1-13',
+                                pdf: 'assets/pdfs/PJAIML/v4-i1-a1.pdf',
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
