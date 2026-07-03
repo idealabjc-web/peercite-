@@ -30,7 +30,10 @@
         'pjmb': 'microbiology',
         'pjdp': 'diagnostic-pathology',
         'pjmm': 'metaphysics',
-        'pjfas': 'fisheries-aquatic-studies'
+        'pjfas': 'fisheries-aquatic-studies',
+        'pjomc': 'organic-medicinal-chemistry',
+        'pjmc': 'modern-chemistry',
+        'pjcr': 'chemical-research'
     };
 
     // ── Slug → shortcode  (journal data key → URL path) ────────────────────────
@@ -67,7 +70,10 @@
         'PJMB': 'pjmb',
         'PJDP': 'pjdp',
         'PJMM': 'pjmm',
-        'PJFAS': 'pjfas'
+        'PJFAS': 'pjfas',
+        'PJOMC': 'pjomc',
+        'PJMC': 'pjmc',
+        'PJCR': 'pjcr'
     };
 
     // ── Resolve journal slug from current URL ───────────────────────────────────

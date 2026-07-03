@@ -95,6 +95,12 @@
 ## Fisheries & Aquatic Studies (PJFAS)
 /pjfas/*        /assets/pdfs/PJFAS/:splat.pdf          200
 
+## Organic & Medicinal Chemistry (PJOMC)
+/pjomc/*        /assets/pdfs/PJOMC/:splat.pdf          200
+
+## Modern Chemistry (PJMC)
+/pjmc/*         /assets/pdfs/PJMC/:splat.pdf           200
+
 
 # ----------------------------------------------------------------
 # 3. JOURNAL PAGE CLEAN URLS — /shortcode  →  journal.html
@@ -126,6 +132,8 @@
 /pjdp           /journal.html?id=diagnostic-pathology       200
 /pjmm           /journal.html?id=metaphysics                200
 /pjfas          /journal.html?id=fisheries-aquatic-studies  200
+/pjomc          /journal.html?id=organic-medicinal-chemistry  200
+/pjmc           /journal.html?id=modern-chemistry           200
 
 
 # ----------------------------------------------------------------
@@ -152,6 +160,8 @@
 /diagnostic-pathology       /journal.html?id=diagnostic-pathology       200
 /metaphysics                /journal.html?id=metaphysics                200
 /fisheries-aquatic-studies  /journal.html?id=fisheries-aquatic-studies  200
+/organic-medicinal-chemistry  /journal.html?id=organic-medicinal-chemistry  200
+/modern-chemistry           /journal.html?id=modern-chemistry           200
 
 # 4. SPA FALLBACK — serves index.html for any unmatched route
 #    Keep this LAST.

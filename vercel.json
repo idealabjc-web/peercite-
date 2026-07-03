@@ -25,6 +25,9 @@
     { "source": "/diagnostic-pathology", "destination": "/journal.html?id=diagnostic-pathology" },
     { "source": "/metaphysics", "destination": "/journal.html?id=metaphysics" },
     { "source": "/fisheries-aquatic-studies", "destination": "/journal.html?id=fisheries-aquatic-studies" },
+    { "source": "/organic-medicinal-chemistry", "destination": "/journal.html?id=organic-medicinal-chemistry" },
+    { "source": "/modern-chemistry", "destination": "/journal.html?id=modern-chemistry" },
+    { "source": "/chemical-research", "destination": "/journal.html?id=chemical-research" },
     {
       "source": "/pjmh/:articleId",
       "destination": "/assets/pdfs/PJMH/:articleId.pdf"
@@ -118,6 +121,18 @@
       "destination": "/assets/pdfs/PJFAS/:articleId.pdf"
     },
     {
+      "source": "/pjomc/:articleId",
+      "destination": "/assets/pdfs/PJOMC/:articleId.pdf"
+    },
+    {
+      "source": "/pjmc/:articleId",
+      "destination": "/assets/pdfs/PJMC/:articleId.pdf"
+    },
+    {
+      "source": "/pjcr/:articleId",
+      "destination": "/assets/pdfs/PJCR/:articleId.pdf"
+    },
+    {
       "source": "/pjmh",
       "destination": "/journal.html?id=mental-health"
     },
@@ -208,6 +223,18 @@
     {
       "source": "/pjfas",
       "destination": "/journal.html?id=fisheries-aquatic-studies"
+    },
+    {
+      "source": "/pjomc",
+      "destination": "/journal.html?id=organic-medicinal-chemistry"
+    },
+    {
+      "source": "/pjmc",
+      "destination": "/journal.html?id=modern-chemistry"
+    },
+    {
+      "source": "/pjcr",
+      "destination": "/journal.html?id=chemical-research"
     }
   ]
 }

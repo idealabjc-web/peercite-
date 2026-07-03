@@ -2511,6 +2511,98 @@ const JOURNALS_DATA = {
                 ]
             }
         ]
+    },
+    'organic-medicinal-chemistry': {
+        id: 'PJOMC',
+        title: 'Peercite Journal of Organic & Medicinal Chemistry',
+        shortTitle: 'Organic & Medicinal Chemistry',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'ISSN: XXXX-XXXX',
+        image: 'assets/images/Organic-Medicinal-Chemistry.jpeg',
+        description: 'Advancing the frontiers of organic and medicinal chemistry through innovative research and development.',
+        about1: 'The Peercite Journal of Organic & Medicinal Chemistry is an open access, peer reviewed scholarly journal that provides an open platform for the worldwide dissemination of original and novel research, based on the various practical approaches to disease management.',
+        about2: 'These include synthesis, synthetic methods and reagents, mechanism of reactions, biologically active compounds with their possible mechanism of action, natural products, in vitro and in vivo tests of compounds, computational chemistry, physical-analytical-inorganic chemistry, nanotechnology, drug carriers, proteomics and genomics. Rapid synthesis of new compounds following eco-friendly methods and their functions as medicinally active agents is certainly the central part of chemical and medicinal research in modern times. On the basis of this fact, significant emphasis is placed on rapid publication and dissemination of original discoveries in this new journal.',
+        scope: [
+            'Translational science research',
+            'Genetics, immunology, and nutrition',
+            'Psychosocial research and epidemiology',
+            'Multidisciplinary team approaches towards imparting quality healthcare services',
+            'Perspectives of doctors, physicians, and medical giants in treating commonly as well as rarely occurring diseases',
+            'Phase III clinical trial results and phase IV/post-marketing studies on novel drugs used in clinical practice',
+            'Therapeutic research, clinical practice, prevention, technologies, and therapy',
+            'Socio-economic research, complications, and new treatments',
+            'Evidence-based treatment guidelines, unmet clinical needs, and therapeutic burden',
+            'Safe and efficacious clinical practices by publishing original data from clinical investigations'
+        ],
+        metrics: [
+            { value: 'OMC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: []
+    },
+    'modern-chemistry': {
+        id: 'PJMC',
+        title: 'Peercite Journal of Modern Chemistry',
+        shortTitle: 'Modern Chemistry',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'ISSN: XXXX-XXXX',
+        image: 'assets/images/Modern-chemistry.jpeg',
+        description: 'Catalyzing the future of chemistry with innovation, insight, and impact through cutting-edge research and global collaboration.',
+        about1: 'Peercite Journal of Modern Chemistry is the central science that connects physics, biology, medicine, environmental science, materials science, and engineering. It explains the composition, structure, properties, and transformations of matter, from the smallest sub atomic particles to complex biological systems and advanced industrial materials.',
+        about2: 'Unlike classical chemistry, which mainly focused on observable reactions and substances, modern chemistry integrates quantum mechanics, thermodynamics, spectroscopy, computational tools, and molecular biology to understand matter at the deepest level. In the twenty-first century, chemistry plays a decisive role in addressing global challenges such as climate change, sustainable energy, clean water, food security, health care, and technological advancement.',
+        scope: [
+            'Discoveries and current developments in modern chemistry',
+            'Book Reviews, Editorials, and General Commentaries',
+            'Hypotheses, Theories, and Research Methods',
+            'Original Research, Perspectives, Reviews, and Mini Reviews',
+            'Specialty Grand Challenges and Technology Reports',
+            'Composition, structure, properties, and transformations of matter',
+            'Interdisciplinary connections with physics, biology, medicine, and environmental science',
+            'Materials science and engineering applications',
+            'Quantum mechanics, thermodynamics, and spectroscopy in chemical systems',
+            'Computational tools and molecular biology integration',
+            'Sustainable energy, clean water, food security, and healthcare innovations'
+        ],
+        metrics: [
+            { value: 'MC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: []
+    },
+    'chemical-research': {
+        id: 'PJCR',
+        title: 'Peercite Journal of Chemical Research',
+        shortTitle: 'Chemical Research',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'ISSN: XXXX-XXXX',
+        image: 'assets/images/Chemical-research.jpeg',
+        description: 'Catalyzing the future of chemistry with innovation, insight, and impact through cutting-edge research and global collaboration.',
+        about1: 'A classic peer-reviewed journal specifically focused on publishing full-length research and reviews across all branches of experimental chemistry. It fills a unique scientific role by explicitly welcoming short papers that clarify the structure of novel compounds or detail the scope of newly discovered chemical reagents.',
+        about2: 'In academic publishing, a Chemical Research Journal is formally defined as a peer-reviewed scientific publication dedicated to disseminating original, experimental, theoretical, or critical review papers across the molecular sciences. Novelty must present entirely new chemical compounds, unrecorded reaction pathways, or fresh theoretical molecular models. The experimental section must provide exact chemical formulas, characterisation data (e.g., NMR, Mass Spectrometry), and step-by-step methodologies so other global scientists can replicate the results. Modern journals rarely accept purely routine testing; the research must explain how or why a chemical transformation happens at the atomic level.',
+        scope: [
+            'Experimental, theoretical, and critical review papers in molecular sciences',
+            'Elucidation of the structure of novel chemical compounds',
+            'Discovery and scope of new chemical reagents and methodologies',
+            'NMR, Mass Spectrometry, and characterisation data analysis',
+            'Unrecorded reaction pathways and molecular model developments',
+            'Atomic-level mechanics of chemical transformations',
+            'Organic, Inorganic, and Materials Chemistry',
+            'Crystallography and Computational Chemistry'
+        ],
+        metrics: [
+            { value: 'CR', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: []
     }
 };
 
