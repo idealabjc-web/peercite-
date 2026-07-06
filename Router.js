@@ -33,7 +33,8 @@
         'pjfas': 'fisheries-aquatic-studies',
         'pjomc': 'organic-medicinal-chemistry',
         'pjmc': 'modern-chemistry',
-        'pjcr': 'chemical-research'
+        'pjcr': 'chemical-research',
+        'pjhc': 'heterocyclic-compounds'
     };
 
     // ── Slug → shortcode  (journal data key → URL path) ────────────────────────
@@ -73,7 +74,8 @@
         'PJFAS': 'pjfas',
         'PJOMC': 'pjomc',
         'PJMC': 'pjmc',
-        'PJCR': 'pjcr'
+        'PJCR': 'pjcr',
+        'PJHC': 'pjhc'
     };
 
     // ── Resolve journal slug from current URL ───────────────────────────────────

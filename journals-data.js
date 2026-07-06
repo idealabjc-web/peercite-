@@ -3081,6 +3081,33 @@ const JOURNALS_DATA = {
             { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: []
+    },
+    'heterocyclic-compounds': {
+        id: 'PJHC',
+        title: 'Peercite Journal of Heterocyclic Compounds',
+        shortTitle: 'Heterocyclic Compounds',
+        category: 'Science & Technology',
+        categoryFilter: 'science-tech',
+        badge: 'ISSN: XXXX-XXXX',
+        image: 'assets/images/heterocyclic-compounds.jpeg',
+        description: 'Showcasing cutting-edge research in heterocyclic compounds, Peercite Journal of Heterocyclic Compounds serves as a premier platform for advancing heterocyclic compounds research.',
+        about1: 'Journal of Heterocyclic Compounds is a peer-reviewed journal focusing on the synthesis, structure, reactivity, and biological activity of heterocyclic compounds.',
+        about2: 'Discusses a wide range of topics from fundamental aspects to new trends in the field and and minireviews on the synthesis, structure, Highlights the practical application of heterocyclic compounds in pharmacy and process chemistry. Publications cater to both scientific and industrial societies. High author satisfaction with 94% indicating willingness to publish again.',
+        scope: [
+            'The journal of Heterocyclic Compounds is a peer-reviewed journal focused on the synthesis, structure, reactivity, and biological activity of heterocyclic compounds.',
+            'Its scope spans fundamental investigations, practical applications in pharmacy and process chemistry, and the study of natural products.',
+            'Development of novel synthetic methods, reaction mechanisms, and physical organic chemistry of heterocyclic systems.',
+            'Design and evaluation of heterocyclic compounds for drug discovery, pharmaceuticals, and pharmacological applications.',
+            'Isolation, structural elucidation, and total synthesis of naturally occurring heterocyclic compounds.',
+            'Process chemistry and the use of heterocycles in materials science and catalysis.'
+        ],
+        metrics: [
+            { value: 'HC', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: []
     }
 };
 
