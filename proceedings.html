@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Proceedings | PeerCite Publishers</title>
+    <meta name="description" content="Browse all WL-WH Conference Proceedings published by PeerCite Publishers. Open-access conference proceedings from world-class speakers and researchers.">
+    <link rel="icon" type="image/png" href="assets/images/Peercite Logo..png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6a1fbf621ebc591c2b76c636/1jq6076c6';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <style>
+        /* ===== PROCEEDINGS PAGE STYLES ===== */
+        .proc-hero {
+            padding: 5rem 0 3rem;
+            background: linear-gradient(135deg, #0a0f1c 0%, #0d1a2e 60%, #0a1628 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .proc-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(16,185,129,.12) 0%, transparent 70%);
+            top: -150px; right: -100px; border-radius: 50%;
+        }
+        .proc-hero::after {
+            content: '';
+            position: absolute;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(99,102,241,.10) 0%, transparent 70%);
+            bottom: -100px; left: -80px; border-radius: 50%;
+        }
+        .proc-hero .container { position: relative; z-index: 1; }
+        .proc-badge {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: rgba(16,185,129,.15); border: 1px solid rgba(16,185,129,.3);
+            color: #10b981; padding: .4rem 1rem; border-radius: 50px;
+            font-size: .8rem; font-weight: 600; letter-spacing: .05em;
+            text-transform: uppercase; margin-bottom: 1.5rem;
+        }
+        .proc-hero h1 {
+            font-size: clamp(2rem,5vw,3.5rem); font-weight: 800;
+            color: #fff; margin-bottom: 1rem; line-height: 1.2;
+        }
+        .proc-hero h1 span { color: #10b981; }
+        .proc-hero p {
+            font-size: 1.05rem; color: rgba(255,255,255,.65);
+            max-width: 560px; margin: 0 auto 2rem; line-height: 1.7;
+        }
+        .proc-stats {
+            display: flex; justify-content: center; gap: 2.5rem;
+            flex-wrap: wrap; margin-top: 2rem;
+        }
+        .proc-stat { text-align: center; }
+        .proc-stat strong {
+            display: block; font-size: 2rem; font-weight: 800;
+            color: #10b981; line-height: 1;
+        }
+        .proc-stat span {
+            font-size: .8rem; color: rgba(255,255,255,.55);
+            text-transform: uppercase; letter-spacing: .05em;
+        }
+
+        /* BREADCRUMB */
+        .proc-breadcrumb {
+            padding: .9rem 0;
+            background: rgba(255,255,255,.03);
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+        .breadcrumb-nav {
+            display: flex; align-items: center; gap: .5rem;
+            flex-wrap: wrap; font-size: .85rem; color: rgba(255,255,255,.5);
+        }
+        .breadcrumb-nav a { color: #10b981; text-decoration: none; transition: color .2s; }
+        .breadcrumb-nav a:hover { color: #34d399; }
+
+        /* INFO / IMAGE CARDS (the 2-image section) */
+        .proc-info-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #0a0f1c 0%, #0d1a2e 100%);
+        }
+        .proc-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .info-img-card {
+            border-radius: 16px; overflow: hidden;
+            position: relative; min-height: 240px;
+            display: flex; flex-direction: column; justify-content: flex-end;
+        }
+        .info-img-card img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform .4s ease;
+        }
+        .info-img-card:hover img { transform: scale(1.05); }
+        .info-img-overlay {
+            position: relative; z-index: 1;
+            background: linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.3) 60%, transparent 100%);
+            padding: 1.5rem;
+        }
+        .info-img-tag {
+            display: inline-flex; align-items: center; gap: .35rem;
+            background: rgba(16,185,129,.25); border: 1px solid rgba(16,185,129,.4);
+            color: #34d399; padding: .2rem .65rem; border-radius: 50px;
+            font-size: .72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; margin-bottom: .6rem;
+        }
+        .info-img-card h3 {
+            font-size: 1.1rem; font-weight: 700; color: #fff;
+            margin: 0 0 .35rem; line-height: 1.3;
+        }
+        .info-img-card p {
+            font-size: .8rem; color: rgba(255,255,255,.72);
+            margin: 0; line-height: 1.5;
+        }
+
+        /* PROCEEDINGS LIST SECTION */
+        .proc-list-section {
+            padding: 4rem 0 5rem;
+            background: #f8fafc;
+        }
+        .proc-list-header {
+            display: flex; align-items: center; gap: 1rem;
+            margin-bottom: 2.5rem; padding-bottom: 1.25rem;
+            border-bottom: 2px solid rgba(16,185,129,.2);
+        }
+        .proc-list-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 12px; display: flex; align-items: center;
+            justify-content: center; color: #fff; font-size: 1.4rem; flex-shrink: 0;
+        }
+        .proc-list-header h2 {
+            font-size: 1.35rem; font-weight: 700; color: #1e293b; margin: 0 0 .2rem;
+        }
+        .proc-list-header p { font-size: .85rem; color: #64748b; margin: 0; }
+
+        /* CARD GRID */
+        .proc-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        .proc-card {
+            background: #fff; border: 1px solid rgba(0,0,0,.08);
+            border-radius: 14px; overflow: hidden;
+            transition: transform .25s, box-shadow .25s, border-color .25s;
+            display: flex; flex-direction: column;
+        }
+        .proc-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(16,185,129,.12);
+            border-color: rgba(16,185,129,.35);
+        }
+        .proc-card.unavailable { opacity: .65; }
+        .proc-card.unavailable:hover { transform: none; box-shadow: none; }
+        .proc-card-bar {
+            height: 5px;
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        .proc-card.unavailable .proc-card-bar {
+            background: linear-gradient(90deg, #94a3b8, #cbd5e1);
+        }
+        .proc-card-body {
+            padding: 1.3rem 1.3rem .9rem; flex: 1; display: flex; flex-direction: column;
+        }
+        .proc-vol-badge {
+            display: inline-flex; align-items: center; gap: .35rem;
+            background: rgba(16,185,129,.1); color: #059669;
+            padding: .22rem .6rem; border-radius: 50px;
+            font-size: .72rem; font-weight: 700;
+            letter-spacing: .04em; text-transform: uppercase;
+            margin-bottom: .75rem; width: fit-content;
+        }
+        .proc-card.unavailable .proc-vol-badge {
+            background: rgba(148,163,184,.15); color: #94a3b8;
+        }
+        .proc-card-title {
+            font-size: .97rem; font-weight: 700; color: #1e293b;
+            margin: 0 0 .4rem; line-height: 1.4;
+        }
+        .proc-card-meta {
+            font-size: .78rem; color: #64748b; margin: 0 0 auto; padding-bottom: .9rem;
+        }
+        .proc-card-foot {
+            padding: 0 1.3rem 1.3rem;
+        }
+        .btn-proc-view {
+            display: flex; align-items: center; justify-content: center; gap: .45rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff; text-decoration: none;
+            padding: .58rem 1rem; border-radius: 8px;
+            font-size: .82rem; font-weight: 600;
+            transition: opacity .2s, transform .15s; width: 100%;
+        }
+        .btn-proc-view:hover { opacity: .88; transform: scale(1.02); }
+        .btn-proc-soon {
+            display: flex; align-items: center; justify-content: center; gap: .45rem;
+            background: #f1f5f9; color: #94a3b8;
+            padding: .58rem 1rem; border-radius: 8px;
+            font-size: .82rem; font-weight: 600; width: 100%;
+        }
+
+        /* CTA */
+        .proc-cta {
+            padding: 3rem 0; background: #f0fdf4;
+            text-align: center; border-top: 1px solid rgba(16,185,129,.15);
+        }
+        .proc-cta h3 { font-size: 1.5rem; font-weight: 700; color: #064e3b; margin-bottom: .5rem; }
+        .proc-cta p { color: #065f46; margin-bottom: 1.5rem; font-size: .95rem; }
+        .btn-proc-cta {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff; text-decoration: none;
+            padding: .8rem 2rem; border-radius: 10px;
+            font-size: .95rem; font-weight: 700;
+            box-shadow: 0 6px 20px rgba(16,185,129,.3);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .btn-proc-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(16,185,129,.4); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .proc-hero { padding: 4rem 0 2.5rem; }
+            .proc-stats { gap: 1.5rem; }
+            .proc-stat strong { font-size: 1.6rem; }
+            .proc-info-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .info-img-card { min-height: 200px; }
+            .proc-cards-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .proc-list-section { padding: 2.5rem 0 3.5rem; }
+            .proc-list-header { flex-direction: column; align-items: flex-start; gap: .75rem; }
+        }
+        @media (max-width: 480px) {
+            .proc-hero h1 { font-size: 1.8rem; }
+            .proc-card-body { padding: 1.1rem 1.1rem .8rem; }
+            .proc-card-foot { padding: 0 1.1rem 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="assets/images/Peercite Logo..png" alt="PeerCite Logo" class="logo-img">
+                <div class="logo-text-wrapper"></div>
+            </a>
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-link"><span>Home</span></a>
+                </div>
+                <div class="nav-dropdown mega-dropdown">
+                    <a href="index.html#publications-filter" class="nav-link">
+                        <span>Publications</span><i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col" data-category="medical">
+                                <h5 class="mega-title"><i class='bx bx-heart-circle'></i> Medical Sciences</h5>
+                                <ul class="mega-links">
+                                    <li><a href="journal.html?id=mental-health">Mental Health Research</a></li>
+                                    <li><a href="journal.html?id=neuroscience">Neuroscience Advances</a></li>
+                                    <li><a href="journal.html?id=surgery-medicine">Surgery &amp; Innovation</a></li>
+                                    <li><a href="journal.html?id=obstetrics-gynecology">Obstetrics &amp; Gynecology</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col" data-category="technology">
+                                <h5 class="mega-title"><i class='bx bx-chip'></i> Technology</h5>
+                                <ul class="mega-links">
+                                    <li><a href="journal.html?id=ai-machine-learning">AI &amp; Machine Learning</a></li>
+                                    <li><a href="journal.html?id=quantum-science">Quantum Science</a></li>
+                                    <li><a href="journal.html?id=applied-chemistry">Applied Chemistry</a></li>
+                                    <li><a href="journal.html?id=organic-medicinal-chemistry">Organic &amp; Medicinal Chemistry</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col" data-category="environmental">
+                                <h5 class="mega-title"><i class='bx bx-chip'></i> Environmental Sciences</h5>
+                                <ul class="mega-links">
+                                    <li><a href="journal.html?id=environmental-sciences">Environmental Sciences</a></li>
+                                    <li><a href="journal.html?id=agriculture-food">Agriculture &amp; Food</a></li>
+                                    <li><a href="journal.html?id=cell-biology">Cell Biology</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col mega-featured">
+                                <div class="mega-featured-card">
+                                    <span class="featured-badge">Latest Issue</span>
+                                    <h4>AI in Healthcare 2024</h4>
+                                    <p>Conference proceedings from the Global Health Tech Summit.</p>
+                                    <div class="featured-stats">
+                                        <div class="stat"><strong>45</strong><span>Articles</span></div>
+                                        <div class="stat"><strong>12K</strong><span>Reads</span></div>
+                                    </div>
+                                    <a href="journal.html?id=ai-machine-learning" class="mega-featured-btn">Read Now &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-dropdown proceedings-nav-dropdown">
+                    <a href="proceedings.html" class="nav-link">
+                        <span>Proceedings</span><i class='bx bx-chevron-down'></i>
+                    </a>
+                    <div class="dropdown-menu proceedings-mega-menu">
+                        <div class="proceedings-mega-inner">
+                            <div class="proceedings-group">
+                                <h5 class="proceedings-group-title">
+                                    <i class='bx bx-intersect'></i> WL-WH CONFERENCE PROCEEDINGS
+                                </h5>
+                                <ul class="proceedings-group-links">
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/MH-Virtual-conference-proceedings-1.1.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Conference Proceedings 1.1</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-2.0.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Conference Proceedings 2.0</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-2.1.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Conference Proceedings 2.1</a></li>
+                                    <li><a href="javascript:void(0)"><i class='bx bx-file-blank'></i> WL-WH Conference Proceedings 3.0</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Virtual-Conference-Proceedings-4.0.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Virtual Conference Proceedings 4.0</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/WL-WH-Virtual-Conference-Proceedings-5.0.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Virtual Conference Proceedings 5.0</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-5.1.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Conference Proceedings 5.1</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Conference-Preceeding-5.2.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> WL-WH Conference Proceedings 5.2</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Virtual-Conference-proceedings-5.3.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> Virtual WL-WH Conference Proceedings 5.3</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Winning-Women-Summit-6.0.pdf-p1" target="_blank"><i class='bx bx-file-blank'></i> Winning Women Summit 6.0</a></li>
+                                    <li><a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-6.1.pdf" target="_blank"><i class='bx bx-file-blank'></i> Winning Women Summit 6.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="authors.html" class="nav-link"><span>Authors Hub</span></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="inpress.html" class="nav-link"><span>In press</span></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="about.html" class="nav-link"><span>About</span></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="contact.html" class="nav-link"><span>Contact</span></a>
+                </div>
+            </nav>
+            <div class="search-autocomplete-wrapper">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search journals....." autocomplete="off" aria-label="Search PeerCite">
+                    <button id="search-btn" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+                <div id="search-dropdown" class="search-dropdown"></div>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo"><span class="logo-mark">P</span><span>PeerCite</span></div>
+            <button class="mobile-close" id="mobile-close"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="mobile-search"><i class='bx bx-search'></i><input type="search" placeholder="Search articles..."></div>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link"><i class='bx bx-home'></i><span>Home</span></a>
+            <a href="index.html#publications-filter" class="mobile-nav-link"><i class='bx bx-book-open'></i><span>Publications</span></a>
+            <a href="proceedings.html" class="mobile-nav-link active"><i class='bx bx-intersect'></i><span>Proceedings</span></a>
+            <a href="authors.html" class="mobile-nav-link"><i class='bx bx-feather'></i><span>Authors Hub</span></a>
+            <a href="inpress.html" class="mobile-nav-link"><i class='bx bx-file'></i><span>Inpress</span></a>
+            <a href="about.html" class="mobile-nav-link"><i class='bx bx-info-circle'></i><span>About</span></a>
+            <a href="contact.html" class="mobile-nav-link"><i class='bx bx-envelope'></i><span>Contact</span></a>
+        </nav>
+        <div class="mobile-menu-cta">
+            <a href="index.html#publications-filter" class="btn-mobile-cta"><i class='bx bx-book-reader'></i> Read Articles</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="proc-hero">
+        <div class="container">
+            <div class="proc-badge"><i class='bx bx-intersect'></i> Conference Proceedings</div>
+            <h1>WL-WH <span>Conference</span><br>Proceedings</h1>
+            <p>Open-access proceedings from world-class Women's Leadership and Women's Health conferences, featuring peer-reviewed research from global experts.</p>
+            <div class="proc-stats">
+                <div class="proc-stat"><strong>11</strong><span>Volumes</span></div>
+                <div class="proc-stat"><strong>6+</strong><span>Years</span></div>
+                <div class="proc-stat"><strong>Open</strong><span>Access</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="proc-breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <i class='bx bx-chevron-right'></i>
+                <span>Conference Proceedings</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 2 IMAGE INFO CARDS -->
+    <section class="proc-info-section">
+        <div class="container">
+            <div class="proc-info-grid">
+                <div class="info-img-card">
+                    <img src="assets/images/Womens Leadership.png" alt="Women's Leadership Conference" loading="lazy">
+                    <div class="info-img-overlay">
+                        <span class="info-img-tag"><i class='bx bx-trophy'></i> WL Conference</span>
+                        <h3>Women's Leadership Proceedings</h3>
+                        <p>Peer-reviewed research advancing gender equity and women in leadership roles worldwide.</p>
+                    </div>
+                </div>
+                <div class="info-img-card">
+                    <img src="assets/images/gen-medical3.png" alt="Women's Health Conference" loading="lazy">
+                    <div class="info-img-overlay">
+                        <span class="info-img-tag"><i class='bx bx-heart'></i> WH Conference</span>
+                        <h3>Women's Health Proceedings</h3>
+                        <p>Cutting-edge clinical research and health science from global medical conferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCEEDINGS CARDS -->
+    <section class="proc-list-section">
+        <div class="container">
+            <div class="proc-list-header">
+                <div class="proc-list-icon"><i class='bx bx-intersect'></i></div>
+                <div>
+                    <h2>WL-WH Conference Proceedings</h2>
+                    <p>Browse and download all published conference proceedings volumes</p>
+                </div>
+            </div>
+
+            <div class="proc-cards-grid">
+
+                <!-- Vol 1.1 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 1.1</span>
+                        <h3 class="proc-card-title">WL-WH Conference Proceedings 1.1</h3>
+                        <p class="proc-card-meta">Virtual Conference &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/MH-Virtual-conference-proceedings-1.1.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 2.0 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 2.0</span>
+                        <h3 class="proc-card-title">WL-WH Conference Proceedings 2.0</h3>
+                        <p class="proc-card-meta">Conference Proceedings &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-2.0.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 2.1 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 2.1</span>
+                        <h3 class="proc-card-title">WL-WH Conference Proceedings 2.1</h3>
+                        <p class="proc-card-meta">Conference Proceedings &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-2.1.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 3.0 - Coming Soon -->
+                <div class="proc-card unavailable">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 3.0</span>
+                        <h3 class="proc-card-title">WL-WH Conference Proceedings 3.0</h3>
+                        <p class="proc-card-meta">Coming Soon &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <span class="btn-proc-soon"><i class='bx bx-time-five'></i> Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Vol 4.0 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 4.0</span>
+                        <h3 class="proc-card-title">WL-WH Virtual Conference Proceedings 4.0</h3>
+                        <p class="proc-card-meta">Virtual Conference &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Virtual-Conference-Proceedings-4.0.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 5.0 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 5.0</span>
+                        <h3 class="proc-card-title">WL-WH Virtual Conference Proceedings 5.0</h3>
+                        <p class="proc-card-meta">Virtual Conference &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/WL-WH-Virtual-Conference-Proceedings-5.0.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 5.1 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 5.1</span>
+                        <h3 class="proc-card-title">WL-WH Conference Proceedings 5.1</h3>
+                        <p class="proc-card-meta">Conference Proceedings &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-5.1.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 5.2 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 5.2</span>
+                        <h3 class="proc-card-title">WL-WH Conference Proceedings 5.2</h3>
+                        <p class="proc-card-meta">Conference Proceedings &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Conference-Preceeding-5.2.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 5.3 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 5.3</span>
+                        <h3 class="proc-card-title">Virtual WL-WH Conference Proceedings 5.3</h3>
+                        <p class="proc-card-meta">Virtual Conference &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Virtual-Conference-proceedings-5.3.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 6.0 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 6.0</span>
+                        <h3 class="proc-card-title">Winning Women Summit 6.0</h3>
+                        <p class="proc-card-meta">Summit Proceedings &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Winning-Women-Summit-6.0.pdf-p1" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vol 6.1 -->
+                <div class="proc-card">
+                    <div class="proc-card-bar"></div>
+                    <div class="proc-card-body">
+                        <span class="proc-vol-badge"><i class='bx bx-file'></i> Vol 6.1</span>
+                        <h3 class="proc-card-title">Winning Women Summit 6.1</h3>
+                        <p class="proc-card-meta">Summit Proceedings &middot; Open Access &middot; Peer Reviewed</p>
+                    </div>
+                    <div class="proc-card-foot">
+                        <a href="viewer.html#assets/pdfs/WL-WH/Conference-Proceedings-6.1.pdf" target="_blank" class="btn-proc-view">
+                            <i class='bx bx-show'></i> View PDF
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- /proc-cards-grid -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="proc-cta">
+        <div class="container">
+            <h3>Explore Our Journals</h3>
+            <p>Browse 26+ peer-reviewed journals across medicine, technology, and social sciences.</p>
+            <a href="index.html#publications-filter" class="btn-proc-cta">
+                <i class='bx bx-book-open'></i> View All Journals
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/Peercite Logo..png" alt="PeerCite" class="footer-logo-img">
+                    </a>
+                    <p class="footer-tagline">Advancing science through open-access publishing and peer-reviewed research.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer-social"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="footer-social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Proceedings</h4>
+                    <a href="proceedings.html">WL-WH Conference Proceedings</a>
+                    <a href="journal.html?id=womens-leadership">Women's Leadership Journal</a>
+                    <a href="inpress.html">In Press</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#publications-filter">Publications</a>
+                    <a href="authors.html">Authors Hub</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><i class='bx bx-phone'></i><a href="tel:+17162171471">+1 716 217 1471</a></div>
+                    <div class="footer-contact-item"><i class='bx bx-envelope'></i><a href="mailto:contact@peercite.org">contact@peercite.org</a></div>
+                    <div class="footer-contact-item"><i class='bx bx-map'></i><span>Parklane West, Menands, Albany, New York 12204, US</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-indexing-strip">
+            <div class="container">
+                <span class="footer-indexing-label">Indexed &amp; Partnered with</span>
+                <div class="footer-indexing-logos">
+                    <img src="assets/images/Crossref.jpeg" alt="Crossref" class="footer-indexing-logo">
+                    <img src="assets/images/OpenAIRE.jpeg" alt="OpenAIRE" class="footer-indexing-logo">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="cc-icons">
+                    <p><strong>PeerCite Journals</strong> &copy; 2026 All rights reserved by <span class="author">Prasad Kovvuru</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></p>
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top"><i class='bx bx-up-arrow-alt'></i></button>
+    <script src="journals-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
