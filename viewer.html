@@ -440,6 +440,13 @@
                 display: none;
             }
 
+            .page-side {
+                width: calc(100vw - 6rem);
+                max-width: 380px;
+                height: auto;
+                min-height: 420px;
+            }
+
             .page-right {
                 border-radius: 6px;
                 box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
@@ -447,6 +454,10 @@
 
             .page-right::before {
                 display: none;
+            }
+
+            .book-viewer {
+                padding: 1rem 0.25rem;
             }
         }
     </style>
@@ -527,9 +538,12 @@
 
         const { pdf: pdfPath, page: startPage } = parseHash();
         let currentSpread = 0;
+        let currentMobilePage = 1;  // for single-page mobile mode
         let totalPages = 0;
         let pdfDoc = null;
         let rendering = false;
+
+        function isMobile() { return window.innerWidth <= 720; }
 
         const pageLeftEl = document.getElementById('pageLeft');
         const pageRightEl = document.getElementById('pageRight');
@@ -600,58 +614,98 @@
             if (rendering || !pdfDoc) return;
             rendering = true;
 
-            const { left, right } = getSpreadPages(spread);
+            if (isMobile()) {
+                // Single-page mode: only render the right canvas, one page at a time
+                const pageNum = currentMobilePage;
+                if (direction) {
+                    pageRightEl.classList.add('flipping');
+                    setTimeout(() => pageRightEl.classList.remove('flipping'), 500);
+                }
+                // hide left canvas
+                canvasLeft.style.display = 'none';
+                pageNumLeft.textContent = '';
 
-            if (direction) {
-                const flipEl = direction === 'next' ? pageRightEl : pageLeftEl;
-                flipEl.classList.add('flipping');
-                setTimeout(() => flipEl.classList.remove('flipping'), 500);
+                await renderPage(pageNum, canvasRight, ctxRight, pageRightEl, pageNumRight);
+
+                document.getElementById('pageInput').value = pageNum;
+                document.getElementById('prevBtn').disabled = (pageNum <= 1);
+                document.getElementById('nextBtn').disabled = (pageNum >= totalPages);
+                window.history.replaceState({}, '', buildHash(pageNum));
+            } else {
+                const { left, right } = getSpreadPages(spread);
+
+                if (direction) {
+                    const flipEl = direction === 'next' ? pageRightEl : pageLeftEl;
+                    flipEl.classList.add('flipping');
+                    setTimeout(() => flipEl.classList.remove('flipping'), 500);
+                }
+
+                await Promise.all([
+                    renderPage(left, canvasLeft, ctxLeft, pageLeftEl, pageNumLeft),
+                    renderPage(right, canvasRight, ctxRight, pageRightEl, pageNumRight)
+                ]);
+
+                const displayPage = right || left || 1;
+                document.getElementById('pageInput').value = displayPage;
+                document.getElementById('prevBtn').disabled = (spread <= 0);
+                document.getElementById('nextBtn').disabled = (spread >= getTotalSpreads() - 1);
+                window.history.replaceState({}, '', buildHash(displayPage));
             }
-
-            await Promise.all([
-                renderPage(left, canvasLeft, ctxLeft, pageLeftEl, pageNumLeft),
-                renderPage(right, canvasRight, ctxRight, pageRightEl, pageNumRight)
-            ]);
-
-            const displayPage = right || left || 1;
-            document.getElementById('pageInput').value = displayPage;
-            document.getElementById('prevBtn').disabled = (spread <= 0);
-            document.getElementById('nextBtn').disabled = (spread >= getTotalSpreads() - 1);
-
-            // Update URL hash
-            window.history.replaceState({}, '', buildHash(displayPage));
 
             rendering = false;
         }
 
-        // Navigation
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            if (currentSpread > 0) { currentSpread--; renderSpread(currentSpread, 'prev'); }
-        });
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            if (currentSpread < getTotalSpreads() - 1) { currentSpread++; renderSpread(currentSpread, 'next'); }
-        });
+        // Navigation helpers
+        function goNext() {
+            if (isMobile()) {
+                if (currentMobilePage < totalPages) { currentMobilePage++; renderSpread(currentSpread, 'next'); }
+            } else {
+                if (currentSpread < getTotalSpreads() - 1) { currentSpread++; renderSpread(currentSpread, 'next'); }
+            }
+        }
+        function goPrev() {
+            if (isMobile()) {
+                if (currentMobilePage > 1) { currentMobilePage--; renderSpread(currentSpread, 'prev'); }
+            } else {
+                if (currentSpread > 0) { currentSpread--; renderSpread(currentSpread, 'prev'); }
+            }
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', goPrev);
+        document.getElementById('nextBtn').addEventListener('click', goNext);
+
         document.getElementById('pageInput').addEventListener('change', (e) => {
             let p = parseInt(e.target.value);
             if (pdfDoc && p >= 1 && p <= totalPages) {
-                currentSpread = pageToSpread(p);
-                renderSpread(currentSpread);
+                if (isMobile()) {
+                    currentMobilePage = p;
+                    renderSpread(currentSpread);
+                } else {
+                    currentSpread = pageToSpread(p);
+                    renderSpread(currentSpread);
+                }
             } else {
-                const sp = getSpreadPages(currentSpread);
-                e.target.value = sp.right || sp.left;
+                e.target.value = isMobile() ? currentMobilePage : (getSpreadPages(currentSpread).right || getSpreadPages(currentSpread).left);
             }
         });
 
-        // Keyboard
+        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.target.tagName === 'INPUT') return;
-            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                if (currentSpread > 0) { currentSpread--; renderSpread(currentSpread, 'prev'); }
-            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
-                if (currentSpread < getTotalSpreads() - 1) { currentSpread++; renderSpread(currentSpread, 'next'); }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goPrev();
+            else if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                goNext();
                 if (e.key === ' ') e.preventDefault();
             }
         });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        document.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].screenX - touchStartX;
+            if (Math.abs(dx) > 50) { dx < 0 ? goNext() : goPrev(); }
+        }, { passive: true });
 
         // Copy link
         function showToast(msg) {
@@ -680,7 +734,9 @@
                 document.getElementById('pageInput').max = totalPages;
                 document.getElementById('loadingOverlay').style.display = 'none';
 
-                currentSpread = pageToSpread(startPage > totalPages ? 1 : startPage);
+                const safePage = (startPage > totalPages || startPage < 1) ? 1 : startPage;
+                currentMobilePage = safePage;
+                currentSpread = pageToSpread(safePage);
                 renderSpread(currentSpread);
             }).catch(err => {
                 document.getElementById('loadingOverlay').innerHTML =
@@ -694,7 +750,16 @@
                 '<span class="loading-text">No document specified</span>';
         }
 
-        window.addEventListener('resize', () => { if (pdfDoc) renderSpread(currentSpread); });
+        window.addEventListener('resize', () => {
+            if (pdfDoc) {
+                // sync mobile page with spread when switching modes
+                if (isMobile()) {
+                    const sp = getSpreadPages(currentSpread);
+                    if (!currentMobilePage) currentMobilePage = sp.right || sp.left || 1;
+                }
+                renderSpread(currentSpread);
+            }
+        });
     </script>
 </body>
 
