@@ -2772,6 +2772,14 @@ window.INPRESS_DATA = INPRESS_DATA;
         <ul class="scope-list">
             ${journal.scope.map(s => `<li><i class='bx bx-check-circle'></i> ${s}</li>`).join('')}
         </ul>
+        <a href="assets/pdfs/Publication Ethics and Malpractice Statement.pdf" target="_blank" class="pub-ethics-banner">
+            <span class="pub-ethics-icon"><i class='bx bx-shield-alt-2'></i></span>
+            <span class="pub-ethics-text">
+                <strong>Publication Ethics &amp; Malpractice Statement</strong>
+                <span>Click to view our official ethics policy (PDF)</span>
+            </span>
+            <span class="pub-ethics-arrow"><i class='bx bx-link-external'></i></span>
+        </a>
     `;
 
     // ---- VOLUMES & ISSUES ARTICLES SECTION ----

@@ -2077,7 +2077,8 @@ ul {
 
 /* ==================== FOOTER ==================== */
 .site-footer {
-    background: rgba(255, 255, 255, 0.75); /* Light glassmorphic */
+    background: rgba(255, 255, 255, 0.75);
+    /* Light glassmorphic */
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(0, 0, 0, 0.06);
     color: var(--gray-600);
@@ -2131,7 +2132,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(16, 185, 129, 0.08); /* Soft green background */
+    background: rgba(16, 185, 129, 0.08);
+    /* Soft green background */
     border-radius: 50%;
     color: var(--primary);
     font-size: 1.1rem;
@@ -2146,7 +2148,8 @@ ul {
 }
 
 .footer-column h4 {
-    color: var(--dark); /* Visible dark headers */
+    color: var(--dark);
+    /* Visible dark headers */
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -2174,7 +2177,8 @@ ul {
 }
 
 .footer-links a {
-    color: var(--gray-600); /* Dark slate links */
+    color: var(--gray-600);
+    /* Dark slate links */
     font-size: 0.95rem;
     transition: all 0.3s ease;
 }
@@ -2210,7 +2214,8 @@ ul {
 
 /* ==================== FOOTER BOTTOM / COPYRIGHT ==================== */
 .footer-bottom {
-    background: #0f172a; /* Unified dark slate copyright section */
+    background: #0f172a;
+    /* Unified dark slate copyright section */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2rem 0;
     color: #94a3b8;
@@ -2259,7 +2264,8 @@ ul {
 }
 
 .cc-icons a {
-    color: #38bdf8; /* Accessible cyan color for links in dark section */
+    color: #38bdf8;
+    /* Accessible cyan color for links in dark section */
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -9705,4 +9711,93 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+/* ===== PUBLICATION ETHICS BANNER ===== */
+.pub-ethics-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #86efac 100%);
+    border: 2px solid #42d906;
+    border-left: 5px solid #42d906;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #14532d;
+    box-shadow: 0 4px 16px rgba(66, 217, 6, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pub-ethics-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.pub-ethics-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(66, 217, 6, 0.4);
+    border-color: #16a34a;
+    text-decoration: none;
+    color: #14532d;
+}
+
+.pub-ethics-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    color: #15803d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pubEthicsPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pubEthicsPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+.pub-ethics-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.pub-ethics-text strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #14532d;
+    letter-spacing: 0.01em;
+}
+
+.pub-ethics-text span {
+    font-size: 0.8rem;
+    color: #166534;
+    opacity: 0.85;
+}
+
+.pub-ethics-arrow {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: #15803d;
+    transition: transform 0.25s ease;
+}
+
+.pub-ethics-banner:hover .pub-ethics-arrow {
+    transform: translateX(4px) translateY(-4px);
 }
