@@ -3019,7 +3019,44 @@ const JOURNALS_DATA = {
             { value: 'Open', label: 'Access' },
             { value: 'Peer', label: 'Reviewed' }
         ],
-        volumes: []
+        volumes: [
+            {
+                volume: 1,
+                year: 2025,
+                issues: [
+                    {
+                        issue: 1,
+                        title: 'Substituent activity relationship studies on new azolo benzoxazepinyl oxazolidinones',
+                        date: 'February 20, 2025',
+                        articles: [
+                            {
+                                id: 'v1-i1-a1',
+                                authors: [
+                                    {
+                                        name: "C. Prasad Narasimhulu",
+                                        aff: "Dr Reddy’s Foundation Somajiguda, Hyderabad"
+                                    },
+                                    {
+                                        name: "M. Roshaiah",
+                                        aff: "Dr Reddy’s Foundation Somajiguda, Hyderabad"
+                                    },
+                                    {
+                                        name: "M. Kannan",
+                                        aff: "Dr Reddy’s Foundation Somajiguda, Hyderabad"
+                                    },
+                                    {
+                                        name: "Jagattaran Das",
+                                        aff: "Dr Reddy’s Foundation Somajiguda, Hyderabad"
+                                    }
+                                ],
+                                pages: '1-10',
+                                pdf: 'assets/pdfs/PJOC/v1-i1-a1.pdf',
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     'modern-chemistry': {
         id: 'PJMC',
