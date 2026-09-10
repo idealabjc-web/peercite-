@@ -3145,6 +3145,37 @@ const JOURNALS_DATA = {
             { value: 'Peer', label: 'Reviewed' }
         ],
         volumes: []
+    },
+    'veterinary-science': {
+        id: 'PJVS',
+        title: 'PeerCite Journal of Veterinary Science',
+        shortTitle: 'Veterinary Science',
+        category: 'Life Sciences',
+        categoryFilter: 'life',
+        badge: 'ISSN: XXXX-XXXX',
+        image: 'assets/images/Veterinary Science.png',
+        description: 'Animal health research, veterinary medicine innovations, and zoonotic disease studies from international veterinary conferences.',
+        about1: 'The PeerCite Journal of Veterinary Science is an open access, peer-reviewed scholarly journal dedicated to publishing high-quality, impactful research across all disciplines of veterinary medicine, animal healthcare, and comparative biomedical sciences.',
+        about2: 'Our mission is to provide an international platform for veterinary researchers, clinicians, animal scientists, and epidemiologists to disseminate scientific discoveries, clinical insights, and novel therapeutic approaches that enhance animal welfare and advance global public health.',
+        scope: [
+            'Veterinary clinical medicine, surgery, and anesthesiology',
+            'Animal pathology, infectious diseases, and diagnostics',
+            'Zoonotic diseases, epidemiology, and One Health initiatives',
+            'Veterinary pharmacology, toxicology, and therapeutics',
+            'Animal physiology, reproduction, and nutritional sciences',
+            'Veterinary immunology, vaccines, and biotechnology',
+            'Comparative medicine and translational biomedical research',
+            'Animal welfare, behavior, ethics, and humane care',
+            'Preventive veterinary medicine and herd health management',
+            'Wildlife, aquatic, and exotic animal health and conservation'
+        ],
+        metrics: [
+            { value: 'VS', label: 'Abbreviation' },
+            { value: '2024', label: 'Year' },
+            { value: 'Open', label: 'Access' },
+            { value: 'Peer', label: 'Reviewed' }
+        ],
+        volumes: []
     }
 };
 

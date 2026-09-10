@@ -28,6 +28,7 @@
     { "source": "/organic-medicinal-chemistry", "destination": "/journal.html?id=organic-medicinal-chemistry" },
     { "source": "/modern-chemistry", "destination": "/journal.html?id=modern-chemistry" },
     { "source": "/chemical-research", "destination": "/journal.html?id=chemical-research" },
+    { "source": "/veterinary-science", "destination": "/journal.html?id=veterinary-science" },
     {
       "source": "/pjmh/:articleId",
       "destination": "/assets/pdfs/PJMH/:articleId.pdf"
@@ -133,6 +134,10 @@
       "destination": "/assets/pdfs/PJCR/:articleId.pdf"
     },
     {
+      "source": "/pjvs/:articleId",
+      "destination": "/assets/pdfs/PJVS/:articleId.pdf"
+    },
+    {
       "source": "/pjmh",
       "destination": "/journal.html?id=mental-health"
     },
@@ -235,6 +240,10 @@
     {
       "source": "/pjcr",
       "destination": "/journal.html?id=chemical-research"
+    },
+    {
+      "source": "/pjvs",
+      "destination": "/journal.html?id=veterinary-science"
     }
   ]
 }

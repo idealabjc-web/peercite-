@@ -34,7 +34,8 @@
         'pjomc': 'organic-medicinal-chemistry',
         'pjmc': 'modern-chemistry',
         'pjcr': 'chemical-research',
-        'pjhc': 'heterocyclic-compounds'
+        'pjhc': 'heterocyclic-compounds',
+        'pjvs': 'veterinary-science'
     };
 
     // ── Slug → shortcode  (journal data key → URL path) ────────────────────────
@@ -75,7 +76,8 @@
         'PJOMC': 'pjomc',
         'PJMC': 'pjmc',
         'PJCR': 'pjcr',
-        'PJHC': 'pjhc'
+        'PJHC': 'pjhc',
+        'PJVS': 'pjvs'
     };
 
     // ── Resolve journal slug from current URL ───────────────────────────────────
