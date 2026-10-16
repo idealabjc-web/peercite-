@@ -1434,26 +1434,7 @@ const JOURNALS_DATA = {
             {
                 volume: 2,
                 year: 2024,
-                issues: [
-                    {
-                        issue: 1,
-                        title: 'Advancements in Drug Delivery Systems: Innovations and Applications',
-                        date: 'March 1, 2024',
-                        articles: [
-                            {
-                                id: 'v2-i1-a1',
-                                authors: [
-                                    {
-                                        name: "Sayed AbdulAzeez",
-                                        aff: "Department of Genetic Research, Institute for Research and Medical Consultations (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia"
-                                    }
-                                ],
-                                pages: '1-3',
-                                pdf: 'assets/pdfs/PJPS/v2-i1-a1.pdf',
-                            }
-                        ]
-                    }
-                ]
+                issues: []
             }
         ]
     },
