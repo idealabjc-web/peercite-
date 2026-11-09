@@ -346,8 +346,8 @@ const JOURNALS_DATA = {
                 year: 2026,
                 issues: [
                     {
-                        issue: 'S1',
-                        title: 'Special Issue',
+                        issue: 'Special',
+                        title: 'Beyond Resilience: The Evolving Leadership Mindset of Women Professionals',
                         date: 'November 09, 2026',
                         articles: [
                             {
@@ -2884,11 +2884,13 @@ function renderVolumesAndIssues(journal) {
 }
 
 function renderIssue(journalId, volumeNum, issue) {
+    const issueText = String(issue.issue || '').trim();
+    const badgeText = /^special$/i.test(issueText) ? 'Special Issue' : (/^(issue|special\s*issue)/i.test(issueText) ? issueText : `Issue ${issueText}`);
     return `
         <div class="issue-block">
             <div class="issue-header" onclick="toggleIssue(this)">
                 <div class="issue-header-left">
-                    <span class="issue-badge">Issue ${issue.issue}</span>
+                    <span class="issue-badge">${badgeText}</span>
                     <div>
                         <h4>${issue.title}</h4>
                         <p class="issue-meta">
