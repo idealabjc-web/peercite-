@@ -3222,7 +3222,22 @@ window.JOURNALS_DATA = JOURNALS_DATA;
 /* =====================================================
    IN PRESS DATA
    ===================================================== */
-const INPRESS_DATA = [];
+const INPRESS_DATA = [
+    {
+        id: "article-1",
+        title: "Beyond Resilience: The Evolving Leadership Mindset of Women Professionals",
+        authors: [
+            {
+                name: "Dr. Rohinirani Desai",
+                aff: "Ph.D. in Management Studies -Pacific University, Master of Laws (LL.M.) - University of Bombay, Bachelor of Laws (LL.B.) - University of Bombay"
+            }
+        ],
+        journal: "Peercite Journal of Women Leadership",
+        date: "November 9, 2026",
+        abstract: "The landscape of leadership is undergoing a profound transformation, moving beyond traditional models to embrace qualities such as emotional intelligence, collaboration, and adaptive resilience. In this evolving ecosystem, women leaders are emerging as pivotal figures, bringing fresh perspectives, inclusive approaches, and transformative leadership styles that are reshaping organizational cultures and driving sustainable success across diverse sectors.",
+        pdf: "assets/pdfs/Dr.Rohinirani-Desai-Women-Leadership-Article.pdf"
+    }
+];
 window.INPRESS_DATA = INPRESS_DATA;
 
 
